@@ -1,29 +1,29 @@
-import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
-import { afterEach, vi } from 'vitest'
+import "@testing-library/jest-dom";
+import { cleanup } from "@testing-library/react";
+import { afterEach, vi } from "vitest";
 
 afterEach(() => {
-  cleanup()
-})
+  cleanup();
+});
 
-vi.mock('next/navigation', () => ({
+vi.mock("next/navigation", () => ({
   useRouter: () => ({
     push: vi.fn(),
     replace: vi.fn(),
     prefetch: vi.fn(),
     back: vi.fn(),
-    pathname: '/',
+    pathname: "/",
     query: {},
-    asPath: '/',
+    asPath: "/",
   }),
-  usePathname: () => '/',
+  usePathname: () => "/",
   useSearchParams: () => new URLSearchParams(),
-}))
+}));
 
-vi.mock('next/image', () => ({
+vi.mock("next/image", () => ({
   default: function MockImage() {
-    return null
+    return null;
   },
-}))
+}));
 
-process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://test@test.ingest.sentry.io/test'
+process.env.NEXT_PUBLIC_SENTRY_DSN = "https://test@test.ingest.sentry.io/test";
