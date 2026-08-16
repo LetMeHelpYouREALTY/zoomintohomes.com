@@ -1,44 +1,37 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { headers } from "next/headers";
 import { getDomainConfig } from "@/lib/domain-config";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
-function canonicalHost(hostname: string): string {
-  const config = getDomainConfig(hostname);
-  return config.domain !== "default" ? config.domain : "zoomintohomes.com";
-}
+export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const domain = headers().get("x-domain") || "";
-  const config = getDomainConfig(domain);
-  const host = canonicalHost(domain);
-  const canonical = `https://${host}`;
+const SITE_HOST = "zoomintohomes.com";
+const config = getDomainConfig(SITE_HOST);
+const canonical = `https://${SITE_HOST}`;
 
-  return {
-    metadataBase: new URL(canonical),
-    title: `${config.neighborhood} Homes | Dr. Jan Duffy, REALTOR® | BHHS Nevada`,
+export const metadata: Metadata = {
+  metadataBase: new URL(canonical),
+  title: `${config.neighborhood} Homes | Dr. Jan Duffy, REALTOR® | BHHS Nevada`,
+  description: config.description,
+  keywords: config.keywords,
+  alternates: {
+    canonical,
+  },
+  openGraph: {
+    title: config.heroHeadline,
     description: config.description,
-    keywords: config.keywords,
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title: config.heroHeadline,
-      description: config.description,
-      type: "website",
-      url: canonical,
-      locale: "en_US",
-      siteName: `${config.neighborhood} | Dr. Jan Duffy`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
-}
+    type: "website",
+    url: canonical,
+    locale: "en_US",
+    siteName: `${config.neighborhood} | Dr. Jan Duffy`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
