@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HeadingImage from "@/components/site/HeadingImage";
+import PageHero from "@/components/site/PageHero";
+import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
 
@@ -8,9 +11,16 @@ export const metadata: Metadata = {
   description: pageMeta.home.description,
 };
 
+const images = pageImages.home;
+
 export default function HomePage() {
+  const byHeading = Object.fromEntries(
+    images.supporting.map((image) => [image.supportsHeading, image]),
+  );
+
   return (
     <article>
+      <PageHero image={images.hero} />
       <h1 className="page-title">{homeCopy.h1}</h1>
       <p className="lede">{homeCopy.lede}</p>
       <p>
@@ -19,16 +29,28 @@ export default function HomePage() {
         </Link>
       </p>
       <h2>{homeCopy.audienceLabel}</h2>
+      {byHeading[homeCopy.audienceLabel] ? (
+        <HeadingImage image={byHeading[homeCopy.audienceLabel]} />
+      ) : null}
       <div className="stack">
         {homeCopy.audiences.map((item) => (
           <section key={item.title} className="card">
+            {byHeading[item.title] ? (
+              <HeadingImage image={byHeading[item.title]} />
+            ) : null}
             <h3>{item.title}</h3>
             <p>{item.body}</p>
           </section>
         ))}
       </div>
       <h2>{homeCopy.promiseTitle}</h2>
+      {byHeading[homeCopy.promiseTitle] ? (
+        <HeadingImage image={byHeading[homeCopy.promiseTitle]} />
+      ) : null}
       <p>{homeCopy.promiseBody}</p>
+      {byHeading[homeCopy.h1] ? (
+        <HeadingImage image={byHeading[homeCopy.h1]} />
+      ) : null}
       <p>
         <Link href="/accessibility-features">Feature glossary</Link>
         {" · "}

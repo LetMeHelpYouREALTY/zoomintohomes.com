@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { collectContentStrings } from "../content";
+import { pageImages } from "../content/page-images";
 import { BANNED_PHRASES, checkCopy } from "./fair-housing";
 
 describe("checkCopy", () => {
@@ -32,5 +33,13 @@ describe("content Fair Housing scan", () => {
       }
     }
     expect(failures).toEqual([]);
+  });
+
+  it("attaches seven images to each public route", () => {
+    for (const set of Object.values(pageImages)) {
+      expect(set.supporting).toHaveLength(6);
+      expect(set.hero.src).toMatch(/\.jpg$/);
+    }
+    expect(Object.keys(pageImages)).toHaveLength(9);
   });
 });

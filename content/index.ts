@@ -13,6 +13,7 @@ import {
 } from "./pages";
 import { processSteps } from "./process";
 import { referralPartnerTypes } from "./partners";
+import { pageImages } from "./page-images";
 import { pageMeta, siteIdentity } from "./site";
 
 function walk(value: unknown, output: string[]): void {
@@ -47,5 +48,6 @@ export function collectContentStrings(): string[] {
   walk(contactCopy, strings);
   walk(referralPartnersCopy, strings);
   walk(consultationRoles, strings);
+  walk(pageImages, strings);
   return strings.filter((value) => value.length > 0);
 }

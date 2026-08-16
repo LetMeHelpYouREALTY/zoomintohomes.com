@@ -54,3 +54,15 @@ export type PageMeta = {
   title: string;
   description: string;
 };
+
+export type PageImage = {
+  id: string;
+  src: string;
+  alt: string;
+  supportsHeading: string;
+};
+
+export type PageImageSet = {
+  hero: PageImage;
+  supporting: PageImage[];
+};
