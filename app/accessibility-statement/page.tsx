@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { accessibilityStatementCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -22,6 +23,7 @@ export default function AccessibilityStatementPage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{accessibilityStatementCopy.h1}</h1>
       <p className="lede">{accessibilityStatementCopy.lede}</p>
+      <PageSeoSections page="accessibilityStatement" slot="intro" />
       <div className="stack">
         {accessibilityStatementCopy.sections.map((section) => {
           const sectionImages = images.supporting.filter(
@@ -41,6 +43,17 @@ export default function AccessibilityStatementPage() {
           );
         })}
       </div>
+      <PageSeoSections
+        page="accessibilityStatement"
+        slot="closing"
+        related={[
+          { href: "/contact", label: "How do I report a barrier?" },
+          {
+            href: "/accessibility-features",
+            label: "What accessibility features are documented for listings?",
+          },
+        ]}
+      />
     </article>
   );
 }

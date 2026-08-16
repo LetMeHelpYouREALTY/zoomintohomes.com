@@ -191,8 +191,60 @@ main {
 .lede {
   font-size: 1.25rem;
   color: var(--text);
-  margin: 0 0 2rem;
+  margin: 0 0 1.25rem;
   max-width: 42rem;
+}
+
+.answer-block {
+  background: var(--surface);
+  border-left: 4px solid var(--button-bg);
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  border-left-color: var(--button-bg);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+  max-width: 46rem;
+}
+
+.answer-block-title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.answer-block-body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.key-facts,
+.faq-section,
+.related-questions {
+  margin: 2.5rem 0 0;
+}
+
+.key-facts ul,
+.related-questions ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.key-facts li,
+.related-questions li {
+  margin-bottom: 0.5rem;
+}
+
+.faq-item h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.entity-line {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
 }
 
 .stack {

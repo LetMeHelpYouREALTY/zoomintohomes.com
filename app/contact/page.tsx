@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ConsultationForm from "@/components/site/ConsultationForm";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { contactCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -23,12 +24,25 @@ export default function ContactPage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{contactCopy.h1}</h1>
       <p className="lede">{contactCopy.lede}</p>
+      <PageSeoSections page="contact" slot="intro" />
+      <h2>{contactCopy.formHeading}</h2>
       <ConsultationForm />
       <div className="image-grid">
         {images.supporting.map((image) => (
           <HeadingImage key={image.id} image={image} />
         ))}
       </div>
+      <PageSeoSections
+        page="contact"
+        slot="closing"
+        related={[
+          { href: "/how-it-works", label: "What happens after intake?" },
+          {
+            href: "/referral-partners",
+            label: "How do referral partners hand off a client?",
+          },
+        ]}
+      />
     </article>
   );
 }

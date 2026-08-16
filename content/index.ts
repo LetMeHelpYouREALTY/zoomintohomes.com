@@ -14,6 +14,7 @@ import {
 import { processSteps } from "./process";
 import { referralPartnerTypes } from "./partners";
 import { pageImages } from "./page-images";
+import { pageSeoEnhance } from "./seo-enhance";
 import { pageMeta, siteIdentity } from "./site";
 
 function walk(value: unknown, output: string[]): void {
@@ -49,5 +50,6 @@ export function collectContentStrings(): string[] {
   walk(referralPartnersCopy, strings);
   walk(consultationRoles, strings);
   walk(pageImages, strings);
+  walk(pageSeoEnhance, strings);
   return strings.filter((value) => value.length > 0);
 }

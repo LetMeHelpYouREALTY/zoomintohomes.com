@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { aboutCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -29,6 +30,8 @@ export default function AboutPage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{aboutCopy.h1}</h1>
       <p className="lede">{aboutCopy.lede}</p>
+      <PageSeoSections page="about" slot="intro" />
+      <h2>{aboutCopy.practiceHeading}</h2>
       <div className="stack">
         {aboutCopy.body.map((paragraph) => {
           const match = byBody.find(
@@ -47,6 +50,20 @@ export default function AboutPage() {
           </section>
         ))}
       </div>
+      <PageSeoSections
+        page="about"
+        slot="closing"
+        related={[
+          {
+            href: "/how-it-works",
+            label: "What process is published in writing?",
+          },
+          {
+            href: "/accessibility-statement",
+            label: "What is the accessibility commitment?",
+          },
+        ]}
+      />
     </article>
   );
 }

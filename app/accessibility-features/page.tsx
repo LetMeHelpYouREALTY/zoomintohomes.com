@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { accessibilityFeatures, featureCategories } from "@/content/features";
 import { pageImages } from "@/content/page-images";
 import { featuresCopy } from "@/content/pages";
@@ -27,6 +28,8 @@ export default function AccessibilityFeaturesPage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{featuresCopy.h1}</h1>
       <p className="lede">{featuresCopy.lede}</p>
+      <PageSeoSections page="features" slot="intro" />
+      <h2>{featuresCopy.categoriesHeading}</h2>
       {featureCategories.map((category) => {
         const items = accessibilityFeatures.filter(
           (feature) => feature.category === category.id,
@@ -41,10 +44,10 @@ export default function AccessibilityFeaturesPage() {
             {byHeading[category.label] ? (
               <HeadingImage image={byHeading[category.label]} />
             ) : null}
-            <h2>{category.label}</h2>
+            <h3>{category.label}</h3>
             {items.map((feature) => (
               <article key={feature.slug} className="card" id={feature.slug}>
-                <h3>{feature.name}</h3>
+                <h4>{feature.name}</h4>
                 <p>{feature.factualDescription}</p>
                 {feature.measurement ? (
                   <p>
@@ -62,6 +65,20 @@ export default function AccessibilityFeaturesPage() {
           </section>
         );
       })}
+      <PageSeoSections
+        page="features"
+        slot="closing"
+        related={[
+          {
+            href: "/how-it-works",
+            label: "How are features verified in the process?",
+          },
+          {
+            href: "/aging-in-place",
+            label: "What does universal design mean here?",
+          },
+        ]}
+      />
     </article>
   );
 }

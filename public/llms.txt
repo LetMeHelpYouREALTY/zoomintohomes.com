@@ -1,0 +1,34 @@
+# Zoom Into Homes (www.zoomintohomes.com)
+
+> Virtual-first real estate practice in Las Vegas and Henderson, Nevada.
+> Berkshire Hathaway HomeServices Nevada Properties.
+> Agent: PLACEHOLDER: Dr. Gene Boyle
+
+## What this site is
+A credibility and referral site. Listings are toured remotely, access features are verified against a published glossary, and in-person visits are limited to two or three finalists.
+
+## What this site is not
+Not an IDX/MLS search portal. Not a VA benefits determination tool. Not a medical or legal advice site.
+
+## Fair Housing rule used in copy
+Describe building features. Do not describe who should live in a property.
+
+## Primary pages
+- / — Positioning and reduced-showing promise
+- /how-it-works — Six-step reduced-showing process
+- /accessibility-features — Feature glossary with ADA citations where applicable
+- /veterans — VA SAH/SHA purchase pairing (no invented grant amounts)
+- /aging-in-place — Las Vegas/Henderson communities and universal design
+- /referral-partners — Discharge planners, OT/PT, VA loan officers, elder law, contractors
+- /about — Agent and brokerage identity (PLACEHOLDER fields visible)
+- /contact — Consultation request form (stub backend)
+- /accessibility-statement — WCAG 2.2 AA scaffold pending legal review
+
+## Canonical
+https://www.zoomintohomes.com
+
+## Official VA source (external)
+https://www.va.gov/housing-assistance/disability-housing-grants/
+
+## Contact
+Use /contact. PLACEHOLDER: phone, email, office address, licenses.

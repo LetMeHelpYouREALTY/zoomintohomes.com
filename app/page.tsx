@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -18,6 +19,16 @@ export const metadata: Metadata = buildPageMetadata({
 
 const images = pageImages.home;
 
+const related = [
+  { href: "/how-it-works", label: "What is the reduced-showing process?" },
+  {
+    href: "/accessibility-features",
+    label: "What is the accessibility feature glossary?",
+  },
+  { href: "/veterans", label: "What are VA SAH and SHA grants?" },
+  { href: "/contact", label: "How do I request a consultation?" },
+];
+
 export default function HomePage() {
   const byHeading = Object.fromEntries(
     images.supporting.map((image) => [image.supportsHeading, image]),
@@ -28,6 +39,7 @@ export default function HomePage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{homeCopy.h1}</h1>
       <p className="lede">{homeCopy.lede}</p>
+      <PageSeoSections page="home" slot="intro" />
       <p>
         <Link href="/how-it-works" className="button">
           Read the process
@@ -63,6 +75,7 @@ export default function HomePage() {
         {" · "}
         <Link href="/contact">Request a consultation</Link>
       </p>
+      <PageSeoSections page="home" slot="closing" related={related} />
     </article>
   );
 }

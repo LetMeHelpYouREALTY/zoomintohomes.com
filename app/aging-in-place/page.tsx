@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { agingInPlaceCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -26,6 +27,7 @@ export default function AgingInPlacePage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{agingInPlaceCopy.h1}</h1>
       <p className="lede">{agingInPlaceCopy.lede}</p>
+      <PageSeoSections page="agingInPlace" slot="intro" />
       <h2>{agingInPlaceCopy.communitiesTitle}</h2>
       <div className="stack">
         {agingInPlaceCopy.communities.map((community) => (
@@ -38,11 +40,25 @@ export default function AgingInPlacePage() {
           </section>
         ))}
       </div>
-      <h2>Universal design, as used here</h2>
-      {byHeading["Universal design, as used here"] ? (
-        <HeadingImage image={byHeading["Universal design, as used here"]} />
+      <h2>{agingInPlaceCopy.universalHeading}</h2>
+      {byHeading[agingInPlaceCopy.universalHeading] ? (
+        <HeadingImage image={byHeading[agingInPlaceCopy.universalHeading]} />
       ) : null}
       <p>{agingInPlaceCopy.universalDesign}</p>
+      <PageSeoSections
+        page="agingInPlace"
+        slot="closing"
+        related={[
+          {
+            href: "/accessibility-features#zero-step-entry",
+            label: "What is zero-step entry?",
+          },
+          {
+            href: "/how-it-works",
+            label: "How does remote verification work?",
+          },
+        ]}
+      />
     </article>
   );
 }

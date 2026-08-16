@@ -31,7 +31,7 @@ export const pageImages = {
       img(
         "home",
         "audience",
-        "Who this practice is built for",
+        "Who is this practice built for?",
         "Printed feature checklist, floor plan, and clipboard on a desk. No listing grid.",
       ),
       img(
@@ -55,7 +55,7 @@ export const pageImages = {
       img(
         "home",
         "promise",
-        "The reduced-showing promise",
+        "What is the reduced-showing promise?",
         "Three printed listing sheets on a table; two marked keep, the rest in a discard stack.",
       ),
       img(
@@ -169,19 +169,19 @@ export const pageImages = {
       img(
         "veterans",
         "will-not",
-        "What we will not do on this page",
+        "What does this page not claim?",
         "Closed document binder and a blank notepad. No dollar figures on screen or paper.",
       ),
       img(
         "veterans",
         "parallel",
-        "What the housing search can do in parallel",
+        "How can the housing search run in parallel with a grant file?",
         "Laptop showing a paused remote tour beside a paper loan file, no amounts visible.",
       ),
       img(
         "veterans",
         "language",
-        "Language we use in files",
+        "What language goes in the purchase file?",
         "Tape measure reading door clear width; handwritten notes say width, threshold, curb.",
       ),
       img(
@@ -193,13 +193,13 @@ export const pageImages = {
       img(
         "veterans",
         "entry",
-        "What the housing search can do in parallel",
+        "How can the housing search run in parallel with a grant file?",
         "Arrival route from driveway to front door with no stair and a shallow threshold.",
       ),
       img(
         "veterans",
         "single-level",
-        "Language we use in files",
+        "What language goes in the purchase file?",
         "Open floor from living room to kitchen and a bedroom hall, one finished level, no stair.",
       ),
     ],
@@ -245,7 +245,7 @@ export const pageImages = {
       img(
         "aging-in-place",
         "universal",
-        "Universal design, as used here",
+        "What does universal design mean here?",
         "Interior: lever hardware, a roll-in shower doorway, and a zero-step patio slider on one level.",
       ),
     ],
@@ -300,14 +300,14 @@ export const pageImages = {
     hero: img(
       "about",
       "hero",
-      "PLACEHOLDER: Dr. Gene Boyle",
+      "What does this practice publish in writing?",
       "Las Vegas Valley residential street of single-level homes, desert mountains on the horizon.",
     ),
     supporting: [
       img(
         "about",
         "brokerage",
-        "PLACEHOLDER: Dr. Gene Boyle",
+        "What does this practice publish in writing?",
         "Professional real-estate office interior, conference table and listing files, no nameplate.",
       ),
       img(
@@ -325,7 +325,7 @@ export const pageImages = {
       img(
         "about",
         "henderson",
-        "PLACEHOLDER: Dr. Gene Boyle",
+        "What does this practice publish in writing?",
         "Henderson hillside homes at dusk, single-level roofs, no marketing skyline overlay.",
       ),
       img(
@@ -353,37 +353,37 @@ export const pageImages = {
       img(
         "contact",
         "buyer",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "House key and a three-item shortlist on a table, not a stack of twelve listing flyers.",
       ),
       img(
         "contact",
         "seller",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "Single-level home exterior prepared for photos, lockbox on a lever-handle door.",
       ),
       img(
         "contact",
         "referral",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "Handoff packet: feature sheet, dated shortlist, and a tablet with a saved tour.",
       ),
       img(
         "contact",
         "remote",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "Laptop video call showing a bathroom doorway while a tape measure sits in the foreground.",
       ),
       img(
         "contact",
         "shortlist",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "Two or three printed addresses circled on a map of the Las Vegas Valley.",
       ),
       img(
         "contact",
         "desk",
-        "Request a consultation",
+        "How do you start the consultation request?",
         "Office desk facing a window with desert mountains, consultation form in the foreground.",
       ),
     ],
@@ -399,37 +399,37 @@ export const pageImages = {
       img(
         "accessibility-statement",
         "commitment",
-        "Commitment",
+        "What is the accessibility commitment?",
         "Printed WCAG 2.2 AA checklist next to a laptop displaying semantic heading outline.",
       ),
       img(
         "accessibility-statement",
         "limits",
-        "Known limits",
+        "What are the known limits?",
         "Simple webpage with a gray map placeholder; no third-party overlay chrome on the screen.",
       ),
       img(
         "accessibility-statement",
         "report",
-        "How to report a barrier",
+        "How do you report a barrier?",
         "Contact form on a large-text screen with labeled fields and a visible focus ring.",
       ),
       img(
         "accessibility-statement",
         "no-overlay",
-        "What this site does not use",
+        "What does this site not use?",
         "Clean browser window of a text-heavy page. No floating accessibility-widget button.",
       ),
       img(
         "accessibility-statement",
         "contrast",
-        "Commitment",
+        "What is the accessibility commitment?",
         "High-contrast dark text on a light page, 16-pixel body copy, left-aligned paragraphs.",
       ),
       img(
         "accessibility-statement",
         "targets",
-        "How to report a barrier",
+        "How do you report a barrier?",
         "Phone screen with large 44-pixel tap targets on primary buttons, ample spacing.",
       ),
     ],

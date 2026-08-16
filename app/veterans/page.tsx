@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { veteransCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -29,6 +30,17 @@ export default function VeteransPage() {
       <PageHero image={images.hero} />
       <h1 className="page-title">{veteransCopy.h1}</h1>
       <p className="lede">{veteransCopy.lede}</p>
+      <PageSeoSections page="veterans" slot="intro" />
+      <p>
+        <a
+          href={veteransCopy.officialSourceHref}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {veteransCopy.officialSourceLabel}
+        </a>{" "}
+        (external VA.gov source)
+      </p>
       <div className="stack">
         {veteransCopy.sections.map((section) => {
           const sectionImages = images.supporting.filter(
@@ -51,6 +63,20 @@ export default function VeteransPage() {
       {extras.map((image) => (
         <HeadingImage key={image.id} image={image} />
       ))}
+      <PageSeoSections
+        page="veterans"
+        slot="closing"
+        related={[
+          {
+            href: "/accessibility-features",
+            label: "Which access features are measured before a showing?",
+          },
+          {
+            href: "/referral-partners#va-loan-officers",
+            label: "How do VA loan officers hand off a file?",
+          },
+        ]}
+      />
     </article>
   );
 }
