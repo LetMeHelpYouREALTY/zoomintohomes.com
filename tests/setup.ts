@@ -1,13 +1,11 @@
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
-import { afterEach } from 'vitest'
+import { afterEach, vi } from 'vitest'
 
-// Cleanup after each test
 afterEach(() => {
   cleanup()
 })
 
-// Mock Next.js router
 vi.mock('next/navigation', () => ({
   useRouter: () => ({
     push: vi.fn(),
@@ -22,13 +20,10 @@ vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams(),
 }))
 
-// Mock Next.js Image component
 vi.mock('next/image', () => ({
-  default: (props: any) => {
-    // eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element
-    return <img {...props} />
+  default: function MockImage() {
+    return null
   },
 }))
 
-// Mock environment variables
 process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://test@test.ingest.sentry.io/test'

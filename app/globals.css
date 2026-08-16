@@ -2,86 +2,313 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  a,
-  button {
-    @apply transition;
-  }
-
-  a {
-    @apply text-emerald-500 underline hover:bg-emerald-100
-        outline-0 focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500;
-  }
-
-  ::selection {
-    @apply bg-emerald-200 text-emerald-950;
-  }
-
-  label,
-  strong,
-  b {
-    @apply font-semibold;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply text-balance;
-  }
-
-  p {
-    @apply text-pretty;
-  }
+:root {
+  --text: #1a1a1a;
+  --text-muted: #3f3f46;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #52525b;
+  --link: #1d4ed8;
+  --link-hover: #1e3a8a;
+  --focus: #1d4ed8;
+  --error: #9f1239;
+  --button-bg: #1e3a8a;
+  --button-text: #ffffff;
 }
 
-/* ===== RealScout Widget Styling ===== */
-
-/* RealScout Simple Search - Desktop */
-realscout-simple-search {
-  --rs-ss-font-primary-color: #1e293b;
-  --rs-ss-searchbar-border-color: #e2e8f0;
-  --rs-ss-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-  --rs-ss-widget-width: 600px !important;
-  --rs-ss-border-radius: 9999px;
-  --rs-ss-background-color: rgba(255, 255, 255, 0.95);
+html {
+  font-size: 100%;
 }
 
-/* RealScout Office Listings */
-realscout-office-listings {
-  --rs-listing-divider-color: #2563eb;
-  width: 100%;
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  text-align: left;
 }
 
-/* RealScout container wrapper */
-.realscout-wrapper {
+:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -6rem;
+  z-index: 100;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  min-width: 44px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0.75rem;
+  color: var(--button-text);
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-desktop {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.nav-desktop a,
+.nav-mobile a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.nav-desktop a:hover,
+.nav-mobile a:hover {
+  text-decoration: underline;
+}
+
+.nav-toggle {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--border);
+  font: inherit;
+  font-weight: 600;
+}
+
+.nav-mobile {
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem 1rem;
+}
+
+@media (min-width: 64rem) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-toggle,
+  .nav-mobile {
+    display: none;
+  }
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+.lede {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 0 2rem;
+  max-width: 42rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.75rem 1.25rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font: inherit;
+  font-weight: 700;
+  border: 2px solid var(--button-bg);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--button-text);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.site-footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.eho {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.consult-form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 40rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--border);
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
   width: 100%;
-  padding: 0 1rem;
+  max-width: 100%;
 }
 
-/* Mobile Responsive: Tablet */
-@media (max-width: 768px) {
-  realscout-simple-search {
-    --rs-ss-widget-width: 100% !important;
-    max-width: 500px;
-  }
+.field textarea {
+  min-height: 8rem;
+}
 
-  .realscout-wrapper {
-    padding: 0 1.5rem;
+.hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.field-error,
+.form-status {
+  margin: 0;
+  color: var(--error);
+  font-weight: 600;
+}
+
+.form-status {
+  color: var(--text);
+}
+
+.feature-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Mobile Responsive: Phone */
-@media (max-width: 480px) {
-  realscout-simple-search {
-    --rs-ss-widget-width: 100% !important;
-    max-width: 100%;
-  }
-
-  .realscout-wrapper {
-    padding: 0 1rem;
+@media (max-width: 320px) {
+  main,
+  .site-header-inner,
+  .site-footer-inner {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

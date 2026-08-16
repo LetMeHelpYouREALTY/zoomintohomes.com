@@ -22,7 +22,38 @@ const nextConfig = {
 
   // Redirect non-www to www
   async redirects() {
+    const retired = [
+      '/listings',
+      '/listings/:path*',
+      '/buyers',
+      '/buyers/:path*',
+      '/sellers',
+      '/sellers/:path*',
+      '/neighborhoods',
+      '/neighborhoods/:path*',
+      '/luxury-homes',
+      '/new-construction',
+      '/investment-properties',
+      '/relocation',
+      '/home-valuation',
+      '/55-plus-communities',
+      '/55-plus-communities/:path*',
+      '/services',
+      '/faq',
+      '/market-report',
+      '/market-update',
+      '/market-insights',
+      '/google-business',
+      '/why-berkshire-hathaway',
+      '/security-policy',
+    ];
+
     return [
+      ...retired.map((source) => ({
+        source,
+        destination: '/',
+        permanent: false,
+      })),
       {
         source: '/:path*',
         has: [

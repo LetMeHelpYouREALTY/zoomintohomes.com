@@ -15,6 +15,11 @@
 # Testing
 # ===================
 /coverage
+/test-results
+/playwright-report
+/blob-report
+/.lighthouseci
+playwright/.cache
 /api/test.py
 /api/temp.txt
 /api/.env

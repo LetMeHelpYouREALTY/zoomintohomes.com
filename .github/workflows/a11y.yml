@@ -1,0 +1,55 @@
+name: Accessibility CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: a11y-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  axe-and-lighthouse:
+    name: axe + Lighthouse accessibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Fair Housing copy scan
+        run: pnpm exec vitest run lib/fair-housing.test.ts
+
+      - name: Production build
+        run: pnpm build
+
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: axe-core on every route
+        run: pnpm exec playwright test
+
+      - name: Lighthouse accessibility 100
+        run: |
+          pnpm start -- --port 3000 &
+          for i in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:3000 >/dev/null; then
+              break
+            fi
+            sleep 2
+          done
+          pnpm exec lhci autorun
+          kill %1
