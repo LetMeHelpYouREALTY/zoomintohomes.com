@@ -41,8 +41,10 @@ export default function HeroSection() {
           >
             <Image
               src={src}
-              alt={`Hero image ${index + 1}`}
+              alt={`Las Vegas homes for sale, photo ${index + 1}`}
               fill
+              sizes="100vw"
+              quality={70}
               className="object-cover"
               priority={index === 0}
             />
