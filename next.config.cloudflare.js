@@ -38,6 +38,17 @@ const nextConfig = {
         destination: 'https://www.heyberkshire.com/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'zoomintohomes.com',
+          },
+        ],
+        destination: 'https://www.zoomintohomes.com/:path*',
+        permanent: true,
+      },
     ]
   },
 

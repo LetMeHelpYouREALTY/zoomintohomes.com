@@ -1,21 +1,31 @@
+import Image from "next/image";
 import Navbar from "@/components/layouts/Navbar";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import ReviewsSection from "@/components/sections/ReviewsSection";
-import FAQSection from "@/components/sections/FAQSection";
+import ReviewsSection, {
+  aggregateRating,
+  defaultReviews,
+  getReviewSchemaData,
+} from "@/components/sections/ReviewsSection";
+import FAQSection, { defaultFaqs, getFAQSchemaData } from "@/components/sections/FAQSection";
 import Footer from "@/components/layouts/Footer";
+import SchemaScript, { FAQSchema, ReviewSchema } from "@/components/SchemaScript";
 import Link from "next/link";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 
+export const revalidate = 3600;
+
 export default async function Home() {
   const config = await getPageDomainConfig();
+  const siteUrl =
+    config.domain !== "default" ? `https://${config.domain}` : "https://zoomintohomes.com";
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: `Dr. Jan Duffy - ${config.neighborhood} Real Estate`,
-    url: `https://${config.domain !== "default" ? config.domain : "heyberkshire.com"}`,
+    url: siteUrl,
     telephone: "+17022221964",
     address: {
       "@type": "PostalAddress",
@@ -23,7 +33,27 @@ export default async function Home() {
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89134",
+      addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 36.1941,
+      longitude: -115.2678,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "10:00",
+        closes: "16:00",
+      },
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
@@ -33,17 +63,23 @@ export default async function Home() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      <SchemaScript schema={organizationSchema} id="home-agent-schema" />
+      <FAQSchema faqs={getFAQSchemaData(defaultFaqs)} />
+      <ReviewSchema
+        reviews={getReviewSchemaData(defaultReviews)}
+        aggregateRating={aggregateRating}
       />
       <Navbar />
       <main>
-        {/* Domain-Aware Hero */}
         <section className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-30"
-            style={{ backgroundImage: "url('/Image/hero_bg_1.jpg')" }}
+          <Image
+            src="/Image/hero_bg_1.jpg"
+            alt={`${config.neighborhood} homes for sale with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties`}
+            fill
+            priority
+            quality={70}
+            sizes="100vw"
+            className="object-cover opacity-30"
           />
           <div className="relative z-10 container mx-auto px-4 text-center">
             {config.ctaBadge && (
@@ -58,7 +94,6 @@ export default async function Home() {
               {config.heroSubheadline}
             </p>
 
-            {/* RealScout Search Widget */}
             <div className="mb-8 flex justify-center">
               <div
                 dangerouslySetInnerHTML={{
@@ -67,7 +102,6 @@ export default async function Home() {
               />
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-white">500+</span>
@@ -85,7 +119,6 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Value Proposition */}
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
@@ -115,7 +148,6 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Market Stats */}
         <section className="py-16 bg-slate-900 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
@@ -151,7 +183,6 @@ export default async function Home() {
         <ReviewsSection />
         <FAQSection />
 
-        {/* Domain-Specific CTA */}
         <section className="py-16 md:py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -177,6 +208,9 @@ export default async function Home() {
             </div>
             <p className="mt-6 text-blue-200 text-sm">
               Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties
+            </p>
+            <p className="mt-2 text-blue-200 text-sm">
+              9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134
             </p>
           </div>
         </section>

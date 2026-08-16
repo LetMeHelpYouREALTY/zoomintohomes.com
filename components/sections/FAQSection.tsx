@@ -1,7 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export interface FAQ {
   question: string;
@@ -59,12 +56,6 @@ export default function FAQSection({
   subtitle = "Get answers to common questions about our real estate services",
   className = "",
 }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className={`py-16 md:py-24 bg-white ${className}`}>
       <div className="container mx-auto px-4">
@@ -77,27 +68,19 @@ export default function FAQSection({
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-slate-200 rounded-lg mb-4 overflow-hidden"
+            <details
+              key={faq.question}
+              className="group border border-slate-200 rounded-lg mb-4 overflow-hidden"
+              open={index === 0}
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
-              >
+              <summary className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" />
-                )}
-              </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
-                  <p className="text-slate-700">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+                <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0 transition-transform group-open:rotate-180 group-open:text-blue-600" />
+              </summary>
+              <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
+                <p className="text-slate-700">{faq.answer}</p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
 
@@ -116,8 +114,9 @@ export default function ReviewsSection({
                   {review.image ? (
                     <Image
                       src={review.image}
-                      alt={review.name}
+                      alt={`${review.name} review of Dr. Jan Duffy, Las Vegas REALTOR®`}
                       fill
+                      sizes="64px"
                       className="object-cover"
                     />
                   ) : (

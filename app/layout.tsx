@@ -1,32 +1,52 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { headers } from "next/headers";
 import { getDomainConfig } from "@/lib/domain-config";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const domain = headers().get("x-domain") || "";
-  const config = getDomainConfig(domain);
-  return {
-    title: `${config.neighborhood} | Dr. Jan Duffy, REALTOR® | BHHS Nevada`,
+export const revalidate = 3600;
+
+const SITE_HOST = "zoomintohomes.com";
+const config = getDomainConfig(SITE_HOST);
+const canonical = `https://${SITE_HOST}`;
+
+export const metadata: Metadata = {
+  metadataBase: new URL(canonical),
+  title: `${config.neighborhood} Homes | Dr. Jan Duffy, REALTOR® | BHHS Nevada`,
+  description: config.description,
+  keywords: config.keywords,
+  alternates: {
+    canonical,
+  },
+  openGraph: {
+    title: config.heroHeadline,
     description: config.description,
-    keywords: config.keywords,
-    openGraph: {
-      title: config.heroHeadline,
-      description: config.description,
-      type: "website",
-    },
-  };
-}
+    type: "website",
+    url: canonical,
+    locale: "en_US",
+    siteName: `${config.neighborhood} | Dr. Jan Duffy`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={GeistSans.className}>
       <head>
-        {/* WidgetTracker */}
-        <Script id="widget-tracker" strategy="afterInteractive">{`
+        <link rel="preconnect" href="https://em.realscout.com" />
+        <link rel="dns-prefetch" href="https://www.realscout.com" />
+      </head>
+      <body>
+        {children}
+        <Script
+          src="https://em.realscout.com/dist/rs-em.js"
+          strategy="afterInteractive"
+        />
+        <Script id="widget-tracker" strategy="lazyOnload">{`
           (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
           {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
           (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
@@ -35,9 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           window.widgetTracker("create","WT-XQHVYQWW");
           window.widgetTracker("send","pageview");
         `}</Script>
-      </head>
-      <body>
-        {children}
         <Analytics />
       </body>
     </html>
