@@ -5,11 +5,15 @@ import PageHero from "@/components/site/PageHero";
 import { pageImages } from "@/content/page-images";
 import { contactCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Request a consultation",
   description: pageMeta.contact.description,
-};
+  path: "/contact",
+  imagePath: pageImages.contact.hero.src,
+  imageAlt: pageImages.contact.hero.alt,
+});
 
 const images = pageImages.contact;
 

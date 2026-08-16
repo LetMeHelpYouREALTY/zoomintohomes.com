@@ -5,11 +5,15 @@ import { pageImages } from "@/content/page-images";
 import { howItWorksCopy } from "@/content/pages";
 import { processSteps } from "@/content/process";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "How the reduced-showing process works",
   description: pageMeta.howItWorks.description,
-};
+  path: "/how-it-works",
+  imagePath: pageImages.howItWorks.hero.src,
+  imageAlt: pageImages.howItWorks.hero.alt,
+});
 
 const images = pageImages.howItWorks;
 

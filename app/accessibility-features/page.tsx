@@ -5,11 +5,15 @@ import { accessibilityFeatures, featureCategories } from "@/content/features";
 import { pageImages } from "@/content/page-images";
 import { featuresCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Accessibility feature glossary",
   description: pageMeta.features.description,
-};
+  path: "/accessibility-features",
+  imagePath: pageImages.features.hero.src,
+  imageAlt: pageImages.features.hero.alt,
+});
 
 const images = pageImages.features;
 

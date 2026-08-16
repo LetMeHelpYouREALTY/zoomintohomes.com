@@ -4,11 +4,15 @@ import PageHero from "@/components/site/PageHero";
 import { pageImages } from "@/content/page-images";
 import { veteransCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "VA SAH and SHA grants with a home purchase",
   description: pageMeta.veterans.description,
-};
+  path: "/veterans",
+  imagePath: pageImages.veterans.hero.src,
+  imageAlt: pageImages.veterans.hero.alt,
+});
 
 const images = pageImages.veterans;
 

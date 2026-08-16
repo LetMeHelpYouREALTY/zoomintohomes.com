@@ -5,11 +5,16 @@ import PageHero from "@/components/site/PageHero";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { absolute: pageMeta.home.title },
+export const metadata: Metadata = buildPageMetadata({
+  title: pageMeta.home.title,
   description: pageMeta.home.description,
-};
+  path: "/",
+  absoluteTitle: true,
+  imagePath: pageImages.home.hero.src,
+  imageAlt: pageImages.home.hero.alt,
+});
 
 const images = pageImages.home;
 

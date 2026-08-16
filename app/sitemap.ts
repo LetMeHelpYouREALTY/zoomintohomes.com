@@ -1,25 +1,13 @@
 import type { MetadataRoute } from "next";
-
-const baseUrl = "https://zoomintohomes.com";
-
-const paths = [
-  "/",
-  "/how-it-works",
-  "/accessibility-features",
-  "/veterans",
-  "/aging-in-place",
-  "/referral-partners",
-  "/about",
-  "/contact",
-  "/accessibility-statement",
-];
+import { SITE_ORIGIN, indexablePaths } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  return paths.map((path) => ({
-    url: `${baseUrl}${path === "/" ? "" : path}`,
+
+  return indexablePaths.map((path) => ({
+    url: path === "/" ? SITE_ORIGIN : `${SITE_ORIGIN}${path}`,
     lastModified,
-    changeFrequency: "monthly" as const,
+    changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
     priority: path === "/" ? 1 : 0.8,
   }));
 }

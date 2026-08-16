@@ -5,11 +5,15 @@ import { pageImages } from "@/content/page-images";
 import { referralPartnersCopy } from "@/content/pages";
 import { referralPartnerTypes } from "@/content/partners";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Referral partners",
   description: pageMeta.referralPartners.description,
-};
+  path: "/referral-partners",
+  imagePath: pageImages.referralPartners.hero.src,
+  imageAlt: pageImages.referralPartners.hero.alt,
+});
 
 const images = pageImages.referralPartners;
 

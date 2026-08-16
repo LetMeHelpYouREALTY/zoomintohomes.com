@@ -2,7 +2,7 @@ import type { NavItem, PageMeta, SiteIdentity } from "./types";
 
 export const siteIdentity: SiteIdentity = {
   siteName: "Zoom Into Homes",
-  domain: "zoomintohomes.com",
+  domain: "www.zoomintohomes.com",
   agentName: "PLACEHOLDER: Dr. Gene Boyle",
   agentLicense: "PLACEHOLDER: NV license number",
   brokerageName: "Berkshire Hathaway HomeServices Nevada Properties",
@@ -73,6 +73,6 @@ export const pageMeta: Record<string, PageMeta> = {
   accessibilityStatement: {
     title: "Accessibility statement | Zoom Into Homes",
     description:
-      "PLACEHOLDER: accessibility statement pending legal review. How to report barriers on zoomintohomes.com.",
+      "PLACEHOLDER: accessibility statement pending legal review. How to report barriers on www.zoomintohomes.com.",
   },
 };

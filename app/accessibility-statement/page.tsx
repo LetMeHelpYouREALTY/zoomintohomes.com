@@ -4,11 +4,15 @@ import PageHero from "@/components/site/PageHero";
 import { pageImages } from "@/content/page-images";
 import { accessibilityStatementCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Accessibility statement",
   description: pageMeta.accessibilityStatement.description,
-};
+  path: "/accessibility-statement",
+  imagePath: pageImages.accessibilityStatement.hero.src,
+  imageAlt: pageImages.accessibilityStatement.hero.alt,
+});
 
 const images = pageImages.accessibilityStatement;
 

@@ -4,11 +4,15 @@ import PageHero from "@/components/site/PageHero";
 import { pageImages } from "@/content/page-images";
 import { agingInPlaceCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Aging in place and 55+ housing, Las Vegas",
   description: pageMeta.agingInPlace.description,
-};
+  path: "/aging-in-place",
+  imagePath: pageImages.agingInPlace.hero.src,
+  imageAlt: pageImages.agingInPlace.hero.alt,
+});
 
 const images = pageImages.agingInPlace;
 

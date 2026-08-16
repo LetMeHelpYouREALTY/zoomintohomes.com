@@ -52,7 +52,7 @@ const nextConfig = {
       ...retired.map((source) => ({
         source,
         destination: '/',
-        permanent: false,
+        permanent: true,
       })),
       {
         source: '/:path*',
