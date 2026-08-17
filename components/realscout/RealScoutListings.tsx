@@ -1,7 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import {
+  REALSCOUT_PORTAL_URL,
+  realScoutOfficeListingsHtml,
+} from "@/content/widgets";
 
 export default function RealScoutListings() {
   return (
@@ -17,21 +20,19 @@ export default function RealScoutListings() {
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">
-            <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer">View All Properties</a>
+            <a
+              href={REALSCOUT_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View All Properties
+            </a>
           </Button>
         </div>
 
-        {/* RealScout Widget - using dangerouslySetInnerHTML per rules */}
         <div
           dangerouslySetInnerHTML={{
-            __html: `<realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="NEWEST" 
-              listing-status="For Sale" 
-              property-types=",SFR,MF,TC" 
-              price-min="500000" 
-              price-max="800000"
-            ></realscout-office-listings>`,
+            __html: realScoutOfficeListingsHtml(),
           }}
         />
       </div>

@@ -108,6 +108,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${atkinson.variable} ${sourceSerif.variable}`}>
       <head>
+        {/* RealScout: script once in head (official embed). type=module required. */}
+        <script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          async
+        />
         <link
           rel="stylesheet"
           href="https://assets.calendly.com/assets/external/widget.css"
@@ -121,11 +127,6 @@ export default function RootLayout({
         <SiteFooter />
         <CalendlyBadge />
         <Analytics />
-        <Script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          type="module"
-          strategy="afterInteractive"
-        />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"

@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import { realScoutOfficeListingsHtml } from "@/content/widgets";
 import {
   Phone,
   Home,
@@ -147,12 +148,7 @@ export default function ListingsPage() {
             <div className="max-w-7xl mx-auto">
               <div
                 dangerouslySetInnerHTML={{
-                  __html: `<realscout-office-listings 
-                    agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                    sort-order="NEWEST" 
-                    listing-status="For Sale" 
-                    property-types=",SFR,MF,TC"
-                  ></realscout-office-listings>`,
+                  __html: realScoutOfficeListingsHtml(),
                 }}
               />
             </div>

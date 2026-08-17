@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
-  REALSCOUT_AGENT_ENCODED_ID,
   REALSCOUT_PORTAL_URL,
+  realScoutOfficeListingsHtml,
 } from "@/content/widgets";
 
 type RealScoutCarouselProps = {
@@ -10,9 +10,9 @@ type RealScoutCarouselProps = {
 };
 
 /**
- * RealScout office listings carousel/grid.
- * Script loads once in root layout. Do not re-load script or use React state
- * to mount the custom element.
+ * RealScout office listings widget.
+ * Script loads once in root layout <head>. Do not re-load script or use
+ * React state to mount the custom element — use the official HTML embed.
  */
 export default function RealScoutCarousel({
   title = "Homes you can tour virtually first",
@@ -41,7 +41,7 @@ export default function RealScoutCarousel({
         <div
           className="realscout-carousel-widget"
           dangerouslySetInnerHTML={{
-            __html: `<realscout-office-listings agent-encoded-id="${REALSCOUT_AGENT_ENCODED_ID}" sort-order="NEWEST" listing-status="For Sale" property-types=",SFR,MF,TC"></realscout-office-listings>`,
+            __html: realScoutOfficeListingsHtml(),
           }}
         />
         <p className="meta realscout-carousel-note">
