@@ -4,15 +4,15 @@ import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 type AfterHeroWidgetsProps = {
   /** When false, skip RealScout (rare). Default true. */
   showRealScout?: boolean;
-  /** When false, skip the post-hero Calendly block. Default true. */
+  /** When false, skip the post-hero Calendly block. Default true on every page. */
   showCalendly?: boolean;
   calendlyId?: string;
 };
 
-/** RealScout carousel under the hero. Calendly stays in header/footer/badge to avoid stacked iframes. */
+/** RealScout carousel and inline Calendly under the split hero on every page. */
 export default function AfterHeroWidgets({
   showRealScout = true,
-  showCalendly = false,
+  showCalendly = true,
   calendlyId = "schedule-after-hero",
 }: AfterHeroWidgetsProps) {
   return (

@@ -43,7 +43,7 @@ export default function ContactPage() {
         intro={contactCopy.scheduleIntro}
         height="720px"
       />
-      <AfterHeroWidgets />
+      <AfterHeroWidgets showCalendly={false} />
       <div className="image-grid">
         {images.supporting.map((image) => (
           <HeadingImage key={image.id} image={image} />

@@ -20,6 +20,7 @@ export type PageHeroProps = {
   tourHref?: string;
   tourLabel?: string;
   showWidgets?: boolean;
+  showCalendly?: boolean;
   calendlyId?: string;
 };
 
@@ -41,6 +42,7 @@ export default function PageHero({
   tourHref,
   tourLabel = "Watch a sample video tour",
   showWidgets = true,
+  showCalendly,
   calendlyId = "schedule-hero",
 }: PageHeroProps) {
   return (
@@ -97,7 +99,9 @@ export default function PageHero({
           </div>
         </div>
       </section>
-      {showWidgets ? <AfterHeroWidgets calendlyId={calendlyId} /> : null}
+      {showWidgets ? (
+        <AfterHeroWidgets calendlyId={calendlyId} showCalendly={showCalendly} />
+      ) : null}
     </>
   );
 }

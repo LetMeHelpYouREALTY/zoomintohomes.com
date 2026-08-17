@@ -4,6 +4,7 @@ import { resolvePageHero, type PageHeroOverrides } from "@/content/page-heroes";
 type RoutePageHeroProps = PageHeroOverrides & {
   path: string;
   showWidgets?: boolean;
+  showCalendly?: boolean;
   calendlyId?: string;
   tourHref?: string;
   tourLabel?: string;
@@ -20,6 +21,7 @@ type RoutePageHeroProps = PageHeroOverrides & {
 export default function RoutePageHero({
   path,
   showWidgets,
+  showCalendly,
   calendlyId,
   tourHref,
   tourLabel,
@@ -38,6 +40,7 @@ export default function RoutePageHero({
       explanation={spec.explanation}
       servicePoints={spec.servicePoints}
       showWidgets={showWidgets}
+      showCalendly={showCalendly}
       calendlyId={calendlyId}
       tourHref={tourHref}
       tourLabel={tourLabel}

@@ -553,19 +553,81 @@ export function auditPerformanceTraps(): AuditFinding[] {
   return findings;
 }
 
+export function auditLeadForms(): AuditFinding[] {
+  const findings: AuditFinding[] = [];
+  const appPages: string[] = [];
+  walkFiles("app", appPages);
+
+  const bannedImports = ["ConsultationForm", "LeadCaptureForm"] as const;
+  const bannedPatterns = [
+    { pattern: /<form\b/i, message: "still renders an HTML form" },
+    {
+      pattern: /type\s*=\s*["']email["']/i,
+      message: "still has an email signup input",
+    },
+  ] as const;
+
+  for (const file of appPages.filter((item) => item.endsWith("/page.tsx"))) {
+    const rel = relative(process.cwd(), file);
+    const source = readFileSync(file, "utf8");
+
+    for (const imp of bannedImports) {
+      if (source.includes(imp)) {
+        findings.push({
+          severity: "error",
+          area: "seo",
+          message: `${rel} still imports ${imp}`,
+        });
+      }
+    }
+    for (const { pattern, message } of bannedPatterns) {
+      if (pattern.test(source)) {
+        findings.push({
+          severity: "error",
+          area: "seo",
+          message: `${rel} ${message}`,
+        });
+      }
+    }
+  }
+
+  const afterHero = readFileSync(
+    join(process.cwd(), "components/site/AfterHeroWidgets.tsx"),
+    "utf8",
+  );
+  if (!/showCalendly\s*=\s*true/.test(afterHero)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "AfterHeroWidgets must show Calendly by default on every page",
+    });
+  }
+
+  if (existsSync(join(process.cwd(), "components/site/ConsultationForm.tsx"))) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "ConsultationForm still exists; use Calendly instead",
+    });
+  }
+
+  return findings;
+}
+
 export function runSiteAudit(): AuditFinding[] {
   return [
     ...auditRealtorSlang(),
     ...auditBuyerSellerLanguage(),
     ...auditImages(),
     ...auditSeoAndSchema(),
+    ...auditLeadForms(),
     ...auditPerformanceTraps(),
   ];
 }
 
 export function formatAuditReport(findings: AuditFinding[]): string {
   if (findings.length === 0) {
-    return "Site audit passed: slang, buyer/seller language, images, schema, and performance traps are clean.";
+    return "Site audit passed: slang, buyer/seller language, images, schema, lead forms, and performance traps are clean.";
   }
   return findings
     .map((finding) => `[${finding.severity.toUpperCase()}] ${finding.area}: ${finding.message}`)

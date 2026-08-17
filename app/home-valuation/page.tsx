@@ -66,7 +66,7 @@ export default function HomeValuationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <RoutePageHero path="/home-valuation" />
+      <RoutePageHero path="/home-valuation" showCalendly={false} />
 
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">

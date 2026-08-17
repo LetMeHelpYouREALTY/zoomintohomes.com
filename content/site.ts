@@ -117,7 +117,7 @@ export const pageMeta: Record<string, PageMeta> = {
   privacy: {
     title: "Privacy policy | Zoom Into Homes",
     description:
-      "How Zoom Into Homes collects, uses, and retains consultation and referral information, including mobility-related notes you choose to share.",
+      "How Zoom Into Homes collects, uses, and retains information from scheduled calls and messages, including mobility-related notes you choose to share.",
   },
   terms: {
     title: "Terms of use | Zoom Into Homes",

@@ -5,7 +5,7 @@ import {
   REALTOR_SLANG,
 } from "./site-audit";
 import { BUYER_SELLER_JARGON } from "./buyer-seller-language";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 describe("site audit", () => {
@@ -56,5 +56,33 @@ describe("site audit", () => {
     expect(page).toContain("RoutePageHero");
     expect(page).toContain("CalendlyInlineSection");
     expect(page).not.toContain("ConsultationForm");
+    expect(page).not.toMatch(/<form\b/i);
+  });
+
+  it("shows Calendly by default and keeps forms off app pages", () => {
+    const afterHero = readFileSync(
+      join(process.cwd(), "components/site/AfterHeroWidgets.tsx"),
+      "utf8",
+    );
+    expect(afterHero).toMatch(/showCalendly\s*=\s*true/);
+
+    const appPages: string[] = [];
+    const walk = (target: string) => {
+      for (const entry of readdirSync(target)) {
+        const full = join(target, entry);
+        if (statSync(full).isDirectory()) walk(full);
+        else if (full.endsWith("/page.tsx")) appPages.push(full);
+      }
+    };
+    walk(join(process.cwd(), "app"));
+
+    for (const file of appPages) {
+      const rel = file.replace(`${process.cwd()}/`, "");
+      const source = readFileSync(file, "utf8");
+      expect(source, rel).not.toContain("ConsultationForm");
+      expect(source, rel).not.toContain("LeadCaptureForm");
+      expect(source, rel).not.toMatch(/<form\b/i);
+      expect(source, rel).not.toMatch(/type\s*=\s*["']email["']/i);
+    }
   });
 });
