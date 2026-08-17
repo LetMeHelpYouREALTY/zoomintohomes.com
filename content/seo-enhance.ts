@@ -92,19 +92,19 @@ export const pageSeoEnhance = {
   },
   features: {
     answerBlock:
-      "The accessibility feature glossary is the copy standard for listing notes on this site. Each row records a measurable building feature—such as zero-step entry or door clear width—often with a 2010 ADA Standards citation. Features are measured. People are not described.",
+      "This glossary lists home features we can measure, such as a zero-step entry or a 32-inch doorway. When a published figure exists, we note the 2010 ADA Standards number on that row. We do not describe who a home is for.",
     keyFacts: [
-      "Categories: entry, circulation, bathroom, kitchen, sensory, systems",
+      "Categories: entry, hallways, bathroom, kitchen, lighting and sound, and home systems",
       "Example measurement: 32 in. minimum door clear width (ADA 404.2.3)",
       "Example measurement: 36 in. minimum accessible route width (ADA 403.5.1)",
       "Example measurement: maximum 1:12 ramp running slope (ADA 405.2)",
-      "Fair Housing rule on this site: features, not personas",
+      "We describe doors, showers, and paths—not people",
     ],
     faqs: [
       {
-        question: "What is an accessibility feature glossary in real estate?",
+        question: "What home features are on the glossary?",
         answer:
-          "It is a published list of objective building attributes used to pre-verify listings. Each item has a factual description, an optional measurement, and a note on why the measurement matters for daily use of the building.",
+          "A list of things we can measure before you visit, like doorway width and shower curb height, plus why that number matters day to day.",
       },
       {
         question: "Do you describe who a house is for?",

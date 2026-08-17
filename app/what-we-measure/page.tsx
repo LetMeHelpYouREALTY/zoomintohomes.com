@@ -30,21 +30,20 @@ export default function WhatWeMeasurePage() {
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">
-          We record measurable building attributes—door clear widths, threshold
-          heights, shower curbs, route widths, control heights, and related
-          items—against the published access glossary.
-          Each row carries a date and an evidence level.
+          We write down door widths, step heights, shower curbs, hall widths,
+          and control heights against the published access glossary.
+          Each row has a date and notes how the number was checked.
         </p>
       </section>
       <h2>{whatWeMeasureCopy.provenanceHeading}</h2>
       <div className="provenance-panel">
         <p>{whatWeMeasureCopy.provenanceBody}</p>
         <p>
-          Layout rule for any future public listing feed: measured data renders in a
-          separately attributed panel — never merged into the listing’s own feature list.
+          If we later show homes for sale, our measurements stay in their own
+          labeled box. They are not mixed into the listing&apos;s own feature list.
         </p>
       </div>
-      <h2>Which attributes appear in the working glossary?</h2>
+      <h2>Which features are in the glossary?</h2>
       <div className="feature-list">
         {accessibilityFeatures.slice(0, 8).map((feature) => (
           <section key={feature.slug} className="card">
@@ -60,7 +59,7 @@ export default function WhatWeMeasurePage() {
         ))}
       </div>
       <p>
-        <Link href="/glossary">Open the full RESO glossary</Link>
+        <Link href="/glossary">Open the full feature glossary</Link>
         {" · "}
         <Link href="/accessibility-features">Category glossary</Link>
         {" · "}

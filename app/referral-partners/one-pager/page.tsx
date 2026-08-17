@@ -25,7 +25,7 @@ export default function ReferralOnePagerPage() {
         <h2>What we return</h2>
         <ul>
           <li>Video tour recordings with measurement pauses</li>
-          <li>Dated access checklists (building attributes only)</li>
+          <li>Dated access checklists (home features only)</li>
           <li>A shortlist of two or three finalists</li>
         </ul>
         <h2>What we need from you</h2>

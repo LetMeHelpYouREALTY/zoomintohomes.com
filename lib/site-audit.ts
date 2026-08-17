@@ -3,6 +3,7 @@ import { join, relative } from "node:path";
 import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
 import { siteIdentity } from "@/content/site";
+import { buyerSellerJargonHits } from "@/lib/buyer-seller-language";
 import { checkCopy } from "@/lib/fair-housing";
 import {
   PAGE_IMAGE_HEIGHT,
@@ -13,7 +14,13 @@ import { indexablePaths, SITE_HOST, SITE_ORIGIN } from "@/lib/site-url";
 
 export type AuditFinding = {
   severity: "error" | "warning";
-  area: "slang" | "images" | "seo" | "schema" | "performance";
+  area:
+    | "slang"
+    | "plain-language"
+    | "images"
+    | "seo"
+    | "schema"
+    | "performance";
   message: string;
 };
 
@@ -69,6 +76,14 @@ const SLANG_ALLOWLIST = [
   "components/site/loadRealScout.ts",
   "components/site/AfterHeroWidgets.tsx",
   "components/site/TourHero.tsx",
+];
+
+/** Statute tables and measurement citations buyers can look up on purpose. */
+const PLAIN_LANGUAGE_ALLOWLIST = [
+  ...SLANG_ALLOWLIST,
+  "content/exemptions.ts",
+  "content/features.ts",
+  "app/clark-county-disabled-veteran-property-tax-exemption",
 ];
 
 const PUBLIC_PAGES = join(process.cwd(), "public/images/pages");
@@ -131,6 +146,7 @@ function isIgnoredQuotedValue(value: string): boolean {
   if (/^https?:\/\//i.test(value)) return true;
   if (value.startsWith("@/")) return true;
   if (/^[a-z0-9-]*(realscout|calendly)[a-z0-9-]*$/i.test(value)) return true;
+  if (/^[a-z0-9_-]+$/.test(value)) return true;
   return false;
 }
 
@@ -155,6 +171,37 @@ export function auditRealtorSlang(): AuditFinding[] {
         findings.push({
           severity: "error",
           area: "slang",
+          message: `${rel}: ${hits.join(", ")} → ${value.slice(0, 140)}`,
+        });
+      }
+    }
+  }
+
+  return findings;
+}
+
+export function auditBuyerSellerLanguage(): AuditFinding[] {
+  const findings: AuditFinding[] = [];
+  const files: string[] = [];
+  for (const root of CORE_SCAN_ROOTS) walkFiles(root, files);
+
+  for (const file of files) {
+    const rel = relative(process.cwd(), file).replaceAll("\\", "/");
+    if (
+      PLAIN_LANGUAGE_ALLOWLIST.some(
+        (allowed) => rel === allowed || rel.startsWith(`${allowed}/`),
+      )
+    ) {
+      continue;
+    }
+    const source = readFileSync(file, "utf8");
+    for (const value of quotedStrings(source)) {
+      if (isIgnoredQuotedValue(value)) continue;
+      const hits = buyerSellerJargonHits(value);
+      if (hits.length > 0) {
+        findings.push({
+          severity: "error",
+          area: "plain-language",
           message: `${rel}: ${hits.join(", ")} → ${value.slice(0, 140)}`,
         });
       }
@@ -402,6 +449,7 @@ export function auditPerformanceTraps(): AuditFinding[] {
 export function runSiteAudit(): AuditFinding[] {
   return [
     ...auditRealtorSlang(),
+    ...auditBuyerSellerLanguage(),
     ...auditImages(),
     ...auditSeoAndSchema(),
     ...auditPerformanceTraps(),
@@ -410,7 +458,7 @@ export function runSiteAudit(): AuditFinding[] {
 
 export function formatAuditReport(findings: AuditFinding[]): string {
   if (findings.length === 0) {
-    return "Site audit passed: slang, images, schema, and performance traps are clean.";
+    return "Site audit passed: slang, buyer/seller language, images, schema, and performance traps are clean.";
   }
   return findings
     .map((finding) => `[${finding.severity.toUpperCase()}] ${finding.area}: ${finding.message}`)

@@ -33,7 +33,7 @@ jobs:
       - name: Fair Housing copy scan
         run: pnpm exec vitest run lib/fair-housing.test.ts
 
-      - name: Site audit (slang, images, schema, performance traps)
+      - name: Site audit (slang, buyer/seller language, images, schema, performance)
         run: pnpm exec vitest run lib/site-audit.test.ts
 
       - name: Production build

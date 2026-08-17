@@ -41,7 +41,7 @@ export const pageImages = {
       img(
         "home",
         "mobility",
-        "Buyers whose bodies constrain the search",
+        "When stairs or narrow doors are a hard stop",
         "Interior doorway with a tape measure showing roughly 36 inches of clear width in a single-level home.",
       ),
       img(

@@ -4,6 +4,7 @@ import {
   runSiteAudit,
   REALTOR_SLANG,
 } from "./site-audit";
+import { BUYER_SELLER_JARGON } from "./buyer-seller-language";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
@@ -13,6 +14,12 @@ describe("site audit", () => {
     expect(REALTOR_SLANG).toContain("referral partner");
   });
 
+  it("knows buyer/seller jargon a homebuyer would not understand", () => {
+    expect(BUYER_SELLER_JARGON).toContain("advertising identification");
+    expect(BUYER_SELLER_JARGON).toContain("personas");
+    expect(BUYER_SELLER_JARGON).toContain("nrs 645");
+  });
+
   it("reads JPEG dimensions from editorial heroes", () => {
     const buffer = readFileSync(
       join(process.cwd(), "public/images/pages/home/hero.jpg"),
@@ -20,7 +27,7 @@ describe("site audit", () => {
     expect(jpegDimensions(buffer)).toEqual({ width: 1200, height: 800 });
   });
 
-  it("passes slang, image, schema, and performance gates", () => {
+  it("passes slang, buyer/seller language, image, schema, and performance gates", () => {
     const findings = runSiteAudit().filter((item) => item.severity === "error");
     expect(findings, findings.map((item) => item.message).join("\n")).toEqual([]);
   });

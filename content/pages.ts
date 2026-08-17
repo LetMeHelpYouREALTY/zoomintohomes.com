@@ -4,8 +4,8 @@ export const homeCopy = {
   audienceLabel: "Who is this practice built for?",
   audiences: [
     {
-      title: "Buyers whose bodies constrain the search",
-      body: "Wheelchair users, post-stroke and post-surgical recovery, ALS and MS, and low vision. The work is remote touring and measured features, not a motivational speech.",
+      title: "When stairs or narrow doors are a hard stop",
+      body: "We check doorway width, step height, and shower curbs on video before anyone drives.",
     },
     {
       title: "Aging-in-place downsizers",
@@ -29,15 +29,15 @@ export const howItWorksCopy = {
 
 export const whatWeMeasureCopy = {
   h1: "What we measure",
-  lede: "Every attribute is a building fact with a date and an evidence level. We do not collapse dimensional data into a single undefined checkbox.",
-  provenanceHeading: "How is provenance recorded?",
+  lede: "We write the date, who measured it, and the number—door width, step height, shower curb. We do not replace those numbers with a generic accessible checkmark.",
+  provenanceHeading: "Where do the numbers come from?",
   provenanceBody:
-    "Each measurement carries evidence such as measured onsite, photo verified, agent reported, or floorplan derived—plus who verified it and when. That record is the product.",
+    "Each measurement notes whether it was measured on site, checked from a photo, reported by an agent, or taken from a floor plan—plus who checked it and when.",
 };
 
 export const featuresCopy = {
   h1: "Home access features we measure",
-  lede: "This is the standard for listing notes. Features are measured. People are not described. Where a figure comes from the 2010 ADA Standards, the citation is on the row.",
+  lede: "Each row is a home feature we can measure, such as a doorway width or a shower curb. If a published figure exists, the 2010 ADA Standards number is on that row.",
   categoriesHeading: "Which feature categories are covered?",
 };
 

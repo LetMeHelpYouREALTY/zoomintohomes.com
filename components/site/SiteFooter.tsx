@@ -87,10 +87,7 @@ export default function SiteFooter() {
           <EqualHousingMark />
           <span>Equal Housing Opportunity. REALTOR®.</span>
         </p>
-        <p className="footer-note">
-          Advertising identification under NRS 645.315 and NAC 645.610.{" "}
-          {brandCopy.measureDontLabel}
-        </p>
+        <p className="footer-note">{brandCopy.measureDontLabel}</p>
       </div>
     </footer>
   );

@@ -21,7 +21,7 @@ export default function TermsPage() {
       </p>
       <h2>No guarantees on inventory or grants</h2>
       <p>
-        Access checklists describe measured building attributes on a stated date.
+        Access checklists describe measured home features on a stated date.
         Homes-for-sale data, when shown later, will be attributed separately. VA grant and
         county tax figures must be verified with official sources before you
         rely on them.

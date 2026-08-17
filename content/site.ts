@@ -57,12 +57,12 @@ export const pageMeta: Record<string, PageMeta> = {
   whatWeMeasure: {
     title: "What we measure on every tour | Zoom Into Homes",
     description:
-      "Door clear widths, thresholds, shower curbs, route widths, and related building attributes recorded with provenance—not a vague accessible checkbox.",
+      "Door widths, step heights, shower curbs, and hall widths written down with the date—not a vague accessible checkbox.",
   },
   features: {
     title: "Accessibility feature glossary | Zoom Into Homes",
     description:
-      "Measurable entry, circulation, bathroom, kitchen, sensory, and systems features used to pre-verify Las Vegas listings. Features are measured; people are not described.",
+      "Doorways, bathrooms, kitchens, and paths we can measure on Las Vegas and Henderson homes before you drive out.",
   },
   accessibleHomes: {
     title: "Homes with measured access features | Las Vegas & Henderson",

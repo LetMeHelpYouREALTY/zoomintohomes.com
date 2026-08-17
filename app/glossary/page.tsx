@@ -26,8 +26,8 @@ export default function GlossaryIndexPage() {
       />
       <h1 className="page-title">Home access features glossary</h1>
       <p className="lede">
-        Thirty-five building attributes we use on written access checklists.
-        Features are measured. People are not described.
+        Thirty-five home features we write on access checklists.
+        We measure the home. We do not describe who should live there.
       </p>
       <ul>
         {resoAccessibilityFeatures.map((feature) => (
@@ -39,7 +39,7 @@ export default function GlossaryIndexPage() {
         ))}
       </ul>
       <p className="meta">
-        Technical source (industry data dictionary):{" "}
+        Technical source:{" "}
         <a
           href="https://dd.reso.org/DD2.1/lookups/AccessibilityFeatures/"
           rel="noopener noreferrer"
