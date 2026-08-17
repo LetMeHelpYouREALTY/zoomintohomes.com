@@ -24,8 +24,22 @@ export const BUYER_SELLER_JARGON: string[] = [
   "reso glossary",
 ];
 
+/** Exact sentences that must not appear anywhere in Zoom core UI. */
+export const REMOVED_SITE_STATEMENTS: string[] = [
+  "Advertising identification under NRS 645.315 and NAC 645.610",
+  "Features are measured. People are not described",
+  "Building attributes are facts; personas are not",
+];
+
 /** Returns each buyer/seller jargon phrase found in `text`. */
 export function buyerSellerJargonHits(text: string): string[] {
   const lower = ` ${text.toLowerCase()} `;
   return BUYER_SELLER_JARGON.filter((phrase) => lower.includes(phrase));
+}
+
+/** Returns each removed site statement found in raw source. */
+export function removedStatementHits(source: string): string[] {
+  return REMOVED_SITE_STATEMENTS.filter((statement) =>
+    source.includes(statement),
+  );
 }

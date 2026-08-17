@@ -87,7 +87,6 @@ export default function SiteFooter() {
           <EqualHousingMark />
           <span>Equal Housing Opportunity. REALTOR®.</span>
         </p>
-        <p className="footer-note">{brandCopy.measureDontLabel}</p>
       </div>
     </footer>
   );

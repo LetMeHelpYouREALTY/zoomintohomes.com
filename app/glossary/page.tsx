@@ -27,7 +27,6 @@ export default function GlossaryIndexPage() {
       <h1 className="page-title">Home access features glossary</h1>
       <p className="lede">
         Thirty-five home features we write on access checklists.
-        We measure the home. We do not describe who should live there.
       </p>
       <ul>
         {resoAccessibilityFeatures.map((feature) => (

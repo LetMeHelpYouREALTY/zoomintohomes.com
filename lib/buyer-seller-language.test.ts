@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   BUYER_SELLER_JARGON,
   buyerSellerJargonHits,
+  removedStatementHits,
 } from "./buyer-seller-language";
 
 describe("buyer/seller plain language", () => {
@@ -22,10 +23,18 @@ describe("buyer/seller plain language", () => {
     );
   });
 
+  it("detects the removed footer statement in source", () => {
+    expect(
+      removedStatementHits(
+        "Advertising identification under NRS 645.315 and NAC 645.610. Features are measured. People are not described. Building attributes are facts; personas are not.",
+      ),
+    ).toHaveLength(3);
+  });
+
   it("allows a buyer-plain measurement sentence", () => {
     expect(
       buyerSellerJargonHits(
-        "We measure the home. We do not describe who should live there.",
+        "We write down doorway widths, step heights, and shower curbs.",
       ),
     ).toEqual([]);
   });

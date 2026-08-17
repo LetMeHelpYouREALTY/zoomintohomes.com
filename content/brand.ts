@@ -22,8 +22,6 @@ export const brandColors = {
 } as const;
 
 export const brandCopy = {
-  measureDontLabel:
-    "We measure the home. We do not describe who should live there.",
   franchiseDisclaimer:
     "Berkshire Hathaway HomeServices Nevada Properties — each office is independently owned and operated.",
 } as const;

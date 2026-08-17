@@ -3,7 +3,10 @@ import { join, relative } from "node:path";
 import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
 import { siteIdentity } from "@/content/site";
-import { buyerSellerJargonHits } from "@/lib/buyer-seller-language";
+import {
+  buyerSellerJargonHits,
+  removedStatementHits,
+} from "@/lib/buyer-seller-language";
 import { checkCopy } from "@/lib/fair-housing";
 import {
   PAGE_IMAGE_HEIGHT,
@@ -195,6 +198,13 @@ export function auditBuyerSellerLanguage(): AuditFinding[] {
       continue;
     }
     const source = readFileSync(file, "utf8");
+    for (const statement of removedStatementHits(source)) {
+      findings.push({
+        severity: "error",
+        area: "plain-language",
+        message: `${rel}: removed statement is still on the site → ${statement}`,
+      });
+    }
     for (const value of quotedStrings(source)) {
       if (isIgnoredQuotedValue(value)) continue;
       const hits = buyerSellerJargonHits(value);

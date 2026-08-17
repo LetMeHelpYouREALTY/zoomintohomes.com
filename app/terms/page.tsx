@@ -27,7 +27,11 @@ export default function TermsPage() {
         rely on them.
       </p>
       <h2>Fair Housing</h2>
-      <p>{brandCopy.measureDontLabel}</p>
+      <p>
+        Housing is offered without regard to race, color, religion, sex,
+        disability, familial status, national origin, or any other class
+        protected by federal, Nevada, or local law.
+      </p>
       <h2>Brokerage identification</h2>
       <p>
         {siteIdentity.agentName}, {siteIdentity.agentLicense}.{" "}
