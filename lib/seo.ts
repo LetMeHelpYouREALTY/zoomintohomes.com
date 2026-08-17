@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/lib/site-url";
+import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 import { siteIdentity } from "@/content/site";
+import { absoluteUrl } from "@/lib/site-url";
 
 type BuildPageMetadataInput = {
   title: string;
@@ -50,8 +51,8 @@ export function buildPageMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1600,
-          height: 900,
+          width: PAGE_IMAGE_WIDTH,
+          height: PAGE_IMAGE_HEIGHT,
           alt: imageAlt,
         },
       ],

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { CALENDLY_URL } from "@/content/widgets";
+import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import "./types";
 
 type CalendlyWidgetProps = {
@@ -11,7 +12,7 @@ type CalendlyWidgetProps = {
 };
 
 /**
- * Inline Calendly embed. Script loads once from root layout — do not load it here.
+ * Inline Calendly embed. CSS/JS load when this widget mounts.
  */
 export default function CalendlyWidget({
   url = CALENDLY_URL,
@@ -21,11 +22,9 @@ export default function CalendlyWidget({
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const parent = widgetRef.current;
-    if (!parent) return;
+    if (!widgetRef.current) return;
 
     let cancelled = false;
-    let pollId = 0;
 
     const initWidget = () => {
       if (cancelled || !window.Calendly || !widgetRef.current) return;
@@ -43,21 +42,12 @@ export default function CalendlyWidget({
       });
     };
 
-    if (window.Calendly) {
-      initWidget();
-    } else {
-      pollId = window.setInterval(() => {
-        if (window.Calendly) {
-          window.clearInterval(pollId);
-          initWidget();
-        }
-      }, 100);
-      window.setTimeout(() => window.clearInterval(pollId), 10000);
-    }
+    void ensureCalendlyAssets()
+      .then(initWidget)
+      .catch(() => undefined);
 
     return () => {
       cancelled = true;
-      if (pollId) window.clearInterval(pollId);
     };
   }, [url, minWidth, height]);
 

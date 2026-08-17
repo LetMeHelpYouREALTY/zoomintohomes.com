@@ -8,6 +8,7 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { siteIdentity } from "@/content/site";
+import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 import { absoluteUrl, SITE_ORIGIN } from "@/lib/site-url";
 
 // ============================================================================
@@ -631,6 +632,9 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     email: siteIdentity.email || undefined,
     description:
       "Zoom Into Homes helps buyers tour Las Vegas and Henderson homes on video first, then visit only finalists that already passed a written access check.",
+    image: {
+      "@id": `${SITE_ORIGIN}/#primaryimage`,
+    },
   };
 
   const website: Record<string, unknown> = {
@@ -640,9 +644,23 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     name: siteIdentity.siteName,
     url: SITE_ORIGIN,
     publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+    primaryImageOfPage: { "@id": `${SITE_ORIGIN}/#primaryimage` },
   };
 
-  return [agent, org, website];
+  const primaryImage: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": `${SITE_ORIGIN}/#primaryimage`,
+    url: absoluteUrl("/images/pages/home/hero.jpg"),
+    contentUrl: absoluteUrl("/images/pages/home/hero.jpg"),
+    width: PAGE_IMAGE_WIDTH,
+    height: PAGE_IMAGE_HEIGHT,
+    caption:
+      "Laptop playing a Las Vegas home walkthrough with a doorway measurement on screen",
+    representativeOfPage: true,
+  };
+
+  return [agent, org, website, primaryImage];
 }
 
 export function buildBreadcrumbList(

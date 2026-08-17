@@ -1,4 +1,5 @@
 import type { PageImageSet } from "./types";
+import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 
 function img(
   page: string,
@@ -11,13 +12,16 @@ function img(
     src: `/images/pages/${page}/${id}.jpg`,
     alt,
     supportsHeading,
+    width: PAGE_IMAGE_WIDTH,
+    height: PAGE_IMAGE_HEIGHT,
   };
 }
 
 /**
  * Seven images per route. `hero` is the strongest match for the page H1.
- * Remaining images sit with the H2/H3 they support. Alt text describes
- * building features and work tools, not who should live in a house.
+ * Remaining images sit with the H2/H3 they support. Sources are 1200×800
+ * JPEGs (3:2). Alt text describes building features and work tools, not who
+ * should live in a house.
  */
 export const pageImages = {
   home: {

@@ -69,8 +69,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: absoluteUrl("/images/pages/home/hero.jpg"),
-        width: 1600,
-        height: 900,
+        width: 1200,
+        height: 800,
         alt: "Laptop playing a Las Vegas home walkthrough with a doorway measurement on screen",
       },
     ],
@@ -103,18 +103,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${atkinson.variable} ${sourceSerif.variable}`}>
-      <head>
-        {/* RealScout: script once in head (official embed). type=module required. */}
-        <script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          type="module"
-          async
-        />
-        <link
-          rel="stylesheet"
-          href="https://assets.calendly.com/assets/external/widget.css"
-        />
-      </head>
       <body className={atkinson.className}>
         <JsonLd data={buildOrganizationSchemas()} />
         <SkipLink />
@@ -124,16 +112,17 @@ export default function RootLayout({
         <CalendlyBadge />
         <Analytics />
         <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
           strategy="afterInteractive"
         />
         {gaId ? (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="ga-init" strategy="afterInteractive">
+            <Script id="ga-init" strategy="lazyOnload">
               {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}',{anonymize_ip:true});`}
             </Script>
           </>

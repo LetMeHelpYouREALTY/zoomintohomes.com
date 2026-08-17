@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { PageImage } from "@/content/types";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import { PAGE_IMAGE_QUALITY, headingImageSizes } from "@/lib/images";
 
 type PageHeroProps = {
   image: PageImage;
@@ -14,10 +15,11 @@ export default function PageHero({ image, showWidgets = true }: PageHeroProps) {
         <Image
           src={image.src}
           alt={image.alt}
-          width={1600}
-          height={900}
+          width={image.width}
+          height={image.height}
           priority
-          sizes="(max-width: 72rem) 100vw, 72rem"
+          quality={PAGE_IMAGE_QUALITY}
+          sizes={headingImageSizes.hero}
         />
       </figure>
       {showWidgets ? <AfterHeroWidgets calendlyId="schedule-hero" /> : null}

@@ -60,6 +60,8 @@ export type PageImage = {
   src: string;
   alt: string;
   supportsHeading: string;
+  width: number;
+  height: number;
 };
 
 export type PageImageSet = {

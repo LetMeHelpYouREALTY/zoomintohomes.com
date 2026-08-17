@@ -236,10 +236,10 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   }
 }
 
-/* Full-bleed virtual-tour hero */
+/* Full-bleed video-tour hero — shorter on phones so the LCP photo is not a full-screen billboard */
 .tour-hero {
   position: relative;
-  min-height: min(88vh, 52rem);
+  min-height: 18.5rem;
   display: grid;
   align-items: end;
   color: #faf7f2;
@@ -250,6 +250,12 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   margin-bottom: 0;
 }
 
+@media (min-width: 40rem) {
+  .tour-hero {
+    min-height: min(58vh, 36rem);
+  }
+}
+
 .tour-hero-media {
   position: absolute;
   inset: 0;
@@ -257,7 +263,6 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 
 .tour-hero-image {
   object-fit: cover;
-  animation: tour-kenburns 28s ease-out forwards;
 }
 
 .tour-hero-shade {
@@ -450,15 +455,6 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   font-weight: 600;
 }
 
-@keyframes tour-kenburns {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.06);
-  }
-}
-
 @keyframes tour-rise {
   from {
     opacity: 0;
@@ -481,6 +477,8 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .heading-image {

@@ -5,6 +5,7 @@ import {
   CALENDLY_BRAND_COLOR,
   CALENDLY_URL,
 } from "@/content/widgets";
+import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import "./types";
 
 type CalendlyBadgeProps = {
@@ -16,7 +17,7 @@ type CalendlyBadgeProps = {
 };
 
 /**
- * Floating Calendly badge. Script + CSS load once from root layout.
+ * Floating Calendly badge. Assets load on demand after first paint.
  */
 export default function CalendlyBadge({
   url = CALENDLY_URL,
@@ -26,32 +27,29 @@ export default function CalendlyBadge({
   branding = true,
 }: CalendlyBadgeProps) {
   useEffect(() => {
+    let cancelled = false;
+
     const initBadge = () => {
-      if (window.Calendly) {
-        window.Calendly.initBadgeWidget({
-          url,
-          text,
-          color,
-          textColor,
-          branding,
-        });
-      }
+      if (cancelled || !window.Calendly) return;
+      window.Calendly.initBadgeWidget({
+        url,
+        text,
+        color,
+        textColor,
+        branding,
+      });
     };
 
-    if (window.Calendly) {
-      initBadge();
-      return;
-    }
+    const start = window.setTimeout(() => {
+      void ensureCalendlyAssets()
+        .then(initBadge)
+        .catch(() => undefined);
+    }, 2500);
 
-    const timer = window.setInterval(() => {
-      if (window.Calendly) {
-        window.clearInterval(timer);
-        initBadge();
-      }
-    }, 150);
-
-    window.setTimeout(() => window.clearInterval(timer), 10000);
-    return () => window.clearInterval(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(start);
+    };
   }, [url, text, color, textColor, branding]);
 
   return null;

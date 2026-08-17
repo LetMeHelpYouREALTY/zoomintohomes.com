@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { brandCopy } from "@/content/brand";
 import { helpNav, siteIdentity } from "@/content/site";
@@ -26,14 +25,8 @@ function EqualHousingMark() {
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
-      <CalendlyInlineSection
-        id="schedule-footer"
-        title="Book a video tour from any page"
-        intro="Every Zoom Into Homes page includes scheduling. Choose a time for a remote walkthrough, access-checklist review, or care-team handoff."
-        height="620px"
-      />
       <div className="site-footer-inner">
-        <div className="footer-schedule-row">
+        <div className="footer-schedule-row" id="schedule-footer">
           <CalendlyButton className="button" text="Schedule a call" />
           <a className="button button-secondary" href={CALENDLY_URL}>
             Open the scheduler

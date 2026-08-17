@@ -1,6 +1,7 @@
 "use client";
 
 import { CALENDLY_URL } from "@/content/widgets";
+import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import "./types";
 
 type CalendlyButtonProps = {
@@ -19,11 +20,17 @@ export default function CalendlyButton({
 }: CalendlyButtonProps) {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url });
-      return;
-    }
-    window.open(url, "_blank", "noopener,noreferrer");
+    void ensureCalendlyAssets()
+      .then(() => {
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({ url });
+          return;
+        }
+        window.open(url, "_blank", "noopener,noreferrer");
+      })
+      .catch(() => {
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
   }
 
   return (

@@ -24,7 +24,7 @@ async function getProperty(id: string) {
     squareFeet: 3200,
     yearBuilt: 2018,
     description:
-      "Stunning modern home in desirable Summerlin community. Features open floor plan, updated kitchen, and beautiful backyard. Close to schools, shopping, and entertainment.",
+      "Stunning modern home in Summerlin. Open floor plan, updated kitchen, and a backyard. Close to shopping and entertainment.",
   };
 }
 
@@ -79,7 +79,8 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               alt={property.name}
               fill
               className="object-cover"
-              priority
+              sizes="(max-width: 48rem) 100vw, 1200px"
+              quality={70}
             />
           </div>
 

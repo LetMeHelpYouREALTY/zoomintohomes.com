@@ -89,7 +89,7 @@ export default function HomePage() {
           {homeCopy.audiences.map((item) => (
             <section key={item.title} className="audience-panel">
               {byHeading[item.title] ? (
-                <HeadingImage image={byHeading[item.title]} />
+                <HeadingImage image={byHeading[item.title]} layout="card" />
               ) : null}
               <h3>{item.title}</h3>
               <p>{item.body}</p>

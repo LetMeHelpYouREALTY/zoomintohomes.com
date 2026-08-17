@@ -1,19 +1,32 @@
 import Image from "next/image";
 import type { PageImage } from "@/content/types";
+import {
+  PAGE_IMAGE_QUALITY,
+  headingImageSizes,
+  type HeadingImageLayout,
+} from "@/lib/images";
 
 type HeadingImageProps = {
   image: PageImage;
+  layout?: HeadingImageLayout;
+  priority?: boolean;
 };
 
-export default function HeadingImage({ image }: HeadingImageProps) {
+export default function HeadingImage({
+  image,
+  layout = "full",
+  priority = false,
+}: HeadingImageProps) {
   return (
     <figure className="heading-image">
       <Image
         src={image.src}
         alt={image.alt}
-        width={1200}
-        height={900}
-        sizes="(max-width: 40rem) 100vw, 40rem"
+        width={image.width}
+        height={image.height}
+        sizes={headingImageSizes[layout]}
+        quality={PAGE_IMAGE_QUALITY}
+        priority={priority}
       />
     </figure>
   );

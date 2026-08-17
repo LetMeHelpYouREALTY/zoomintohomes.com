@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { PageImage } from "@/content/types";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import { CALENDLY_URL } from "@/content/widgets";
+import { PAGE_IMAGE_QUALITY } from "@/lib/images";
 
 type TourHeroProps = {
   image: PageImage;
@@ -44,8 +45,9 @@ export default function TourHero({
             alt={image.alt}
             fill
             priority
+            quality={PAGE_IMAGE_QUALITY}
             className="tour-hero-image"
-            sizes="100vw"
+            sizes="(max-width: 48rem) 100vw, 1400px"
           />
           <div className="tour-hero-shade" />
         </div>
