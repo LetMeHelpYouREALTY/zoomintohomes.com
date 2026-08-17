@@ -115,8 +115,14 @@ export function jpegDimensions(buffer: Buffer): { width: number; height: number 
 }
 
 function quotedStrings(source: string): string[] {
-  const matches = source.matchAll(/(["'`])(?:\\.|(?!\1)[^\\])*?\1/g);
-  return [...matches].map((match) => match[0].slice(1, -1));
+  const values: string[] = [];
+  const pattern = /(["'`])(?:\\.|(?!\1)[^\\])*?\1/g;
+  let match: RegExpExecArray | null = pattern.exec(source);
+  while (match) {
+    values.push(match[0].slice(1, -1));
+    match = pattern.exec(source);
+  }
+  return values;
 }
 
 function isIgnoredQuotedValue(value: string): boolean {
