@@ -38,6 +38,15 @@ const legacyWordpressRedirects = [
     source: "/why-experts-say-mortgage-rates-should-ease-over-the-next-year/",
     destination: "/market-insights",
   },
+  // GSC "Crawled - currently not indexed" (crawled Jul 2025)
+  {
+    source: "/the-big-difference-between-a-homeowners-and-a-renters-net-worth",
+    destination: "/buyers",
+  },
+  {
+    source: "/the-big-difference-between-a-homeowners-and-a-renters-net-worth/",
+    destination: "/buyers",
+  },
   {
     source: "/home-4",
     destination: "/",

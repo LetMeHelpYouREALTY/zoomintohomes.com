@@ -28,9 +28,9 @@ Only intentional `noindex`: `app/not-found.tsx` and placeholder `app/listings/[i
 
 ## Not found (404) — retired WordPress URLs
 
-GSC may list old blog/archive URLs (e.g. `/2018/12/`, `/home-4/`, mortgage-rate posts). Those pages are gone. Permanent redirects live in `redirects/legacy-wordpress.js` (wired from `next.config.js`) to `/`, `/market-insights`, `/market-report`, or `/investment-properties`.
+GSC may list old blog/archive URLs (e.g. `/2018/12/`, `/home-4/`, mortgage-rate posts, homeowner-vs-renter net-worth). Those pages are gone. Permanent redirects live in `redirects/legacy-wordpress.js` (wired from `next.config.js`) to `/`, `/buyers`, `/market-insights`, `/market-report`, or `/investment-properties`.
 
-After deploy: **Page indexing → Not found (404) → Validate fix**.
+After deploy: **Page indexing → Not found (404)** and **Crawled - currently not indexed** → **Validate fix**.
 
 ## What the codebase does
 
