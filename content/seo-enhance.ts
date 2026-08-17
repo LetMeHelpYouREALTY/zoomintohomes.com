@@ -137,7 +137,7 @@ export const pageSeoEnhance = {
       "Official program information: va.gov housing-assistance disability housing grants",
       "This site sequences remote tours and feature sheets; it does not decide entitlement",
       "Purchase files use feature language: width, threshold, curb, route—not diagnoses",
-      "PLACEHOLDER: dollar amounts and eligibility grids pending source-verified VA materials",
+      "Grant amounts and eligibility: verify on VA.gov — not quoted from this site",
     ],
     faqs: [
       {
@@ -247,20 +247,20 @@ export const pageSeoEnhance = {
   },
   about: {
     answerBlock:
-      "PLACEHOLDER: Dr. Gene Boyle practices with Berkshire Hathaway HomeServices Nevada Properties in Las Vegas and Henderson. Zoom Into Homes documents a virtual-first touring process and a Fair Housing copy rule—features, not people—so referral sources can evaluate the work in writing.",
+      "Dr. Gene Boyle (California DRE #02282581) runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson via Dr. Jan Duffy (S.0197614.LLC). The site documents a virtual-first touring process and a Fair Housing copy rule—features, not people.",
     keyFacts: [
       "Brand: Zoom Into Homes",
-      "Agent name: PLACEHOLDER: Dr. Gene Boyle",
+      "Agent: Dr. Gene Boyle, California DRE #02282581",
+      "Nevada partner: Dr. Jan Duffy, License S.0197614.LLC",
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
+      "Phone: (702) 222-1964",
       "Markets: Las Vegas and Henderson, Nevada",
-      "Public artifacts: process page, feature glossary, accessibility statement",
-      "PLACEHOLDER: credentials and biography pending source documents",
     ],
     faqs: [
       {
         question: "Who runs Zoom Into Homes?",
         answer:
-          "PLACEHOLDER: Dr. Gene Boyle, affiliated with Berkshire Hathaway HomeServices Nevada Properties. License numbers appear as placeholders until sourced.",
+          "Dr. Gene Boyle, California DRE #02282581, with Las Vegas coordination through Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
       },
       {
         question: "What makes this practice different from a listing portal?",
@@ -275,34 +275,34 @@ export const pageSeoEnhance = {
       {
         question: "Where is the brokerage identified?",
         answer:
-          "On every page footer: agent name placeholder, Nevada license placeholder, Berkshire Hathaway HomeServices Nevada Properties, and Equal Housing Opportunity.",
+          "In the site footer on every page: agent licenses, Berkshire Hathaway HomeServices Nevada Properties, franchise independently-owned disclaimer, and Equal Housing Opportunity.",
       },
     ],
     entityPhrases: [
-      "PLACEHOLDER: Dr. Gene Boyle",
+      "Dr. Gene Boyle",
       "Berkshire Hathaway HomeServices Nevada Properties",
       "Zoom Into Homes Las Vegas",
     ],
   },
   contact: {
     answerBlock:
-      "Request a consultation for a virtual-first home search or a referral handoff in Las Vegas and Henderson. The form collects name, email, phone, role, and a short note. Submissions are validated in the browser; the backend endpoint is not connected yet.",
+      "Request a consultation for a virtual-first home search or a referral handoff in Las Vegas and Henderson. Call (702) 222-1964 or use the form for name, email, phone, role, and a short note.",
     keyFacts: [
+      "Phone: (702) 222-1964",
       "Form fields: name, email, phone, role, message",
       "Roles: Buyer, Seller, Referral partner, Other",
       "Purpose: start intake without a twelve-house tour",
-      "PLACEHOLDER: submission endpoint not connected",
     ],
     faqs: [
       {
         question: "How do I request a consultation?",
         answer:
-          "Use the form on this page. Include whether you are buying, selling, or referring, plus required features and timeline when known.",
+          "Call (702) 222-1964 or use the form on this page. Include whether you are buying, selling, or referring, plus required features and timeline when known.",
       },
       {
         question: "Is the contact form live?",
         answer:
-          "Client-side validation is live. The submission handler is a typed stub until a backend endpoint is connected (PLACEHOLDER).",
+          "Yes. Submissions post to the lead capture API and Follow Up Boss when those credentials are configured. You can always call the published number.",
       },
       {
         question: "What should referral partners include?",
@@ -322,19 +322,18 @@ export const pageSeoEnhance = {
   },
   accessibilityStatement: {
     answerBlock:
-      "This accessibility statement is a scaffold pending legal review. The site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers through the contact form with page, browser or assistive technology, and failed task.",
+      "This site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers through the contact form or by calling (702) 222-1964.",
     keyFacts: [
-      "Target: WCAG 2.2 Level AA (PLACEHOLDER: formal conformance statement pending legal review)",
+      "Target: WCAG 2.2 Level AA",
       "Automated checks: axe-core, jsx-a11y, Lighthouse accessibility",
       "No accessiBe, UserWay, or AudioEye overlays",
-      "Report barriers via the contact form",
-      "PLACEHOLDER: dedicated accessibility email and response-time SLA",
+      "Report barriers via the contact form or (702) 222-1964",
     ],
     faqs: [
       {
         question: "What accessibility standard does this site target?",
         answer:
-          "WCAG 2.2 Level AA. The formal conformance statement and review date remain PLACEHOLDER pending legal review.",
+          "WCAG 2.2 Level AA in markup and automated testing. Brokerage counsel may refine formal conformance language.",
       },
       {
         question: "Does the site use an accessibility overlay?",
@@ -344,7 +343,7 @@ export const pageSeoEnhance = {
       {
         question: "How do I report an accessibility barrier?",
         answer:
-          "Use the contact form. Name the page URL, the browser or assistive technology, and the task that failed. PLACEHOLDER: dedicated email and response-time commitment pending operations.",
+          "Use the contact form or call (702) 222-1964. Name the page URL, the browser or assistive technology, and the task that failed.",
       },
       {
         question: "What automated tests run in continuous integration?",

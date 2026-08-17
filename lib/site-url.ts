@@ -8,14 +8,26 @@ export const SITE_HOST = "www.zoomintohomes.com" as const;
 
 export const indexablePaths = [
   "/",
-  "/how-it-works",
-  "/accessibility-features",
-  "/veterans",
+  "/virtual-tour-process",
+  "/what-we-measure",
+  "/accessible-homes",
+  "/glossary",
+  "/henderson",
+  "/summerlin",
+  "/va-sah-grant-nevada",
+  "/va-sha-grant-nevada",
+  "/clark-county-disabled-veteran-property-tax-exemption",
   "/aging-in-place",
   "/referral-partners",
+  "/referral-partners/one-pager",
+  "/examples/feature-sheet",
+  "/examples/walkthrough",
   "/about",
   "/contact",
   "/accessibility-statement",
+  "/privacy",
+  "/terms",
+  "/accessibility-features",
 ] as const;
 
 export type IndexablePath = (typeof indexablePaths)[number];

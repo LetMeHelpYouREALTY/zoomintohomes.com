@@ -60,7 +60,9 @@ export default function ConsultationForm() {
     const result = await submitConsultation(values);
     setStatus("done");
     if (result.ok) {
-      setFormMessage("Request recorded.");
+      setFormMessage(
+        "Request received. We will follow up, or call (702) 222-1964 if you need us sooner.",
+      );
       setValues(empty);
     } else {
       setFormMessage(result.error);

@@ -49,7 +49,7 @@ export const pageImages = {
       img(
         "home",
         "veterans",
-        "Disabled veterans",
+        "Purchase searches paired with VA adapted-housing grants",
         "Single-level desert home with a wide, paved route from driveway to a low-threshold front door.",
       ),
       img(
@@ -313,7 +313,7 @@ export const pageImages = {
       img(
         "about",
         "workstation",
-        "PLACEHOLDER: credentials, education, and years in practice pending source documents.",
+        "Dr. Gene Boyle (California DRE #02282581) plans virtual-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
         "Dual monitors showing a paused home video and a feature checklist, empty chair.",
       ),
       img(
@@ -331,7 +331,7 @@ export const pageImages = {
       img(
         "about",
         "measure",
-        "PLACEHOLDER: biography. Do not invent military service, medical licenses, or awards.",
+        "Call (702) 222-1964. Zoom Into Homes documents the reduced-showing process and the feature glossary used in files so a referral source can evaluate the work without a sales call.",
         "Hands of a working adult measuring a door clear width. No wheelchair prop in the frame.",
       ),
       img(

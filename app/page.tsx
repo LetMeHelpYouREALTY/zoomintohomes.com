@@ -3,9 +3,12 @@ import Link from "next/link";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
+import JsonLd from "@/components/site/JsonLd";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
-import { pageMeta } from "@/content/site";
+import { pageMeta, siteIdentity } from "@/content/site";
+import { pageSeoEnhance } from "@/content/seo-enhance";
+import { buildFaqPage } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -20,12 +23,15 @@ export const metadata: Metadata = buildPageMetadata({
 const images = pageImages.home;
 
 const related = [
-  { href: "/how-it-works", label: "What is the reduced-showing process?" },
   {
-    href: "/accessibility-features",
-    label: "What is the accessibility feature glossary?",
+    href: "/virtual-tour-process",
+    label: "What is the reduced-showing process?",
   },
-  { href: "/veterans", label: "What are VA SAH and SHA grants?" },
+  { href: "/what-we-measure", label: "What do you measure on a tour?" },
+  {
+    href: "/va-sah-grant-nevada",
+    label: "How does a VA SAH grant pair with a purchase?",
+  },
   { href: "/contact", label: "How do I request a consultation?" },
 ];
 
@@ -36,15 +42,22 @@ export default function HomePage() {
 
   return (
     <article>
+      <JsonLd data={buildFaqPage(pageSeoEnhance.home.faqs)} />
       <PageHero image={images.hero} />
       <h1 className="page-title">{homeCopy.h1}</h1>
       <p className="lede">{homeCopy.lede}</p>
       <PageSeoSections page="home" slot="intro" />
-      <p>
-        <Link href="/how-it-works" className="button">
+      <div className="cta-row">
+        <Link href="/virtual-tour-process" className="button">
           Read the process
         </Link>
-      </p>
+        <a href={`tel:${siteIdentity.phoneTel}`} className="button button-secondary">
+          Call {siteIdentity.phoneDisplay}
+        </a>
+        <Link href="/examples/walkthrough" className="button button-secondary">
+          Example walkthrough
+        </Link>
+      </div>
       <h2>{homeCopy.audienceLabel}</h2>
       {byHeading[homeCopy.audienceLabel] ? (
         <HeadingImage image={byHeading[homeCopy.audienceLabel]} />
@@ -69,7 +82,9 @@ export default function HomePage() {
         <HeadingImage image={byHeading[homeCopy.h1]} />
       ) : null}
       <p>
-        <Link href="/accessibility-features">Feature glossary</Link>
+        <Link href="/accessible-homes">Accessible homes hub</Link>
+        {" · "}
+        <Link href="/glossary">RESO glossary</Link>
         {" · "}
         <Link href="/referral-partners">For referral partners</Link>
         {" · "}

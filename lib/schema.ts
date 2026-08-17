@@ -7,6 +7,8 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { siteIdentity } from "@/content/site";
+import { absoluteUrl, SITE_ORIGIN } from "@/lib/site-url";
 
 // ============================================================================
 // Types
@@ -577,4 +579,73 @@ export function combineSchemas(...schemas: Record<string, unknown>[]) {
  */
 export function schemaToJsonLd(schema: Record<string, unknown>): string {
   return JSON.stringify(schema);
+}
+
+// ---------------------------------------------------------------------------
+// Zoom Into Homes teardown helpers (amenityFeature-safe; no PeopleAudience)
+// ---------------------------------------------------------------------------
+
+export function buildOrganizationSchemas(): Record<string, unknown>[] {
+  const agent: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: siteIdentity.agentName,
+    url: SITE_ORIGIN,
+    telephone: siteIdentity.phoneTel || undefined,
+    email: siteIdentity.email || undefined,
+    areaServed: siteIdentity.serviceArea.split(",").map((part) => part.trim()),
+    memberOf: {
+      "@type": "Organization",
+      name: siteIdentity.brokerageName,
+    },
+    brand: {
+      "@type": "Brand",
+      name: siteIdentity.siteName,
+    },
+  };
+
+  const org: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteIdentity.siteName,
+    url: SITE_ORIGIN,
+    telephone: siteIdentity.phoneTel || undefined,
+    email: siteIdentity.email || undefined,
+    description:
+      "Virtual-first real estate practice that measures access features and limits in-person visits to shortlisted finalists in Las Vegas and Henderson.",
+  };
+
+  return [agent, org];
+}
+
+export function buildBreadcrumbList(
+  items: { name: string; path: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
+    })),
+  };
+}
+
+export function buildFaqPage(
+  faqs: { question: string; answer: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 }

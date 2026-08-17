@@ -55,6 +55,16 @@ const nextConfig = {
         permanent: true,
       })),
       {
+        source: '/veterans',
+        destination: '/va-sah-grant-nevada',
+        permanent: true,
+      },
+      {
+        source: '/how-it-works',
+        destination: '/virtual-tour-process',
+        permanent: true,
+      },
+      {
         source: '/:path*',
         has: [
           {

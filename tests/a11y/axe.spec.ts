@@ -3,14 +3,25 @@ import AxeBuilder from "@axe-core/playwright";
 
 const routes = [
   "/",
-  "/how-it-works",
-  "/accessibility-features",
-  "/veterans",
+  "/virtual-tour-process",
+  "/what-we-measure",
+  "/accessible-homes",
+  "/glossary",
+  "/va-sah-grant-nevada",
+  "/va-sha-grant-nevada",
+  "/clark-county-disabled-veteran-property-tax-exemption",
   "/aging-in-place",
   "/referral-partners",
+  "/referral-partners/one-pager",
+  "/examples/feature-sheet",
+  "/examples/walkthrough",
+  "/henderson",
+  "/summerlin",
   "/about",
   "/contact",
   "/accessibility-statement",
+  "/privacy",
+  "/terms",
 ];
 
 for (const path of routes) {

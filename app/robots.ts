@@ -18,6 +18,13 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "Googlebot-Image",
         allow: ["/", "/images/", "/_next/image"],
       },
+      // Retrieval bots for AI search citations (not training opt-outs).
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "Claude-SearchBot", allow: "/" },
+      { userAgent: "Claude-User", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "Perplexity-User", allow: "/" },
     ],
     sitemap: `${SITE_ORIGIN}/sitemap.xml`,
     host: SITE_HOST,

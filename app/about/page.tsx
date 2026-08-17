@@ -8,7 +8,7 @@ import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About PLACEHOLDER: Dr. Gene Boyle",
+  title: "About Dr. Gene Boyle",
   description: pageMeta.about.description,
   path: "/about",
   imagePath: pageImages.about.hero.src,

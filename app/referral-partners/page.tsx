@@ -29,6 +29,11 @@ export default function ReferralPartnersPage() {
       <h1 className="page-title">{referralPartnersCopy.h1}</h1>
       <p className="lede">{referralPartnersCopy.lede}</p>
       <PageSeoSections page="referralPartners" slot="intro" />
+      <p>
+        <a href="/referral-partners/one-pager" className="button">
+          Downloadable one-pager (HTML)
+        </a>
+      </p>
       <h2>{referralPartnersCopy.partnersHeading}</h2>
       <div className="stack">
         {referralPartnerTypes.map((partner) => (
@@ -57,7 +62,7 @@ export default function ReferralPartnersPage() {
         slot="closing"
         related={[
           {
-            href: "/how-it-works",
+            href: "/virtual-tour-process",
             label: "What is the reduced-showing process?",
           },
           { href: "/contact", label: "How do partners request a handoff?" },

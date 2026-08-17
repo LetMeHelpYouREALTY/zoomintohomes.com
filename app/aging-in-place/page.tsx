@@ -50,11 +50,11 @@ export default function AgingInPlacePage() {
         slot="closing"
         related={[
           {
-            href: "/accessibility-features#zero-step-entry",
-            label: "What is zero-step entry?",
+            href: "/accessible-homes/accessible-entrance",
+            label: "What is an accessible entrance?",
           },
           {
-            href: "/how-it-works",
+            href: "/virtual-tour-process",
             label: "How does remote verification work?",
           },
         ]}

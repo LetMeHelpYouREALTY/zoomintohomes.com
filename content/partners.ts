@@ -35,7 +35,7 @@ export const referralPartnerTypes: ReferralPartnerType[] = [
     whatWeHandle: [
       "Early remote screening so a pre-approval is not spent on a stair-only plan",
       "A written feature sheet a processor can attach to the file",
-      "PLACEHOLDER: SAH/SHA pairing steps pending source-verified grant rules",
+      "Share required features early; verify SAH/SHA rules on VA.gov with an accredited representative",
     ],
     handoffProcess:
       "Introduce the veteran (with consent). We run intake and remote tours, then coordinate showing dates with your underwriting calendar. Grant dollar amounts are not quoted from this site.",
