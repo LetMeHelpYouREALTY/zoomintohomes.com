@@ -24,4 +24,11 @@ describe("site audit", () => {
     const findings = runSiteAudit().filter((item) => item.severity === "error");
     expect(findings, findings.map((item) => item.message).join("\n")).toEqual([]);
   });
+
+  it("keeps the home-search widget off the layout critical path", () => {
+    const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+    expect(layout).not.toContain("realscout-web-components.umd.js");
+    expect(layout).not.toContain('strategy="afterInteractive"');
+    expect(layout).toContain("RealScoutScript");
+  });
 });

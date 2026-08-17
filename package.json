@@ -20,7 +20,7 @@
     "test:ci": "vitest run --reporter=verbose",
     "test:a11y": "playwright test",
     "test:fair-housing": "vitest run lib/fair-housing.test.ts",
-    "audit": "vitest run lib/site-audit.test.ts lib/fair-housing.test.ts",
+    "audit": "vitest run lib/site-audit.test.ts lib/fair-housing.test.ts lib/load-on-interaction.test.ts",
     "test:watch": "vitest watch",
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "lhci autorun",

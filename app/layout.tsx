@@ -8,6 +8,7 @@ import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import JsonLd from "@/components/site/JsonLd";
 import CalendlyBadge from "@/components/calendly/CalendlyBadge";
+import RealScoutScript from "@/components/site/RealScoutScript";
 import { buildOrganizationSchemas } from "@/lib/schema";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
@@ -110,12 +111,8 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <SiteFooter />
         <CalendlyBadge />
+        <RealScoutScript />
         <Analytics />
-        <Script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          type="module"
-          strategy="afterInteractive"
-        />
         {gaId ? (
           <>
             <Script

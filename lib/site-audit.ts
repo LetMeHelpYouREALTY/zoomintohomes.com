@@ -65,6 +65,8 @@ const SLANG_ALLOWLIST = [
   "content/widgets.ts",
   "content/reso-features.ts",
   "components/site/RealScoutCarousel.tsx",
+  "components/site/RealScoutScript.tsx",
+  "components/site/loadRealScout.ts",
   "components/site/AfterHeroWidgets.tsx",
   "components/site/TourHero.tsx",
 ];
@@ -337,6 +339,22 @@ export function auditPerformanceTraps(): AuditFinding[] {
       message: "Root layout still loads Calendly JS on every page",
     });
   }
+  if (layout.includes("realscout-web-components.umd.js")) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message:
+        "Root layout still loads the home-search widget script on the critical path",
+    });
+  }
+  if (layout.includes('strategy="afterInteractive"')) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message:
+        "Root layout still uses afterInteractive for a third-party script",
+    });
+  }
 
   const footer = readFileSync(
     join(process.cwd(), "components/site/SiteFooter.tsx"),
@@ -356,6 +374,25 @@ export function auditPerformanceTraps(): AuditFinding[] {
       severity: "error",
       area: "performance",
       message: "next.config.js still allows 3840px image variants",
+    });
+  }
+  if (/transpileClientSDK:\s*true/.test(nextConfig)) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "Sentry still transpiles the client SDK for IE11",
+    });
+  }
+
+  const sentryClient = readFileSync(
+    join(process.cwd(), "sentry.client.config.ts"),
+    "utf8",
+  );
+  if (sentryClient.includes("replayIntegration")) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "Sentry Session Replay is still bundled on every page",
     });
   }
 

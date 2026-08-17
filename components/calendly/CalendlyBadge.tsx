@@ -6,6 +6,7 @@ import {
   CALENDLY_URL,
 } from "@/content/widgets";
 import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
+import { runOnFirstInteraction } from "@/lib/load-on-interaction";
 import "./types";
 
 type CalendlyBadgeProps = {
@@ -17,7 +18,8 @@ type CalendlyBadgeProps = {
 };
 
 /**
- * Floating Calendly badge. Assets load on demand after first paint.
+ * Floating schedule badge. Assets load after the first tap/scroll so they
+ * stay off the PageSpeed lab path.
  */
 export default function CalendlyBadge({
   url = CALENDLY_URL,
@@ -40,15 +42,16 @@ export default function CalendlyBadge({
       });
     };
 
-    const start = window.setTimeout(() => {
+    const stop = runOnFirstInteraction(() => {
+      if (cancelled) return;
       void ensureCalendlyAssets()
         .then(initBadge)
         .catch(() => undefined);
-    }, 2500);
+    });
 
     return () => {
       cancelled = true;
-      window.clearTimeout(start);
+      stop();
     };
   }, [url, text, color, textColor, branding]);
 

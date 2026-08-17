@@ -45,6 +45,7 @@ export default function TourHero({
             alt={image.alt}
             fill
             priority
+            fetchPriority="high"
             quality={PAGE_IMAGE_QUALITY}
             className="tour-hero-image"
             sizes="(max-width: 48rem) 100vw, 1400px"

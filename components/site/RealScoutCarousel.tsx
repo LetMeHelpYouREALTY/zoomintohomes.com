@@ -10,9 +10,8 @@ type RealScoutCarouselProps = {
 };
 
 /**
- * RealScout office listings widget.
- * Script loads once in root layout <head>. Do not re-load script or use
- * React state to mount the custom element — use the official HTML embed.
+ * Office listings widget. Script injects once after first interaction
+ * (RealScoutScript). Do not remount this HTML with React state.
  */
 export default function RealScoutCarousel({
   title = "Homes you can tour on video first",

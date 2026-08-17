@@ -11,7 +11,7 @@ type CalendlyButtonProps = {
   children?: React.ReactNode;
 };
 
-/** Popup scheduler. Relies on Calendly script from root layout. */
+/** Popup scheduler. Loads booking assets on click, then opens the overlay. */
 export default function CalendlyButton({
   url = CALENDLY_URL,
   text = "Schedule a virtual tour",
