@@ -20,7 +20,7 @@ export const pageSeoEnhance = {
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
       "Method: remote tour → feature sheet → shortlist → two or three finalists",
       "Copy rule: describe building features, not who should live there",
-      "No IDX search grid and no accessibility overlay widgets on this site",
+      "Live listings via RealScout portal; this site documents the measured tour process",
     ],
     faqs: [
       {

@@ -856,6 +856,12 @@ h4 {
   margin: 0 0 2rem;
 }
 
+/* Legacy marketing pages: one brand shell (SiteHeader/Footer), no nested chrome */
+.legacy-page {
+  background: #f8fafc;
+  min-height: 50vh;
+}
+
 .realscout-carousel,
 .calendly-inline-section {
   background: var(--sand);

@@ -28,6 +28,16 @@ export const indexablePaths = [
   "/privacy",
   "/terms",
   "/accessibility-features",
+  "/veterans",
+  "/how-it-works",
+  "/faq",
+  "/buyers",
+  "/sellers",
+  "/listings",
+  "/neighborhoods",
+  "/services",
+  "/home-valuation",
+  "/security-policy",
 ] as const;
 
 export type IndexablePath = (typeof indexablePaths)[number];

@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
@@ -22,7 +19,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 500-1942.",
+    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 222-1964.",
   keywords: [
     "California to Las Vegas relocation",
     "moving from California to Nevada",
@@ -50,7 +47,7 @@ const faqSchema = {
       name: "What neighborhoods do California relocators prefer in Las Vegas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (family-friendly like San Diego suburbs), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
+        text: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (community-oriented like San Diego suburbs), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
       },
     },
     {
@@ -84,7 +81,7 @@ const realEstateAgentSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  telephone: "+17025001942",
+  telephone: "+17022221964",
   url: "https://heyberkshire.com/buyers/california-relocator",
   address: {
     "@type": "PostalAddress",
@@ -108,8 +105,7 @@ export default function CaliforniaRelocatorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateAgentSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -138,11 +134,11 @@ export default function CaliforniaRelocatorPage() {
               Zero state income tax. 40-60% lower home prices. Same sunshine.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Start Your Tax-Free Life → (702) 500-1942
+              Start Your Tax-Free Life → (702) 222-1964
             </a>
           </div>
 
@@ -278,7 +274,7 @@ export default function CaliforniaRelocatorPage() {
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
                     Henderson = San Diego suburbs meets tech corridor. Google's data center,
-                    top schools, and "America's Safest City" accolades.
+                    nearby schools, and strong community amenities.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
                     <strong>Best for:</strong> Tech workers, young families, San Diego relocators
@@ -409,7 +405,7 @@ export default function CaliforniaRelocatorPage() {
                 </h3>
                 <p className="text-slate-600">
                   California buyers typically gravitate toward Summerlin (similar to Irvine/coastal
-                  communities), Henderson (family-friendly like San Diego suburbs), and The Ridges
+                  communities), Henderson (community-oriented like San Diego suburbs), and The Ridges
                   (comparable to Newport Coast luxury). These areas offer the quality and amenities
                   California buyers expect.
                 </p>
@@ -476,11 +472,11 @@ export default function CaliforniaRelocatorPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 500-1942
+                Call/Text (702) 222-1964
               </a>
               <Link
                 href="/contact"
@@ -495,9 +491,7 @@ export default function CaliforniaRelocatorPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }

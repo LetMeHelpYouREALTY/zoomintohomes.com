@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
@@ -16,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Summerlin | Las Vegas Luxury Real Estate",
   description:
-    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 500-1942.",
+    "Find Summerlin homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Summerlin",
     "Summerlin homes for sale",
@@ -77,8 +74,7 @@ export default function SummerlinPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + Place + FAQ */}
       <SchemaScript schema={pageSchemas} id="summerlin-schema" />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -156,7 +152,7 @@ export default function SummerlinPage() {
               </p>
               <p>
                 <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has deep roots in Summerlin,
-                and our agents understand the nuances of each village—from the family-friendly atmosphere of
+                and our agents understand the nuances of each village—from the community-oriented atmosphere of
                 The Paseos to the luxury estates of The Ridges. Whether you're a first-time buyer looking at
                 condos in Affinity or a move-up buyer seeking a custom home in Red Rock Country Club, BHHS
                 has the expertise to guide you through the process.
@@ -375,11 +371,11 @@ export default function SummerlinPage() {
               for a personalized home search or free market analysis.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -387,9 +383,7 @@ export default function SummerlinPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }

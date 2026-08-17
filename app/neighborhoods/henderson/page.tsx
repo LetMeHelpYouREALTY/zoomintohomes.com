@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
@@ -9,7 +6,7 @@ import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
   description:
-    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's family-friendly communities. Median price $485K. Call (702) 500-1942.",
+    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's master-planned communities. Median price $485K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Henderson",
     "Henderson homes for sale",
@@ -23,7 +20,7 @@ const neighborhoodSchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   name: "Henderson, Nevada",
-  description: "Nevada's second-largest city known for safety, schools, and family-friendly communities",
+  description: "Nevada's second-largest city known for safety, schools, and master-planned communities",
   geo: {
     "@type": "GeoCoordinates",
     latitude: "36.0395",
@@ -48,7 +45,7 @@ const faqSchema = {
       name: "How safe is Henderson compared to Las Vegas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson consistently ranks as one of America's safest cities. It has been named the safest city in Nevada and frequently appears in national 'Best Places to Live' rankings for its low crime rates and family-friendly environment.",
+        text: "Henderson consistently ranks as one of highly ranked places to live. It has been named the highly ranked Nevada city and frequently appears in national 'Best Places to Live' rankings for its established residential streets and community amenities and trail access.",
       },
     },
     {
@@ -81,8 +78,7 @@ export default function HendersonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -106,7 +102,7 @@ export default function HendersonPage() {
               Berkshire Hathaway HomeServices Henderson
             </h1>
             <p className="text-xl text-slate-600">
-              Nevada's safest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
+              A highly ranked Nevada city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
           </div>
@@ -155,7 +151,7 @@ export default function HendersonPage() {
               <p>
                 What sets Henderson apart? Start with safety. Henderson consistently ranks as one of America's
                 safest large cities, making it the top choice for families with children. The city's excellent
-                schools, low crime rates, and community-oriented atmosphere create an environment where
+                schools, established residential streets, and community-oriented atmosphere create an environment where
                 families thrive. Add in the fact that Nevada has no state income tax, and you understand why
                 so many Californians are making Henderson their new home.
               </p>
@@ -174,12 +170,12 @@ export default function HendersonPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">America's Safest City</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Highly Ranked City</h4>
                   </div>
                   <p className="text-slate-600">
-                    Henderson has been named the safest city in Nevada and consistently ranks among America's
+                    Henderson has been named the highly ranked Nevada city and consistently ranks among America's
                     safest large cities. The Henderson Police Department's community policing approach and
-                    active neighborhood watch programs contribute to exceptionally low crime rates that give
+                    active neighborhood watch programs contribute to exceptionally established residential streets that give
                     families peace of mind.
                   </p>
                 </div>
@@ -358,9 +354,9 @@ export default function HendersonPage() {
                   How safe is Henderson compared to Las Vegas?
                 </h3>
                 <p className="text-slate-600">
-                  Henderson consistently ranks as one of America's safest cities. It has been named the
-                  safest city in Nevada and frequently appears in national "Best Places to Live" rankings
-                  for its low crime rates and family-friendly environment.
+                  Henderson consistently ranks as one of highly ranked places to live. It has been named the
+                  highly ranked Nevada city and frequently appears in national "Best Places to Live" rankings
+                  for its established residential streets and community amenities and trail access.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -396,11 +392,11 @@ export default function HendersonPage() {
               for personalized guidance and local market insights.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -408,9 +404,7 @@ export default function HendersonPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }

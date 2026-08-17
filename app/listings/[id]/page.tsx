@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +7,7 @@ import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
   description: "View detailed information about this property listing in Las Vegas or Henderson, NV.",
+  robots: { index: false, follow: false },
 };
 
 // This would typically fetch from RealScout API
@@ -39,9 +38,8 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
   return (
     <>
-      <Navbar />
       <AfterHeroWidgets />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="mb-6 text-sm">
@@ -138,7 +136,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 </p>
                 <div className="space-y-3">
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                    <a href="tel:+17025001942">Call (702) 500-1942</a>
+                    <a href="tel:+17022221964">Call (702) 222-1964</a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
                     <a href="/contact">Send Message</a>
@@ -148,8 +146,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
+      </div>
     </>
   );
 }

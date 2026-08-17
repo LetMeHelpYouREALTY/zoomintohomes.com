@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
@@ -20,7 +17,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Solera at Anthem Homes for Sale | Intimate Guard-Gated 55+ Henderson | Dr. Jan Duffy",
   description:
-    "Solera at Anthem - intimate guard-gated 55+ community in Henderson. Homes from $380K-$650K. Lower HOA fees, close-knit atmosphere. Dr. Jan Duffy, BHHS. Call (702) 500-1942.",
+    "Solera at Anthem - intimate guard-gated 55+ community in Henderson. Homes from $380K-$650K. Lower HOA fees, close-knit atmosphere. Dr. Jan Duffy, BHHS. Call (702) 222-1964.",
   keywords: [
     "Solera at Anthem homes for sale",
     "Solera Anthem Henderson",
@@ -63,8 +60,7 @@ export default function SoleraAnthemPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -351,7 +347,7 @@ export default function SoleraAnthemPage() {
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-slate-900">
-                    Guard-gated in America's safest city
+                    Guard-gated Henderson community
                   </strong>
                   <p className="text-slate-600 text-sm">
                     Double layer of security: Henderson's safety record plus 24/7
@@ -378,7 +374,7 @@ export default function SoleraAnthemPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Solera at Anthem is perfect for buyers who find Sun City
+                "Solera at Anthem is well suited for buyers who find Sun City
                 overwhelming. It's intimate, genuinely guard-gated, and everyone
                 is actually 55+. The community feels like a neighborhood, not a
                 small city. As a{" "}
@@ -403,11 +399,11 @@ export default function SoleraAnthemPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-teal-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-teal-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
@@ -427,9 +423,7 @@ export default function SoleraAnthemPage() {
         <div className="text-center text-sm text-slate-500 mt-8">
           Last Updated: January 2026
         </div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }

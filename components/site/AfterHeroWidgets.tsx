@@ -9,10 +9,10 @@ type AfterHeroWidgetsProps = {
   calendlyId?: string;
 };
 
-/** RealScout carousel + Calendly booking block placed directly under page heroes. */
+/** RealScout carousel under the hero. Calendly stays in header/footer/badge to avoid stacked iframes. */
 export default function AfterHeroWidgets({
   showRealScout = true,
-  showCalendly = true,
+  showCalendly = false,
   calendlyId = "schedule-after-hero",
 }: AfterHeroWidgetsProps) {
   return (

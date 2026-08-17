@@ -18,7 +18,7 @@ export const homeCopy = {
   ],
   promiseTitle: "What is the reduced-showing promise?",
   promiseBody:
-    "A hospital discharge planner, an occupational therapist, a VA loan officer, or an elder law attorney should be able to send a client here and see the process in writing. No IDX grid on this site. No overlay widget. Feature language, not persona language.",
+    "A hospital discharge planner, an occupational therapist, a VA loan officer, or an elder law attorney should be able to send a client here and see the process in writing. Listing browse uses a RealScout portal for live inventory; this site focuses on the measured tour process. Feature language, not persona language.",
 };
 
 export const howItWorksCopy = {

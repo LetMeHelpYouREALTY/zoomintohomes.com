@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
@@ -9,7 +6,7 @@ import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
   description:
-    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call (702) 500-1942.",
+    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Centennial Hills",
     "Centennial Hills homes for sale",
@@ -65,8 +62,7 @@ export default function CentennialHillsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -90,7 +86,7 @@ export default function CentennialHillsPage() {
               Berkshire Hathaway HomeServices Centennial Hills
             </h1>
             <p className="text-xl text-slate-600">
-              Family-friendly northwest Las Vegas living. Find your Centennial Hills home with{" "}
+              Community-focused northwest Las Vegas living. Find your Centennial Hills home with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
@@ -383,11 +379,11 @@ export default function CentennialHillsPage() {
               for guidance in this established family community.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
@@ -395,9 +391,7 @@ export default function CentennialHillsPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }

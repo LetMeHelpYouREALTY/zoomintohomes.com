@@ -1,6 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
@@ -25,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
-    "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 500-1942.",
+    "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Sun City Anthem homes for sale",
     "Sun City Anthem Henderson",
@@ -104,8 +101,7 @@ export default function SunCityAnthemPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + ResidentialComplex + FAQ */}
       <SchemaScript schema={pageSchemas} id="sun-city-anthem-schema" />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -198,7 +194,7 @@ export default function SunCityAnthemPage() {
                     Why Henderson Matters
                   </h3>
                   <p className="text-slate-700 mb-4">
-                    Henderson consistently ranks as one of America's safest cities. For 55+ buyers,
+                    Henderson consistently ranks as one of highly ranked places to live. For 55+ buyers,
                     this translates to peace of mind, stable property values, and a community that
                     attracts similar residents who value safety and quality of life.
                   </p>
@@ -329,11 +325,11 @@ export default function SunCityAnthemPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-green-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
@@ -345,9 +341,7 @@ export default function SunCityAnthemPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
+      </div>
     </>
   );
 }
