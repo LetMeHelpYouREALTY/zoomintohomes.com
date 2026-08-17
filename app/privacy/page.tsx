@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import Link from "next/link";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
@@ -12,11 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function PrivacyPage() {
   return (
     <article>
-      <h1 className="page-title">Privacy policy</h1>
-      <p className="lede">
-        How {siteIdentity.siteName} handles information you submit through this
-        website. Effective {new Date().toISOString().slice(0, 10)}.
-      </p>
+      <RoutePageHero path="/privacy" />
       <h2>What we collect</h2>
       <p>
         Consultation and referral forms may collect your name, email, phone,

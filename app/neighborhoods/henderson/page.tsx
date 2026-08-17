@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
@@ -78,6 +78,8 @@ export default function HendersonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <RoutePageHero path="/neighborhoods/henderson" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -91,24 +93,7 @@ export default function HendersonPage() {
             </nav>
           </div>
 
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Henderson
-            </h1>
-            <p className="text-xl text-slate-600">
-              A highly ranked Nevada city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
-            </p>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

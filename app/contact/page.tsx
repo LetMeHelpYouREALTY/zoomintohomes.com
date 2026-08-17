@@ -5,7 +5,7 @@ import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import ConsultationForm from "@/components/site/ConsultationForm";
 import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { contactCopy } from "@/content/pages";
@@ -27,16 +27,13 @@ const images = pageImages.contact;
 export default function ContactPage() {
   return (
     <article>
+      <RoutePageHero path="/contact" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "Contact", path: "/contact" },
         ])}
       />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{contactCopy.h1}</h1>
-      <p className="lede">{contactCopy.lede}</p>
-      <PageSeoSections page="contact" slot="intro" />
       <div className="cta-row">
         <a href={`tel:${siteIdentity.phoneTel}`} className="button">
           Call {siteIdentity.phoneDisplay}

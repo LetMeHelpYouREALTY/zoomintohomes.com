@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { accessibilityFeatures, featureCategories } from "@/content/features";
 import { pageImages } from "@/content/page-images";
@@ -25,10 +25,7 @@ export default function AccessibilityFeaturesPage() {
 
   return (
     <article>
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{featuresCopy.h1}</h1>
-      <p className="lede">{featuresCopy.lede}</p>
-      <PageSeoSections page="features" slot="intro" />
+      <RoutePageHero path="/accessibility-features" />
       <h2>{featuresCopy.categoriesHeading}</h2>
       {featureCategories.map((category) => {
         const items = accessibilityFeatures.filter(

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { veteransCopy } from "@/content/pages";
@@ -27,10 +27,7 @@ export default function VeteransPage() {
 
   return (
     <article>
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{veteransCopy.h1}</h1>
-      <p className="lede">{veteransCopy.lede}</p>
-      <PageSeoSections page="veterans" slot="intro" />
+      <RoutePageHero path="/veterans" />
       <p>
         <a
           href={veteransCopy.officialSourceHref}

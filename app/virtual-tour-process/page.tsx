@@ -7,7 +7,7 @@ import { howItWorksCopy } from "@/content/pages";
 import { processSteps } from "@/content/process";
 import { pageImages } from "@/content/page-images";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -28,16 +28,13 @@ export default function VirtualTourProcessPage() {
 
   return (
     <article>
+      <RoutePageHero path="/virtual-tour-process" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "How touring works", path: "/virtual-tour-process" },
         ])}
       />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{howItWorksCopy.h1}</h1>
-      <p className="lede">{howItWorksCopy.lede}</p>
-      <PageSeoSections page="howItWorks" slot="intro" />
       <div className="cta-row">
         <Link href="/contact" className="button">
           Request a call

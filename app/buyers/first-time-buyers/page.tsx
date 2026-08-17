@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   Home as HomeIcon,
@@ -76,6 +76,8 @@ export default function FirstTimeBuyersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <RoutePageHero path="/buyers/first-time-buyers" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -89,32 +91,7 @@ export default function FirstTimeBuyersPage() {
             </nav>
           </div>
 
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Key className="h-4 w-4 mr-2" />
-              Down Payment Assistance Available
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Your First Home in Las Vegas<br />
-              <span className="text-blue-600">Starts Here</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Down payment assistance. Builder incentives. Expert guidance every step of the way.
-            </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Let's Make Homeownership Happen → (702) 222-1964
-            </a>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Financing Options */}
           <section className="mb-16 max-w-5xl mx-auto">

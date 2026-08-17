@@ -8,7 +8,7 @@ import {
 } from "@/content/reso-features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 type PageProps = {
   params: { term: string };
@@ -38,7 +38,11 @@ export default function GlossaryTermPage({ params }: PageProps) {
 
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero
+        path={`/glossary/${feature.slug}`}
+        headline={feature.name}
+        support={feature.definition}
+      />
 
       <JsonLd
         data={buildBreadcrumbList([
@@ -47,8 +51,6 @@ export default function GlossaryTermPage({ params }: PageProps) {
           { name: feature.name, path: `/glossary/${feature.slug}` },
         ])}
       />
-      <h1 className="page-title">{feature.name}</h1>
-      <p className="lede">{feature.definition}</p>
       <p>
         <strong>Feature code:</strong> {feature.resoKey}
       </p>

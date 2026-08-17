@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   Heart,
@@ -29,6 +29,8 @@ export const metadata: Metadata = {
 export default function DownsizingPage() {
   return (
     <>
+      <RoutePageHero path="/sellers/downsizing" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -42,31 +44,7 @@ export default function DownsizingPage() {
             </nav>
           </div>
 
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Heart className="h-4 w-4 mr-2" />
-              Embrace Low-Maintenance Living
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Simplify. Downsize. Enjoy.
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Extract your equity. Embrace low-maintenance living. Start your next chapter.
-            </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Let's Talk About Your Options → (702) 222-1964
-            </a>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Equity Extraction */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

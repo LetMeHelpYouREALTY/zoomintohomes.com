@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { referralPartnersCopy } from "@/content/pages";
@@ -27,16 +27,13 @@ export default function ReferralPartnersPage() {
 
   return (
     <article>
+      <RoutePageHero path="/referral-partners" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "For care teams", path: "/referral-partners" },
         ])}
       />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{referralPartnersCopy.h1}</h1>
-      <p className="lede">{referralPartnersCopy.lede}</p>
-      <PageSeoSections page="referralPartners" slot="intro" />
       <p>
         <a href="/referral-partners/one-pager" className="button">
           Downloadable one-pager (HTML)

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.summerlin.title,
@@ -13,15 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function SummerlinPage() {
   return (
     <article>
-      <AfterHeroWidgets />
-
-      <h1 className="page-title">
-        Homes with measured access features in Summerlin
-      </h1>
-      <p className="lede">
-        Editorial-first guide for Summerlin and northwest Las Vegas. Feature
-        verification follows the published glossary before any showing circuit.
-      </p>
+      <RoutePageHero path="/summerlin" />
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

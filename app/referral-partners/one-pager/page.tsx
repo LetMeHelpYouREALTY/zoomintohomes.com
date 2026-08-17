@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Care team one-pager | Zoom Into Homes",
@@ -14,13 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ReferralOnePagerPage() {
   return (
     <article>
-      <AfterHeroWidgets />
-
-      <h1 className="page-title">Care team one-pager</h1>
-      <p className="lede">
-        Print or save this page for a folder. It is the written handoff Zoom Into
-        Homes already describes for hospitals and care teams.
-      </p>
+      <RoutePageHero path="/referral-partners/one-pager" />
       <section className="card">
         <h2>What we return</h2>
         <ul>

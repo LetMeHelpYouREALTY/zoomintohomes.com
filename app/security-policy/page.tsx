@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RoutePageHero from "@/components/site/RoutePageHero";
 import { siteIdentity } from '@/content/site'
 
 export const metadata: Metadata = {
@@ -12,12 +13,10 @@ export const metadata: Metadata = {
 
 export default function SecurityPolicyPage() {
   return (
-    <div className="min-h-screen bg-white py-12">
-      <div className="container mx-auto max-w-4xl px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          Security Policy
-        </h1>
-
+    <>
+      <RoutePageHero path="/security-policy" />
+      <div className="min-h-screen bg-white py-12">
+        <div className="container mx-auto max-w-4xl px-4">
         <div className="prose prose-lg max-w-none">
           {/* Overview */}
           <section className="mb-12">
@@ -270,7 +269,8 @@ export default function SecurityPolicyPage() {
             </p>
           </footer>
         </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

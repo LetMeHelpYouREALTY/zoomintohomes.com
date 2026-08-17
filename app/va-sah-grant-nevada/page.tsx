@@ -6,7 +6,7 @@ import { pageImages } from "@/content/page-images";
 import { veteransCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -27,18 +27,13 @@ export default function VaSahGrantPage() {
 
   return (
     <article>
+      <RoutePageHero path="/va-sah-grant-nevada" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "VA housing grant", path: "/va-sah-grant-nevada" },
         ])}
       />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">
-        Buying a home with a VA SAH grant in Nevada
-      </h1>
-      <p className="lede">{veteransCopy.lede}</p>
-      <PageSeoSections page="veterans" slot="intro" />
       <p>
         Official program information:{" "}
         <a

@@ -21,6 +21,7 @@ import { pageSeoEnhance } from "./seo-enhance";
 import { resoAccessibilityFeatures } from "./reso-features";
 import { pageMeta, siteIdentity } from "./site";
 import { brandCopy } from "./brand";
+import { pageHeroByPath } from "./page-heroes";
 
 function walk(value: unknown, output: string[]): void {
   if (typeof value === "string") {
@@ -60,6 +61,7 @@ export function collectContentStrings(): string[] {
   walk(consultationRoles, strings);
   walk(pageImages, strings);
   walk(pageSeoEnhance, strings);
+  walk(pageHeroByPath, strings);
   walk(clarkCountyVeteranExemptions, strings);
   walk(sampleFeatureSheet, strings);
   return strings.filter((value) => value.length > 0);

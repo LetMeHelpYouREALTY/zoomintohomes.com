@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   Shield,
@@ -29,6 +29,8 @@ export const metadata: Metadata = {
 export default function DivorceProbatePage() {
   return (
     <>
+      <RoutePageHero path="/sellers/divorce-probate" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -42,32 +44,7 @@ export default function DivorceProbatePage() {
             </nav>
           </div>
 
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center bg-slate-100 text-slate-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Shield className="h-4 w-4 mr-2" />
-              Handled with Discretion & Professionalism
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Difficult Situations,<br />Expert Guidance
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              When life gets complicated, you need an agent who handles sensitive transactions
-              with discretion, expertise, and compassion.
-            </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Confidential Consultation → (702) 222-1964
-            </a>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Situations We Help With */}
           <section className="mb-16 max-w-5xl mx-auto">

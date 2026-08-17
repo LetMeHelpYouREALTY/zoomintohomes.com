@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { aboutCopy } from "@/content/pages";
@@ -29,16 +29,13 @@ export default function AboutPage() {
 
   return (
     <article>
+      <RoutePageHero path="/about" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
         ])}
       />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{aboutCopy.h1}</h1>
-      <p className="lede">{aboutCopy.lede}</p>
-      <PageSeoSections page="about" slot="intro" />
       <h2>{aboutCopy.practiceHeading}</h2>
       <div className="stack">
         {aboutCopy.body.map((paragraph) => {

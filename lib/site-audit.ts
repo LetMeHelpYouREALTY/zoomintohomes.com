@@ -3,6 +3,7 @@ import { join, relative } from "node:path";
 import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
 import { homeCopy } from "@/content/pages";
+import { pageHeroByPath } from "@/content/page-heroes";
 import { siteIdentity } from "@/content/site";
 import {
   buyerSellerJargonHits,
@@ -80,6 +81,8 @@ const SLANG_ALLOWLIST = [
   "components/site/loadRealScout.ts",
   "components/site/AfterHeroWidgets.tsx",
   "components/site/TourHero.tsx",
+  "components/site/PageHero.tsx",
+  "components/site/RoutePageHero.tsx",
 ];
 
 /** Statute tables and measurement citations buyers can look up on purpose. */
@@ -360,6 +363,53 @@ export function auditSeoAndSchema(): AuditFinding[] {
       area: "seo",
       message: "Homepage hero needs at least 3 service points",
     });
+  }
+
+  const pageHeroSource = readFileSync(
+    join(process.cwd(), "components/site/PageHero.tsx"),
+    "utf8",
+  );
+  if (!pageHeroSource.includes("tour-hero-explanation")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "PageHero must put a service explanation beside the photo",
+    });
+  }
+
+  for (const [path, spec] of Object.entries(pageHeroByPath)) {
+    if (spec.explanation.split(/\s+/).length < 20) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${path}: split-hero explanation is too short`,
+      });
+    }
+    if (spec.servicePoints.length < 3) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${path}: split hero needs at least 3 service points`,
+      });
+    }
+  }
+
+  const appPages: string[] = [];
+  walkFiles("app", appPages);
+  for (const file of appPages.filter((item) => item.endsWith("/page.tsx"))) {
+    const rel = relative(process.cwd(), file);
+    const source = readFileSync(file, "utf8");
+    const hasSplit =
+      source.includes("TourHero") ||
+      source.includes("PageHero") ||
+      source.includes("RoutePageHero");
+    if (!hasSplit) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${rel} is missing the split photo-and-explanation hero`,
+      });
+    }
   }
 
   const schemas = buildOrganizationSchemas();

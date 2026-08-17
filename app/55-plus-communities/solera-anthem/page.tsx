@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   MapPin,
@@ -60,6 +60,8 @@ export default function SoleraAnthemPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
+      <RoutePageHero path="/55-plus-communities/solera-anthem" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -77,25 +79,7 @@ export default function SoleraAnthemPage() {
             </nav>
           </div>
 
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Heart className="h-4 w-4 mr-2" />
-              Intimate Guard-Gated 55+ Community
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Solera at Anthem
-            </h1>
-            <p className="text-xl text-slate-600">
-              The close-knit alternative to mega-communities. Guard-gated security
-              in Henderson's safest neighborhood.
-            </p>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

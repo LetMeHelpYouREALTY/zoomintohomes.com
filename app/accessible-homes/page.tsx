@@ -6,7 +6,7 @@ import { resoAccessibilityFeatures } from "@/content/reso-features";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.accessibleHomes.title,
@@ -21,7 +21,7 @@ export default function AccessibleHomesPage() {
 
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero path="/accessible-homes" />
 
       <JsonLd
         data={buildBreadcrumbList([
@@ -29,8 +29,6 @@ export default function AccessibleHomesPage() {
           { name: "Accessible homes", path: "/accessible-homes" },
         ])}
       />
-      <h1 className="page-title">{accessibleHomesCopy.h1}</h1>
-      <p className="lede">{accessibleHomesCopy.lede}</p>
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

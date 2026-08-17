@@ -3,7 +3,7 @@ import Link from "next/link";
 import { sampleFeatureSheet } from "@/content/exemptions";
 import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.featureSheetExample.title,
@@ -16,12 +16,7 @@ export default function FeatureSheetExamplePage() {
 
   return (
     <article>
-      <AfterHeroWidgets />
-
-      <h1 className="page-title">{sheet.title}</h1>
-      <p className="lede">
-        {sheet.listingLabel}. Measured {sheet.measuredOn} by {sheet.measuredBy}.
-      </p>
+      <RoutePageHero path="/examples/feature-sheet" />
       <div className="provenance-panel">
         <p>{sheet.disclaimer}</p>
         <p className="meta">Evidence level: {sheet.evidence}</p>

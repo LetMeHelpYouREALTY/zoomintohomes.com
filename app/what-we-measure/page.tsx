@@ -6,7 +6,7 @@ import { whatWeMeasureCopy } from "@/content/pages";
 import { accessibilityFeatures } from "@/content/features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.whatWeMeasure.title,
@@ -17,7 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function WhatWeMeasurePage() {
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero path="/what-we-measure" />
 
       <JsonLd
         data={buildBreadcrumbList([
@@ -25,8 +25,6 @@ export default function WhatWeMeasurePage() {
           { name: "What we measure", path: "/what-we-measure" },
         ])}
       />
-      <h1 className="page-title">{whatWeMeasureCopy.h1}</h1>
-      <p className="lede">{whatWeMeasureCopy.lede}</p>
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

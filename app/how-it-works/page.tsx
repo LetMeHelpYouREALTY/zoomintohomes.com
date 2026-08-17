@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { howItWorksCopy } from "@/content/pages";
@@ -25,10 +25,7 @@ export default function HowItWorksPage() {
 
   return (
     <article>
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{howItWorksCopy.h1}</h1>
-      <p className="lede">{howItWorksCopy.lede}</p>
-      <PageSeoSections page="howItWorks" slot="intro" />
+      <RoutePageHero path="/how-it-works" />
       <h2>{howItWorksCopy.stepsHeading}</h2>
       <ol className="stack">
         {processSteps.map((step) => (

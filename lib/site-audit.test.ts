@@ -39,9 +39,9 @@ describe("site audit", () => {
     expect(layout).toContain("RealScoutScript");
   });
 
-  it("puts a service explanation beside the homepage hero", () => {
+  it("puts a service explanation beside every page hero", () => {
     const hero = readFileSync(
-      join(process.cwd(), "components/site/TourHero.tsx"),
+      join(process.cwd(), "components/site/PageHero.tsx"),
       "utf8",
     );
     expect(hero).toContain("tour-hero-explanation");

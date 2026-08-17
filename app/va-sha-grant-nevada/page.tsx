@@ -4,7 +4,7 @@ import JsonLd from "@/components/site/JsonLd";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.vaSha.title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function VaShaGrantPage() {
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero path="/va-sha-grant-nevada" />
 
       <JsonLd
         data={buildBreadcrumbList([
@@ -23,14 +23,6 @@ export default function VaShaGrantPage() {
           { name: "VA SHA grant Nevada", path: "/va-sha-grant-nevada" },
         ])}
       />
-      <h1 className="page-title">
-        Buying a home with a VA SHA grant in Nevada
-      </h1>
-      <p className="lede">
-        Special Housing Adaptation (SHA) is a VA adaptive housing grant program.
-        This page explains how a Nevada purchase search can run beside SHA. It is
-        not a benefits determination.
-      </p>
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

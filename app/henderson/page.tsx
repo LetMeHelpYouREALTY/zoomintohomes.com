@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.henderson.title,
@@ -13,16 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function HendersonPage() {
   return (
     <article>
-      <AfterHeroWidgets />
-
-      <h1 className="page-title">
-        Homes with measured access features in Henderson
-      </h1>
-      <p className="lede">
-        Editorial-first guide. Neighborhood listing pages stay thin when
-        inventory is low—so this page leads with process, vocabulary, and
-        communities often checked, not an empty listing grid.
-      </p>
+      <RoutePageHero path="/henderson" />
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

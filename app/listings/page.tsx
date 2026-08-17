@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   Home,
@@ -112,32 +112,11 @@ export default function ListingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}
       />
+      <RoutePageHero path="/listings" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
-          {/* Hero Section */}
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Homes for Sale
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Search thousands of Las Vegas, Henderson, and Summerlin properties with live MLS 
-              listings updated every 15 minutes. Find your dream home with expert guidance from 
-              Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong>.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS Data</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Updated Every 15 Min</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 5,000+ Active Listings</span>
-            </div>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Popular Searches Section */}
           <section className="mb-16 max-w-6xl mx-auto">

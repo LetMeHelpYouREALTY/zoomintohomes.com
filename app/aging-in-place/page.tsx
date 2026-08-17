@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { agingInPlaceCopy } from "@/content/pages";
@@ -24,10 +24,7 @@ export default function AgingInPlacePage() {
 
   return (
     <article>
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{agingInPlaceCopy.h1}</h1>
-      <p className="lede">{agingInPlaceCopy.lede}</p>
-      <PageSeoSections page="agingInPlace" slot="intro" />
+      <RoutePageHero path="/aging-in-place" />
       <h2>{agingInPlaceCopy.communitiesTitle}</h2>
       <div className="stack">
         {agingInPlaceCopy.communities.map((community) => (

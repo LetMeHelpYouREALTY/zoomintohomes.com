@@ -5,7 +5,7 @@ import { clarkCountyVeteranExemptions } from "@/content/exemptions";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList, buildFaqPage } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.clarkCountyExemption.title,
@@ -36,7 +36,7 @@ export default function ClarkCountyExemptionPage() {
 
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero path="/clark-county-disabled-veteran-property-tax-exemption" />
 
       <JsonLd
         data={[
@@ -50,13 +50,6 @@ export default function ClarkCountyExemptionPage() {
           buildFaqPage(faqs),
         ]}
       />
-      <h1 className="page-title">
-        Clark County disabled-veteran property tax exemption tiers
-      </h1>
-      <p className="lede">
-        Assessed-value exemption amounts published by the Clark County Assessor.
-        These are local tax figures—not VA SAH/SHA grant amounts.
-      </p>
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

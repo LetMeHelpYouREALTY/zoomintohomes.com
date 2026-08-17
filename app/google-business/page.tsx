@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   Mail,
@@ -60,7 +60,8 @@ export default function GoogleBusinessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <AfterHeroWidgets />
+      <RoutePageHero path="/google-business" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}
@@ -72,9 +73,9 @@ export default function GoogleBusinessPage() {
                     <Award className="h-6 w-6 text-yellow-400" />
                     <span className="text-yellow-400 font-semibold">Berkshire Hathaway HomeServices</span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4">
                     Dr. Jan Duffy
-                  </h1>
+                  </h2>
                   <p className="text-xl text-blue-200 mb-2">REALTOR® | License {businessInfo.license}</p>
                   <p className="text-slate-300 mb-6">Nevada Properties</p>
                   

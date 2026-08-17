@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
@@ -38,7 +38,12 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
   return (
     <>
-      <AfterHeroWidgets />
+      <RoutePageHero
+        path={`/listings/${id}`}
+        headline={property.name}
+        support={`${property.location} · ${property.price}`}
+      />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -62,9 +67,6 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
           {/* Property Header */}
           <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-              {property.name}
-            </h1>
             <div className="flex items-center text-slate-600 mb-4">
               <MapPin className="h-5 w-5 mr-2" />
               {property.location}

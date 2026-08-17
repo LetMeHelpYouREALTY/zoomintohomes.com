@@ -8,7 +8,7 @@ import {
 } from "@/content/reso-features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 
 type PageProps = {
   params: { slug: string };
@@ -40,7 +40,11 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
 
   return (
     <article>
-      <AfterHeroWidgets />
+      <RoutePageHero
+        path={`/accessible-homes/${feature.slug}`}
+        headline={`${feature.name} in Las Vegas and Henderson`}
+        support={feature.definition}
+      />
 
       <JsonLd
         data={buildBreadcrumbList([
@@ -52,8 +56,6 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
           },
         ])}
       />
-      <h1 className="page-title">{feature.name} in Las Vegas and Henderson</h1>
-      <p className="lede">{feature.definition}</p>
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">

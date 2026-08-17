@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import Link from "next/link";
 import { brandCopy } from "@/content/brand";
 import { pageMeta, siteIdentity } from "@/content/site";
@@ -13,12 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TermsPage() {
   return (
     <article>
-      <h1 className="page-title">Terms of use</h1>
-      <p className="lede">
-        By using {siteIdentity.domain}, you agree to these terms. This site is
-        advertising for a real-estate practice, not legal, medical, tax, or VA
-        benefits advice.
-      </p>
+      <RoutePageHero path="/terms" />
       <h2>No guarantees on inventory or grants</h2>
       <p>
         Access checklists describe measured home features on a stated date.

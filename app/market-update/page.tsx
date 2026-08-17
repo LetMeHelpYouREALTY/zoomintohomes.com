@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import {
   Phone,
   TrendingUp,
@@ -57,6 +57,8 @@ export default function MarketUpdatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <RoutePageHero path="/market-update" />
+
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -70,28 +72,7 @@ export default function MarketUpdatePage() {
             </nav>
           </div>
 
-          {/* Header */}
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Calendar className="h-4 w-4 mr-2" />
-              Week of January 20, 2026
-            </div>
-
-
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Berkshire Hathaway HomeServices Las Vegas Market Update
-            </h1>
-            <p className="text-xl text-slate-600">
-              Your weekly insider report on Las Vegas Valley real estate from{" "}
-              <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>
-            </p>
-            <div className="flex items-center justify-center mt-6 text-slate-500 text-sm">
-              <span>By Dr. Jan Duffy, REALTOR® | BHHS Nevada Properties</span>
-            </div>
-          </div>
-
-          <AfterHeroWidgets />
-
+          
 
           {/* Key Statistics */}
           <section className="mb-16 max-w-5xl mx-auto">

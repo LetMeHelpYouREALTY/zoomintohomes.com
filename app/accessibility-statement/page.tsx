@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
+import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { accessibilityStatementCopy } from "@/content/pages";
@@ -20,10 +20,7 @@ const images = pageImages.accessibilityStatement;
 export default function AccessibilityStatementPage() {
   return (
     <article>
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{accessibilityStatementCopy.h1}</h1>
-      <p className="lede">{accessibilityStatementCopy.lede}</p>
-      <PageSeoSections page="accessibilityStatement" slot="intro" />
+      <RoutePageHero path="/accessibility-statement" />
       <div className="stack">
         {accessibilityStatementCopy.sections.map((section) => {
           const sectionImages = images.supporting.filter(
