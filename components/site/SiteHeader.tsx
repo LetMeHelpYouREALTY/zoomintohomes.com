@@ -21,9 +21,10 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header-inner">
         <Link href="/" className="site-logo">
-          {siteIdentity.siteName}
+          <span className="site-logo-mark">Zoom</span>
+          <span className="site-logo-rest"> Into Homes</span>
         </Link>
-        <nav aria-label="Primary">
+        <nav aria-label="Primary" className="site-header-nav">
           <ul className="nav-desktop">
             {primaryNav.map((item) => (
               <li key={item.href}>
@@ -31,6 +32,9 @@ export default function SiteHeader() {
               </li>
             ))}
           </ul>
+          <Link href="/examples/walkthrough" className="header-tour-link">
+            Virtual tour
+          </Link>
         </nav>
         <button
           type="button"
@@ -44,6 +48,14 @@ export default function SiteHeader() {
       </div>
       <nav id="mobile-nav" aria-label="Primary mobile" hidden={!open}>
         <ul className="nav-mobile">
+          <li>
+            <Link
+              href="/examples/walkthrough"
+              onClick={() => setOpen(false)}
+            >
+              Virtual tour
+            </Link>
+          </li>
           {primaryNav.map((item) => (
             <li key={item.href}>
               <Link href={item.href} onClick={() => setOpen(false)}>
@@ -51,6 +63,11 @@ export default function SiteHeader() {
               </Link>
             </li>
           ))}
+          <li>
+            <a href={`tel:${siteIdentity.phoneTel}`}>
+              Call {siteIdentity.phoneDisplay}
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

@@ -11,6 +11,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { FollowUpBossClient } from '@/lib/fub/client';
+import { resolveFubEnv } from '@/lib/fub/env';
 import { leadFormLimiter, getClientId, checkRateLimit, getRateLimitHeaders } from '@/lib/rate-limit';
 
 export interface LeadCaptureRequest {
@@ -132,10 +133,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Initialize FUB client
+    // Initialize FUB client (supports FUB_* and FOLLOW_UP_BOSS_* env aliases)
+    const fubEnv = resolveFubEnv();
+    if (!fubEnv.apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Lead desk is not configured yet. Call (702) 222-1964 and we will take your request by phone.',
+        },
+        { status: 503 },
+      );
+    }
+
     const fub = new FollowUpBossClient({
-      apiKey: process.env.FUB_API_KEY || '',
-      systemKey: process.env.FUB_SYSTEM_KEY,
+      apiKey: fubEnv.apiKey,
+      systemKey: fubEnv.systemKey,
+      baseUrl: fubEnv.baseUrl,
     });
 
     // Check for existing lead (deduplication)

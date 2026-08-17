@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { pageMeta } from "@/content/site";
+import TourStage from "@/components/site/TourStage";
+import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -16,48 +17,66 @@ export default function WalkthroughExamplePage() {
     <article>
       <h1 className="page-title">Example virtual walkthrough</h1>
       <p className="lede">
-        The practice name promises a tour. Below is either an embedded sample
-        (when configured) or a written room-by-room equivalent—the durable
-        product for this audience.
+        Zoom Into Homes is built around remote video touring with measurement
+        pauses. Below is either an embedded sample (when configured) or a written
+        room-by-room equivalent—the durable product for this audience. Tours never
+        autoplay.
       </p>
-      <div className="video-frame">
-        {walkthroughUrl ? (
-          <iframe
-            title="Sample accessibility walkthrough"
-            src={walkthroughUrl}
-            allow="fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-        ) : (
-          <p>
-            Sample video URL not configured yet (
-            <code>NEXT_PUBLIC_SAMPLE_WALKTHROUGH_URL</code>). Until then, use
-            the written equivalent below—never autoplay embeds.
-          </p>
-        )}
-      </div>
+      <TourStage
+        title="Sample virtual tour · click to start"
+        caption="Highlight sequence: zero-step entry → doorway width → primary bath → kitchen clearances."
+      >
+        <div className="video-frame tour-stage-video">
+          {walkthroughUrl ? (
+            <iframe
+              title="Sample accessibility walkthrough"
+              src={walkthroughUrl}
+              allow="fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          ) : (
+            <p>
+              Sample video URL not configured yet. Set{" "}
+              <code>NEXT_PUBLIC_SAMPLE_WALKTHROUGH_URL</code> in Vercel, then
+              redeploy. Until then, use the written equivalent below.
+            </p>
+          )}
+        </div>
+      </TourStage>
       <h2>Written walkthrough equivalent</h2>
-      <ol>
+      <ol className="process-steps">
         <li>
-          Arrival: covered zero-step entry; note threshold height at the primary
-          door.
+          <h3>Arrival</h3>
+          <p>
+            Covered zero-step entry; note threshold height at the primary door.
+          </p>
         </li>
         <li>
-          Circulation: measure clear width on the route to the primary bedroom
-          and bath.
+          <h3>Circulation</h3>
+          <p>
+            Measure clear width on the route to the primary bedroom and bath.
+          </p>
         </li>
         <li>
-          Primary bath: shower curb height, turning space, and door clear width.
+          <h3>Primary bath</h3>
+          <p>Shower curb height, turning space, and door clear width.</p>
         </li>
         <li>
-          Kitchen: aisle clearances and control heights on range and sink.
+          <h3>Kitchen</h3>
+          <p>Aisle clearances and control heights on range and sink.</p>
         </li>
       </ol>
-      <p>
-        <Link href="/examples/feature-sheet">Example feature sheet</Link>
-        {" · "}
-        <Link href="/virtual-tour-process">Process</Link>
-      </p>
+      <div className="cta-row">
+        <Link href="/contact" className="button">
+          Book a virtual tour consultation
+        </Link>
+        <a href={`tel:${siteIdentity.phoneTel}`} className="button button-secondary">
+          Call {siteIdentity.phoneDisplay}
+        </a>
+        <Link href="/examples/feature-sheet" className="button button-secondary">
+          Example feature sheet
+        </Link>
+      </div>
     </article>
   );
 }

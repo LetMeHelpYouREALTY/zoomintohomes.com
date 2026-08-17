@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeadingImage from "@/components/site/HeadingImage";
-import PageHero from "@/components/site/PageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import JsonLd from "@/components/site/JsonLd";
+import TourHero from "@/components/site/TourHero";
+import TourStage from "@/components/site/TourStage";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
 import { pageMeta, siteIdentity } from "@/content/site";
@@ -41,56 +42,73 @@ export default function HomePage() {
   );
 
   return (
-    <article>
+    <article className="home-article">
       <JsonLd data={buildFaqPage(pageSeoEnhance.home.faqs)} />
-      <PageHero image={images.hero} />
-      <h1 className="page-title">{homeCopy.h1}</h1>
-      <p className="lede">{homeCopy.lede}</p>
-      <PageSeoSections page="home" slot="intro" />
-      <div className="cta-row">
-        <Link href="/virtual-tour-process" className="button">
-          Read the process
-        </Link>
-        <a href={`tel:${siteIdentity.phoneTel}`} className="button button-secondary">
-          Call {siteIdentity.phoneDisplay}
-        </a>
-        <Link href="/examples/walkthrough" className="button button-secondary">
-          Example walkthrough
-        </Link>
-      </div>
-      <h2>{homeCopy.audienceLabel}</h2>
-      {byHeading[homeCopy.audienceLabel] ? (
-        <HeadingImage image={byHeading[homeCopy.audienceLabel]} />
-      ) : null}
-      <div className="stack">
-        {homeCopy.audiences.map((item) => (
-          <section key={item.title} className="card">
-            {byHeading[item.title] ? (
-              <HeadingImage image={byHeading[item.title]} />
+      <TourHero
+        image={images.hero}
+        brand={siteIdentity.siteName}
+        headline={homeCopy.h1}
+        support={homeCopy.lede}
+        primaryHref="/virtual-tour-process"
+        primaryLabel="See the tour process"
+        secondaryHref={`tel:${siteIdentity.phoneTel}`}
+        secondaryLabel={`Call ${siteIdentity.phoneDisplay}`}
+        tourHref="/examples/walkthrough"
+        tourLabel="Watch a sample virtual tour"
+      />
+      <div className="home-body">
+        <PageSeoSections page="home" slot="intro" />
+
+        <section className="tour-promise" aria-labelledby="tour-promise-heading">
+          <div className="tour-promise-copy">
+            <h2 id="tour-promise-heading">{homeCopy.promiseTitle}</h2>
+            <p>{homeCopy.promiseBody}</p>
+            <div className="cta-row">
+              <Link href="/examples/feature-sheet" className="button">
+                View a sample feature sheet
+              </Link>
+              <Link
+                href="/what-we-measure"
+                className="button button-secondary"
+              >
+                What we measure on camera
+              </Link>
+            </div>
+          </div>
+          <TourStage
+            title="Live tour pause · doorway clear width"
+            caption="Virtual-first means the tape measure happens on video before anyone drives."
+          >
+            {byHeading[homeCopy.h1] ? (
+              <HeadingImage image={byHeading[homeCopy.h1]} />
             ) : null}
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
-          </section>
-        ))}
+          </TourStage>
+        </section>
+
+        <h2>{homeCopy.audienceLabel}</h2>
+        {byHeading[homeCopy.audienceLabel] ? (
+          <HeadingImage image={byHeading[homeCopy.audienceLabel]} />
+        ) : null}
+        <div className="audience-grid">
+          {homeCopy.audiences.map((item) => (
+            <section key={item.title} className="audience-panel">
+              {byHeading[item.title] ? (
+                <HeadingImage image={byHeading[item.title]} />
+              ) : null}
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </section>
+          ))}
+        </div>
+
+        <nav className="home-links" aria-label="Primary topics">
+          <Link href="/accessible-homes">Accessible homes hub</Link>
+          <Link href="/glossary">RESO glossary</Link>
+          <Link href="/referral-partners">For referral partners</Link>
+          <Link href="/contact">Request a consultation</Link>
+        </nav>
+        <PageSeoSections page="home" slot="closing" related={related} />
       </div>
-      <h2>{homeCopy.promiseTitle}</h2>
-      {byHeading[homeCopy.promiseTitle] ? (
-        <HeadingImage image={byHeading[homeCopy.promiseTitle]} />
-      ) : null}
-      <p>{homeCopy.promiseBody}</p>
-      {byHeading[homeCopy.h1] ? (
-        <HeadingImage image={byHeading[homeCopy.h1]} />
-      ) : null}
-      <p>
-        <Link href="/accessible-homes">Accessible homes hub</Link>
-        {" · "}
-        <Link href="/glossary">RESO glossary</Link>
-        {" · "}
-        <Link href="/referral-partners">For referral partners</Link>
-        {" · "}
-        <Link href="/contact">Request a consultation</Link>
-      </p>
-      <PageSeoSections page="home" slot="closing" related={related} />
     </article>
   );
 }

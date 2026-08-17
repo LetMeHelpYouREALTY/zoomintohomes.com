@@ -16,6 +16,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { FollowUpBossClient } from '@/lib/fub/client';
+import { resolveFubEnv } from '@/lib/fub/env';
 import { ClaudeClient } from '@/lib/claude/client';
 import { propertySearchTemplate } from '@/lib/claude/prompt-templates';
 
@@ -74,8 +75,11 @@ export async function POST(request: NextRequest) {
 async function handlePersonCreated(data: any) {
   console.log(`[FUB] New person created: ${data.name || data.id}`);
 
+  const fubEnv = resolveFubEnv();
   const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
+    apiKey: fubEnv.apiKey,
+    systemKey: fubEnv.systemKey,
+    baseUrl: fubEnv.baseUrl,
   });
 
   try {
@@ -137,8 +141,11 @@ async function handlePersonUpdated(data: any) {
 async function handleStageUpdated(data: any) {
   console.log(`[FUB] Stage updated for ${data.name || data.id}: ${data.stage}`);
 
+  const fubEnv = resolveFubEnv();
   const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
+    apiKey: fubEnv.apiKey,
+    systemKey: fubEnv.systemKey,
+    baseUrl: fubEnv.baseUrl,
   });
 
   try {
@@ -184,8 +191,11 @@ async function handleStageUpdated(data: any) {
 async function handleTagsCreated(data: any) {
   console.log(`[FUB] Tags added to ${data.name || data.id}: ${data.tags?.join(', ')}`);
 
+  const fubEnv = resolveFubEnv();
   const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
+    apiKey: fubEnv.apiKey,
+    systemKey: fubEnv.systemKey,
+    baseUrl: fubEnv.baseUrl,
   });
 
   // Trigger actions based on specific tags
@@ -280,8 +290,11 @@ Based on this information, provide a brief lead qualification summary and recomm
  * Check for duplicate leads
  */
 async function checkForDuplicates(personId: number) {
+  const fubEnv = resolveFubEnv();
   const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
+    apiKey: fubEnv.apiKey,
+    systemKey: fubEnv.systemKey,
+    baseUrl: fubEnv.baseUrl,
   });
 
   try {
@@ -329,8 +342,11 @@ async function checkForDuplicates(personId: number) {
  * Trigger property search
  */
 async function triggerPropertySearch(personId: number, neighborhood?: string) {
+  const fubEnv = resolveFubEnv();
   const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
+    apiKey: fubEnv.apiKey,
+    systemKey: fubEnv.systemKey,
+    baseUrl: fubEnv.baseUrl,
   });
 
   try {
