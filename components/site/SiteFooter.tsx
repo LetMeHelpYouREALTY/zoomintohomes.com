@@ -1,6 +1,9 @@
 import Link from "next/link";
+import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
+import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { brandCopy } from "@/content/brand";
 import { helpNav, siteIdentity } from "@/content/site";
+import { CALENDLY_URL } from "@/content/widgets";
 
 function EqualHousingMark() {
   return (
@@ -23,7 +26,25 @@ function EqualHousingMark() {
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
+      <CalendlyInlineSection
+        id="schedule-footer"
+        title="Book a virtual tour from any page"
+        intro="Every Zoom Into Homes page includes scheduling. Choose a time for a remote walkthrough, feature-sheet review, or referral handoff."
+        height="620px"
+      />
       <div className="site-footer-inner">
+        <div className="footer-schedule-row">
+          <CalendlyButton className="button" text="Open Calendly popup" />
+          <a className="button button-secondary" href={CALENDLY_URL}>
+            Open Calendly in a new tab
+          </a>
+          <a
+            className="button button-secondary"
+            href={`tel:${siteIdentity.phoneTel}`}
+          >
+            Call {siteIdentity.phoneDisplay}
+          </a>
+        </div>
         <div className="compliance-block" id="nevada-advertising">
           <p>
             <strong>{siteIdentity.agentName}</strong>
@@ -65,6 +86,8 @@ export default function SiteFooter() {
               <Link href={item.href}>{item.label}</Link>
             </span>
           ))}
+          {" · "}
+          <a href="#schedule-footer">Schedule</a>
         </p>
 
         <p className="eho">

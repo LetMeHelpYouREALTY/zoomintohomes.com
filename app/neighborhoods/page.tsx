@@ -4,6 +4,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = {
   title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
@@ -122,6 +123,8 @@ export default function NeighborhoodsPage() {
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas & Henderson Neighborhoods
             </h1>
@@ -130,6 +133,9 @@ export default function NeighborhoodsPage() {
               <strong>Berkshire Hathaway HomeServices</strong> neighborhood expert
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Neighborhood Grid */}
           <section className="mb-16 max-w-6xl mx-auto">

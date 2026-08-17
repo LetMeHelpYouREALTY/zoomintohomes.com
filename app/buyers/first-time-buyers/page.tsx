@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   Home as HomeIcon,
@@ -98,6 +99,8 @@ export default function FirstTimeBuyersPage() {
               <Key className="h-4 w-4 mr-2" />
               Down Payment Assistance Available
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Your First Home in Las Vegas<br />
               <span className="text-blue-600">Starts Here</span>
@@ -113,6 +116,9 @@ export default function FirstTimeBuyersPage() {
               Let's Make Homeownership Happen → (702) 500-1942
             </a>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Financing Options */}
           <section className="mb-16 max-w-5xl mx-auto">

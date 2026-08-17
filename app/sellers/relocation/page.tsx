@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   Plane,
@@ -51,6 +52,8 @@ export default function RelocationPage() {
               <Plane className="h-4 w-4 mr-2" />
               Nationwide BHHS Network
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               New Opportunity?<br />We Handle Your Sale.
             </h1>
@@ -66,6 +69,9 @@ export default function RelocationPage() {
               Start Your Relocation → (702) 500-1942
             </a>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Network Advantage */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

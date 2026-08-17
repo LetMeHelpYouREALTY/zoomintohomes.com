@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { primaryNav, siteIdentity } from "@/content/site";
 
 export default function SiteHeader() {
@@ -35,6 +36,7 @@ export default function SiteHeader() {
           <Link href="/examples/walkthrough" className="header-tour-link">
             Virtual tour
           </Link>
+          <CalendlyButton className="header-tour-link" text="Book a call" />
         </nav>
         <button
           type="button"
@@ -49,12 +51,15 @@ export default function SiteHeader() {
       <nav id="mobile-nav" aria-label="Primary mobile" hidden={!open}>
         <ul className="nav-mobile">
           <li>
-            <Link
-              href="/examples/walkthrough"
-              onClick={() => setOpen(false)}
-            >
+            <Link href="/examples/walkthrough" onClick={() => setOpen(false)}>
               Virtual tour
             </Link>
+          </li>
+          <li>
+            <CalendlyButton
+              className="nav-mobile-calendly"
+              text="Book a Calendly call"
+            />
           </li>
           {primaryNav.map((item) => (
             <li key={item.href}>

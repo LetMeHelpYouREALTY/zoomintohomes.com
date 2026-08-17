@@ -6,6 +6,7 @@ import { whatWeMeasureCopy } from "@/content/pages";
 import { accessibilityFeatures } from "@/content/features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.whatWeMeasure.title,
@@ -16,6 +17,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function WhatWeMeasurePage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },

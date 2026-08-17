@@ -7,6 +7,7 @@ import SkipLink from "@/components/site/SkipLink";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import JsonLd from "@/components/site/JsonLd";
+import CalendlyBadge from "@/components/calendly/CalendlyBadge";
 import { buildOrganizationSchemas } from "@/lib/schema";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
@@ -106,13 +107,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${atkinson.variable} ${sourceSerif.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://assets.calendly.com/assets/external/widget.css"
+        />
+      </head>
       <body className={atkinson.className}>
         <JsonLd data={buildOrganizationSchemas()} />
         <SkipLink />
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <CalendlyBadge />
         <Analytics />
+        <Script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+        />
         {gaId ? (
           <>
             <Script

@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   TrendingUp,
@@ -71,6 +72,8 @@ export default function MarketInsightsPage() {
               <TrendingUp className="h-4 w-4 mr-2" />
               2026 Economic & Real Estate Analysis
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Market Insights
             </h1>
@@ -79,6 +82,9 @@ export default function MarketInsightsPage() {
               real estate in 2026 and beyond.
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Key Drivers */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

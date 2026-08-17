@@ -5,6 +5,7 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = {
   title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
@@ -87,6 +88,8 @@ export default function HomeValuationPage() {
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               What's Your Las Vegas Home Worth?
             </h1>
@@ -97,6 +100,9 @@ export default function HomeValuationPage() {
             </p>
           </div>
 
+          <AfterHeroWidgets />
+
+
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
             {/* Calendly Widget */}
             <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
@@ -106,7 +112,7 @@ export default function HomeValuationPage() {
                   Book a consultation with Dr. Jan Duffy
                 </p>
               </div>
-              <CalendlyWidget url="showing" height="650px" />
+              <CalendlyWidget height="650px" />
               <p className="text-xs text-slate-500 text-center p-4 border-t border-slate-200">
                 No obligation. No pressure. Just accurate information from Berkshire Hathaway
                 HomeServices.

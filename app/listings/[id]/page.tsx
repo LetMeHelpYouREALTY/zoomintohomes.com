@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
@@ -39,6 +40,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   return (
     <>
       <Navbar />
+      <AfterHeroWidgets />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}

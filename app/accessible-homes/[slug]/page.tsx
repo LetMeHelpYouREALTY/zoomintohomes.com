@@ -8,6 +8,7 @@ import {
 } from "@/content/reso-features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 type PageProps = {
   params: { slug: string };
@@ -39,6 +40,8 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
 
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },

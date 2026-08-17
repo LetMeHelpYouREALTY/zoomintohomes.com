@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   MapPin,
@@ -74,6 +75,8 @@ export default function SunCitySummerlinPage() {
               <Trophy className="h-4 w-4 mr-2" />
               Nevada's Largest 55+ Community
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Summerlin
             </h1>
@@ -81,6 +84,9 @@ export default function SunCitySummerlinPage() {
               7,700+ homes. 3 golf courses. 4 recreation centers. The gold standard of active adult living.
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

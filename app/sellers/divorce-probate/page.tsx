@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   Shield,
@@ -51,6 +52,8 @@ export default function DivorceProbatePage() {
               <Shield className="h-4 w-4 mr-2" />
               Handled with Discretion & Professionalism
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Difficult Situations,<br />Expert Guidance
             </h1>
@@ -66,6 +69,9 @@ export default function DivorceProbatePage() {
               Confidential Consultation → (702) 500-1942
             </a>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Situations We Help With */}
           <section className="mb-16 max-w-5xl mx-auto">

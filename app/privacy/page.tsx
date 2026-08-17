@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.privacy.title,
@@ -12,6 +13,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function PrivacyPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <h1 className="page-title">Privacy policy</h1>
       <p className="lede">
         How {siteIdentity.siteName} handles information you submit through this

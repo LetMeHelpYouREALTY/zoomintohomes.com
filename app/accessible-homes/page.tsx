@@ -6,6 +6,7 @@ import { resoAccessibilityFeatures } from "@/content/reso-features";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.accessibleHomes.title,
@@ -20,6 +21,8 @@ export default function AccessibleHomesPage() {
 
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },

@@ -5,6 +5,7 @@ import { clarkCountyVeteranExemptions } from "@/content/exemptions";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList, buildFaqPage } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.clarkCountyExemption.title,
@@ -35,6 +36,8 @@ export default function ClarkCountyExemptionPage() {
 
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={[
           buildBreadcrumbList([

@@ -4,6 +4,7 @@ import JsonLd from "@/components/site/JsonLd";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.vaSha.title,
@@ -14,6 +15,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function VaShaGrantPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },

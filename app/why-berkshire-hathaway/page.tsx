@@ -4,6 +4,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = {
   title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
@@ -49,6 +50,8 @@ export default function WhyBerkshireHathawayPage() {
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               The Most Trusted Name in Real Estate
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Why Choose Berkshire Hathaway HomeServices?
             </h1>
@@ -58,6 +61,9 @@ export default function WhyBerkshireHathawayPage() {
               same principles that built Warren Buffett's empire.
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Warren Buffett Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

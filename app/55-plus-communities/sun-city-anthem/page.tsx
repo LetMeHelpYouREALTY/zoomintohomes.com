@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   MapPin,
@@ -123,6 +124,8 @@ export default function SunCityAnthemPage() {
               <Mountain className="h-4 w-4 mr-2" />
               Henderson's Premier 55+ Community
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sun City Anthem
             </h1>
@@ -130,6 +133,9 @@ export default function SunCityAnthemPage() {
               7,100+ homes. Mountain views. Henderson safety. Championship golf.
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

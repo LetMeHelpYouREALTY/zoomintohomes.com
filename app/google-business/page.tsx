@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   Mail,
@@ -62,6 +63,7 @@ export default function GoogleBusinessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
+      <AfterHeroWidgets />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}

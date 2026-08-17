@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.henderson.title,
@@ -12,6 +13,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function HendersonPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <h1 className="page-title">
         Homes with measured access features in Henderson
       </h1>

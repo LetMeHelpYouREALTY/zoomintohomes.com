@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   TrendingUp,
@@ -79,6 +80,8 @@ export default function MarketUpdatePage() {
               <Calendar className="h-4 w-4 mr-2" />
               Week of January 20, 2026
             </div>
+
+
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Berkshire Hathaway HomeServices Las Vegas Market Update
             </h1>
@@ -90,6 +93,9 @@ export default function MarketUpdatePage() {
               <span>By Dr. Jan Duffy, REALTOR® | BHHS Nevada Properties</span>
             </div>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Key Statistics */}
           <section className="mb-16 max-w-5xl mx-auto">

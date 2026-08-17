@@ -4,6 +4,7 @@ import JsonLd from "@/components/site/JsonLd";
 import { resoAccessibilityFeatures } from "@/content/reso-features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "RESO accessibility features glossary | Zoom Into Homes",
@@ -15,6 +16,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function GlossaryIndexPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },

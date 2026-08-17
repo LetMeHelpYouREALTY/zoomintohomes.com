@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   TrendingUp,
@@ -50,6 +51,8 @@ export default function MoveUpSellerPage() {
               <TrendingUp className="h-4 w-4 mr-2" />
               Your Equity Unlocks Your Dream Home
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Ready for Your Next Chapter?
             </h1>
@@ -64,6 +67,9 @@ export default function MoveUpSellerPage() {
               Start Your Upgrade → (702) 500-1942
             </a>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Equity Section */}
           <section className="mb-16 bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

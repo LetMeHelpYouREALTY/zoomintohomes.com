@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import CalendlyButton from "@/components/calendly/CalendlyButton";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -121,10 +122,11 @@ export default function Navbar() {
               )}
             </div>
 
+            <CalendlyButton className="text-blue-600 hover:text-blue-700 font-semibold text-sm underline-offset-2 hover:underline" text="Book a call" />
             <Button asChild className="bg-blue-600 hover:bg-blue-700">
-              <Link href="tel:+17025001942" className="flex items-center gap-2">
+              <Link href="tel:+17022221964" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span className="hidden xl:inline">(702) 500-1942</span>
+                <span className="hidden xl:inline">(702) 222-1964</span>
                 <span className="xl:hidden">Call</span>
               </Link>
             </Button>
@@ -193,14 +195,18 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 space-y-2">
+                <CalendlyButton
+                  className="flex w-full items-center justify-center rounded-md bg-teal-700 px-4 py-2 text-sm font-semibold text-white"
+                  text="Book a Calendly call"
+                />
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 w-full">
                   <Link
-                    href="tel:+17025001942"
+                    href="tel:+17022221964"
                     className="flex items-center justify-center gap-2"
                   >
                     <Phone className="h-4 w-4" />
-                    Call Dr. Jan: (702) 500-1942
+                    Call: (702) 222-1964
                   </Link>
                 </Button>
               </div>

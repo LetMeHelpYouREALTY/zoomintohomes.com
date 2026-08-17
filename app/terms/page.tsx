@@ -3,6 +3,7 @@ import Link from "next/link";
 import { brandCopy } from "@/content/brand";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.terms.title,
@@ -13,6 +14,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TermsPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <h1 className="page-title">Terms of use</h1>
       <p className="lede">
         By using {siteIdentity.domain}, you agree to these terms. This site is

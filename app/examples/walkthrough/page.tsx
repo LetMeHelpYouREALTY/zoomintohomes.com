@@ -3,6 +3,7 @@ import Link from "next/link";
 import TourStage from "@/components/site/TourStage";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.walkthroughExample.title,
@@ -15,6 +16,8 @@ const walkthroughUrl = process.env.NEXT_PUBLIC_SAMPLE_WALKTHROUGH_URL?.trim();
 export default function WalkthroughExamplePage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <h1 className="page-title">Example virtual walkthrough</h1>
       <p className="lede">
         Zoom Into Homes is built around remote video touring with measurement

@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 import {
   Phone,
   Waves,
@@ -49,6 +50,8 @@ export default function DelWebbLakeLasVegasPage() {
               <Waves className="h-4 w-4 mr-2" />
               Lakefront 55+ Living
             </div>
+
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Del Webb at Lake Las Vegas
             </h1>
@@ -56,6 +59,9 @@ export default function DelWebbLakeLasVegasPage() {
               Modern homes. Lake views. Resort living. The newest Del Webb in Las Vegas.
             </p>
           </div>
+
+          <AfterHeroWidgets />
+
 
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">

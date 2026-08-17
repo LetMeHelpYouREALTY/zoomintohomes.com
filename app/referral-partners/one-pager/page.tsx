@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
+import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Referral partner one-pager | Zoom Into Homes",
@@ -13,6 +14,8 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ReferralOnePagerPage() {
   return (
     <article>
+      <AfterHeroWidgets />
+
       <h1 className="page-title">Referral partner one-pager</h1>
       <p className="lede">
         Print or save this page for a folder. It is the written handoff Zoom Into

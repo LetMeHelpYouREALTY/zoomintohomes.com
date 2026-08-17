@@ -1,12 +1,37 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import CalendlyButton from "@/components/calendly/CalendlyButton";
+import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
+import { CALENDLY_URL } from "@/content/widgets";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-slate-900 text-white">
+      <div className="bg-white text-slate-900">
+        <CalendlyInlineSection
+          id="schedule-legacy-footer"
+          title="Schedule a virtual tour call"
+          intro="Book a remote walkthrough or listing consult. We measure on video first."
+          height="620px"
+        />
+      </div>
       <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="mb-8 flex flex-wrap gap-3">
+          <CalendlyButton
+            className="inline-flex rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+            text="Schedule on Calendly"
+          />
+          <a
+            href={CALENDLY_URL}
+            className="inline-flex rounded-md border border-slate-600 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Open Calendly in a new tab
+          </a>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>

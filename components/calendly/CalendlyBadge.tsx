@@ -1,26 +1,31 @@
 "use client";
 
 import { useEffect } from "react";
-import Script from "next/script";
+import {
+  CALENDLY_BRAND_COLOR,
+  CALENDLY_URL,
+} from "@/content/widgets";
 import "./types";
 
-interface CalendlyBadgeProps {
+type CalendlyBadgeProps = {
   url?: string;
   text?: string;
   color?: string;
   textColor?: string;
   branding?: boolean;
-}
+};
 
+/**
+ * Floating Calendly badge. Script + CSS load once from root layout.
+ */
 export default function CalendlyBadge({
-  url = "https://calendly.com/drjanduffy/showing",
-  text = "Schedule time with me",
-  color = "#0069ff",
+  url = CALENDLY_URL,
+  text = "Schedule a virtual tour",
+  color = CALENDLY_BRAND_COLOR,
   textColor = "#ffffff",
   branding = true,
 }: CalendlyBadgeProps) {
   useEffect(() => {
-    // Initialize badge widget when Calendly script is loaded
     const initBadge = () => {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
@@ -33,40 +38,21 @@ export default function CalendlyBadge({
       }
     };
 
-    // Check if Calendly is already loaded
     if (window.Calendly) {
       initBadge();
-    } else {
-      // Wait for script to load
-      window.addEventListener("calendly-loaded", initBadge);
+      return;
     }
 
-    return () => {
-      window.removeEventListener("calendly-loaded", initBadge);
-    };
+    const timer = window.setInterval(() => {
+      if (window.Calendly) {
+        window.clearInterval(timer);
+        initBadge();
+      }
+    }, 150);
+
+    window.setTimeout(() => window.clearInterval(timer), 10000);
+    return () => window.clearInterval(timer);
   }, [url, text, color, textColor, branding]);
 
-  return (
-    <>
-      <link
-        href="https://assets.calendly.com/assets/external/widget.css"
-        rel="stylesheet"
-      />
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-        onLoad={() => {
-          if (window.Calendly) {
-            window.Calendly.initBadgeWidget({
-              url,
-              text,
-              color,
-              textColor,
-              branding,
-            });
-          }
-        }}
-      />
-    </>
-  );
+  return null;
 }
