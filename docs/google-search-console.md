@@ -26,6 +26,12 @@ GSC “Excluded by ‘noindex’ tag” rows for `/`, `/about`, `/contact`, `/li
 
 Only intentional `noindex`: `app/not-found.tsx` and placeholder `app/listings/[id]/page.tsx`.
 
+## Not found (404) — retired WordPress URLs
+
+GSC may list old blog/archive URLs (e.g. `/2018/12/`, `/home-4/`, mortgage-rate posts). Those pages are gone. Permanent redirects live in `redirects/legacy-wordpress.js` (wired from `next.config.js`) to `/`, `/market-insights`, `/market-report`, or `/investment-properties`.
+
+After deploy: **Page indexing → Not found (404) → Validate fix**.
+
 ## What the codebase does
 
 | Item | Location | Notes |

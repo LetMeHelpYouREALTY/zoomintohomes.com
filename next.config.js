@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const { legacyWordpressRedirects } = require("./redirects/legacy-wordpress");
+
 const nextConfig = {
   // Standalone output for Docker/Vercel optimization
   output: 'standalone',
@@ -20,7 +22,7 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
 
-  // Host + path aliases (do not 301 live content routes to / — that caused GSC confusion)
+  // Host + path aliases + retired WordPress URLs (GSC 404 cleanup)
   async redirects() {
     return [
       {
@@ -43,6 +45,10 @@ const nextConfig = {
         destination: "/virtual-tour-process",
         permanent: true,
       },
+      ...legacyWordpressRedirects.map((rule) => ({
+        ...rule,
+        permanent: true,
+      })),
       {
         source: "/:path*",
         has: [
