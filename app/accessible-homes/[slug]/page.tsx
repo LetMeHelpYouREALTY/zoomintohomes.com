@@ -66,20 +66,21 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
       <p>
         Remote video first, then measurements against the published glossary.
         In-person time is reserved for finalists. See{" "}
-        <Link href="/virtual-tour-process">the virtual-tour process</Link> and{" "}
+        <Link href="/virtual-tour-process">how touring works</Link> and{" "}
         <Link href="/what-we-measure">what we measure</Link>.
       </p>
       <div className="provenance-panel">
         <h2>Attribution rule</h2>
         <p>
           When listing data is shown later, Zoom Into Homes measurements appear in
-          a separate panel labeled as agent-measured data—not as MLS fields.
+          a separate panel labeled as agent-measured data—not as the listing feed’s
+          own fields.
         </p>
       </div>
       <p>
         <Link href={`/glossary/${feature.slug}`}>Glossary entry</Link>
         {" · "}
-        <Link href="/contact">Request a consultation</Link>
+        <Link href="/contact">Request a call</Link>
       </p>
     </article>
   );

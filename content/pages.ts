@@ -120,7 +120,7 @@ export const accessibilityStatementCopy = {
     },
     {
       title: "What are the known limits?",
-      body: "Third-party embeds (for example Calendly or Matterport) inherit their own accessibility exceptions. Every tour should ship with a written room-by-room measurement equivalent. Map views are enhancements—list views are canonical.",
+      body: "Third-party embeds (for example the scheduler or a 3D tour player) inherit their own accessibility exceptions. Every tour should ship with a written room-by-room measurement equivalent. Map views are enhancements—list views are canonical.",
     },
     {
       title: "How do you report a barrier?",

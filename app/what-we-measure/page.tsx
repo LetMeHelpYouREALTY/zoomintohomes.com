@@ -30,9 +30,9 @@ export default function WhatWeMeasurePage() {
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">
-          We record falsifiable building attributes—door clear widths, threshold
+          We record measurable building attributes—door clear widths, threshold
           heights, shower curbs, route widths, control heights, and related
-          items—against a published glossary aligned to RESO AccessibilityFeatures.
+          items—against the published access glossary.
           Each row carries a date and an evidence level.
         </p>
       </section>
@@ -40,8 +40,8 @@ export default function WhatWeMeasurePage() {
       <div className="provenance-panel">
         <p>{whatWeMeasureCopy.provenanceBody}</p>
         <p>
-          Layout rule for any future MLS join: measured data renders in a
-          separately attributed panel — never merged into MLS feature lists.
+          Layout rule for any future public listing feed: measured data renders in a
+          separately attributed panel — never merged into the listing’s own feature list.
         </p>
       </div>
       <h2>Which attributes appear in the working glossary?</h2>

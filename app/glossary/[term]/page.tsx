@@ -24,7 +24,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     return { title: "Term not found" };
   }
   return buildPageMetadata({
-    title: `${feature.name} — RESO glossary`,
+    title: `${feature.name} — access glossary`,
     description: feature.definition,
     path: `/glossary/${feature.slug}`,
   });
@@ -50,7 +50,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
       <h1 className="page-title">{feature.name}</h1>
       <p className="lede">{feature.definition}</p>
       <p>
-        <strong>RESO key:</strong> {feature.resoKey}
+        <strong>Feature code:</strong> {feature.resoKey}
       </p>
       <h2>How Zoom Into Homes uses this term</h2>
       <p>
@@ -71,7 +71,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
         </p>
       )}
       <p>
-        <Link href="/glossary">All RESO terms</Link>
+        <Link href="/glossary">All access terms</Link>
         {" · "}
         <Link href="/what-we-measure">What we measure</Link>
       </p>
