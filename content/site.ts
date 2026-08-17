@@ -105,9 +105,9 @@ export const pageMeta: Record<string, PageMeta> = {
       "Dr. Gene Boyle helps Las Vegas and Henderson buyers tour homes on video first with Berkshire Hathaway HomeServices Nevada Properties. We describe building features, not people.",
   },
   contact: {
-    title: "Request a call | Zoom Into Homes",
+    title: "Book a Las Vegas video-tour call | Zoom Into Homes",
     description:
-      "Start a Las Vegas or Henderson home search or introduce a client. Call (702) 222-1964 or use the form—no twelve-house tour required.",
+      "Schedule a Las Vegas or Henderson video-tour planning call. We check doorway and bathroom access on camera, then visit two or three finalists. Call (702) 222-1964.",
   },
   accessibilityStatement: {
     title: "Accessibility statement | Zoom Into Homes",

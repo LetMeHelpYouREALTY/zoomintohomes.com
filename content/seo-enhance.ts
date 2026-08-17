@@ -286,23 +286,23 @@ export const pageSeoEnhance = {
   },
   contact: {
     answerBlock:
-      "Request a call for a video-first home search or to introduce a client in Las Vegas and Henderson. Call (702) 222-1964 or use the form for name, email, phone, role, and a short note.",
+      "Zoom Into Homes books Las Vegas and Henderson video-tour planning calls on this page. We tour the listing on camera, write doorway widths, step heights, and shower curbs, then visit two or three finalists in person. Pick a time on the calendar or call (702) 222-1964.",
     keyFacts: [
       "Phone: (702) 222-1964",
-      "Form fields: name, email, phone, role, message",
-      "Roles: Buyer, Seller, I'm introducing a client, Other",
-      "Purpose: start intake without a twelve-house tour",
+      "Book a time on the calendar on this page",
+      "Markets: Las Vegas and Henderson, Nevada",
+      "Method: video tour → written access checklist → two or three finalists",
     ],
     faqs: [
       {
-        question: "How do I request a call?",
+        question: "How do I book a video-tour call?",
         answer:
-          "Call (702) 222-1964 or use the form on this page. Include whether you are buying, selling, or introducing a client, plus required features and timeline when known.",
+          "Pick a time on the calendar on this page, or call (702) 222-1964. Tell us whether you are buying, selling, or introducing a client, plus required doorway and bathroom features when known.",
       },
       {
-        question: "Is the contact form live?",
+        question: "What happens on the planning call?",
         answer:
-          "Yes. Submissions go to our lead inbox when configured. You can always call (702) 222-1964.",
+          "We confirm the search area, the access details that must be measured, and which listings to tour on video first. In-person visits stay limited to two or three finalists.",
       },
       {
         question: "What should care teams include when introducing a client?",
@@ -316,18 +316,19 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
-      "Zoom Into Homes consultation",
-      "Las Vegas video home tour request",
+      "Las Vegas video home tour",
+      "Henderson video-tour planning call",
+      "Zoom Into Homes book a time",
     ],
   },
   accessibilityStatement: {
     answerBlock:
-      "This site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers through the contact form or by calling (702) 222-1964.",
+      "This site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers by calling (702) 222-1964 or booking a time on the contact page.",
     keyFacts: [
       "Target: WCAG 2.2 Level AA",
       "Automated checks: axe-core, jsx-a11y, Lighthouse accessibility",
       "No accessiBe, UserWay, or AudioEye overlays",
-      "Report barriers via the contact form or (702) 222-1964",
+      "Report barriers by calling (702) 222-1964 or booking a time on the contact page",
     ],
     faqs: [
       {
@@ -343,7 +344,7 @@ export const pageSeoEnhance = {
       {
         question: "How do I report an accessibility barrier?",
         answer:
-          "Use the contact form or call (702) 222-1964. Name the page URL, the browser or assistive technology, and the task that failed.",
+          "Call (702) 222-1964 or book a time on the contact page. Name the page URL, the browser or assistive technology, and the task that failed.",
       },
       {
         question: "What automated tests run in continuous integration?",

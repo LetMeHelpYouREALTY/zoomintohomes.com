@@ -47,4 +47,14 @@ describe("site audit", () => {
     expect(hero).toContain("tour-hero-explanation");
     expect(hero).toContain("servicePoints");
   });
+
+  it("uses the scheduler, not a lead form, on /contact", () => {
+    const page = readFileSync(
+      join(process.cwd(), "app/contact/page.tsx"),
+      "utf8",
+    );
+    expect(page).toContain("RoutePageHero");
+    expect(page).toContain("CalendlyInlineSection");
+    expect(page).not.toContain("ConsultationForm");
+  });
 });

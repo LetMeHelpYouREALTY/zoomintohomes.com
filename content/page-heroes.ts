@@ -173,6 +173,11 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     contactCopy.h1,
     contactCopy.lede,
     pageSeoEnhance.contact.answerBlock,
+    [
+      "Pick a time on the calendar, or call (702) 222-1964",
+      "Tour Las Vegas and Henderson homes on video first",
+      "Visit two or three finalists in person, not a dozen",
+    ],
   ),
   "/accessibility-statement": hero(
     pageImages.accessibilityStatement.hero,
@@ -196,7 +201,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.accessibilityStatement.hero,
     "Security policy",
     "How Berkshire Hathaway HomeServices Nevada Properties handles security reports for zoomintohomes.com.",
-    "This page explains how to report a security issue on Zoom Into Homes. Do not include client names, medical notes, or listing credentials in a public report. Call (702) 222-1964 or use the contact form for a private handoff.",
+    "This page explains how to report a security issue on Zoom Into Homes. Do not include client names, medical notes, or listing credentials in a public report. Call (702) 222-1964 or book a time on the contact page for a private handoff.",
   ),
   "/sellers": hero(
     pageImages.home.hero,

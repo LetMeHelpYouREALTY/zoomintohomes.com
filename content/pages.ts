@@ -131,7 +131,7 @@ export const accessibilityStatementCopy = {
     },
     {
       title: "How do you report a barrier?",
-      body: "Use the contact form and describe the page, the browser or assistive technology, and the task that failed. Or call (702) 222-1964.",
+      body: "Call (702) 222-1964 or book a time on the contact page. Name the page, the browser or assistive technology, and the task that failed.",
     },
     {
       title: "What does this site not use?",
@@ -147,9 +147,11 @@ export const referralPartnersCopy = {
 };
 
 export const contactCopy = {
-  h1: "Request a call",
-  lede: "Tell us whether you are buying, selling, or introducing a client. Call (702) 222-1964 or use the form. We will not ask you to tour twelve houses to prove you are serious.",
-  formHeading: "How do you get started?",
+  h1: "Book a Las Vegas video-tour call",
+  lede: "Pick a time, or call (702) 222-1964. We tour Las Vegas and Henderson homes on video, write doorway and bathroom measurements, then visit two or three finalists.",
+  scheduleHeading: "Pick a time for a video-tour planning call",
+  scheduleIntro:
+    "Use the calendar to book. We tour the listing on video, write doorway and bathroom measurements, then visit two or three finalists in person.",
   stubNotice:
-    "We follow up by phone or email after you submit. You can also call (702) 222-1964.",
+    "Pick a time on the calendar, or call (702) 222-1964 if you need us sooner.",
 };

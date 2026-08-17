@@ -35,7 +35,7 @@ export default function PageHero({
   servicePoints,
   brand = siteIdentity.siteName,
   primaryHref = "/contact",
-  primaryLabel = "Request a call",
+  primaryLabel = "Book a call",
   secondaryHref = `tel:${siteIdentity.phoneTel}`,
   secondaryLabel = `Call ${siteIdentity.phoneDisplay}`,
   tourHref,

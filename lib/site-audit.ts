@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
-import { homeCopy } from "@/content/pages";
+import { homeCopy, contactCopy } from "@/content/pages";
 import { pageHeroByPath } from "@/content/page-heroes";
 import { siteIdentity } from "@/content/site";
 import {
@@ -362,6 +362,38 @@ export function auditSeoAndSchema(): AuditFinding[] {
       severity: "error",
       area: "seo",
       message: "Homepage hero needs at least 3 service points",
+    });
+  }
+  if (!/las vegas/i.test(contactCopy.h1)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Contact H1 must name Las Vegas",
+    });
+  }
+  if (/form/i.test(`${contactCopy.h1} ${contactCopy.lede}`)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Contact hero still tells people to use a form",
+    });
+  }
+  const contactPage = readFileSync(
+    join(process.cwd(), "app/contact/page.tsx"),
+    "utf8",
+  );
+  if (contactPage.includes("ConsultationForm")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Contact page still renders a lead form instead of the scheduler",
+    });
+  }
+  if (!contactPage.includes("CalendlyInlineSection")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Contact page must embed the inline scheduler",
     });
   }
 

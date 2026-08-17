@@ -45,7 +45,7 @@ export default function PrivacyPage() {
       <p>
         Questions: call{" "}
         <a href={`tel:${siteIdentity.phoneTel}`}>{siteIdentity.phoneDisplay}</a>{" "}
-        or use the <Link href="/contact">contact form</Link>.
+        or use the <Link href="/contact">contact page</Link>.
       </p>
     </article>
   );
