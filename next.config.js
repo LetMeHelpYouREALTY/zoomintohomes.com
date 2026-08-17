@@ -20,62 +20,41 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
 
-  // Redirect non-www to www
+  // Host + path aliases (do not 301 live content routes to / — that caused GSC confusion)
   async redirects() {
-    const retired = [
-      '/listings',
-      '/listings/:path*',
-      '/buyers',
-      '/buyers/:path*',
-      '/sellers',
-      '/sellers/:path*',
-      '/neighborhoods',
-      '/neighborhoods/:path*',
-      '/luxury-homes',
-      '/new-construction',
-      '/investment-properties',
-      '/relocation',
-      '/home-valuation',
-      '/55-plus-communities',
-      '/55-plus-communities/:path*',
-      '/services',
-      '/faq',
-      '/market-report',
-      '/market-update',
-      '/market-insights',
-      '/google-business',
-      '/why-berkshire-hathaway',
-      '/security-policy',
-    ];
-
     return [
-      ...retired.map((source) => ({
-        source,
-        destination: '/',
-        permanent: true,
-      })),
       {
-        source: '/veterans',
-        destination: '/va-sah-grant-nevada',
+        source: "/home",
+        destination: "/",
         permanent: true,
       },
       {
-        source: '/how-it-works',
-        destination: '/virtual-tour-process',
+        source: "/home/",
+        destination: "/",
         permanent: true,
       },
       {
-        source: '/:path*',
+        source: "/veterans",
+        destination: "/va-sah-grant-nevada",
+        permanent: true,
+      },
+      {
+        source: "/how-it-works",
+        destination: "/virtual-tour-process",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
         has: [
           {
-            type: 'host',
-            value: 'heyberkshire.com',
+            type: "host",
+            value: "heyberkshire.com",
           },
         ],
-        destination: 'https://www.heyberkshire.com/:path*',
+        destination: "https://www.heyberkshire.com/:path*",
         permanent: true,
       },
-    ]
+    ];
   },
 
   // Python API rewrites

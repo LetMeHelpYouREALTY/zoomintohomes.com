@@ -28,8 +28,6 @@ export const indexablePaths = [
   "/privacy",
   "/terms",
   "/accessibility-features",
-  "/veterans",
-  "/how-it-works",
   "/faq",
   "/buyers",
   "/sellers",

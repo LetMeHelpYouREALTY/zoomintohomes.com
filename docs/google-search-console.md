@@ -1,48 +1,63 @@
 # Google Search Console setup — zoomintohomes.com
 
-Site prep in this repo (as of Aug 2026). Verification and property creation happen in Google’s UI; Claude/ops sets the env token after GSC issues it.
+Site prep in this repo (as of Aug 17, 2026). Verification and property creation happen in Google’s UI.
 
-## What the codebase already does
+## Current indexing status (Aug 17, 2026 live check)
 
-| Item                     | Location                              | Notes                                                      |
-| ------------------------ | ------------------------------------- | ---------------------------------------------------------- |
-| Canonical host           | `lib/site-url.ts`                     | `https://www.zoomintohomes.com` (apex 308 → www on Vercel) |
-| `sitemap.xml`            | `app/sitemap.ts`                      | Nine indexable routes only                                 |
-| `robots.txt`             | `app/robots.ts`                       | Allows crawl; points at www sitemap; `host` = www          |
-| Stale static robots      | removed `public/robots.txt`           | Old heyberkshire.com file would override App Router output |
-| Per-page canonical + OG  | `lib/seo.ts` + each `app/**/page.tsx` | Absolute www URLs                                          |
-| Default social image     | `app/opengraph-image.jpg`             | Home hero                                                  |
-| Google verification meta | `app/layout.tsx`                      | Emits only when `GOOGLE_SITE_VERIFICATION` is set          |
-| Retired funnel URLs      | `next.config.js`                      | Permanent redirects → `/`                                  |
-| JSON-LD                  | commented slot in `app/layout.tsx`    | Claude-only; do not invent schema here                     |
+Production serves:
 
-## Claude / ops steps (after this PR is on production)
-
-1. Open [Google Search Console](https://search.google.com/search-console).
-2. Prefer a **Domain** property for `zoomintohomes.com` (covers apex + www) via DNS TXT at the registrar. DNS edits are Claude-side — do not change Cloudflare from this repo.
-3. Or add a **URL prefix** property for `https://www.zoomintohomes.com/` and verify with the HTML meta tag:
-   - Copy the `content` value from the Google meta tag.
-   - Set Vercel env `GOOGLE_SITE_VERIFICATION` to that value (no quotes).
-   - Redeploy; confirm homepage source contains `google-site-verification`.
-   - Click **Verify** in GSC.
-4. Alternate URL-prefix method: upload Google’s HTML file into `public/` with the exact filename Google provides, commit, deploy, verify.
-5. In GSC → **Sitemaps**, submit: `https://www.zoomintohomes.com/sitemap.xml`
-6. Request indexing on `/` after the first crawl if needed.
-7. Confirm **Page indexing** does not list the nine routes as “Excluded by ‘noindex’” or blocked by robots.
-8. After NAP placeholders are replaced, Claude injects validated JSON-LD into the layout slot (LocalBusiness / RealEstateAgent).
-
-## Env var added by this work
-
-```env
-# Optional until GSC issues a token. Server-side metadata only.
-GOOGLE_SITE_VERIFICATION=
+```html
+<meta name="robots" content="index, follow"/>
 ```
 
-List this in Vercel project env when verifying via the HTML tag method.
+on `https://www.zoomintohomes.com/` (and key routes). There is **no** `noindex` and **no** `X-Robots-Tag: noindex` on the live homepage.
+
+GSC “Excluded by ‘noindex’ tag” rows for `/`, `/about`, `/contact`, `/listings`, and `/home/` are from **older crawls** (May–early Aug 2026) before the Zoom Into Homes rebuild set `robots: { index: true }`. Click **Validate fix** in GSC after this deploy; request indexing on `https://www.zoomintohomes.com/`.
+
+### URL notes from the GSC example list
+
+| Example URL | What should happen |
+| --- | --- |
+| `http://zoomintohomes.com/` | 308 → `https://www.zoomintohomes.com/` (indexable) |
+| `https://zoomintohomes.com/` | 308 → www (indexable) |
+| `https://www.zoomintohomes.com/` | 200, `index, follow`, canonical www |
+| `https://zoomintohomes.com/home/` | 308 → `/` |
+| `/listings`, `/about`, `/contact` | 200 on www (content routes; not redirected to `/`) |
+
+Only intentional `noindex`: `app/not-found.tsx` and placeholder `app/listings/[id]/page.tsx`.
+
+## What the codebase does
+
+| Item | Location | Notes |
+| --- | --- | --- |
+| Canonical host | `lib/site-url.ts` | `https://www.zoomintohomes.com` |
+| `sitemap.xml` | `app/sitemap.ts` | Indexable www paths only (no alias redirects) |
+| `robots.txt` | `app/robots.ts` | Allows `/`; sitemap + host = www |
+| Per-page robots + canonical | `lib/seo.ts` + layout | Explicit `index, follow` |
+| `/home` alias | `next.config.js` + `vercel.json` | Permanent → `/` |
+| Google verification meta | `app/layout.tsx` | When `GOOGLE_SITE_VERIFICATION` is set |
+
+## Claude / ops steps
+
+1. Open [Google Search Console](https://search.google.com/search-console).
+2. Prefer a **Domain** property for `zoomintohomes.com` (covers apex + www) via DNS TXT.
+3. Or **URL prefix** `https://www.zoomintohomes.com/` + HTML meta:
+   - Set Vercel env `GOOGLE_SITE_VERIFICATION` to the tag’s `content` value.
+   - Redeploy; confirm homepage source contains `google-site-verification`.
+   - Click **Verify**.
+4. **Sitemaps** → submit `https://www.zoomintohomes.com/sitemap.xml`.
+5. **Page indexing** → open “Excluded by ‘noindex’” → **Validate fix**.
+6. **URL inspection** on `https://www.zoomintohomes.com/` → **Request indexing**.
+7. Confirm apex/http variants are not separate URL-prefix properties fighting www (Domain property preferred).
+
+## Env
+
+```env
+GOOGLE_SITE_VERIFICATION=
+```
 
 ## Do not invent
 
 - Verification token / DNS TXT value
-- Google Analytics / Tag Manager IDs for GSC verification
-- Schema.org JSON-LD properties
-- NAP, license numbers, or grant amounts
+- Analytics IDs for GSC verification
+- Schema.org properties or NAP/license/grant numbers
