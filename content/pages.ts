@@ -1,6 +1,13 @@
 export const homeCopy = {
   h1: "Tour the listing first. Visit only the finalists.",
   lede: "We tour homes on video first, check doorway and bathroom access against a written list, then visit only two or three finalists in person—not a dozen.",
+  explanation:
+    "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video touring is how we keep showings short.",
+  servicePoints: [
+    "Tour Las Vegas and Henderson homes on video first",
+    "Write down doorway widths, step heights, and shower curbs",
+    "Visit two or three finalists in person, not a dozen",
+  ],
   audienceLabel: "Who is this practice built for?",
   audiences: [
     {

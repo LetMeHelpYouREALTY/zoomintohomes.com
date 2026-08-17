@@ -13,6 +13,7 @@
   --sand: #f2ede4;
   --border: #14666b;
   --link: #0f4c4f;
+  --primary: #0f4c4f;
   --link-hover: #16262b;
   --focus-fill: #f5c542;
   --focus-bar: #16262b;
@@ -236,94 +237,122 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   }
 }
 
-/* Full-bleed video-tour hero — shorter on phones so the LCP photo is not a full-screen billboard */
+/* Split hero: photo beside service copy so the H1 is readable, not lost on a tall overlay */
 .tour-hero {
-  position: relative;
-  min-height: 18.5rem;
   display: grid;
-  align-items: end;
-  color: #faf7f2;
+  grid-template-columns: 1fr;
+  align-items: stretch;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-bottom: 0;
-}
-
-@media (min-width: 40rem) {
-  .tour-hero {
-    min-height: min(58vh, 36rem);
-  }
+  width: 100%;
+  margin: 0 0 0;
+  background: var(--sand);
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
 }
 
 .tour-hero-media {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  min-height: 14rem;
+  aspect-ratio: 3 / 2;
+}
+
+@media (min-width: 56rem) {
+  .tour-hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(22rem, 0.9fr);
+    min-height: 28rem;
+  }
+
+  .tour-hero-media {
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
 }
 
 .tour-hero-image {
   object-fit: cover;
 }
 
-.tour-hero-shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgb(22 38 43 / 0.25) 0%, rgb(22 38 43 / 0.55) 45%, rgb(22 38 43 / 0.88) 100%),
-    linear-gradient(90deg, rgb(15 76 79 / 0.35), transparent 55%);
+.tour-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 1.25rem 1.75rem;
 }
 
-.tour-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 72rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 4rem 1.25rem 3rem;
-  animation: tour-rise 0.9s ease-out both;
+@media (min-width: 56rem) {
+  .tour-hero-content {
+    padding: 2.25rem 1.75rem 2.5rem;
+  }
 }
 
 .tour-hero-brand {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-size: 1.05rem;
   font-weight: 700;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 .tour-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+  font-size: clamp(1.65rem, 3.4vw, 2.45rem);
   line-height: 1.15;
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
   max-width: 18ch;
   text-wrap: balance;
   font-weight: 700;
 }
 
 .tour-hero-support {
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.85rem;
   max-width: 38rem;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.tour-hero-explanation {
+  margin: 0 0 1rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
   line-height: 1.55;
-  color: rgb(250 247 242 / 0.92);
+}
+
+.tour-hero-points {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  max-width: 38rem;
+}
+
+.tour-hero-points li {
+  margin: 0 0 0.4rem;
 }
 
 .tour-hero-actions {
   margin: 0;
 }
 
-.tour-play-button {
-  gap: 0.65rem;
-  background: #faf7f2;
-  color: var(--ink);
-  border-color: #faf7f2;
+.tour-hero .tour-play-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border-color: var(--button-bg);
 }
 
-.tour-play-button:hover {
-  background: #fff;
-  color: var(--ink);
-  border-color: #fff;
+.tour-hero .tour-play-icon {
+  border-color: transparent transparent transparent var(--button-text);
+}
+
+.tour-play-button {
+  gap: 0.65rem;
+}
+
+.tour-hero .tour-play-button:hover {
+  background: var(--teal-hover, #14666b);
+  border-color: var(--teal-hover, #14666b);
+  color: var(--button-text);
 }
 
 .tour-play-icon {
@@ -331,25 +360,7 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   height: 0;
   border-style: solid;
   border-width: 0.55rem 0 0.55rem 0.9rem;
-  border-color: transparent transparent transparent var(--button-bg);
-}
-
-.button-on-dark {
-  background: var(--button-bg);
-  border-color: var(--button-bg);
-  color: #fff;
-}
-
-.button-ghost-on-dark {
-  background: transparent;
-  border-color: rgb(250 247 242 / 0.7);
-  color: #faf7f2;
-}
-
-.button-ghost-on-dark:hover {
-  background: rgb(250 247 242 / 0.12);
-  color: #fff;
-  border-color: #fff;
+  border-color: transparent transparent transparent var(--button-text);
 }
 
 .tour-stage {

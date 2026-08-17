@@ -38,4 +38,13 @@ describe("site audit", () => {
     expect(layout).not.toContain('strategy="afterInteractive"');
     expect(layout).toContain("RealScoutScript");
   });
+
+  it("puts a service explanation beside the homepage hero", () => {
+    const hero = readFileSync(
+      join(process.cwd(), "components/site/TourHero.tsx"),
+      "utf8",
+    );
+    expect(hero).toContain("tour-hero-explanation");
+    expect(hero).toContain("servicePoints");
+  });
 });

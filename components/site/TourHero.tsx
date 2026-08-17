@@ -10,6 +10,8 @@ type TourHeroProps = {
   brand: string;
   headline: string;
   support: string;
+  explanation: string;
+  servicePoints: readonly string[];
   primaryHref: string;
   primaryLabel: string;
   secondaryHref: string;
@@ -20,14 +22,16 @@ type TourHeroProps = {
 };
 
 /**
- * Full-bleed tour-stage hero: brand + one headline + support + CTAs over
- * cinematic media. RealScout + Calendly render immediately below.
+ * Split hero: photo beside the H1 and service explanation so the first
+ * screen states what we do. Listings render immediately below.
  */
 export default function TourHero({
   image,
   brand,
   headline,
   support,
+  explanation,
+  servicePoints,
   primaryHref,
   primaryLabel,
   secondaryHref,
@@ -48,9 +52,8 @@ export default function TourHero({
             fetchPriority="high"
             quality={PAGE_IMAGE_QUALITY}
             className="tour-hero-image"
-            sizes="(max-width: 48rem) 100vw, 1400px"
+            sizes="(max-width: 56rem) 100vw, 50vw"
           />
-          <div className="tour-hero-shade" />
         </div>
         <div className="tour-hero-content">
           <p className="tour-hero-brand">{brand}</p>
@@ -58,24 +61,30 @@ export default function TourHero({
             {headline}
           </h1>
           <p className="tour-hero-support">{support}</p>
+          <p className="tour-hero-explanation">{explanation}</p>
+          <ul className="tour-hero-points">
+            {servicePoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
           <div className="cta-row tour-hero-actions">
             <Link href={tourHref} className="button tour-play-button">
               <span className="tour-play-icon" aria-hidden="true" />
               {tourLabel}
             </Link>
-            <Link href={primaryHref} className="button button-on-dark">
+            <Link href={primaryHref} className="button">
               {primaryLabel}
             </Link>
             {secondaryHref.startsWith("tel:") ? (
-              <a href={secondaryHref} className="button button-ghost-on-dark">
+              <a href={secondaryHref} className="button button-secondary">
                 {secondaryLabel}
               </a>
             ) : (
-              <Link href={secondaryHref} className="button button-ghost-on-dark">
+              <Link href={secondaryHref} className="button button-secondary">
                 {secondaryLabel}
               </Link>
             )}
-            <a href={CALENDLY_URL} className="button button-ghost-on-dark">
+            <a href={CALENDLY_URL} className="button button-secondary">
               Book a time
             </a>
           </div>

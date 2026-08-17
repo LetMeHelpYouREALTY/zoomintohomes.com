@@ -14,7 +14,7 @@ export type PageSeoEnhance = {
 export const pageSeoEnhance = {
   home: {
     answerBlock:
-      "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video-first touring is how we keep showings short.",
+      "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video touring is how we keep showings short.",
     keyFacts: [
       "Service area: Las Vegas and Henderson, Nevada",
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",

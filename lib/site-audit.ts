@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
+import { homeCopy } from "@/content/pages";
 import { siteIdentity } from "@/content/site";
 import {
   buyerSellerJargonHits,
@@ -344,6 +345,20 @@ export function auditSeoAndSchema(): AuditFinding[] {
       severity: "error",
       area: "seo",
       message: `CTA phone is ${siteIdentity.phoneDisplay}, expected (702) 222-1964`,
+    });
+  }
+  if (homeCopy.explanation.split(/\s+/).length < 28) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Homepage service explanation next to the hero is too short",
+    });
+  }
+  if (homeCopy.servicePoints.length < 3) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Homepage hero needs at least 3 service points",
     });
   }
 

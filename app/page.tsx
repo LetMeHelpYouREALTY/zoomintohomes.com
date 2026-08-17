@@ -45,6 +45,8 @@ export default function HomePage() {
         brand={siteIdentity.siteName}
         headline={homeCopy.h1}
         support={homeCopy.lede}
+        explanation={homeCopy.explanation}
+        servicePoints={homeCopy.servicePoints}
         primaryHref="/virtual-tour-process"
         primaryLabel="See the tour process"
         secondaryHref={`tel:${siteIdentity.phoneTel}`}
@@ -53,8 +55,6 @@ export default function HomePage() {
         tourLabel="Watch a sample video tour"
       />
       <div className="home-body">
-        <PageSeoSections page="home" slot="intro" />
-
         <section className="tour-promise" aria-labelledby="tour-promise-heading">
           <div className="tour-promise-copy">
             <h2 id="tour-promise-heading">{homeCopy.promiseTitle}</h2>
