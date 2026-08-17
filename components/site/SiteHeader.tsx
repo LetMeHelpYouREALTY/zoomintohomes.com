@@ -58,7 +58,7 @@ export default function SiteHeader() {
           <li>
             <CalendlyButton
               className="nav-mobile-calendly"
-              text="Book a Calendly call"
+              text="Book a call"
             />
           </li>
           {primaryNav.map((item) => (

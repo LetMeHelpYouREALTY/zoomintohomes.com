@@ -4,16 +4,18 @@ import CalendlyButton from "@/components/calendly/CalendlyButton";
 import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import ConsultationForm from "@/components/site/ConsultationForm";
 import HeadingImage from "@/components/site/HeadingImage";
+import JsonLd from "@/components/site/JsonLd";
 import PageHero from "@/components/site/PageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { contactCopy } from "@/content/pages";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { CALENDLY_URL } from "@/content/widgets";
+import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Request a consultation",
+  title: pageMeta.contact.title,
   description: pageMeta.contact.description,
   path: "/contact",
   imagePath: pageImages.contact.hero.src,
@@ -25,6 +27,12 @@ const images = pageImages.contact;
 export default function ContactPage() {
   return (
     <article>
+      <JsonLd
+        data={buildBreadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
       <PageHero image={images.hero} />
       <h1 className="page-title">{contactCopy.h1}</h1>
       <p className="lede">{contactCopy.lede}</p>
@@ -33,9 +41,9 @@ export default function ContactPage() {
         <a href={`tel:${siteIdentity.phoneTel}`} className="button">
           Call {siteIdentity.phoneDisplay}
         </a>
-        <CalendlyButton className="button button-secondary" text="Book on Calendly" />
+        <CalendlyButton className="button button-secondary" text="Book a time" />
         <a href={CALENDLY_URL} className="button button-secondary">
-          Open Calendly
+          Open the scheduler
         </a>
       </div>
       <h2>{contactCopy.formHeading}</h2>
@@ -47,7 +55,7 @@ export default function ContactPage() {
       <CalendlyInlineSection
         id="schedule-contact"
         title="Prefer to pick a time now?"
-        intro="Use the scheduler for a virtual-tour planning call. Same practice, same reduced-showing process."
+        intro="Use the scheduler for a video-tour planning call. Same practice, same fewer-showings process."
       />
       <div className="image-grid">
         {images.supporting.map((image) => (
@@ -60,11 +68,11 @@ export default function ContactPage() {
         related={[
           {
             href: "/virtual-tour-process",
-            label: "What happens after intake?",
+            label: "What happens after we talk?",
           },
           {
             href: "/referral-partners",
-            label: "How do referral partners hand off a client?",
+            label: "How do care teams introduce a client?",
           },
         ]}
       />

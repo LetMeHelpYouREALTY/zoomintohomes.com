@@ -50,5 +50,5 @@ export const CALENDLY_URL =
 export const CALENDLY_BRAND_COLOR = "#0F4C4F";
 
 export function calendlyHeading(): string {
-  return `Schedule a virtual tour with ${siteIdentity.agentName}`;
+  return `Schedule a video tour with ${siteIdentity.agentName}`;
 }

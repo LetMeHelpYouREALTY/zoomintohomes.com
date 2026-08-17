@@ -20,7 +20,7 @@ type CalendlyBadgeProps = {
  */
 export default function CalendlyBadge({
   url = CALENDLY_URL,
-  text = "Schedule a virtual tour",
+  text = "Schedule a video tour",
   color = CALENDLY_BRAND_COLOR,
   textColor = "#ffffff",
   branding = true,

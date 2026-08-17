@@ -108,7 +108,7 @@ export const pageImages = {
         "how-it-works",
         "close",
         "Offer, access notes, close",
-        "Inspection flashlight and a feature sheet on a kitchen counter beside a lever faucet.",
+        "Inspection flashlight and an access checklist on a kitchen counter beside a lever faucet.",
       ),
     ],
   },
@@ -254,7 +254,7 @@ export const pageImages = {
     hero: img(
       "referral-partners",
       "hero",
-      "Referral partners",
+      "For hospitals and care teams",
       "Dated shortlist printout and a tablet playing a doorway video on a conference table.",
     ),
     supporting: [
@@ -262,7 +262,7 @@ export const pageImages = {
         "referral-partners",
         "discharge",
         "Hospital discharge planners",
-        "Hospital case-management desk with a housing feature brief, not a patient bedside scene.",
+        "Hospital case-management desk with a housing access brief, not a patient bedside scene.",
       ),
       img(
         "referral-partners",
@@ -274,13 +274,13 @@ export const pageImages = {
         "referral-partners",
         "va-loan",
         "VA loan officers",
-        "Loan processor desk with a written feature sheet clipped to a file, no grant amounts shown.",
+        "Loan processor desk with a written access checklist clipped to a file, no grant amounts shown.",
       ),
       img(
         "referral-partners",
         "elder-law",
         "Elder law attorneys",
-        "Legal file folder, house key, and a remote-tour still of a single-level floor plan.",
+        "Legal file folder, house key, and a video-tour still of a single-level floor plan.",
       ),
       img(
         "referral-partners",
@@ -292,7 +292,7 @@ export const pageImages = {
         "referral-partners",
         "handoff",
         "Handoff",
-        "Envelope of stills and a one-page feature sheet labeled with a date, not a diagnosis.",
+        "Envelope of stills and a one-page access checklist labeled with a date, not a diagnosis.",
       ),
     ],
   },
@@ -313,13 +313,13 @@ export const pageImages = {
       img(
         "about",
         "workstation",
-        "Dr. Gene Boyle (California DRE #02282581) plans virtual-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
+        "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
         "Dual monitors showing a paused home video and a feature checklist, empty chair.",
       ),
       img(
         "about",
         "glossary",
-        "The practice is built so a referral source can read the process, the glossary, and the Fair Housing rule (features, not people) without a sales call.",
+        "The practice is built so a care team can read the process, the measurement list, and the Fair Housing rule (features, not people) without a sales call.",
         "Open binder of measured doorway and shower photos with width notes in the margin.",
       ),
       img(
@@ -331,7 +331,7 @@ export const pageImages = {
       img(
         "about",
         "measure",
-        "Call (702) 222-1964. Zoom Into Homes documents the reduced-showing process and the feature glossary used in files so a referral source can evaluate the work without a sales call.",
+        "Call (702) 222-1964. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
         "Hands of a working adult measuring a door clear width. No wheelchair prop in the frame.",
       ),
       img(
@@ -366,7 +366,7 @@ export const pageImages = {
         "contact",
         "referral",
         "How do you start the consultation request?",
-        "Handoff packet: feature sheet, dated shortlist, and a tablet with a saved tour.",
+        "Handoff packet: access checklist, dated shortlist, and a tablet with a saved tour.",
       ),
       img(
         "contact",

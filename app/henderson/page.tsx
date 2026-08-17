@@ -19,7 +19,7 @@ export default function HendersonPage() {
         Homes with measured access features in Henderson
       </h1>
       <p className="lede">
-        Editorial-first guide. Neighborhood-grain IDX pages stay thin when
+        Editorial-first guide. Neighborhood listing pages stay thin when
         inventory is low—so this page leads with process, vocabulary, and
         communities often checked, not an empty listing grid.
       </p>
@@ -38,7 +38,7 @@ export default function HendersonPage() {
         <li>Siena</li>
       </ul>
       <p>
-        <Link href="/virtual-tour-process">How virtual-first touring works</Link>
+        <Link href="/virtual-tour-process">How video-first touring works</Link>
         {" · "}
         <Link href="/accessible-homes">Accessible homes hub</Link>
         {" · "}

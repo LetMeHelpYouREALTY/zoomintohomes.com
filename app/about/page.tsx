@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
+import JsonLd from "@/components/site/JsonLd";
 import PageHero from "@/components/site/PageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { aboutCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
+import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About Dr. Gene Boyle",
+  title: pageMeta.about.title,
   description: pageMeta.about.description,
   path: "/about",
   imagePath: pageImages.about.hero.src,
@@ -27,6 +29,12 @@ export default function AboutPage() {
 
   return (
     <article>
+      <JsonLd
+        data={buildBreadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
       <PageHero image={images.hero} />
       <h1 className="page-title">{aboutCopy.h1}</h1>
       <p className="lede">{aboutCopy.lede}</p>

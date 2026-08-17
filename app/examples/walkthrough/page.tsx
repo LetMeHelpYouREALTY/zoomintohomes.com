@@ -77,7 +77,7 @@ export default function WalkthroughExamplePage() {
           Call {siteIdentity.phoneDisplay}
         </a>
         <Link href="/examples/feature-sheet" className="button button-secondary">
-          Example feature sheet
+          Example access checklist
         </Link>
       </div>
     </article>

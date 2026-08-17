@@ -7,8 +7,8 @@ export const referralPartnerTypes: ReferralPartnerType[] = [
     theirProblem:
       "A patient needs a different unit before a stair-only house becomes the reason for a bounce-back. Housing search is not in the discharge timeline.",
     whatWeHandle: [
-      "Virtual tours while the patient is still admitted or in rehab",
-      "Feature sheets that a case manager can file without a site visit",
+      "Video tours while the patient is still admitted or in rehab",
+      "Written access checklists that a case manager can file without a site visit",
       "A shortlist timed to a realistic discharge window",
     ],
     handoffProcess:
@@ -34,7 +34,7 @@ export const referralPartnerTypes: ReferralPartnerType[] = [
       "SAH and SHA are grant programs, not a line item most purchase files already know how to sequence. Clients get sent to agents who then discover stairs on the first showing.",
     whatWeHandle: [
       "Early remote screening so a pre-approval is not spent on a stair-only plan",
-      "A written feature sheet a processor can attach to the file",
+      "A written access checklist a processor can attach to the file",
       "Share required features early; verify SAH/SHA rules on VA.gov with an accredited representative",
     ],
     handoffProcess:

@@ -4,11 +4,10 @@ import JsonLd from "@/components/site/JsonLd";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { veteransCopy } from "@/content/pages";
-import { pageSeoEnhance } from "@/content/seo-enhance";
 import { pageMeta } from "@/content/site";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
-import { buildBreadcrumbList, buildFaqPage } from "@/lib/schema";
+import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -20,7 +19,6 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const images = pageImages.veterans;
-const enhance = pageSeoEnhance.veterans;
 
 export default function VaSahGrantPage() {
   const byHeading = Object.fromEntries(
@@ -30,13 +28,10 @@ export default function VaSahGrantPage() {
   return (
     <article>
       <JsonLd
-        data={[
-          buildBreadcrumbList([
-            { name: "Home", path: "/" },
-            { name: "VA SAH grant Nevada", path: "/va-sah-grant-nevada" },
-          ]),
-          buildFaqPage(enhance.faqs),
-        ]}
+        data={buildBreadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "VA housing grant", path: "/va-sah-grant-nevada" },
+        ])}
       />
       <PageHero image={images.hero} />
       <h1 className="page-title">
@@ -76,7 +71,7 @@ export default function VaSahGrantPage() {
           </Link>
         </li>
         <li>
-          <Link href="/virtual-tour-process">Virtual-first touring process</Link>
+          <Link href="/virtual-tour-process">Video-first touring process</Link>
         </li>
       </ul>
       <PageSeoSections

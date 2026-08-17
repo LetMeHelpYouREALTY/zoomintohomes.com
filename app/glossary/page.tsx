@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "RESO accessibility features glossary | Zoom Into Homes",
+  title: "Home access features glossary | Zoom Into Homes",
   description:
-    "All 35 RESO AccessibilityFeatures enums with plain-language definitions. Building attributes only—Fair Housing–safe vocabulary for Las Vegas and Henderson searches.",
+    "Plain-language definitions for doorway, bathroom, entry, and related access features used on Zoom Into Homes checklists in Las Vegas and Henderson.",
   path: "/glossary",
 });
 
@@ -24,11 +24,10 @@ export default function GlossaryIndexPage() {
           { name: "Glossary", path: "/glossary" },
         ])}
       />
-      <h1 className="page-title">RESO AccessibilityFeatures glossary</h1>
+      <h1 className="page-title">Home access features glossary</h1>
       <p className="lede">
-        Thirty-five enumerated building attributes from the RESO Data Dictionary
-        (DD 2.1). This is the shared vocabulary for feature sheets, future
-        filters, and Fair Housing–safe copy.
+        Thirty-five building attributes we use on written access checklists.
+        Features are measured. People are not described.
       </p>
       <ul>
         {resoAccessibilityFeatures.map((feature) => (
@@ -40,12 +39,12 @@ export default function GlossaryIndexPage() {
         ))}
       </ul>
       <p className="meta">
-        Source:{" "}
+        Technical source (industry data dictionary):{" "}
         <a
           href="https://dd.reso.org/DD2.1/lookups/AccessibilityFeatures/"
           rel="noopener noreferrer"
         >
-          RESO AccessibilityFeatures lookup
+          AccessibilityFeatures lookup
         </a>
         .
       </p>

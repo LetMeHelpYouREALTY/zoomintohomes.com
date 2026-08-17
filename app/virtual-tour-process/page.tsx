@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/site/JsonLd";
 import PageSeoSections from "@/components/site/PageSeoSections";
-import { pageSeoEnhance } from "@/content/seo-enhance";
 import { pageMeta } from "@/content/site";
 import { howItWorksCopy } from "@/content/pages";
 import { processSteps } from "@/content/process";
 import { pageImages } from "@/content/page-images";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageHero from "@/components/site/PageHero";
-import { buildBreadcrumbList, buildFaqPage } from "@/lib/schema";
+import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -21,7 +20,6 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const images = pageImages.howItWorks;
-const enhance = pageSeoEnhance.howItWorks;
 
 export default function VirtualTourProcessPage() {
   const byHeading = Object.fromEntries(
@@ -31,13 +29,10 @@ export default function VirtualTourProcessPage() {
   return (
     <article>
       <JsonLd
-        data={[
-          buildBreadcrumbList([
-            { name: "Home", path: "/" },
-            { name: "Virtual tour process", path: "/virtual-tour-process" },
-          ]),
-          buildFaqPage(enhance.faqs),
-        ]}
+        data={buildBreadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "How touring works", path: "/virtual-tour-process" },
+        ])}
       />
       <PageHero image={images.hero} />
       <h1 className="page-title">{howItWorksCopy.h1}</h1>
@@ -45,7 +40,7 @@ export default function VirtualTourProcessPage() {
       <PageSeoSections page="howItWorks" slot="intro" />
       <div className="cta-row">
         <Link href="/contact" className="button">
-          Request a consultation
+          Request a call
         </Link>
         <Link href="/examples/walkthrough" className="button button-secondary">
           See an example walkthrough
@@ -71,7 +66,7 @@ export default function VirtualTourProcessPage() {
           { href: "/what-we-measure", label: "What do you measure?" },
           {
             href: "/examples/feature-sheet",
-            label: "What does a feature sheet look like?",
+            label: "What does an access checklist look like?",
           },
           { href: "/contact", label: "How do I start intake?" },
         ]}

@@ -18,7 +18,7 @@ export function buildPageMetadata({
   path,
   absoluteTitle = false,
   imagePath = "/images/pages/home/hero.jpg",
-  imageAlt = "Zoom Into Homes virtual-first home search in Las Vegas",
+  imageAlt = "Zoom Into Homes video-first home search in Las Vegas",
 }: BuildPageMetadataInput): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(imagePath);

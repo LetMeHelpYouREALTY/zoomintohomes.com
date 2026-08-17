@@ -8,6 +8,7 @@
  */
 
 import { combineSchemas, schemaToJsonLd } from "@/lib/schema";
+import { SITE_ORIGIN } from "@/lib/site-url";
 
 interface SchemaScriptProps {
   /** Single schema object */
@@ -64,7 +65,7 @@ export function BreadcrumbSchema({
       name: item.name,
       item: item.url.startsWith("http")
         ? item.url
-        : `https://heyberkshire.com${item.url}`,
+        : `${SITE_ORIGIN}${item.url}`,
     })),
   };
 

@@ -27,7 +27,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
   return buildPageMetadata({
     title: `${feature.name} homes in Las Vegas & Henderson`,
-    description: `${feature.definition} Measured and documented in Zoom Into Homes feature sheets—not an undefined checkbox.`,
+    description: `${feature.definition} Measured and documented in Zoom Into Homes access checklists—not an undefined checkbox.`,
     path: `/accessible-homes/${feature.slug}`,
   });
 }
@@ -57,9 +57,8 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
       <section className="answer-block" aria-label="Direct answer">
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">
-          {feature.name} is a RESO AccessibilityFeatures value (
-          {feature.resoKey}). On this practice, it is verified on the unit with a
-          dated feature sheet—not inferred from a community label or an MLS
+          {feature.name} is verified on the unit with a dated access
+          checklist—not inferred from a community label or a public listing feed
           checkbox alone.
         </p>
       </section>

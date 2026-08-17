@@ -28,15 +28,15 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <CalendlyInlineSection
         id="schedule-footer"
-        title="Book a virtual tour from any page"
-        intro="Every Zoom Into Homes page includes scheduling. Choose a time for a remote walkthrough, feature-sheet review, or referral handoff."
+        title="Book a video tour from any page"
+        intro="Every Zoom Into Homes page includes scheduling. Choose a time for a remote walkthrough, access-checklist review, or care-team handoff."
         height="620px"
       />
       <div className="site-footer-inner">
         <div className="footer-schedule-row">
-          <CalendlyButton className="button" text="Open Calendly popup" />
+          <CalendlyButton className="button" text="Schedule a call" />
           <a className="button button-secondary" href={CALENDLY_URL}>
-            Open Calendly in a new tab
+            Open the scheduler
           </a>
           <a
             className="button button-secondary"

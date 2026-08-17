@@ -14,80 +14,80 @@ export type PageSeoEnhance = {
 export const pageSeoEnhance = {
   home: {
     answerBlock:
-      "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours listings remotely, verifies access features against a published glossary, and schedules in-person visits for two or three finalists only. Virtual-first touring is the accommodation.",
+      "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video-first touring is how we keep showings short.",
     keyFacts: [
       "Service area: Las Vegas and Henderson, Nevada",
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
-      "Method: remote tour → feature sheet → shortlist → two or three finalists",
+      "Method: video tour → written access checklist → shortlist → two or three finalists",
       "Copy rule: describe building features, not who should live there",
-      "Live listings via RealScout portal; this site documents the measured tour process",
+      "Browse live homes for sale here; this site explains the measured tour process",
     ],
     faqs: [
       {
-        question: "What is virtual-first home touring?",
+        question: "What is video-first home touring?",
         answer:
-          "Virtual-first touring means listings are walked on video and checked against a written access-feature list before anyone spends a showing day on the road. Only properties that already pass required items become in-person finalists.",
+          "Video-first touring means homes are walked on video and checked against a written access list before anyone spends a showing day on the road. Only properties that already pass required items become in-person finalists.",
       },
       {
-        question: "How many homes do clients visit in person?",
+        question: "How many homes do buyers visit in person?",
         answer:
           "The process is built to visit two or three finalists, not a dozen maybes. Exact count depends on the shortlist after remote verification.",
       },
       {
-        question: "Is this an MLS or IDX search site?",
+        question: "Is this a full home-search website?",
         answer:
-          "No. This is a credibility and referral site that documents the process and the feature glossary. Listing search is handled outside this site.",
+          "You can browse live listings here. This site also explains how we measure access and keep in-person tours short—so you know the process before you spend a day driving.",
       },
       {
-        question: "Who refers clients here?",
+        question: "Who usually sends people here?",
         answer:
-          "Hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors use the written process and feature sheets.",
+          "Hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors use the written process and access checklists.",
       },
     ],
     entityPhrases: [
       "Zoom Into Homes",
       "Berkshire Hathaway HomeServices Nevada Properties",
       "Las Vegas accessible home search",
-      "virtual-first touring Las Vegas",
+      "video home tours Las Vegas",
     ],
   },
   howItWorks: {
     answerBlock:
-      "The reduced-showing process has six steps: intake of required access features, remote video tour, glossary verification, a shortlist of two or three finalists, in-person visits only to those finalists, then offer and close with the same feature checklist.",
+      "Keeping in-person tours short has six steps: list required access details, tour on video, check the written measurement list, shortlist two or three finalists, visit only those homes, then offer and close with the same checklist.",
     keyFacts: [
       "Step 1 — Intake: write required, useful, and irrelevant features",
       "Step 2 — Remote tour first on video",
-      "Step 3 — Measure against the published glossary",
+      "Step 3 — Measure against the published list",
       "Step 4 — Shortlist two or three finalists",
       "Step 5 — Visit only the finalists",
       "Step 6 — Offer, access notes, and close",
     ],
     faqs: [
       {
-        question: "What is the reduced-showing process?",
+        question: "How do you keep in-person tours short?",
         answer:
-          "It is a written sequence that spends physical energy only on listings that already passed a documented access-feature check. Remote work comes first; in-person time is reserved for confirmation.",
+          "It is a written sequence that spends physical energy only on homes that already passed a documented access check. Video work comes first; in-person time is reserved for confirmation.",
       },
       {
-        question: "Do clients have to leave home for every listing?",
+        question: "Do buyers have to leave home for every listing?",
         answer:
-          "No. Remote tours and feature sheets happen before drive-outs. Clients travel for the shortlist, not for every active listing.",
+          "No. Video tours and written access checklists happen before drive-outs. Buyers travel for the shortlist, not for every active listing.",
       },
       {
-        question: "What does the client have to prepare for intake?",
+        question: "What does a buyer prepare for intake?",
         answer:
-          "A short list of required access features, optional photos of current equipment, and one call or written note. An in-person intake meeting is optional.",
+          "A short list of required access details, optional photos of current equipment, and one call or written note. An in-person intake meeting is optional.",
       },
       {
-        question: "How are features recorded?",
+        question: "How are access details recorded?",
         answer:
-          "Each remaining listing gets a feature sheet with measured door clearances, threshold heights, shower curb, route widths, and lighting notes. The sheet describes the building, not a diagnosis.",
+          "Each remaining home gets a written checklist with measured door clearances, threshold heights, shower curb, path widths, and lighting notes. The sheet describes the building, not a diagnosis.",
       },
     ],
     entityPhrases: [
-      "reduced-showing process",
+      "video-first home tours Las Vegas",
       "remote property tour Las Vegas",
-      "accessibility feature sheet",
+      "home access checklist",
     ],
   },
   features: {
@@ -109,7 +109,7 @@ export const pageSeoEnhance = {
       {
         question: "Do you describe who a house is for?",
         answer:
-          "No. Copy and feature sheets describe door widths, thresholds, showers, and routes. They do not claim a property fits a type of person.",
+          "No. Copy and written access checklists describe door widths, thresholds, showers, and routes. They do not claim a property fits a type of person.",
       },
       {
         question: "Where do the measurements come from?",
@@ -135,7 +135,7 @@ export const pageSeoEnhance = {
     keyFacts: [
       "Programs named: VA Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA)",
       "Official program information: va.gov housing-assistance disability housing grants",
-      "This site sequences remote tours and feature sheets; it does not decide entitlement",
+      "This site sequences video tours and written access checklists; it does not decide entitlement",
       "Purchase files use feature language: width, threshold, curb, route—not diagnoses",
       "Grant amounts and eligibility: verify on VA.gov — not quoted from this site",
     ],
@@ -148,7 +148,7 @@ export const pageSeoEnhance = {
       {
         question: "Can a home search run while a grant file is open?",
         answer:
-          "Yes. Remote tours and feature sheets can start while a lender or VA-accredited representative works the grant file, so showing time is not spent on plans that cannot take the needed adaptation.",
+          "Yes. Video tours and written access checklists can start while a lender or VA-accredited representative works the grant file, so showing time is not spent on plans that cannot take the needed adaptation.",
       },
       {
         question: "Does Zoom Into Homes decide VA eligibility?",
@@ -209,11 +209,11 @@ export const pageSeoEnhance = {
   },
   referralPartners: {
     answerBlock:
-      "Referral partners—hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors—can inspect the housing process in writing, keep dated shortlists and recordings, and leave medical and legal decisions in their own lane.",
+      "Hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors can inspect the housing process in writing, keep dated shortlists and recordings, and leave medical and legal decisions in their own lane.",
     keyFacts: [
-      "Partner types: discharge planners, OT/PT, VA loan officers, elder law, contractors",
-      "Deliverables: remote tours, feature sheets, dated shortlists",
-      "Partners keep clinical or legal decisions; this practice keeps housing logistics",
+      "Care teams: discharge planners, OT/PT, VA loan officers, elder law, contractors",
+      "Deliverables: video tours, written access checklists, dated shortlists",
+      "Care teams keep clinical or legal decisions; this practice keeps housing logistics",
       "Handoff starts with location constraints and required features",
     ],
     faqs: [
@@ -230,24 +230,24 @@ export const pageSeoEnhance = {
       {
         question: "Do you quote SAH or SHA dollar amounts to loan officers?",
         answer:
-          "No. Grant amounts are not quoted from this site. Early remote screening and written feature sheets are what attach to the purchase file.",
+          "No. Grant amounts are not quoted from this site. Early video screening and written access checklists are what attach to the purchase file.",
       },
       {
         question: "When should a remodeling contractor get involved?",
         answer:
-          "After pre-purchase video and measurements show whether required features or wall blocking can support the work—before a truck rolls for a listing that cannot take the adaptation.",
+          "After pre-purchase video and measurements show whether required features or wall blocking can support the work—before a truck rolls for a home that cannot take the adaptation.",
       },
     ],
     entityPhrases: [
-      "hospital discharge planner housing referral",
+      "hospital discharge planner housing handoff",
       "occupational therapist home search Las Vegas",
-      "VA loan officer feature sheet",
+      "VA loan officer access checklist",
       "elder law housing handoff",
     ],
   },
   about: {
     answerBlock:
-      "Dr. Gene Boyle (California DRE #02282581) runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson via Dr. Jan Duffy (S.0197614.LLC). The site documents a virtual-first touring process and a Fair Housing copy rule—features, not people.",
+      "Dr. Gene Boyle (California DRE #02282581) runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson via Dr. Jan Duffy (S.0197614.LLC). The site documents a video-first touring process and a Fair Housing copy rule—features, not people.",
     keyFacts: [
       "Brand: Zoom Into Homes",
       "Agent: Dr. Gene Boyle, California DRE #02282581",
@@ -265,7 +265,7 @@ export const pageSeoEnhance = {
       {
         question: "What makes this practice different from a listing portal?",
         answer:
-          "The site publishes the reduced-showing process and the feature glossary used in files. It is built for referral inspection, not for browsing an IDX grid.",
+          "The site publishes how we keep in-person tours short and the measurement list used in files. It is built so care teams can read the process—and so buyers can browse homes for sale without industry jargon.",
       },
       {
         question: "How do you handle Fair Housing in marketing copy?",
@@ -286,38 +286,38 @@ export const pageSeoEnhance = {
   },
   contact: {
     answerBlock:
-      "Request a consultation for a virtual-first home search or a referral handoff in Las Vegas and Henderson. Call (702) 222-1964 or use the form for name, email, phone, role, and a short note.",
+      "Request a call for a video-first home search or to introduce a client in Las Vegas and Henderson. Call (702) 222-1964 or use the form for name, email, phone, role, and a short note.",
     keyFacts: [
       "Phone: (702) 222-1964",
       "Form fields: name, email, phone, role, message",
-      "Roles: Buyer, Seller, Referral partner, Other",
+      "Roles: Buyer, Seller, I'm introducing a client, Other",
       "Purpose: start intake without a twelve-house tour",
     ],
     faqs: [
       {
-        question: "How do I request a consultation?",
+        question: "How do I request a call?",
         answer:
-          "Call (702) 222-1964 or use the form on this page. Include whether you are buying, selling, or referring, plus required features and timeline when known.",
+          "Call (702) 222-1964 or use the form on this page. Include whether you are buying, selling, or introducing a client, plus required features and timeline when known.",
       },
       {
         question: "Is the contact form live?",
         answer:
-          "Yes. Submissions post to the lead capture API and Follow Up Boss when those credentials are configured. You can always call the published number.",
+          "Yes. Submissions go to our lead inbox when configured. You can always call (702) 222-1964.",
       },
       {
-        question: "What should referral partners include?",
+        question: "What should care teams include when introducing a client?",
         answer:
-          "Location constraints, required access features, timeline, and consent to introduce the client. Medical and legal advice stays with the partner.",
+          "Location constraints, required access features, timeline, and consent to introduce the client. Medical and legal advice stays with the care team.",
       },
       {
         question: "Do I need to tour twelve homes first?",
         answer:
-          "No. The practice is built so remote verification happens before a long showing circuit.",
+          "No. The practice is built so video checks happen before a long showing day.",
       },
     ],
     entityPhrases: [
       "Zoom Into Homes consultation",
-      "Las Vegas virtual home tour request",
+      "Las Vegas video home tour request",
     ],
   },
   accessibilityStatement: {

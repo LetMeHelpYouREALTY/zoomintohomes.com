@@ -73,7 +73,7 @@ export default function TourHero({
               </Link>
             )}
             <a href={CALENDLY_URL} className="button button-ghost-on-dark">
-              Book on Calendly
+              Book a time
             </a>
           </div>
         </div>

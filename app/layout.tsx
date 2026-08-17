@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   publisher: siteIdentity.brokerageName,
   category: "real estate",
   keywords: [
-    "Las Vegas accessible home search",
-    "virtual home tours Las Vegas",
+    "Las Vegas home search",
+    "video home tours Las Vegas",
     "aging in place Henderson",
-    "VA SAH SHA housing Nevada",
+    "VA Specially Adapted Housing Nevada",
     "zero-step entry homes Las Vegas",
     "measured accessibility features real estate",
   ],
@@ -60,13 +60,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  alternates: {
-    canonical: absoluteUrl("/"),
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: absoluteUrl("/"),
     siteName: siteIdentity.siteName,
     title: pageMeta.home.title,
     description: pageMeta.home.description,

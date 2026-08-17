@@ -18,9 +18,9 @@ export const processSteps: ProcessStep[] = [
   {
     order: 3,
     title: "Verify features against the glossary",
-    body: "Each remaining listing gets a feature sheet: measured door clearances, threshold heights, shower curb, route widths, and notes on lighting. We do not describe who should live there. We describe what the building does.",
+    body: "Each remaining home gets a written access checklist: measured door clearances, threshold heights, shower curb, route widths, and notes on lighting. We do not describe who should live there. We describe what the building does.",
     clientEffort:
-      "Nothing required. Review the sheet if you want to drop or keep a listing.",
+      "Nothing required. Review the checklist if you want to drop or keep a home.",
   },
   {
     order: 4,
@@ -37,7 +37,7 @@ export const processSteps: ProcessStep[] = [
   {
     order: 6,
     title: "Offer, access notes, close",
-    body: "Offers can include repair or modification notes tied to the feature sheet. After acceptance, we keep the same checklist through inspection so a missed curb or a 28-inch door does not appear at walkthrough.",
+    body: "Offers can include repair or modification notes tied to the access checklist. After acceptance, we keep the same checklist through inspection so a missed curb or a 28-inch door does not appear at walkthrough.",
     clientEffort: "Standard purchase decisions. No extra showing circuit.",
   },
 ];

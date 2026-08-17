@@ -119,7 +119,7 @@ export default function ConsultationForm() {
           }
         />
         <p id={`${id}-email-hint`} className="hint">
-          We use this to send the feature brief.
+          We use this to send your access needs summary.
         </p>
         {errors.email ? (
           <p id={`${id}-email-error`} className="field-error">

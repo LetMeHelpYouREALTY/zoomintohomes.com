@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import HeadingImage from "@/components/site/HeadingImage";
+import JsonLd from "@/components/site/JsonLd";
 import PageHero from "@/components/site/PageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
 import { referralPartnersCopy } from "@/content/pages";
 import { referralPartnerTypes } from "@/content/partners";
 import { pageMeta } from "@/content/site";
+import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Referral partners",
+  title: pageMeta.referralPartners.title,
   description: pageMeta.referralPartners.description,
   path: "/referral-partners",
   imagePath: pageImages.referralPartners.hero.src,
@@ -25,6 +27,12 @@ export default function ReferralPartnersPage() {
 
   return (
     <article>
+      <JsonLd
+        data={buildBreadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "For care teams", path: "/referral-partners" },
+        ])}
+      />
       <PageHero image={images.hero} />
       <h1 className="page-title">{referralPartnersCopy.h1}</h1>
       <p className="lede">{referralPartnersCopy.lede}</p>

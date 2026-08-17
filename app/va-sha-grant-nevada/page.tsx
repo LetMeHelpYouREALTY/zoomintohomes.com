@@ -36,7 +36,7 @@ export default function VaShaGrantPage() {
         <p className="answer-block-body">
           SHA can fund adaptations that make a home safer or more usable for
           certain veterans. Current eligibility and amounts come from the VA.
-          Zoom Into Homes sequences remote tours and feature sheets so showing
+          Zoom Into Homes sequences remote tours and access checklists so showing
           time is not spent on plans that cannot take the needed work.
         </p>
       </section>

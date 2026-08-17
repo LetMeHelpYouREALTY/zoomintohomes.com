@@ -589,33 +589,60 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
   const agent: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
+    "@id": `${SITE_ORIGIN}/#agent`,
     name: siteIdentity.agentName,
     url: SITE_ORIGIN,
     telephone: siteIdentity.phoneTel || undefined,
     email: siteIdentity.email || undefined,
     areaServed: siteIdentity.serviceArea.split(",").map((part) => part.trim()),
     memberOf: {
-      "@type": "Organization",
+      "@type": "RealEstateAgent",
       name: siteIdentity.brokerageName,
     },
     brand: {
       "@type": "Brand",
       name: siteIdentity.siteName,
     },
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      identifier: siteIdentity.agentLicense,
+    },
+    colleague: {
+      "@type": "RealEstateAgent",
+      name: "Dr. Jan Duffy",
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        identifier: "S.0197614.LLC",
+      },
+    },
+    description:
+      "Las Vegas and Henderson real estate practice that tours homes on video, records access measurements in writing, and limits in-person visits to shortlisted finalists.",
   };
 
   const org: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_ORIGIN}/#organization`,
     name: siteIdentity.siteName,
     url: SITE_ORIGIN,
     telephone: siteIdentity.phoneTel || undefined,
     email: siteIdentity.email || undefined,
     description:
-      "Virtual-first real estate practice that measures access features and limits in-person visits to shortlisted finalists in Las Vegas and Henderson.",
+      "Zoom Into Homes helps buyers tour Las Vegas and Henderson homes on video first, then visit only finalists that already passed a written access check.",
   };
 
-  return [agent, org];
+  const website: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_ORIGIN}/#website`,
+    name: siteIdentity.siteName,
+    url: SITE_ORIGIN,
+    publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+
+  return [agent, org, website];
 }
 
 export function buildBreadcrumbList(

@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageSeoSections from "@/components/site/PageSeoSections";
-import JsonLd from "@/components/site/JsonLd";
 import TourHero from "@/components/site/TourHero";
 import TourStage from "@/components/site/TourStage";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
 import { pageMeta, siteIdentity } from "@/content/site";
-import { pageSeoEnhance } from "@/content/seo-enhance";
-import { buildFaqPage } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -26,14 +23,14 @@ const images = pageImages.home;
 const related = [
   {
     href: "/virtual-tour-process",
-    label: "What is the reduced-showing process?",
+    label: "How do you keep in-person tours short?",
   },
   { href: "/what-we-measure", label: "What do you measure on a tour?" },
   {
     href: "/va-sah-grant-nevada",
-    label: "How does a VA SAH grant pair with a purchase?",
+    label: "How does a VA housing grant pair with a purchase?",
   },
-  { href: "/contact", label: "How do I request a consultation?" },
+  { href: "/contact", label: "How do I request a call?" },
 ];
 
 export default function HomePage() {
@@ -43,7 +40,6 @@ export default function HomePage() {
 
   return (
     <article className="home-article">
-      <JsonLd data={buildFaqPage(pageSeoEnhance.home.faqs)} />
       <TourHero
         image={images.hero}
         brand={siteIdentity.siteName}
@@ -54,7 +50,7 @@ export default function HomePage() {
         secondaryHref={`tel:${siteIdentity.phoneTel}`}
         secondaryLabel={`Call ${siteIdentity.phoneDisplay}`}
         tourHref="/examples/walkthrough"
-        tourLabel="Watch a sample virtual tour"
+        tourLabel="Watch a sample video tour"
       />
       <div className="home-body">
         <PageSeoSections page="home" slot="intro" />
@@ -65,7 +61,7 @@ export default function HomePage() {
             <p>{homeCopy.promiseBody}</p>
             <div className="cta-row">
               <Link href="/examples/feature-sheet" className="button">
-                View a sample feature sheet
+                View a sample access checklist
               </Link>
               <Link
                 href="/what-we-measure"
@@ -77,7 +73,7 @@ export default function HomePage() {
           </div>
           <TourStage
             title="Live tour pause · doorway clear width"
-            caption="Virtual-first means the tape measure happens on video before anyone drives."
+            caption="We measure on video before anyone drives."
           >
             {byHeading[homeCopy.h1] ? (
               <HeadingImage image={byHeading[homeCopy.h1]} />
@@ -103,9 +99,9 @@ export default function HomePage() {
 
         <nav className="home-links" aria-label="Primary topics">
           <Link href="/accessible-homes">Accessible homes hub</Link>
-          <Link href="/glossary">RESO glossary</Link>
-          <Link href="/referral-partners">For referral partners</Link>
-          <Link href="/contact">Request a consultation</Link>
+          <Link href="/glossary">Access features we measure</Link>
+          <Link href="/referral-partners">For hospitals and care teams</Link>
+          <Link href="/contact">Request a call</Link>
         </nav>
         <PageSeoSections page="home" slot="closing" related={related} />
       </div>

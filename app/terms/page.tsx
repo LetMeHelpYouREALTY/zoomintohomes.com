@@ -21,7 +21,7 @@ export default function TermsPage() {
       </p>
       <h2>No guarantees on inventory or grants</h2>
       <p>
-        Feature sheets describe measured building attributes on a stated date.
+        Access checklists describe measured building attributes on a stated date.
         MLS data, when shown later, will be attributed separately. VA grant and
         county tax figures must be verified with official sources before you
         rely on them.

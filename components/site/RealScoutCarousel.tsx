@@ -15,8 +15,8 @@ type RealScoutCarouselProps = {
  * React state to mount the custom element — use the official HTML embed.
  */
 export default function RealScoutCarousel({
-  title = "Homes you can tour virtually first",
-  intro = "Browse live Las Vegas and Henderson listings, then we pre-verify access features on video before any drive-out.",
+  title = "Homes you can tour on video first",
+  intro = "Browse live Las Vegas and Henderson homes for sale. We check doorway and bathroom access on video before any drive-out.",
 }: RealScoutCarouselProps) {
   return (
     <section
@@ -35,7 +35,7 @@ export default function RealScoutCarousel({
             rel="noopener noreferrer"
             target="_blank"
           >
-            Open full search
+            Open full home search
           </a>
         </div>
         <div
@@ -46,9 +46,9 @@ export default function RealScoutCarousel({
         />
         <p className="meta realscout-carousel-note">
           Prefer a guided remote tour?{" "}
-          <Link href="/virtual-tour-process">See how virtual-first touring works</Link>
+          <Link href="/virtual-tour-process">See how video-first touring works</Link>
           {" · "}
-          <Link href="/contact">Request a consultation</Link>
+          <Link href="/contact">Request a call</Link>
         </p>
       </div>
     </section>

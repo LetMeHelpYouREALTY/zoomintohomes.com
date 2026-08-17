@@ -54,7 +54,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
       </p>
       <h2>How Zoom Into Homes uses this term</h2>
       <p>
-        We treat {feature.name} as a falsifiable building claim. Feature sheets
+        We treat {feature.name} as a falsifiable building claim. Access checklists
         record a measured or photo-verified value with a date. We do not use the
         term to describe who should live in a property.
       </p>

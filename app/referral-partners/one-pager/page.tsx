@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Referral partner one-pager | Zoom Into Homes",
+  title: "Care team one-pager | Zoom Into Homes",
   description:
     "Printable handoff sheet for discharge planners, OT/PT, VA loan officers, and elder law attorneys.",
   path: "/referral-partners/one-pager",
@@ -16,16 +16,16 @@ export default function ReferralOnePagerPage() {
     <article>
       <AfterHeroWidgets />
 
-      <h1 className="page-title">Referral partner one-pager</h1>
+      <h1 className="page-title">Care team one-pager</h1>
       <p className="lede">
         Print or save this page for a folder. It is the written handoff Zoom Into
-        Homes already describes on the referral partners page.
+        Homes already describes for hospitals and care teams.
       </p>
       <section className="card">
         <h2>What we return</h2>
         <ul>
-          <li>Remote tour recordings with measurement pauses</li>
-          <li>Dated feature sheets (building attributes only)</li>
+          <li>Video tour recordings with measurement pauses</li>
+          <li>Dated access checklists (building attributes only)</li>
           <li>A shortlist of two or three finalists</li>
         </ul>
         <h2>What we need from you</h2>
@@ -36,8 +36,8 @@ export default function ReferralOnePagerPage() {
         </ul>
         <h2>What stays in your lane</h2>
         <p>
-          Clinical, legal, and benefits decisions remain with the referral
-          source. We sequence housing logistics.
+          Clinical, legal, and benefits decisions remain with the care team. We
+          sequence housing logistics.
         </p>
         <h2>Contact</h2>
         <p>
@@ -50,7 +50,7 @@ export default function ReferralOnePagerPage() {
         </p>
       </section>
       <p>
-        <Link href="/referral-partners">Back to referral partners</Link>
+        <Link href="/referral-partners">Back to care teams</Link>
       </p>
     </article>
   );

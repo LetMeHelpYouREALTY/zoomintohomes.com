@@ -27,7 +27,7 @@ export default function SummerlinPage() {
         <p className="answer-block-body">
           Summerlin inventory still needs door widths, thresholds, and shower
           curbs measured on the specific unit. A master-plan amenity list is not
-          a substitute for a feature sheet.
+          a substitute for a access checklist.
         </p>
       </section>
       <h2>Often paired with</h2>

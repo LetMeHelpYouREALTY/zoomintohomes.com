@@ -18,7 +18,7 @@ export async function submitConsultation(
         source: "zoomintohomes-consultation",
         tags: [
           "zoom-into-homes",
-          "virtual-first",
+          "video-first",
           `role:${request.role.toLowerCase().replace(/\s+/g, "-")}`,
         ],
         customFields: {

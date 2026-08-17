@@ -61,7 +61,7 @@ export default function AccessibleHomesPage() {
       <p>
         <Link href="/glossary">Full RESO glossary (35 terms)</Link>
         {" · "}
-        <Link href="/virtual-tour-process">Virtual-first process</Link>
+        <Link href="/virtual-tour-process">Video-first process</Link>
       </p>
     </article>
   );

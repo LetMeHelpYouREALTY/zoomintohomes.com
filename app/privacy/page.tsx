@@ -20,16 +20,16 @@ export default function PrivacyPage() {
       <h2>What we collect</h2>
       <p>
         Consultation and referral forms may collect your name, email, phone,
-        role (buyer, seller, referral partner, or other), and a free-text note.
+        role (buyer, seller, someone introducing a client, or other), and a free-text note.
         Notes may include mobility-related or medical-adjacent details you choose
         to share so we can pre-verify building features. Do not submit
         information about another person unless you have authority to do so.
       </p>
       <h2>How we use it</h2>
       <p>
-        We use submissions to respond to your request, coordinate referrals,
-        schedule tours, and keep feature sheets accurate. If Follow Up Boss is
-        connected, submissions are stored in that CRM under brokerage policies.
+        We use submissions to respond to your request, coordinate introductions,
+        schedule tours, and keep access checklists accurate. When our lead inbox
+        is connected, submissions are stored under brokerage policies.
       </p>
       <h2>Analytics</h2>
       <p>

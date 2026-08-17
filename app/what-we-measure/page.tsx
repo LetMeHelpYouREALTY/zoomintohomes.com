@@ -64,7 +64,7 @@ export default function WhatWeMeasurePage() {
         {" · "}
         <Link href="/accessibility-features">Category glossary</Link>
         {" · "}
-        <Link href="/examples/feature-sheet">Example feature sheet</Link>
+        <Link href="/examples/feature-sheet">Example access checklist</Link>
       </p>
     </article>
   );

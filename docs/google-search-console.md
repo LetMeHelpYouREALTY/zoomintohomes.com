@@ -32,6 +32,20 @@ GSC may list old blog/archive URLs (e.g. `/2018/12/`, `/home-4/`, mortgage-rate 
 
 After deploy: **Page indexing → Not found (404)** and **Crawled - currently not indexed** → **Validate fix**.
 
+## Plain-language SEO / GEO / AEO (Aug 17, 2026)
+
+Buyer- and seller-facing copy avoids realtor slang (RealScout, Follow Up Boss, IDX/MLS jargon, “referral partners,” “feature sheets”) in visible UI. Prefer “homes for sale,” “video tour,” “access checklist,” and “care teams.”
+
+Structured data on Zoom core pages:
+
+| Graph | Where |
+| --- | --- |
+| `RealEstateAgent` + `Organization` + `WebSite` | Root layout via `buildOrganizationSchemas()` |
+| `FAQPage` | Emitted with visible FAQs in `PageSeoSections` closing slot |
+| `BreadcrumbList` | Key routes (`/about`, `/contact`, `/virtual-tour-process`, grants, care teams) |
+
+After deploy: submit sitemap, Validate fix on prior noindex/404 rows, and spot-check rich results with Google’s Rich Results Test on `/` and `/contact`.
+
 ## What the codebase does
 
 | Item | Location | Notes |

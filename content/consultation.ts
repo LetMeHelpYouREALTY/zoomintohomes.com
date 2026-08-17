@@ -1,7 +1,7 @@
 export const consultationRoles = [
   "Buyer",
   "Seller",
-  "Referral partner",
+  "I'm introducing a client",
   "Other",
 ] as const;
 

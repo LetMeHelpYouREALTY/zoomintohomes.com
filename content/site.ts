@@ -25,9 +25,9 @@ export const primaryNav: NavItem[] = [
   { href: "/virtual-tour-process", label: "How touring works" },
   { href: "/what-we-measure", label: "What we measure" },
   { href: "/accessible-homes", label: "Accessible homes" },
-  { href: "/va-sah-grant-nevada", label: "VA SAH grant" },
+  { href: "/va-sah-grant-nevada", label: "VA housing grant" },
   { href: "/aging-in-place", label: "Aging in place" },
-  { href: "/referral-partners", label: "Referral partners" },
+  { href: "/referral-partners", label: "For care teams" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -40,19 +40,19 @@ export const helpNav: NavItem[] = [
 
 export const pageMeta: Record<string, PageMeta> = {
   home: {
-    title: "Virtual-first home search in Las Vegas | Zoom Into Homes",
+    title: "Tour Las Vegas homes on video first | Zoom Into Homes",
     description:
-      "Zoom Into Homes tours Las Vegas and Henderson listings remotely, verifies access features against a published glossary, and limits in-person visits to two or three finalists.",
+      "Zoom Into Homes helps Las Vegas and Henderson buyers tour homes on video, check doorway and bathroom access details in writing, then visit only two or three finalists in person.",
   },
   howItWorks: {
-    title: "How the reduced-showing process works | Zoom Into Homes",
+    title: "How we keep in-person tours short | Zoom Into Homes",
     description:
-      "Six steps: intake of required features, remote video tour, glossary verification, a shortlist of two or three finalists, in-person visits only to those homes, then offer and close.",
+      "Six steps: list what the home must have, tour on video, check measurements, pick two or three finalists, visit only those homes, then offer and close.",
   },
   virtualTourProcess: {
-    title: "Virtual-first touring process | Zoom Into Homes",
+    title: "How video-first home tours work | Zoom Into Homes",
     description:
-      "Remote video tours and measured feature sheets before drive-outs. Visit two or three finalists—not a dozen maybes—in Las Vegas and Henderson.",
+      "Tour Las Vegas and Henderson homes on video and get a written access checklist before anyone drives. Visit two or three finalists—not a dozen maybes.",
   },
   whatWeMeasure: {
     title: "What we measure on every tour | Zoom Into Homes",
@@ -82,7 +82,7 @@ export const pageMeta: Record<string, PageMeta> = {
   vaSha: {
     title: "VA SHA grant and a Nevada home purchase | Zoom Into Homes",
     description:
-      "How Special Housing Adaptation (SHA) can sequence with a Nevada purchase. Feature sheets use building measurements, not diagnoses.",
+      "How Special Housing Adaptation (SHA) can sequence with a Nevada purchase. Written access checklists use building measurements, not diagnoses.",
   },
   clarkCountyExemption: {
     title: "Clark County disabled-veteran property tax exemption tiers",
@@ -95,19 +95,19 @@ export const pageMeta: Record<string, PageMeta> = {
       "Aging-in-place searches in Las Vegas and Henderson check single-level plans, zero-step entries, and showers in Sun City Summerlin, Anthem, Solera, Siena, and Del Webb communities.",
   },
   referralPartners: {
-    title: "Referral partners | Zoom Into Homes",
+    title: "For hospitals and care teams | Zoom Into Homes",
     description:
-      "Written handoff for discharge planners, OT/PT, VA loan officers, elder law attorneys, and contractors: remote tours, feature sheets, and dated shortlists.",
+      "A written handoff for discharge planners, therapists, VA loan officers, elder law attorneys, and contractors: video tours, access checklists, and dated shortlists.",
   },
   about: {
     title: "About Dr. Gene Boyle | Zoom Into Homes",
     description:
-      "Dr. Gene Boyle plans virtual-first touring with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson. Fair Housing copy rule: features, not people.",
+      "Dr. Gene Boyle helps Las Vegas and Henderson buyers tour homes on video first with Berkshire Hathaway HomeServices Nevada Properties. We describe building features, not people.",
   },
   contact: {
-    title: "Request a consultation | Zoom Into Homes",
+    title: "Request a call | Zoom Into Homes",
     description:
-      "Request a virtual-first home search or referral handoff in Las Vegas and Henderson. Call (702) 222-1964 or use the form—no twelve-house tour required.",
+      "Start a Las Vegas or Henderson home search or introduce a client. Call (702) 222-1964 or use the form—no twelve-house tour required.",
   },
   accessibilityStatement: {
     title: "Accessibility statement | Zoom Into Homes",
@@ -125,9 +125,9 @@ export const pageMeta: Record<string, PageMeta> = {
       "Terms for using www.zoomintohomes.com. Not legal, medical, or VA benefits advice. Brokerage advertising disclosures apply.",
   },
   featureSheetExample: {
-    title: "Example accessibility feature sheet | Zoom Into Homes",
+    title: "Example home access checklist | Zoom Into Homes",
     description:
-      "Redacted sample of how measured building attributes are recorded after a remote or on-site tour—with provenance and date.",
+      "Redacted sample of how doorway, bathroom, and path measurements are written down after a video or on-site tour—with date and source.",
   },
   walkthroughExample: {
     title: "Example virtual walkthrough | Zoom Into Homes",
@@ -142,6 +142,6 @@ export const pageMeta: Record<string, PageMeta> = {
   summerlin: {
     title: "Homes with access features in Summerlin | Zoom Into Homes",
     description:
-      "Editorial guide to measured access features in Summerlin and northwest Las Vegas, linked to the virtual-first touring process.",
+      "Editorial guide to measured access features in Summerlin and northwest Las Vegas, linked to our video-first tour process.",
   },
 };

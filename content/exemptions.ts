@@ -40,13 +40,13 @@ export const clarkCountyVeteranExemptions: ExemptionTier = {
 };
 
 export const sampleFeatureSheet = {
-  title: "Example feature sheet (redacted)",
+  title: "Example home access checklist (redacted)",
   listingLabel: "Sample single-level residence — Las Vegas Valley",
   measuredOn: "2026-06-02",
   measuredBy: "Zoom Into Homes field notes",
   evidence: "measured_onsite" as const,
   disclaimer:
-    "Accessibility details measured by Zoom Into Homes on the date shown — not MLS data. Figures describe the building. They do not describe who should live there.",
+    "Access details measured by Zoom Into Homes on the date shown — not a public listing feed. Figures describe the building. They do not describe who should live there.",
   rows: [
     {
       attribute: "Accessible Entrance / zero-step arrival",

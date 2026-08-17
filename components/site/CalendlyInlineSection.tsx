@@ -13,7 +13,7 @@ type CalendlyInlineSectionProps = {
 
 export default function CalendlyInlineSection({
   title = calendlyHeading(),
-  intro = "Book a planning call for a remote walkthrough, feature-sheet review, or referral handoff. No twelve-house tour required.",
+  intro = "Book a planning call for a remote walkthrough or access-checklist review. No twelve-house tour required.",
   height = "680px",
   id = "schedule",
 }: CalendlyInlineSectionProps) {
