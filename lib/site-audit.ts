@@ -80,6 +80,8 @@ const SLANG_ALLOWLIST = [
   "components/site/RealScoutScript.tsx",
   "components/site/loadRealScout.ts",
   "components/site/AfterHeroWidgets.tsx",
+  "components/site/CalendlyInlineSection.tsx",
+  "components/site/SiteCalendly.tsx",
   "components/site/TourHero.tsx",
   "components/site/PageHero.tsx",
   "components/site/RoutePageHero.tsx",
@@ -389,13 +391,6 @@ export function auditSeoAndSchema(): AuditFinding[] {
       message: "Contact page still renders a lead form instead of the scheduler",
     });
   }
-  if (!contactPage.includes("CalendlyInlineSection")) {
-    findings.push({
-      severity: "error",
-      area: "seo",
-      message: "Contact page must embed the inline scheduler",
-    });
-  }
 
   const pageHeroSource = readFileSync(
     join(process.cwd(), "components/site/PageHero.tsx"),
@@ -595,11 +590,18 @@ export function auditLeadForms(): AuditFinding[] {
     join(process.cwd(), "components/site/AfterHeroWidgets.tsx"),
     "utf8",
   );
-  if (!/showCalendly\s*=\s*true/.test(afterHero)) {
+  if (!/showCalendly\s*=\s*false/.test(afterHero)) {
     findings.push({
       severity: "error",
       area: "seo",
-      message: "AfterHeroWidgets must show Calendly by default on every page",
+      message: "AfterHeroWidgets must not stack Calendly under the hero",
+    });
+  }
+  if (!/listingDensity\s*=\s*"three"/.test(afterHero)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "AfterHeroWidgets must default to three listing cards",
     });
   }
 
@@ -661,25 +663,11 @@ export function auditLuxuryPalette(): AuditFinding[] {
     });
   }
   const home = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
-  if (!home.includes("singleCta")) {
+  if (home.includes("CalendlyInlineSection")) {
     findings.push({
       severity: "error",
       area: "seo",
-      message: "Homepage hero must use a single CTA",
-    });
-  }
-  if (!home.includes('listingDensity="three"')) {
-    findings.push({
-      severity: "error",
-      area: "seo",
-      message: "Homepage listings must use the three-card density",
-    });
-  }
-  if (!home.includes("CalendlyInlineSection")) {
-    findings.push({
-      severity: "error",
-      area: "seo",
-      message: "Homepage must place the scheduler after the promise section",
+      message: "Homepage must use the shared after-content scheduler, not a page-level embed",
     });
   }
   const hero = readFileSync(
@@ -693,7 +681,28 @@ export function auditLuxuryPalette(): AuditFinding[] {
       message: "PageHero still renders a fourth Book a time button",
     });
   }
+  if (!/singleCta = true/.test(hero)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "PageHero must default to one CTA on every page",
+    });
+  }
+  if (!/listingDensity = "three"/.test(hero)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "PageHero must default to three listing cards",
+    });
+  }
   const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+  if (!layout.includes("SiteCalendly")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Root layout must render the after-content scheduler on every page",
+    });
+  }
   if (!layout.includes("#0E1A2B")) {
     findings.push({
       severity: "error",

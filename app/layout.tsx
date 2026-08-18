@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import SkipLink from "@/components/site/SkipLink";
 import SiteHeader from "@/components/site/SiteHeader";
+import SiteCalendly from "@/components/site/SiteCalendly";
 import SiteFooter from "@/components/site/SiteFooter";
 import JsonLd from "@/components/site/JsonLd";
 import CalendlyBadge from "@/components/calendly/CalendlyBadge";
@@ -109,6 +110,7 @@ export default function RootLayout({
         <SkipLink />
         <SiteHeader />
         <main id="main-content">{children}</main>
+        <SiteCalendly />
         <SiteFooter />
         <CalendlyBadge />
         <RealScoutScript />

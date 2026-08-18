@@ -1,4 +1,3 @@
-import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
@@ -66,7 +65,7 @@ export default function HomeValuationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <RoutePageHero path="/home-valuation" showCalendly={false} />
+      <RoutePageHero path="/home-valuation" />
 
       <div className="legacy-page pb-16 pt-6">
         <div className="container mx-auto px-4">
@@ -83,22 +82,7 @@ export default function HomeValuationPage() {
 
           
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
-            {/* Calendly Widget */}
-            <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
-              <div className="bg-blue-600 text-white p-4 text-center">
-                <h2 className="text-2xl font-bold">Schedule Your Free Valuation</h2>
-                <p className="text-blue-100 text-sm mt-1">
-                  Book a consultation with Dr. Jan Duffy
-                </p>
-              </div>
-              <CalendlyWidget height="650px" />
-              <p className="text-xs text-slate-500 text-center p-4 border-t border-slate-200">
-                No obligation. No pressure. Just accurate information from Berkshire Hathaway
-                HomeServices.
-              </p>
-            </div>
-
+          <div className="max-w-3xl mx-auto mb-16">
             {/* Value Prop */}
             <div className="space-y-8">
               <div className="bg-slate-900 text-white rounded-lg p-8">

@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import AfterHeroWidgets from "@/components/site/AfterHeroWidgets";
-import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
 import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageImages } from "@/content/page-images";
-import { contactCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -25,25 +22,13 @@ const images = pageImages.contact;
 export default function ContactPage() {
   return (
     <article>
-      <RoutePageHero
-        path="/contact"
-        showWidgets={false}
-        primaryHref="#schedule-contact"
-        primaryLabel="Pick a time"
-      />
+      <RoutePageHero path="/contact" />
       <JsonLd
         data={buildBreadcrumbList([
           { name: "Home", path: "/" },
           { name: "Contact", path: "/contact" },
         ])}
       />
-      <CalendlyInlineSection
-        id="schedule-contact"
-        title={contactCopy.scheduleHeading}
-        intro={contactCopy.scheduleIntro}
-        height="720px"
-      />
-      <AfterHeroWidgets showCalendly={false} />
       <div className="image-grid">
         {images.supporting.map((image) => (
           <HeadingImage key={image.id} image={image} />

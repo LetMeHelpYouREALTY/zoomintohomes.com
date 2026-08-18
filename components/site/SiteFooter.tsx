@@ -76,7 +76,7 @@ export default function SiteFooter() {
             </span>
           ))}
           {" · "}
-          <a href="#schedule-footer">Schedule</a>
+          <a href="#schedule">Schedule</a>
         </p>
 
         <p className="eho">

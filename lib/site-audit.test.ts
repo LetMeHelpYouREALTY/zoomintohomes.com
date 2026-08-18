@@ -54,17 +54,19 @@ describe("site audit", () => {
       "utf8",
     );
     expect(page).toContain("RoutePageHero");
-    expect(page).toContain("CalendlyInlineSection");
     expect(page).not.toContain("ConsultationForm");
     expect(page).not.toMatch(/<form\b/i);
+    const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+    expect(layout).toContain("SiteCalendly");
   });
 
-  it("shows Calendly by default and keeps forms off app pages", () => {
+  it("keeps forms off app pages and Calendly after page content", () => {
     const afterHero = readFileSync(
       join(process.cwd(), "components/site/AfterHeroWidgets.tsx"),
       "utf8",
     );
-    expect(afterHero).toMatch(/showCalendly\s*=\s*true/);
+    expect(afterHero).toMatch(/showCalendly\s*=\s*false/);
+    expect(afterHero).toMatch(/listingDensity\s*=\s*"three"/);
 
     const appPages: string[] = [];
     const walk = (target: string) => {
@@ -94,18 +96,18 @@ describe("site audit", () => {
     expect(css).not.toMatch(/#14666b/i);
   });
 
-  it("keeps the homepage to one hero CTA, three listings, and a later scheduler", () => {
-    const home = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
-    expect(home).toContain("singleCta");
-    expect(home).toContain('listingDensity="three"');
-    expect(home).toContain("CalendlyInlineSection");
-    expect(home).toContain('showCalendly={false}');
-
+  it("uses one hero CTA, three listings, and an after-content scheduler on every page", () => {
     const hero = readFileSync(
       join(process.cwd(), "components/site/PageHero.tsx"),
       "utf8",
     );
+    expect(hero).toMatch(/singleCta = true/);
+    expect(hero).toMatch(/listingDensity = "three"/);
     expect(hero).not.toContain("Book a time");
+    expect(hero).toContain('primaryHref = "#schedule"');
+
+    const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+    expect(layout).toContain("SiteCalendly");
 
     const widgets = readFileSync(
       join(process.cwd(), "content/widgets.ts"),

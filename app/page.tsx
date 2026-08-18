@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import TourHero from "@/components/site/TourHero";
@@ -48,11 +47,6 @@ export default function HomePage() {
         support={homeCopy.lede}
         explanation={homeCopy.explanation}
         servicePoints={homeCopy.servicePoints}
-        primaryHref="#schedule-home"
-        primaryLabel="Book a call"
-        singleCta
-        showCalendly={false}
-        listingDensity="three"
         tourHref="/examples/walkthrough"
         tourLabel="Watch a sample video tour"
       />
@@ -79,13 +73,6 @@ export default function HomePage() {
             ) : null}
           </TourStage>
         </section>
-
-        <CalendlyInlineSection
-          id="schedule-home"
-          title="Schedule your virtual tour call"
-          intro="Pick a time to plan a remote walkthrough. We measure on video first, then visit only the finalists."
-          height="640px"
-        />
 
         <h2>{homeCopy.audienceLabel}</h2>
         {byHeading[homeCopy.audienceLabel] ? (

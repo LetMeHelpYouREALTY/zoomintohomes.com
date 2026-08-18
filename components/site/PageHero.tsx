@@ -18,7 +18,7 @@ export type PageHeroProps = {
   secondaryLabel?: string;
   tourHref?: string;
   tourLabel?: string;
-  /** One navy button plus a phone text link. Homepage uses this. */
+  /** One navy button plus a phone text link. Default on every page. */
   singleCta?: boolean;
   showWidgets?: boolean;
   showCalendly?: boolean;
@@ -28,7 +28,8 @@ export type PageHeroProps = {
 
 /**
  * Split hero used on every page: photo beside the H1 and a short service
- * explanation. Listings and scheduling widgets render immediately below.
+ * explanation. Three listings render immediately below. The scheduler sits
+ * after page content in the root layout.
  */
 export default function PageHero({
   image,
@@ -37,17 +38,17 @@ export default function PageHero({
   explanation,
   servicePoints,
   brand = siteIdentity.siteName,
-  primaryHref = "/contact",
+  primaryHref = "#schedule",
   primaryLabel = "Book a call",
   secondaryHref = `tel:${siteIdentity.phoneTel}`,
   secondaryLabel = `Call ${siteIdentity.phoneDisplay}`,
   tourHref,
   tourLabel = "Watch a sample video tour",
-  singleCta = false,
+  singleCta = true,
   showWidgets = true,
-  showCalendly,
+  showCalendly = false,
   calendlyId = "schedule-hero",
-  listingDensity = "default",
+  listingDensity = "three",
 }: PageHeroProps) {
   return (
     <>
