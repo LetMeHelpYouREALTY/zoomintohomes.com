@@ -2,7 +2,6 @@ import Link from "next/link";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { brandCopy } from "@/content/brand";
 import { helpNav, siteIdentity } from "@/content/site";
-import { CALENDLY_URL } from "@/content/widgets";
 
 function EqualHousingMark() {
   return (
@@ -28,9 +27,6 @@ export default function SiteFooter() {
       <div className="site-footer-inner">
         <div className="footer-schedule-row" id="schedule-footer">
           <CalendlyButton className="button" text="Schedule a call" />
-          <a className="button button-secondary" href={CALENDLY_URL}>
-            Open the scheduler
-          </a>
           <a
             className="button button-secondary"
             href={`tel:${siteIdentity.phoneTel}`}

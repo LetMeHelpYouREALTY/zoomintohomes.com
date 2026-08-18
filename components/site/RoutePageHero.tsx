@@ -12,6 +12,8 @@ type RoutePageHeroProps = PageHeroOverrides & {
   primaryLabel?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
+  singleCta?: boolean;
+  listingDensity?: "default" | "three";
 };
 
 /**
@@ -29,6 +31,8 @@ export default function RoutePageHero({
   primaryLabel,
   secondaryHref,
   secondaryLabel,
+  singleCta,
+  listingDensity,
   ...overrides
 }: RoutePageHeroProps) {
   const spec = resolvePageHero(path, overrides);
@@ -48,6 +52,8 @@ export default function RoutePageHero({
       primaryLabel={primaryLabel}
       secondaryHref={secondaryHref}
       secondaryLabel={secondaryLabel}
+      singleCta={singleCta}
+      listingDensity={listingDensity}
     />
   );
 }

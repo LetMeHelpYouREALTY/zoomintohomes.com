@@ -219,6 +219,22 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   color: var(--bg);
 }
 
+.header-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.65rem;
+  color: var(--bg) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.header-text-link:hover {
+  color: var(--gold) !important;
+  text-decoration: underline !important;
+}
+
 .header-tour-link {
   display: inline-flex;
   align-items: center;
@@ -233,8 +249,8 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 }
 
 .header-tour-link:hover {
-  background: var(--gold);
-  color: var(--navy) !important;
+  background: rgb(247 243 235 / 0.08);
+  color: var(--bg) !important;
 }
 
 @media (min-width: 64rem) {
@@ -340,6 +356,19 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 
 .tour-hero-actions {
   margin: 0;
+}
+
+.tour-hero-phone {
+  margin: 0.35rem 0 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
 }
 
 .tour-hero .tour-play-button {
@@ -637,13 +666,13 @@ h4 {
 
 .button-secondary {
   background: transparent;
-  color: var(--link);
-  border-color: var(--border);
+  color: var(--navy);
+  border-color: var(--navy);
 }
 
 .button-secondary:hover {
-  color: var(--ink);
-  background: var(--sand);
+  color: var(--bg);
+  background: var(--navy);
 }
 
 .button:disabled {
@@ -675,13 +704,13 @@ h4 {
 
 .site-footer .button {
   color: var(--navy);
-  background: var(--gold);
-  border-color: var(--gold);
+  background: var(--bg);
+  border-color: var(--bg);
 }
 
 .site-footer .button:hover {
   color: var(--bg);
-  background: var(--navy-hover);
+  background: transparent;
   border-color: var(--gold);
 }
 
@@ -692,8 +721,9 @@ h4 {
 }
 
 .site-footer .button-secondary:hover {
-  background: var(--gold);
-  color: var(--navy);
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .site-footer .compliance-block {
@@ -960,12 +990,30 @@ h4 {
   padding: 0.75rem;
 }
 
+/* One row of three cards on desktop; clip the MLS-style second row. */
+.realscout-carousel--three .realscout-carousel-widget {
+  max-height: 22rem;
+  overflow: hidden;
+}
+
+@media (min-width: 48rem) {
+  .realscout-carousel--three .realscout-carousel-widget {
+    max-height: 28rem;
+  }
+}
+
 .realscout-carousel-note {
   margin-top: 1rem;
 }
 
 .calendly-inline-section {
   background: var(--surface);
+}
+
+.calendly-inline-inner [style*="min-width"],
+.calendly-inline-widget {
+  background: var(--navy);
+  color-scheme: light;
 }
 
 .footer-schedule-row {

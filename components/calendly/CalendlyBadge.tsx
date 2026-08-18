@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import {
   CALENDLY_BRAND_COLOR,
-  CALENDLY_URL,
+  calendlyEmbedUrl,
 } from "@/content/widgets";
 import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import { runOnFirstInteraction } from "@/lib/load-on-interaction";
@@ -22,7 +22,7 @@ type CalendlyBadgeProps = {
  * stay off the PageSpeed lab path.
  */
 export default function CalendlyBadge({
-  url = CALENDLY_URL,
+  url = calendlyEmbedUrl(),
   text = "Schedule a video tour",
   color = CALENDLY_BRAND_COLOR,
   textColor = "#F7F3EB",

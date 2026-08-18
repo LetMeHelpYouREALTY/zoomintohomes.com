@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { CALENDLY_URL } from "@/content/widgets";
+import { calendlyEmbedUrl } from "@/content/widgets";
 import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import "./types";
 
@@ -15,7 +15,7 @@ type CalendlyWidgetProps = {
  * Inline Calendly embed. CSS/JS load when this widget mounts.
  */
 export default function CalendlyWidget({
-  url = CALENDLY_URL,
+  url = calendlyEmbedUrl(),
   minWidth = "320px",
   height = "700px",
 }: CalendlyWidgetProps) {
@@ -51,5 +51,11 @@ export default function CalendlyWidget({
     };
   }, [url, minWidth, height]);
 
-  return <div ref={widgetRef} style={{ minWidth, height, width: "100%" }} />;
+  return (
+    <div
+      ref={widgetRef}
+      className="calendly-host"
+      style={{ minWidth, height, width: "100%", background: "#0E1A2B" }}
+    />
+  );
 }

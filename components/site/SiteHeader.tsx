@@ -33,7 +33,7 @@ export default function SiteHeader() {
               </li>
             ))}
           </ul>
-          <Link href="/examples/walkthrough" className="header-tour-link">
+          <Link href="/examples/walkthrough" className="header-text-link">
             Virtual tour
           </Link>
           <CalendlyButton className="header-tour-link" text="Book a call" />

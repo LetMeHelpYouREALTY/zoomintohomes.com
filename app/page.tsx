@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CalendlyInlineSection from "@/components/site/CalendlyInlineSection";
 import HeadingImage from "@/components/site/HeadingImage";
 import PageSeoSections from "@/components/site/PageSeoSections";
 import TourHero from "@/components/site/TourHero";
@@ -47,10 +48,11 @@ export default function HomePage() {
         support={homeCopy.lede}
         explanation={homeCopy.explanation}
         servicePoints={homeCopy.servicePoints}
-        primaryHref="/virtual-tour-process"
-        primaryLabel="See the tour process"
-        secondaryHref={`tel:${siteIdentity.phoneTel}`}
-        secondaryLabel={`Call ${siteIdentity.phoneDisplay}`}
+        primaryHref="#schedule-home"
+        primaryLabel="Book a call"
+        singleCta
+        showCalendly={false}
+        listingDensity="three"
         tourHref="/examples/walkthrough"
         tourLabel="Watch a sample video tour"
       />
@@ -63,10 +65,7 @@ export default function HomePage() {
               <Link href="/examples/feature-sheet" className="button">
                 View a sample access checklist
               </Link>
-              <Link
-                href="/what-we-measure"
-                className="button button-secondary"
-              >
+              <Link href="/what-we-measure" className="text-link">
                 What we measure on camera
               </Link>
             </div>
@@ -80,6 +79,13 @@ export default function HomePage() {
             ) : null}
           </TourStage>
         </section>
+
+        <CalendlyInlineSection
+          id="schedule-home"
+          title="Schedule your virtual tour call"
+          intro="Pick a time to plan a remote walkthrough. We measure on video first, then visit only the finalists."
+          height="640px"
+        />
 
         <h2>{homeCopy.audienceLabel}</h2>
         {byHeading[homeCopy.audienceLabel] ? (

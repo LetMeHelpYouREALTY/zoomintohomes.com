@@ -1,7 +1,7 @@
 "use client";
 
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
-import { CALENDLY_URL, calendlyHeading } from "@/content/widgets";
+import { calendlyHeading } from "@/content/widgets";
 import { siteIdentity } from "@/content/site";
 
 type CalendlyInlineSectionProps = {
@@ -27,7 +27,7 @@ export default function CalendlyInlineSection({
           <a href={`tel:${siteIdentity.phoneTel}`}>{siteIdentity.phoneDisplay}</a>
           .
         </p>
-        <CalendlyWidget url={CALENDLY_URL} height={height} />
+        <CalendlyWidget height={height} />
       </div>
     </section>
   );

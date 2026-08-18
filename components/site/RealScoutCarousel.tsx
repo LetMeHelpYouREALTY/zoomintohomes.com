@@ -7,6 +7,7 @@ import {
 type RealScoutCarouselProps = {
   title?: string;
   intro?: string;
+  density?: "default" | "three";
 };
 
 /**
@@ -16,10 +17,11 @@ type RealScoutCarouselProps = {
 export default function RealScoutCarousel({
   title = "Homes you can tour on video first",
   intro = "Browse live Las Vegas and Henderson homes for sale. We check doorway and bathroom access on video before any drive-out.",
+  density = "default",
 }: RealScoutCarouselProps) {
   return (
     <section
-      className="realscout-carousel"
+      className={`realscout-carousel${density === "three" ? " realscout-carousel--three" : ""}`}
       aria-labelledby="realscout-carousel-heading"
     >
       <div className="realscout-carousel-inner">
@@ -49,6 +51,13 @@ export default function RealScoutCarousel({
           {" · "}
           <Link href="/contact">Request a call</Link>
         </p>
+        {density === "three" ? (
+          <p className="meta realscout-carousel-note">
+            Listing data from the local MLS. Information is deemed reliable
+            but not guaranteed. Open full search for complete results and
+            attribution.
+          </p>
+        ) : null}
       </div>
     </section>
   );

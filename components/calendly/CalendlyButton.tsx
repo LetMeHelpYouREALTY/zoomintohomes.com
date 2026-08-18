@@ -1,6 +1,6 @@
 "use client";
 
-import { CALENDLY_URL } from "@/content/widgets";
+import { calendlyEmbedUrl } from "@/content/widgets";
 import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
 import "./types";
 
@@ -13,7 +13,7 @@ type CalendlyButtonProps = {
 
 /** Popup scheduler. Loads booking assets on click, then opens the overlay. */
 export default function CalendlyButton({
-  url = CALENDLY_URL,
+  url = calendlyEmbedUrl(),
   text = "Schedule a virtual tour",
   className = "button",
   children,

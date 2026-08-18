@@ -93,4 +93,25 @@ describe("site audit", () => {
     expect(css).not.toMatch(/#0f4c4f/i);
     expect(css).not.toMatch(/#14666b/i);
   });
+
+  it("keeps the homepage to one hero CTA, three listings, and a later scheduler", () => {
+    const home = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
+    expect(home).toContain("singleCta");
+    expect(home).toContain('listingDensity="three"');
+    expect(home).toContain("CalendlyInlineSection");
+    expect(home).toContain('showCalendly={false}');
+
+    const hero = readFileSync(
+      join(process.cwd(), "components/site/PageHero.tsx"),
+      "utf8",
+    );
+    expect(hero).not.toContain("Book a time");
+
+    const widgets = readFileSync(
+      join(process.cwd(), "content/widgets.ts"),
+      "utf8",
+    );
+    expect(widgets).toContain("primary_color");
+    expect(widgets).toContain("0e1a2b");
+  });
 });

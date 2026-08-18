@@ -48,6 +48,24 @@ export const CALENDLY_URL =
   "https://calendly.com/drjanduffy/showing";
 
 export const CALENDLY_BRAND_COLOR = "#0E1A2B";
+export const CALENDLY_TEXT_COLOR = "#14110E";
+export const CALENDLY_BG_COLOR = "#F7F3EB";
+
+/**
+ * Calendly embed URL with navy chrome. Hex values omit `#` per Calendly's
+ * embed docs (help.calendly.com, still current in 2026).
+ */
+export function calendlyEmbedUrl(base: string = CALENDLY_URL): string {
+  try {
+    const url = new URL(base);
+    url.searchParams.set("background_color", "f7f3eb");
+    url.searchParams.set("text_color", "14110e");
+    url.searchParams.set("primary_color", "0e1a2b");
+    return url.toString();
+  } catch {
+    return base;
+  }
+}
 
 export function calendlyHeading(): string {
   return `Schedule a video tour with ${siteIdentity.agentName}`;

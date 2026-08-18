@@ -638,6 +638,61 @@ export function auditLuxuryPalette(): AuditFinding[] {
       message: "globals.css is missing the champagne gold token",
     });
   }
+  if (/header-tour-link:hover[\s\S]{0,80}background:\s*var\(--gold\)/.test(css)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Header CTA still fills with gold on hover",
+    });
+  }
+  if (/\.site-footer \.button \{[\s\S]{0,120}background:\s*var\(--gold\)/.test(css)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Footer primary button still uses a gold fill",
+    });
+  }
+  const widgets = readFileSync(join(process.cwd(), "content/widgets.ts"), "utf8");
+  if (!widgets.includes("primary_color") || !widgets.includes("0e1a2b")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Calendly embed URL must set navy primary_color",
+    });
+  }
+  const home = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
+  if (!home.includes("singleCta")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Homepage hero must use a single CTA",
+    });
+  }
+  if (!home.includes('listingDensity="three"')) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Homepage listings must use the three-card density",
+    });
+  }
+  if (!home.includes("CalendlyInlineSection")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Homepage must place the scheduler after the promise section",
+    });
+  }
+  const hero = readFileSync(
+    join(process.cwd(), "components/site/PageHero.tsx"),
+    "utf8",
+  );
+  if (hero.includes("Book a time")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "PageHero still renders a fourth Book a time button",
+    });
+  }
   const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
   if (!layout.includes("#0E1A2B")) {
     findings.push({
