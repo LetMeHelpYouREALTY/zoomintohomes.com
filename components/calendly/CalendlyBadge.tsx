@@ -25,7 +25,7 @@ export default function CalendlyBadge({
   url = CALENDLY_URL,
   text = "Schedule a video tour",
   color = CALENDLY_BRAND_COLOR,
-  textColor = "#ffffff",
+  textColor = "#F7F3EB",
   branding = true,
 }: CalendlyBadgeProps) {
   useEffect(() => {

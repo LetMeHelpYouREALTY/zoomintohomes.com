@@ -85,4 +85,12 @@ describe("site audit", () => {
       expect(source, rel).not.toMatch(/type\s*=\s*["']email["']/i);
     }
   });
+
+  it("uses navy and champagne gold instead of teal", () => {
+    const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+    expect(css).toMatch(/--navy:\s*#0e1a2b/i);
+    expect(css).toMatch(/--gold:\s*#c4a574/i);
+    expect(css).not.toMatch(/#0f4c4f/i);
+    expect(css).not.toMatch(/#14666b/i);
+  });
 });

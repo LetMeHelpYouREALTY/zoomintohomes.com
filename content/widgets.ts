@@ -47,7 +47,7 @@ export const CALENDLY_URL =
   process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ||
   "https://calendly.com/drjanduffy/showing";
 
-export const CALENDLY_BRAND_COLOR = "#0F4C4F";
+export const CALENDLY_BRAND_COLOR = "#0E1A2B";
 
 export function calendlyHeading(): string {
   return `Schedule a video tour with ${siteIdentity.agentName}`;

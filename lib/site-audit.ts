@@ -614,6 +614,41 @@ export function auditLeadForms(): AuditFinding[] {
   return findings;
 }
 
+export function auditLuxuryPalette(): AuditFinding[] {
+  const findings: AuditFinding[] = [];
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  if (/#0f4c4f/i.test(css) || /#14666b/i.test(css)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "globals.css still uses the old teal palette instead of navy and gold",
+    });
+  }
+  if (!/--navy:\s*#0e1a2b/i.test(css)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "globals.css is missing the luxury navy token",
+    });
+  }
+  if (!/--gold:\s*#c4a574/i.test(css)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "globals.css is missing the champagne gold token",
+    });
+  }
+  const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+  if (!layout.includes("#0E1A2B")) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "Browser theme-color must match luxury navy",
+    });
+  }
+  return findings;
+}
+
 export function runSiteAudit(): AuditFinding[] {
   return [
     ...auditRealtorSlang(),
@@ -621,6 +656,7 @@ export function runSiteAudit(): AuditFinding[] {
     ...auditImages(),
     ...auditSeoAndSchema(),
     ...auditLeadForms(),
+    ...auditLuxuryPalette(),
     ...auditPerformanceTraps(),
   ];
 }

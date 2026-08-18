@@ -3,26 +3,30 @@
 @tailwind utilities;
 
 :root {
-  /* Teardown palette — contrast computed against white / oat / sand */
-  --ink: #16262b;
-  --text: #16262b;
-  --text-secondary: #3d4b50;
-  --text-muted: #5c6b70;
-  --bg: #faf7f2;
-  --surface: #ffffff;
-  --sand: #f2ede4;
-  --border: #14666b;
-  --link: #0f4c4f;
-  --primary: #0f4c4f;
-  --link-hover: #16262b;
-  --focus-fill: #f5c542;
-  --focus-bar: #16262b;
-  --error: #a4262c;
-  --success: #1b6b45;
-  --button-bg: #0f4c4f;
-  --button-text: #ffffff;
-  --clay: #9c3f14;
-  --clay-light: #b4541f;
+  /* Luxury realtor palette — navy, ivory, champagne gold */
+  --ink: #14110e;
+  --text: #14110e;
+  --text-secondary: #3f3a34;
+  --text-muted: #6b645c;
+  --bg: #f7f3eb;
+  --surface: #fffcf6;
+  --sand: #e8e0d2;
+  --navy: #0e1a2b;
+  --navy-hover: #1a2f4a;
+  --gold: #c4a574;
+  --gold-deep: #8c7350;
+  --border: #8c7350;
+  --link: #0e1a2b;
+  --primary: #0e1a2b;
+  --link-hover: #6e5428;
+  --focus-fill: #d4a017;
+  --focus-bar: #14110e;
+  --error: #7a2e2e;
+  --success: #2c5a45;
+  --button-bg: #0e1a2b;
+  --button-text: #f7f3eb;
+  --clay: #8c7350;
+  --clay-light: #c4a574;
   --header-height: 4.5rem;
   --font-sans: var(--font-atkinson), "Atkinson Hyperlegible", "Segoe UI", sans-serif;
   --font-display: var(--font-source-serif), "Source Serif 4", Georgia, serif;
@@ -36,8 +40,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(ellipse 120% 60% at 100% -10%, rgb(20 102 107 / 0.08), transparent 55%),
-    radial-gradient(ellipse 80% 40% at 0% 100%, rgb(156 63 20 / 0.06), transparent 50%),
+    radial-gradient(ellipse 120% 60% at 100% -10%, rgb(196 165 116 / 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgb(14 26 43 / 0.06), transparent 50%),
     var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -99,8 +103,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgb(255 255 255 / 0.94);
-  border-bottom: 1px solid var(--border);
+  background: rgb(14 26 43 / 0.96);
+  border-bottom: 1px solid var(--gold);
   backdrop-filter: blur(8px);
 }
 
@@ -119,12 +123,12 @@ a:hover {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.35rem;
-  color: var(--ink);
+  color: var(--bg);
   text-decoration: none;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
 }
 
 .nav-desktop {
@@ -144,7 +148,7 @@ a:hover {
   min-height: 44px;
   padding: 0.5rem 0.65rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--bg);
   font-weight: 600;
   font-size: 1rem;
 }
@@ -152,15 +156,16 @@ a:hover {
 .nav-desktop a:hover,
 .nav-mobile a:hover {
   text-decoration: underline;
+  color: var(--gold);
 }
 
 .nav-toggle {
   min-height: 44px;
   min-width: 44px;
   padding: 0.5rem 0.75rem;
-  background: var(--surface);
-  color: var(--text);
-  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--bg);
+  border: 1px solid var(--gold);
   font: inherit;
   font-weight: 600;
 }
@@ -207,11 +212,11 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 }
 
 .site-logo-mark {
-  color: var(--button-bg);
+  color: var(--gold);
 }
 
 .site-logo-rest {
-  color: var(--ink);
+  color: var(--bg);
 }
 
 .header-tour-link {
@@ -219,16 +224,17 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   align-items: center;
   min-height: 44px;
   padding: 0.5rem 0.9rem;
-  background: var(--ink);
-  color: #faf7f2 !important;
+  background: transparent;
+  color: var(--bg) !important;
+  border: 1px solid var(--gold);
   text-decoration: none !important;
   font-weight: 700;
   font-size: 0.95rem;
 }
 
 .header-tour-link:hover {
-  background: var(--button-bg);
-  color: #fff !important;
+  background: var(--gold);
+  color: var(--navy) !important;
 }
 
 @media (min-width: 64rem) {
@@ -293,8 +299,9 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   font-size: 1.05rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
-  letter-spacing: -0.02em;
-  color: var(--primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
 }
 
 .tour-hero-title {
@@ -350,8 +357,8 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 }
 
 .tour-hero .tour-play-button:hover {
-  background: var(--teal-hover, #14666b);
-  border-color: var(--teal-hover, #14666b);
+  background: var(--navy-hover);
+  border-color: var(--navy-hover);
   color: var(--button-text);
 }
 
@@ -375,15 +382,15 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
   align-items: center;
   gap: 0.4rem;
   padding: 0.65rem 0.85rem;
-  background: #0b171a;
-  color: #faf7f2;
+  background: var(--navy);
+  color: var(--bg);
   font-size: 0.95rem;
 }
 
 .tour-stage-dot {
   width: 0.55rem;
   height: 0.55rem;
-  background: rgb(250 247 242 / 0.35);
+  background: rgb(247 243 235 / 0.35);
 }
 
 .tour-stage-label {
@@ -410,9 +417,9 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 
 .tour-stage-caption {
   padding: 0.85rem 1rem;
-  color: rgb(250 247 242 / 0.85);
+  color: rgb(247 243 235 / 0.85);
   font-size: 1rem;
-  background: #0b171a;
+  background: var(--navy);
 }
 
 .tour-promise {
@@ -443,7 +450,7 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 
 .audience-panel {
   background: var(--surface);
-  border-top: 3px solid var(--button-bg);
+  border-top: 3px solid var(--gold);
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   border-left: 1px solid var(--border);
@@ -528,7 +535,7 @@ h4 {
 .answer-block {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--button-bg);
+  border-left: 4px solid var(--gold);
   padding: 1rem 1.25rem;
   margin: 0 0 1.5rem;
   max-width: 46rem;
@@ -624,8 +631,8 @@ h4 {
 
 .button:hover {
   color: var(--button-text);
-  background: var(--teal-hover, #14666b);
-  border-color: var(--teal-hover, #14666b);
+  background: var(--navy-hover);
+  border-color: var(--navy-hover);
 }
 
 .button-secondary {
@@ -652,9 +659,47 @@ h4 {
 }
 
 .site-footer {
-  background: var(--sand);
-  border-top: 1px solid var(--border);
+  background: var(--navy);
+  color: var(--bg);
+  border-top: 1px solid var(--gold);
   font-size: 1rem;
+}
+
+.site-footer a {
+  color: var(--gold);
+}
+
+.site-footer a:hover {
+  color: var(--bg);
+}
+
+.site-footer .button {
+  color: var(--navy);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.site-footer .button:hover {
+  color: var(--bg);
+  background: var(--navy-hover);
+  border-color: var(--gold);
+}
+
+.site-footer .button-secondary {
+  background: transparent;
+  color: var(--bg);
+  border-color: var(--gold);
+}
+
+.site-footer .button-secondary:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.site-footer .compliance-block {
+  background: rgb(10 16 28 / 0.65);
+  border-color: var(--gold-deep);
+  color: var(--bg);
 }
 
 .site-footer-inner {
@@ -683,6 +728,12 @@ h4 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  color: var(--bg);
+}
+
+.eho svg {
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 .consult-form {
@@ -862,7 +913,7 @@ h4 {
 
 /* Legacy marketing pages: one brand shell (SiteHeader/Footer), no nested chrome */
 .legacy-page {
-  background: #f8fafc;
+  background: var(--bg);
   min-height: 50vh;
 }
 
@@ -930,13 +981,13 @@ h4 {
   min-height: 44px;
   padding: 0.5rem 0.75rem;
   font-weight: 700;
-  color: var(--button-bg);
+  color: var(--gold);
   text-decoration: underline;
 }
 
 /* Official RealScout office-listings styles */
 realscout-office-listings {
-  --rs-listing-divider-color: rgb(101, 141, 172);
+  --rs-listing-divider-color: #8c7350;
   display: block;
   width: 100%;
   min-height: 28rem;

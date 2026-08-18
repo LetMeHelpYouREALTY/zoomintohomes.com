@@ -14,10 +14,10 @@ function EqualHousingMark() {
       focusable="false"
     >
       <path
-        fill="#16262B"
+        fill="currentColor"
         d="M20 2 2 16h6v14h24V16h6L20 2zm-8 26V15.2L20 8.4l8 6.8V28H12z"
       />
-      <path fill="#16262B" d="M16 20h8v2h-8zm0 4h8v2h-8z" />
+      <path fill="currentColor" d="M16 20h8v2h-8zm0 4h8v2h-8z" />
     </svg>
   );
 }
