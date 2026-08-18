@@ -35,6 +35,7 @@
 html {
   font-size: 100%;
   scroll-padding-top: var(--header-height);
+  color-scheme: light;
 }
 
 body {
@@ -939,6 +940,8 @@ h4 {
 
 .after-hero-widgets {
   margin: 0 0 2rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 36rem;
 }
 
 /* Legacy marketing pages: one brand shell (SiteHeader/Footer), no nested chrome */
@@ -1008,6 +1011,8 @@ h4 {
 
 .calendly-inline-section {
   background: var(--surface);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 48rem;
 }
 
 .calendly-inline-inner [style*="min-width"],

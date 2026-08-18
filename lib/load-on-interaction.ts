@@ -37,3 +37,41 @@ export function runOnFirstInteraction(task: () => void): () => void {
 
   return cleanup;
 }
+
+/**
+ * Run a third-party loader when the element is near the viewport, or
+ * immediately if the URL hash already points at it (`#schedule`).
+ */
+export function runWhenVisible(
+  element: Element,
+  task: () => void,
+  options?: IntersectionObserverInit,
+): () => void {
+  if (typeof window === "undefined") {
+    return () => undefined;
+  }
+
+  const hash = window.location.hash.replace(/^#/, "");
+  const id = element.id || element.closest("[id]")?.id;
+  if (hash && id && hash === id) {
+    task();
+    return () => undefined;
+  }
+
+  if (typeof IntersectionObserver === "undefined") {
+    task();
+    return () => undefined;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        observer.disconnect();
+        task();
+      }
+    },
+    { rootMargin: "240px 0px", threshold: 0.01, ...options },
+  );
+  observer.observe(element);
+  return () => observer.disconnect();
+}

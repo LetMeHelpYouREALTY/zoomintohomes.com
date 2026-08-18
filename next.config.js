@@ -18,9 +18,12 @@ const nextConfig = {
 
   // Compression
   compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
 
-  // Performance optimizations
-  swcMinify: true,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "react-markdown"],
+  },
 
   // Host + path aliases + retired WordPress URLs (GSC 404 cleanup)
   async redirects() {
@@ -87,11 +90,11 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://assets.calendly.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://assets.calendly.com https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com",
               "style-src 'self' 'unsafe-inline' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://assets.calendly.com https://fonts.googleapis.com",
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' data: https://assets.calendly.com https://fonts.gstatic.com https://em.realscout.com https://www.realscout.com",
-              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://api.mapbox.com https://openrouter.ai https://api.openai.com https://calendly.com https://assets.calendly.com https://www.google-analytics.com https://analytics.google.com https://*.ingest.sentry.io",
+              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://api.mapbox.com https://openrouter.ai https://api.openai.com https://calendly.com https://assets.calendly.com https://www.google-analytics.com https://analytics.google.com https://*.ingest.sentry.io https://va.vercel-scripts.com https://vitals.vercel-insights.com",
               "frame-src 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com",
               "worker-src 'self' blob:",
             ].join('; '),
