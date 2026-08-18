@@ -545,6 +545,47 @@ export function auditPerformanceTraps(): AuditFinding[] {
     });
   }
 
+  const vercelJson = readFileSync(join(process.cwd(), "vercel.json"), "utf8");
+  for (const key of [
+    "buildCommand",
+    "devCommand",
+    "framework",
+    "outputDirectory",
+  ] as const) {
+    if (new RegExp(`"${key}"\\s*:`).test(vercelJson)) {
+      findings.push({
+        severity: "error",
+        area: "performance",
+        message: `vercel.json overrides Vercel ${key}; leave Framework Settings on auto-detect`,
+      });
+    }
+  }
+  if (!vercelJson.includes('"/images/(.*)"')) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "vercel.json is not long-caching /images/",
+    });
+  }
+
+  const pkg = readFileSync(join(process.cwd(), "package.json"), "utf8");
+  if (!pkg.includes('"node": "24.x"')) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "package.json engines.node is not pinned to 24.x",
+    });
+  }
+
+  const nvmrc = readFileSync(join(process.cwd(), ".nvmrc"), "utf8").trim();
+  if (nvmrc !== "24") {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: `.nvmrc is ${nvmrc}, not 24`,
+    });
+  }
+
   return findings;
 }
 
