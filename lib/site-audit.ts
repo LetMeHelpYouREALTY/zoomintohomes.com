@@ -545,6 +545,43 @@ export function auditPerformanceTraps(): AuditFinding[] {
     });
   }
 
+  if (!layout.includes("SpeedInsights")) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "Root layout is missing Vercel Speed Insights",
+    });
+  }
+
+  if (!nextConfig.includes("optimizePackageImports")) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "next.config.js is missing optimizePackageImports for lucide-react",
+    });
+  }
+
+  const calendlyWidget = readFileSync(
+    join(process.cwd(), "components/calendly/CalendlyWidget.tsx"),
+    "utf8",
+  );
+  if (!calendlyWidget.includes("runWhenVisible")) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "Calendly iframe still loads on mount instead of when visible",
+    });
+  }
+
+  const vercelJson = readFileSync(join(process.cwd(), "vercel.json"), "utf8");
+  if (!vercelJson.includes('"/images/(.*)"')) {
+    findings.push({
+      severity: "error",
+      area: "performance",
+      message: "vercel.json is not long-caching /images/",
+    });
+  }
+
   return findings;
 }
 

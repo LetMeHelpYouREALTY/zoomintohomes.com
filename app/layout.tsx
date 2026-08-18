@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Atkinson_Hyperlegible, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import SkipLink from "@/components/site/SkipLink";
 import SiteHeader from "@/components/site/SiteHeader";
@@ -96,6 +97,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#0E1A2B",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -105,6 +107,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${atkinson.variable} ${sourceSerif.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://em.realscout.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+      </head>
       <body className={atkinson.className}>
         <JsonLd data={buildOrganizationSchemas()} />
         <SkipLink />
@@ -115,6 +122,7 @@ export default function RootLayout({
         <CalendlyBadge />
         <RealScoutScript />
         <Analytics />
+        <SpeedInsights />
         {gaId ? (
           <>
             <Script

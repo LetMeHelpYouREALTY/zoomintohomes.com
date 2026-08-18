@@ -37,6 +37,7 @@ describe("site audit", () => {
     expect(layout).not.toContain("realscout-web-components.umd.js");
     expect(layout).not.toContain('strategy="afterInteractive"');
     expect(layout).toContain("RealScoutScript");
+    expect(layout).toContain("SpeedInsights");
   });
 
   it("puts a service explanation beside every page hero", () => {
