@@ -32,6 +32,23 @@ describe("site audit", () => {
     expect(findings, findings.map((item) => item.message).join("\n")).toEqual([]);
   });
 
+  it("lets Vercel auto-detect Next.js instead of overriding Framework Settings", () => {
+    const vercelJson = readFileSync(join(process.cwd(), "vercel.json"), "utf8");
+    expect(vercelJson).not.toMatch(/"buildCommand"\s*:/);
+    expect(vercelJson).not.toMatch(/"devCommand"\s*:/);
+    expect(vercelJson).not.toMatch(/"framework"\s*:/);
+    expect(vercelJson).not.toMatch(/"outputDirectory"\s*:/);
+    expect(vercelJson).toContain('"/images/(.*)"');
+
+    const pkg = JSON.parse(
+      readFileSync(join(process.cwd(), "package.json"), "utf8"),
+    ) as { engines?: { node?: string } };
+    expect(pkg.engines?.node).toBe("24.x");
+    expect(readFileSync(join(process.cwd(), ".nvmrc"), "utf8").trim()).toBe(
+      "24",
+    );
+  });
+
   it("keeps the home-search widget off the layout critical path", () => {
     const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
     expect(layout).not.toContain("realscout-web-components.umd.js");
