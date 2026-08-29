@@ -1,0 +1,11 @@
+{
+  "name": "Zoom Into Homes (Next.js 14)",
+  "install": "corepack enable && pnpm install --frozen-lockfile",
+  "terminals": [
+    {
+      "name": "next-dev",
+      "command": "pnpm exec next dev -p 3000"
+    }
+  ],
+  "ports": [3000]
+}
