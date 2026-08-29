@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { legacyWordpressRedirects } = require("./redirects/legacy-wordpress");
+const { leftoverHostRedirects } = require("./redirects/legacy-host-content");
 
 const nextConfig = {
   // Standalone output for Docker/Vercel optimization
@@ -45,6 +46,10 @@ const nextConfig = {
         destination: "/virtual-tour-process",
         permanent: true,
       },
+      ...leftoverHostRedirects.map((rule) => ({
+        ...rule,
+        permanent: true,
+      })),
       ...legacyWordpressRedirects.map((rule) => ({
         ...rule,
         permanent: true,

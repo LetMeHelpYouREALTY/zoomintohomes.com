@@ -200,7 +200,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/security-policy": hero(
     pageImages.accessibilityStatement.hero,
     "Security policy",
-    "How Berkshire Hathaway HomeServices Nevada Properties handles security reports for zoomintohomes.com.",
+    "How Zoom Into Homes handles security reports for zoomintohomes.com.",
     "This page explains how to report a security issue on Zoom Into Homes. Do not include client names, medical notes, or listing credentials in a public report. Call (702) 222-1964 or book a time on the contact page for a private handoff.",
   ),
   "/sellers": hero(

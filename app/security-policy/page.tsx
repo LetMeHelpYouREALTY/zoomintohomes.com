@@ -24,7 +24,7 @@ export default function SecurityPolicyPage() {
               Our Commitment to Security
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              At Berkshire Hathaway HomeServices Nevada Properties, we take the security
+              At Zoom Into Homes, we take the security
               of our systems and the privacy of our clients seriously. This page outlines
               our security practices and provides information for security researchers.
             </p>
@@ -46,16 +46,17 @@ export default function SecurityPolicyPage() {
               </h3>
               <ul className="space-y-2 text-blue-800">
                 <li>
-                  <strong>Email:</strong>{' '}
-                  <a href="mailto:Homes@HeyBerkshire.com" className="underline">
-                    Homes@HeyBerkshire.com
+                  <strong>Phone:</strong>{' '}
+                  <a href={`tel:${siteIdentity.phoneTel}`} className="underline">
+                    {siteIdentity.phoneDisplay}
                   </a>
                 </li>
                 <li>
-                  <strong>Phone:</strong>{' '}
-                  <a href="tel:+17022221964" className="underline">
-                    (702) 222-1964
+                  <strong>Private handoff:</strong>{' '}
+                  <a href="/contact" className="underline">
+                    Book a Zoom Into Homes call
                   </a>
+                  . Do not email listing credentials or client notes to a public inbox.
                 </li>
                 <li>
                   <strong>Response Time:</strong> Within 48 hours
@@ -239,21 +240,17 @@ export default function SecurityPolicyPage() {
             </p>
             <div className="bg-gray-100 p-6 rounded-lg">
               <p className="mb-2">
-                <strong>Dr. Jan Duffy</strong>
+                <strong>{siteIdentity.agentName}</strong>
               </p>
               <p className="mb-2">
-                Berkshire Hathaway HomeServices Nevada Properties
-              </p>
-              <p className="mb-2">
-                Email:{' '}
-                <a href="mailto:Homes@HeyBerkshire.com" className="text-blue-600 underline">
-                  Homes@HeyBerkshire.com
-                </a>
+                {siteIdentity.siteName}
+                <br />
+                {siteIdentity.brokerageName}
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17022221964" className="text-blue-600 underline">
-                  (702) 222-1964
+                <a href={`tel:${siteIdentity.phoneTel}`} className="text-blue-600 underline">
+                  {siteIdentity.phoneDisplay}
                 </a>
               </p>
             </div>
@@ -262,7 +259,7 @@ export default function SecurityPolicyPage() {
           {/* Last Updated */}
           <footer className="border-t pt-6 mt-12">
             <p className="text-sm text-gray-500">
-              Last updated: February 14, 2026
+              Last updated: August 29, 2026
             </p>
             <p className="text-sm text-gray-500">
               This policy is reviewed and updated regularly.
