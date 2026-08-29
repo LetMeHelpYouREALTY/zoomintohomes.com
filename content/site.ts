@@ -32,6 +32,7 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const helpNav: NavItem[] = [
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/accessibility-statement", label: "Accessibility statement" },
   { href: "/privacy", label: "Privacy" },

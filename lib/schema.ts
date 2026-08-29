@@ -596,6 +596,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     telephone: siteIdentity.phoneTel || undefined,
     email: siteIdentity.email || undefined,
     areaServed: siteIdentity.serviceArea.split(",").map((part) => part.trim()),
+    image: absoluteUrl("/images/agent/gene-boyle.jpg"),
     memberOf: {
       "@type": "RealEstateAgent",
       name: siteIdentity.brokerageName,
@@ -612,6 +613,9 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     colleague: {
       "@type": "RealEstateAgent",
       name: "Dr. Jan Duffy",
+      image: absoluteUrl("/images/agent/jan-duffy-square.png"),
+      url: "https://www.heyberkshire.com",
+      telephone: siteIdentity.phoneTel || undefined,
       hasCredential: {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "license",
@@ -656,7 +660,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     width: PAGE_IMAGE_WIDTH,
     height: PAGE_IMAGE_HEIGHT,
     caption:
-      "Laptop playing a Las Vegas home walkthrough with a doorway measurement on screen",
+      "Laptop on a Las Vegas kitchen island showing a live Zoom walkthrough of a home, ready for a video-tour call",
     representativeOfPage: true,
   };
 

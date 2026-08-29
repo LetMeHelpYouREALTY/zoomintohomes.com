@@ -128,6 +128,7 @@ a:hover {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  gap: 0.65rem;
   letter-spacing: 0.01em;
 }
 
@@ -217,6 +218,91 @@ main :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible 
 
 .site-logo-rest {
   color: var(--bg);
+}
+
+.site-logo-photo,
+.footer-agent-photo {
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--navy);
+}
+
+.site-logo-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.footer-agent-photo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.agent-photo-crop {
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+}
+
+.agent-photo-badge {
+  border-radius: 50%;
+  background: transparent;
+}
+
+.practice-team {
+  margin: 2rem 0 2.5rem;
+}
+
+.practice-team-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .practice-team-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.practice-team-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: start;
+}
+
+.practice-team-card h3 {
+  margin: 0.5rem 0 0;
+}
+
+.agent-portrait-card {
+  margin: 0;
+}
+
+.agent-portrait-card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.footer-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-person {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-person p {
+  margin: 0;
 }
 
 .header-text-link {

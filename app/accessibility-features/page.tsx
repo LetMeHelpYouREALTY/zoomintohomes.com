@@ -67,7 +67,7 @@ export default function AccessibilityFeaturesPage() {
         slot="closing"
         related={[
           {
-            href: "/how-it-works",
+            href: "/virtual-tour-process",
             label: "How are features verified in the process?",
           },
           {

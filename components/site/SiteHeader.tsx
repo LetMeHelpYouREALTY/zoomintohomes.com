@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import AgentPortrait from "@/components/site/AgentPortrait";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { primaryNav, siteIdentity } from "@/content/site";
 
@@ -22,6 +23,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header-inner">
         <Link href="/" className="site-logo">
+          <AgentPortrait person="gene" variant="header" />
           <span className="site-logo-mark">Zoom</span>
           <span className="site-logo-rest"> Into Homes</span>
         </Link>

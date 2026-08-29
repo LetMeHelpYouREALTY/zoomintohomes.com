@@ -65,6 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: SITE_ORIGIN,
     siteName: siteIdentity.siteName,
     title: pageMeta.home.title,
     description: pageMeta.home.description,
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
         url: absoluteUrl("/images/pages/home/hero.jpg"),
         width: 1200,
         height: 800,
-        alt: "Laptop playing a Las Vegas home walkthrough with a doorway measurement on screen",
+        alt: "Laptop on a Las Vegas kitchen island showing a live Zoom walkthrough of a home, ready for a video-tour call",
       },
     ],
   },

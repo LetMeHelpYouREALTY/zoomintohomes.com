@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AgentPortrait from "@/components/site/AgentPortrait";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
 import { brandCopy } from "@/content/brand";
 import { helpNav, siteIdentity } from "@/content/site";
@@ -35,16 +36,26 @@ export default function SiteFooter() {
           </a>
         </div>
         <div className="compliance-block" id="nevada-advertising">
-          <p>
-            <strong>{siteIdentity.agentName}</strong>
-            <br />
-            {siteIdentity.agentLicense}
-          </p>
-          <p>
-            <strong>{siteIdentity.brokerageName}</strong>
-            <br />
-            {siteIdentity.brokerageLicense}
-          </p>
+          <div className="footer-people">
+            <div className="footer-person">
+              <AgentPortrait person="gene" variant="footer" />
+              <p>
+                <strong>{siteIdentity.agentName}</strong>
+                <br />
+                {siteIdentity.agentLicense}
+              </p>
+            </div>
+            <div className="footer-person">
+              <AgentPortrait person="jan" variant="footer" />
+              <p>
+                <strong>Dr. Jan Duffy</strong>
+                <br />
+                License S.0197614.LLC
+                <br />
+                {siteIdentity.brokerageName}
+              </p>
+            </div>
+          </div>
           <p>{brandCopy.franchiseDisclaimer}</p>
           <p>
             {siteIdentity.phoneTel ? (

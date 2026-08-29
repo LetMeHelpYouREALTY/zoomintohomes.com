@@ -27,6 +27,24 @@ describe("site audit", () => {
     expect(jpegDimensions(buffer)).toEqual({ width: 1200, height: 800 });
   });
 
+  it("keeps homepage Open Graph and Twitter on /images/pages/home/hero.jpg", () => {
+    const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+    expect(layout).toContain('absoluteUrl("/images/pages/home/hero.jpg")');
+    expect(layout).toContain('card: "summary_large_image"');
+    expect(layout).toContain("url: SITE_ORIGIN");
+    expect(existsSync(join(process.cwd(), "app/opengraph-image.jpg"))).toBe(
+      false,
+    );
+    expect(existsSync(join(process.cwd(), "app/twitter-image.jpg"))).toBe(
+      false,
+    );
+
+    const home = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
+    expect(home).toContain('path: "/"');
+    expect(home).toContain("absoluteTitle: true");
+    expect(home).toContain("pageImages.home.hero.src");
+  });
+
   it("passes slang, buyer/seller language, image, schema, and performance gates", () => {
     const findings = runSiteAudit().filter((item) => item.severity === "error");
     expect(findings, findings.map((item) => item.message).join("\n")).toEqual([]);

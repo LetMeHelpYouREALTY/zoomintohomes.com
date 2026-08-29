@@ -3,6 +3,7 @@ import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
 import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
+import PracticeTeam from "@/components/site/PracticeTeam";
 import { pageImages } from "@/content/page-images";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
@@ -29,6 +30,7 @@ export default function ContactPage() {
           { name: "Contact", path: "/contact" },
         ])}
       />
+      <PracticeTeam heading="Who answers the call" />
       <div className="image-grid">
         {images.supporting.map((image) => (
           <HeadingImage key={image.id} image={image} />

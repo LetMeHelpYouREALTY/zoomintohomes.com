@@ -3,6 +3,7 @@ import HeadingImage from "@/components/site/HeadingImage";
 import JsonLd from "@/components/site/JsonLd";
 import RoutePageHero from "@/components/site/RoutePageHero";
 import PageSeoSections from "@/components/site/PageSeoSections";
+import PracticeTeam from "@/components/site/PracticeTeam";
 import { pageImages } from "@/content/page-images";
 import { aboutCopy } from "@/content/pages";
 import { pageMeta } from "@/content/site";
@@ -36,6 +37,7 @@ export default function AboutPage() {
           { name: "About", path: "/about" },
         ])}
       />
+      <PracticeTeam heading="Who runs this practice" />
       <h2>{aboutCopy.practiceHeading}</h2>
       <div className="stack">
         {aboutCopy.body.map((paragraph) => {
@@ -60,7 +62,7 @@ export default function AboutPage() {
         slot="closing"
         related={[
           {
-            href: "/how-it-works",
+            href: "/virtual-tour-process",
             label: "What process is published in writing?",
           },
           {
