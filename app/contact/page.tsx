@@ -13,7 +13,6 @@ export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.contact.title,
   description: pageMeta.contact.description,
   path: "/contact",
-  absoluteTitle: true,
   imagePath: pageImages.contact.hero.src,
   imageAlt: pageImages.contact.hero.alt,
 });
@@ -30,7 +29,7 @@ export default function ContactPage() {
           { name: "Contact", path: "/contact" },
         ])}
       />
-      <PracticeTeam heading="Who answers the call" />
+      <PracticeTeam heading="Who answers a Zoom Into Homes call" />
       <div className="image-grid">
         {images.supporting.map((image) => (
           <HeadingImage key={image.id} image={image} />

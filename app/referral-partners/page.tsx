@@ -68,7 +68,7 @@ export default function ReferralPartnersPage() {
         related={[
           {
             href: "/virtual-tour-process",
-            label: "What is the reduced-showing process?",
+            label: "How does Zoom Into Homes keep in-person tours short?",
           },
           { href: "/contact", label: "How do partners request a handoff?" },
         ]}

@@ -7,7 +7,7 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
-import { siteIdentity } from "@/content/site";
+import { brandVariations, siteIdentity } from "@/content/site";
 import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 import { absoluteUrl, SITE_ORIGIN } from "@/lib/site-url";
 
@@ -623,7 +623,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
       },
     },
     description:
-      "Las Vegas and Henderson real estate practice that tours homes on video, records access measurements in writing, and limits in-person visits to shortlisted finalists.",
+      "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, records access measurements in writing, and limits in-person visits to shortlisted finalists.",
   };
 
   const org: Record<string, unknown> = {
@@ -631,6 +631,8 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     "@type": "Organization",
     "@id": `${SITE_ORIGIN}/#organization`,
     name: siteIdentity.siteName,
+    alternateName: [...brandVariations],
+    legalName: siteIdentity.siteName,
     url: SITE_ORIGIN,
     telephone: siteIdentity.phoneTel || undefined,
     email: siteIdentity.email || undefined,
@@ -646,6 +648,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     "@type": "WebSite",
     "@id": `${SITE_ORIGIN}/#website`,
     name: siteIdentity.siteName,
+    alternateName: [...brandVariations],
     url: SITE_ORIGIN,
     publisher: { "@id": `${SITE_ORIGIN}/#organization` },
     primaryImageOfPage: { "@id": `${SITE_ORIGIN}/#primaryimage` },

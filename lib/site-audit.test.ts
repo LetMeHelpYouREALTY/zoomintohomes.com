@@ -27,6 +27,23 @@ describe("site audit", () => {
     expect(jpegDimensions(buffer)).toEqual({ width: 1200, height: 800 });
   });
 
+  it("renders the brand as Zoom Into Homes, not ZoomInto Homes", () => {
+    const logo = readFileSync(
+      join(process.cwd(), "components/site/SiteLogo.tsx"),
+      "utf8",
+    );
+    expect(logo).toContain("site-logo-wordmark");
+    expect(logo).toContain(" Into Homes");
+    expect(logo).not.toMatch(/site-logo-rest">Into Homes/);
+
+    const header = readFileSync(
+      join(process.cwd(), "components/site/SiteHeader.tsx"),
+      "utf8",
+    );
+    expect(header).toContain("SiteLogo");
+    expect(header).not.toContain("site-logo-mark");
+  });
+
   it("keeps homepage Open Graph and Twitter on /images/pages/home/hero.jpg", () => {
     const layout = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
     expect(layout).toContain('absoluteUrl("/images/pages/home/hero.jpg")');

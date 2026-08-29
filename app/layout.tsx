@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   publisher: siteIdentity.brokerageName,
   category: "real estate",
   keywords: [
+    "Zoom Into Homes",
+    "zoom into homes Las Vegas",
+    "Zoom into Homes Henderson",
     "Las Vegas home search",
     "video home tours Las Vegas",
     "aging in place Henderson",

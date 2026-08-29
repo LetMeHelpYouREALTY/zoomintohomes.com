@@ -9,7 +9,7 @@ import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "How the reduced-showing process works",
+  title: pageMeta.howItWorks.title,
   description: pageMeta.howItWorks.description,
   path: "/how-it-works",
   imagePath: pageImages.howItWorks.hero.src,

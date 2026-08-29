@@ -1,14 +1,14 @@
 export const homeCopy = {
-  h1: "Tour the listing first. Visit only the finalists.",
+  h1: "Zoom Into Homes: tour Las Vegas homes on video first",
   lede: "We tour homes on video first, check doorway and bathroom access against a written list, then visit only two or three finalists in person—not a dozen.",
   explanation:
     "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video touring is how we keep showings short.",
   servicePoints: [
-    "Tour Las Vegas and Henderson homes on video first",
+    "Zoom Into Homes tours Las Vegas and Henderson homes on video first",
     "Write down doorway widths, step heights, and shower curbs",
     "Visit two or three finalists in person, not a dozen",
   ],
-  audienceLabel: "Who is this practice built for?",
+  audienceLabel: "Who is Zoom Into Homes for?",
   audiences: [
     {
       title: "When stairs or narrow doors are a hard stop",
@@ -23,39 +23,39 @@ export const homeCopy = {
       body: "Nevada has a large veteran population. Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA) are often poorly sequenced with purchase teams. We sequence the housing search; we do not quote unverified grant amounts.",
     },
   ],
-  promiseTitle: "What is the fewer-showings promise?",
+  promiseTitle: "What is the Zoom Into Homes reduced-tour promise?",
   promiseBody:
-    "A hospital discharge planner, therapist, VA loan officer, or elder law attorney should be able to send someone here and see the process in writing. You can browse live homes for sale here; this site explains how we measure access and keep in-person tours short. We describe building features, not people.",
+    "A hospital discharge planner, therapist, VA loan officer, or elder law attorney should be able to send someone here and see the Zoom Into Homes process in writing. You can browse live homes for sale here; this site explains how we measure access and keep in-person tours short. We describe building features, not people.",
 };
 
 export const howItWorksCopy = {
-  h1: "How we keep in-person tours short",
-  lede: "Each step exists so you only spend energy on homes that already passed a written access check.",
-  stepsHeading: "What are the six steps?",
+  h1: "How Zoom Into Homes keeps in-person tours short",
+  lede: "Each Zoom Into Homes step exists so you only spend energy on homes that already passed a written access check.",
+  stepsHeading: "What are the six Zoom Into Homes steps?",
 };
 
 export const whatWeMeasureCopy = {
-  h1: "What we measure",
-  lede: "We write the date, who measured it, and the number—door width, step height, shower curb. We do not replace those numbers with a generic accessible checkmark.",
+  h1: "What Zoom Into Homes measures",
+  lede: "Zoom Into Homes writes the date, who measured it, and the number—door width, step height, shower curb. We do not replace those numbers with a generic accessible checkmark.",
   provenanceHeading: "Where do the numbers come from?",
   provenanceBody:
     "Each measurement notes whether it was measured on site, checked from a photo, reported by an agent, or taken from a floor plan—plus who checked it and when.",
 };
 
 export const featuresCopy = {
-  h1: "Home access features we measure",
+  h1: "Access features Zoom Into Homes measures",
   lede: "Each row is a home feature we can measure, such as a doorway width or a shower curb. If a published figure exists, the 2010 ADA Standards number is on that row.",
   categoriesHeading: "Which feature categories are covered?",
 };
 
 export const accessibleHomesCopy = {
-  h1: "Homes with measured access features in Las Vegas and Henderson",
-  lede: "This guide puts the measurement process first. Many listings do not publish access details in the public search feed, so we write down what we measure on video—then attach homes when inventory matches.",
+  h1: "Zoom Into Homes measured-access homes in Las Vegas and Henderson",
+  lede: "This Zoom Into Homes guide puts the measurement process first. Many listings do not publish access details in the public search feed, so we write down what we measure on video—then attach homes when inventory matches.",
 };
 
 export const veteransCopy = {
-  h1: "VA SAH and SHA grants, paired with a purchase",
-  lede: "Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA) are VA grant programs. This page explains how a purchase search can run beside those programs. It is not a benefits determination.",
+  h1: "VA SAH and SHA grants, paired with a Zoom Into Homes purchase",
+  lede: "Zoom Into Homes sequences a Las Vegas or Henderson purchase search beside VA Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA). This page is not a benefits determination.",
   officialSourceHref:
     "https://www.va.gov/housing-assistance/disability-housing-grants/",
   officialSourceLabel: "VA disability housing grants",
@@ -76,8 +76,8 @@ export const veteransCopy = {
 };
 
 export const agingInPlaceCopy = {
-  h1: "Aging in place, Las Vegas and Henderson",
-  lede: "The search is for a floor plan that still works when stairs, tub walls, and round knobs start to cost more energy than they used to.",
+  h1: "Zoom Into Homes aging-in-place searches in Las Vegas and Henderson",
+  lede: "Zoom Into Homes looks for a floor plan that still works when stairs, tub walls, and round knobs start to cost more energy than they used to.",
   communitiesTitle: "Which communities are checked often?",
   communities: [
     {
@@ -107,9 +107,9 @@ export const agingInPlaceCopy = {
 };
 
 export const aboutCopy = {
-  h1: "Dr. Gene Boyle",
-  lede: "Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson. Video-first touring for buyers and sellers whose search is shaped by how their body moves through a house.",
-  practiceHeading: "What does this practice publish in writing?",
+  h1: "About Zoom Into Homes",
+  lede: "Dr. Gene Boyle runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson. Video-first touring for buyers and sellers whose search is shaped by how their body moves through a house.",
+  practiceHeading: "What does Zoom Into Homes publish in writing?",
   body: [
     "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
     "Call (702) 222-1964. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
@@ -118,7 +118,7 @@ export const aboutCopy = {
 };
 
 export const accessibilityStatementCopy = {
-  h1: "Accessibility statement",
+  h1: "Zoom Into Homes accessibility statement",
   lede: "This site targets WCAG 2.2 Level AA in markup and testing. Formal legal conformance language remains subject to brokerage counsel review.",
   sections: [
     {
@@ -141,15 +141,15 @@ export const accessibilityStatementCopy = {
 };
 
 export const referralPartnersCopy = {
-  h1: "For hospitals and care teams",
-  lede: "For people whose job is to send someone to a housing process they can read in writing. Review the steps, keep the recordings, and leave medical and legal decisions in your lane.",
+  h1: "Zoom Into Homes for hospitals and care teams",
+  lede: "For people whose job is to send someone to a Zoom Into Homes housing process they can read in writing. Review the steps, keep the recordings, and leave medical and legal decisions in your lane.",
   partnersHeading: "Who usually introduces a client?",
 };
 
 export const contactCopy = {
-  h1: "Book a Las Vegas video-tour call",
-  lede: "Pick a time, or call (702) 222-1964. We tour Las Vegas and Henderson homes on video, write doorway and bathroom measurements, then visit two or three finalists.",
-  scheduleHeading: "Pick a time for a video-tour planning call",
+  h1: "Book a Zoom Into Homes Las Vegas video-tour call",
+  lede: "Pick a time, or call (702) 222-1964. Zoom Into Homes tours Las Vegas and Henderson homes on video, writes doorway and bathroom measurements, then visits two or three finalists.",
+  scheduleHeading: "Pick a time for a Zoom Into Homes planning call",
   scheduleIntro:
     "Use the calendar to book. We tour the listing on video, write doorway and bathroom measurements, then visit two or three finalists in person.",
   stubNotice:

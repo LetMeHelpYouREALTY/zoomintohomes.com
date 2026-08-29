@@ -28,14 +28,14 @@ export const pageImages = {
     hero: img(
       "home",
       "hero",
-      "Tour the listing first. Visit only the finalists.",
+      "Zoom Into Homes: tour Las Vegas homes on video first",
       "Laptop on a Las Vegas kitchen island showing a live Zoom walkthrough of a home hallway, with a phone beside it ready for the call.",
     ),
     supporting: [
       img(
         "home",
         "audience",
-        "Who is this practice built for?",
+        "Who is Zoom Into Homes for?",
         "Two adults on a sofa watching a live Zoom walkthrough of a Las Vegas living room on a laptop.",
       ),
       img(
@@ -59,13 +59,13 @@ export const pageImages = {
       img(
         "home",
         "promise",
-        "What is the reduced-showing promise?",
+        "What is the Zoom Into Homes reduced-tour promise?",
         "Three house keys on a numbered card beside a closed laptop, extra listing flyers stacked to the side.",
       ),
       img(
         "home",
         "finalists",
-        "Tour the listing first. Visit only the finalists.",
+        "Zoom Into Homes: tour Las Vegas homes on video first",
         "Car in the driveway of a single-level Las Vegas home at golden hour — an in-person visit after the Zoom tours.",
       ),
     ],
@@ -74,7 +74,7 @@ export const pageImages = {
     hero: img(
       "how-it-works",
       "hero",
-      "The reduced-showing process",
+      "How Zoom Into Homes keeps in-person tours short",
       "Phone showing a video-call join button beside a laptop playing a live Zoom tour of a luxury foyer.",
     ),
     supporting: [
@@ -120,7 +120,7 @@ export const pageImages = {
     hero: img(
       "accessibility-features",
       "hero",
-      "Accessibility feature glossary",
+      "Access features Zoom Into Homes measures",
       "Covered front walk and open door of a single-level Las Vegas home as an agent films a live video tour.",
     ),
     supporting: [
@@ -166,7 +166,7 @@ export const pageImages = {
     hero: img(
       "veterans",
       "hero",
-      "VA SAH and SHA grants, paired with a purchase",
+      "VA SAH and SHA grants, paired with a Zoom Into Homes purchase",
       "Photographer filming a luxury single-level Las Vegas home at sunset for a remote video tour.",
     ),
     supporting: [
@@ -191,7 +191,7 @@ export const pageImages = {
       img(
         "veterans",
         "shower",
-        "VA SAH and SHA grants, paired with a purchase",
+        "VA SAH and SHA grants, paired with a Zoom Into Homes purchase",
         "Curbless residential shower with a transfer space and a tablet showing the same bath on a video tour.",
       ),
       img(
@@ -212,7 +212,7 @@ export const pageImages = {
     hero: img(
       "aging-in-place",
       "hero",
-      "Aging in place, Las Vegas and Henderson",
+      "Zoom Into Homes aging-in-place searches in Las Vegas and Henderson",
       "Camera on a tripod filming a single-level Summerlin street from a covered porch at golden hour.",
     ),
     supporting: [
@@ -258,7 +258,7 @@ export const pageImages = {
     hero: img(
       "referral-partners",
       "hero",
-      "For hospitals and care teams",
+      "Zoom Into Homes for hospitals and care teams",
       "Conference table with a tablet playing a Zoom doorway tour, listing photos, and a blank access checklist.",
     ),
     supporting: [
@@ -304,14 +304,14 @@ export const pageImages = {
     hero: img(
       "about",
       "hero",
-      "What does this practice publish in writing?",
+      "What does Zoom Into Homes publish in writing?",
       "Dual monitors in a desert-view office: a paused home video tour on one screen and a calendar on the other.",
     ),
     supporting: [
       img(
         "about",
         "brokerage",
-        "What does this practice publish in writing?",
+        "What does Zoom Into Homes publish in writing?",
         "Two homeowners on a Zoom listing consult with a lockbox and keys, Red Rock mountains in the window.",
       ),
       img(
@@ -329,7 +329,7 @@ export const pageImages = {
       img(
         "about",
         "henderson",
-        "What does this practice publish in writing?",
+        "What does Zoom Into Homes publish in writing?",
         "Henderson hillside street of single-level homes at dusk, camera on the sidewalk filming a remote tour.",
       ),
       img(
@@ -350,7 +350,7 @@ export const pageImages = {
     hero: img(
       "contact",
       "hero",
-      "Request a consultation",
+      "Book a Zoom Into Homes Las Vegas video-tour call",
       "Phone showing a video-call join button beside a laptop playing a live Zoom tour of a luxury foyer.",
     ),
     supporting: [
@@ -396,7 +396,7 @@ export const pageImages = {
     hero: img(
       "accessibility-statement",
       "hero",
-      "Accessibility statement",
+      "Zoom Into Homes accessibility statement",
       "Remote buyer at a desk joining a Zoom tour of a Las Vegas home on a laptop, phone ready for the same call.",
     ),
     supporting: [

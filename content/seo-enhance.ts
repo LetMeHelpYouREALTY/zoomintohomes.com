@@ -16,6 +16,7 @@ export const pageSeoEnhance = {
     answerBlock:
       "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, and schedules in-person visits for two or three finalists only. Video touring is how we keep showings short.",
     keyFacts: [
+      "Brand: Zoom Into Homes",
       "Service area: Las Vegas and Henderson, Nevada",
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
       "Method: video tour → written access checklist → shortlist → two or three finalists",
@@ -24,9 +25,14 @@ export const pageSeoEnhance = {
     ],
     faqs: [
       {
-        question: "What is video-first home touring?",
+        question: "What is Zoom Into Homes?",
         answer:
-          "Video-first touring means homes are walked on video and checked against a written access list before anyone spends a showing day on the road. Only properties that already pass required items become in-person finalists.",
+          "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, then visits only two or three finalists in person. Call (702) 222-1964.",
+      },
+      {
+        question: "What does it mean to zoom into homes in Las Vegas?",
+        answer:
+          "Zoom into homes means Zoom Into Homes walks the listing on video first so buyers and sellers can check doorways and bathrooms in writing before anyone drives. In-person visits stay limited to two or three finalists.",
       },
       {
         question: "How many homes do buyers visit in person?",
@@ -46,14 +52,15 @@ export const pageSeoEnhance = {
     ],
     entityPhrases: [
       "Zoom Into Homes",
+      "zoom into homes Las Vegas",
+      "Zoom Into Homes Henderson",
       "Berkshire Hathaway HomeServices Nevada Properties",
-      "Las Vegas accessible home search",
       "video home tours Las Vegas",
     ],
   },
   howItWorks: {
     answerBlock:
-      "Keeping in-person tours short has six steps: list required access details, tour on video, check the written measurement list, shortlist two or three finalists, visit only those homes, then offer and close with the same checklist.",
+      "Zoom Into Homes keeps in-person tours short in six steps: list required access details, tour on video, check the written measurement list, shortlist two or three finalists, visit only those homes, then offer and close with the same checklist.",
     keyFacts: [
       "Step 1 — Intake: write required, useful, and irrelevant features",
       "Step 2 — Remote tour first on video",
@@ -64,9 +71,9 @@ export const pageSeoEnhance = {
     ],
     faqs: [
       {
-        question: "How do you keep in-person tours short?",
+        question: "How does Zoom Into Homes keep in-person tours short?",
         answer:
-          "It is a written sequence that spends physical energy only on homes that already passed a documented access check. Video work comes first; in-person time is reserved for confirmation.",
+          "Zoom Into Homes uses a written sequence that spends physical energy only on homes that already passed a documented access check. Video work comes first; in-person time is reserved for confirmation.",
       },
       {
         question: "Do buyers have to leave home for every listing?",
@@ -85,6 +92,8 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
+      "How Zoom Into Homes video tours work",
       "video-first home tours Las Vegas",
       "remote property tour Las Vegas",
       "home access checklist",
@@ -92,7 +101,7 @@ export const pageSeoEnhance = {
   },
   features: {
     answerBlock:
-      "This glossary lists home features we can measure, such as a zero-step entry or a 32-inch doorway. When a published figure exists, we note the 2010 ADA Standards number on that row. We do not describe who a home is for.",
+      "Zoom Into Homes lists home features we can measure, such as a zero-step entry or a 32-inch doorway. When a published figure exists, we note the 2010 ADA Standards number on that row. We do not describe who a home is for.",
     keyFacts: [
       "Categories: entry, hallways, bathroom, kitchen, lighting and sound, and home systems",
       "Example measurement: 32 in. minimum door clear width (ADA 404.2.3)",
@@ -123,7 +132,8 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
-      "accessibility feature glossary",
+      "Zoom Into Homes",
+      "Zoom Into Homes access-feature glossary",
       "2010 ADA Standards",
       "zero-step entry",
       "door clear width",
@@ -131,7 +141,7 @@ export const pageSeoEnhance = {
   },
   veterans: {
     answerBlock:
-      "Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA) are U.S. Department of Veterans Affairs grant programs. This page explains how a Las Vegas or Henderson purchase search can run beside those programs. It is not a benefits determination and does not quote unverified grant amounts.",
+      "Zoom Into Homes sequences a Las Vegas or Henderson purchase search beside VA Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA). This page is not a benefits determination and does not quote unverified grant amounts. Official program rules live on VA.gov.",
     keyFacts: [
       "Programs named: VA Specially Adapted Housing (SAH) and Special Housing Adaptation (SHA)",
       "Official program information: va.gov housing-assistance disability housing grants",
@@ -162,6 +172,7 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
       "VA Specially Adapted Housing",
       "Special Housing Adaptation",
       "disabled veteran home purchase Nevada",
@@ -170,7 +181,7 @@ export const pageSeoEnhance = {
   },
   agingInPlace: {
     answerBlock:
-      "Aging-in-place searches in Las Vegas and Henderson focus on floor plans that still work when stairs, tub walls, and round knobs cost more energy. Communities often reviewed include Sun City Summerlin, Sun City Anthem, Solera, Siena, and Del Webb locations. A 55+ label is an age policy, not an access certificate.",
+      "Zoom Into Homes aging-in-place searches in Las Vegas and Henderson focus on floor plans that still work when stairs, tub walls, and round knobs cost more energy. Communities often reviewed include Sun City Summerlin, Sun City Anthem, Solera, Siena, and Del Webb locations. A 55+ label is an age policy, not an access certificate.",
     keyFacts: [
       "Markets: Las Vegas and Henderson, Nevada",
       "Communities often checked: Sun City Summerlin, Sun City Anthem, Solera, Siena, Del Webb",
@@ -201,15 +212,16 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes aging-in-place searches",
       "aging in place Las Vegas",
       "Sun City Summerlin",
       "Sun City Anthem",
-      "universal design Henderson",
     ],
   },
   referralPartners: {
     answerBlock:
-      "Hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors can inspect the housing process in writing, keep dated shortlists and recordings, and leave medical and legal decisions in their own lane.",
+      "Zoom Into Homes is the written housing handoff for hospital discharge planners, occupational and physical therapists, VA loan officers, elder law attorneys, and accessibility contractors. Care teams keep dated shortlists and recordings, and leave medical and legal decisions in their own lane.",
     keyFacts: [
       "Care teams: discharge planners, OT/PT, VA loan officers, elder law, contractors",
       "Deliverables: video tours, written access checklists, dated shortlists",
@@ -239,10 +251,11 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes for hospitals and care teams",
       "hospital discharge planner housing handoff",
       "occupational therapist home search Las Vegas",
       "VA loan officer access checklist",
-      "elder law housing handoff",
     ],
   },
   about: {
@@ -279,9 +292,10 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes Las Vegas",
       "Dr. Gene Boyle",
       "Berkshire Hathaway HomeServices Nevada Properties",
-      "Zoom Into Homes Las Vegas",
     ],
   },
   contact: {
@@ -295,7 +309,7 @@ export const pageSeoEnhance = {
     ],
     faqs: [
       {
-        question: "How do I book a video-tour call?",
+        question: "How do I book a Zoom Into Homes Las Vegas video-tour call?",
         answer:
           "Pick a time on the calendar on this page, or call (702) 222-1964. Tell us whether you are buying, selling, or introducing a client, plus required doorway and bathroom features when known.",
       },
@@ -316,14 +330,15 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
+      "Zoom Into Homes",
+      "Book a Zoom Into Homes Las Vegas video-tour call",
       "Las Vegas video home tour",
       "Henderson video-tour planning call",
-      "Zoom Into Homes book a time",
     ],
   },
   accessibilityStatement: {
     answerBlock:
-      "This site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers by calling (702) 222-1964 or booking a time on the contact page.",
+      "The Zoom Into Homes site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers by calling (702) 222-1964 or booking a time on the contact page.",
     keyFacts: [
       "Target: WCAG 2.2 Level AA",
       "Automated checks: axe-core, jsx-a11y, Lighthouse accessibility",
@@ -353,8 +368,9 @@ export const pageSeoEnhance = {
       },
     ],
     entityPhrases: [
-      "WCAG 2.2 Level AA",
+      "Zoom Into Homes",
       "Zoom Into Homes accessibility statement",
+      "WCAG 2.2 Level AA",
     ],
   },
 } satisfies Record<string, PageSeoEnhance>;

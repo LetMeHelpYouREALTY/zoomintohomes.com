@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Care team one-pager | Zoom Into Homes",
+  title: "Zoom Into Homes care-team one-pager",
   description:
     "Printable handoff sheet for discharge planners, OT/PT, VA loan officers, and elder law attorneys.",
   path: "/referral-partners/one-pager",

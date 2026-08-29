@@ -9,7 +9,7 @@ import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Accessibility feature glossary",
+  title: pageMeta.features.title,
   description: pageMeta.features.description,
   path: "/accessibility-features",
   imagePath: pageImages.features.hero.src,

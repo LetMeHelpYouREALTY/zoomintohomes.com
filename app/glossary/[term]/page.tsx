@@ -24,7 +24,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     return { title: "Term not found" };
   }
   return buildPageMetadata({
-    title: `${feature.name} — access glossary`,
+    title: `${feature.name} in the Zoom Into Homes glossary`,
     description: feature.definition,
     path: `/glossary/${feature.slug}`,
   });

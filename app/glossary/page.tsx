@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Home access features glossary | Zoom Into Homes",
+  title: "Zoom Into Homes access-features glossary",
   description:
     "Plain-language definitions for doorway, bathroom, entry, and related access features used on Zoom Into Homes checklists in Las Vegas and Henderson.",
   path: "/glossary",

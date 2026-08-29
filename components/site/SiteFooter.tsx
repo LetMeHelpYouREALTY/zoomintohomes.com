@@ -36,6 +36,17 @@ export default function SiteFooter() {
           </a>
         </div>
         <div className="compliance-block" id="nevada-advertising">
+          <p className="footer-brand">
+            <Link href="/" translate="no">
+              {siteIdentity.siteName}
+            </Link>
+            {" — "}
+            video home tours in Las Vegas and Henderson. Call{" "}
+            <a href={`tel:${siteIdentity.phoneTel}`}>
+              {siteIdentity.phoneDisplay}
+            </a>
+            .
+          </p>
           <div className="footer-people">
             <div className="footer-person">
               <AgentPortrait person="gene" variant="footer" />

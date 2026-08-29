@@ -4,7 +4,7 @@ import { pageImages } from "@/content/page-images";
 import { pageSeoEnhance } from "@/content/seo-enhance";
 import { homeCopy, contactCopy } from "@/content/pages";
 import { pageHeroByPath } from "@/content/page-heroes";
-import { siteIdentity } from "@/content/site";
+import { pageMeta, siteIdentity } from "@/content/site";
 import {
   buyerSellerJargonHits,
   removedStatementHits,
@@ -450,6 +450,58 @@ export function auditSeoAndSchema(): AuditFinding[] {
       });
     }
   }
+  const org = schemas.find((item) => item["@type"] === "Organization");
+  const alt = org?.alternateName;
+  if (!Array.isArray(alt) || !alt.includes("Zoom into Homes")) {
+    findings.push({
+      severity: "error",
+      area: "schema",
+      message: "Organization schema must list Zoom into Homes as alternateName",
+    });
+  }
+  if (siteIdentity.siteName !== "Zoom Into Homes") {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: `siteName is ${siteIdentity.siteName}, expected Zoom Into Homes`,
+    });
+  }
+
+  const logoPath = join(process.cwd(), "components/site/SiteLogo.tsx");
+  if (!existsSync(logoPath)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "SiteLogo.tsx is missing — header brand would split into ZoomInto Homes",
+    });
+  } else {
+    const logo = readFileSync(logoPath, "utf8");
+    if (!logo.includes("site-logo-wordmark")) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: "Logo wordmark must be one inline phrase so the space in Zoom Into Homes cannot collapse",
+      });
+    }
+    if (!logo.includes(" Into Homes")) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: "Logo must include a space before Into Homes",
+      });
+    }
+  }
+
+  for (const [key, meta] of Object.entries(pageMeta)) {
+    if (key === "home") continue;
+    if (meta.title.includes("| Zoom Into Homes")) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${key} title already includes | Zoom Into Homes; the layout template would double the brand`,
+      });
+    }
+  }
 
   for (const [page, enhance] of Object.entries(pageSeoEnhance)) {
     if (enhance.faqs.length < 3) {
@@ -464,6 +516,24 @@ export function auditSeoAndSchema(): AuditFinding[] {
         severity: "warning",
         area: "schema",
         message: `${page}: answerBlock is short for GEO extraction`,
+      });
+    }
+    if (!enhance.answerBlock.includes("Zoom Into Homes")) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${page}: GEO answerBlock must name Zoom Into Homes`,
+      });
+    }
+    if (
+      !enhance.entityPhrases.some((phrase) =>
+        phrase.toLowerCase().includes("zoom into homes"),
+      )
+    ) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: `${page}: entity line must include a Zoom Into Homes variation`,
       });
     }
   }

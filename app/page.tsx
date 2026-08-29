@@ -23,14 +23,14 @@ const images = pageImages.home;
 const related = [
   {
     href: "/virtual-tour-process",
-    label: "How do you keep in-person tours short?",
+    label: "How does Zoom Into Homes keep in-person tours short?",
   },
-  { href: "/what-we-measure", label: "What do you measure on a tour?" },
+  { href: "/what-we-measure", label: "What does Zoom Into Homes measure on a tour?" },
   {
     href: "/va-sah-grant-nevada",
-    label: "How does a VA housing grant pair with a purchase?",
+    label: "How does Zoom Into Homes pair a VA housing grant with a purchase?",
   },
-  { href: "/contact", label: "How do I request a call?" },
+  { href: "/contact", label: "How do I book a Zoom Into Homes call?" },
 ];
 
 export default function HomePage() {

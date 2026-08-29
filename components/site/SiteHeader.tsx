@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import AgentPortrait from "@/components/site/AgentPortrait";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
+import SiteLogo from "@/components/site/SiteLogo";
 import { primaryNav, siteIdentity } from "@/content/site";
 
 export default function SiteHeader() {
@@ -22,11 +22,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link href="/" className="site-logo">
-          <AgentPortrait person="gene" variant="header" />
-          <span className="site-logo-mark">Zoom</span>
-          <span className="site-logo-rest"> Into Homes</span>
-        </Link>
+        <SiteLogo />
         <nav aria-label="Primary" className="site-header-nav">
           <ul className="nav-desktop">
             {primaryNav.map((item) => (
@@ -36,7 +32,7 @@ export default function SiteHeader() {
             ))}
           </ul>
           <Link href="/examples/walkthrough" className="header-text-link">
-            Virtual tour
+            Zoom Into Homes tour
           </Link>
           <CalendlyButton className="header-tour-link" text="Book a call" />
         </nav>
@@ -54,7 +50,7 @@ export default function SiteHeader() {
         <ul className="nav-mobile">
           <li>
             <Link href="/examples/walkthrough" onClick={() => setOpen(false)}>
-              Virtual tour
+              Zoom Into Homes tour
             </Link>
           </li>
           <li>

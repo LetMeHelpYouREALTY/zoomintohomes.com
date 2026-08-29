@@ -32,7 +32,7 @@ export type PageHeroOverrides = {
 };
 
 export const DEFAULT_SERVICE_POINTS = [
-  "Tour Las Vegas and Henderson homes on video first",
+  "Zoom Into Homes tours Las Vegas and Henderson homes on video first",
   "Write down doorway widths, step heights, and shower curbs",
   "Visit two or three finalists in person, not a dozen",
 ] as const;

@@ -37,7 +37,7 @@ export default function AboutPage() {
           { name: "About", path: "/about" },
         ])}
       />
-      <PracticeTeam heading="Who runs this practice" />
+      <PracticeTeam heading="Who runs Zoom Into Homes" />
       <h2>{aboutCopy.practiceHeading}</h2>
       <div className="stack">
         {aboutCopy.body.map((paragraph) => {
