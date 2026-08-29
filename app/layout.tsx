@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Atkinson_Hyperlegible, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import SkipLink from "@/components/site/SkipLink";
 import SiteHeader from "@/components/site/SiteHeader";
@@ -119,6 +120,7 @@ export default function RootLayout({
         <CalendlyBadge />
         <RealScoutScript />
         <Analytics />
+        <SpeedInsights />
         {gaId ? (
           <>
             <Script
