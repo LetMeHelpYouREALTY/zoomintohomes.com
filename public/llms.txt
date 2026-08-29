@@ -1,0 +1,35 @@
+# Zoom Into Homes
+
+> Las Vegas and Henderson real estate practice that tours homes on video first, writes doorway and bathroom measurements, then visits two or three finalists. Agent: Dr. Gene Boyle (California DRE #02282581). Nevada partner: Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.
+
+This file is a first-party URL map for retrieval systems. It restates facts already visible on the site. It is not a Google ranking file.
+
+Service area: Las Vegas, Henderson, North Las Vegas, Summerlin, Enterprise, Spring Valley, Paradise. Planning office: 320 Junco, Irvine, CA 92618. Housing copy describes building features, not people.
+
+## First-party pages
+
+- [Home](https://www.zoomintohomes.com/): What Zoom Into Homes is and how video-first touring works
+- [How touring works](https://www.zoomintohomes.com/virtual-tour-process): Six-step process from intake to close
+- [What we measure](https://www.zoomintohomes.com/what-we-measure): Door widths, step heights, shower curbs, hall widths
+- [Accessible homes](https://www.zoomintohomes.com/accessible-homes): Measured-access hub for Las Vegas and Henderson
+- [Glossary](https://www.zoomintohomes.com/glossary): Doorway, bathroom, and entry terms used on checklists
+- [Henderson](https://www.zoomintohomes.com/henderson): Henderson video tours and unit-level checklists
+- [Summerlin](https://www.zoomintohomes.com/summerlin): Summerlin video tours and unit-level checklists
+- [VA SAH grant](https://www.zoomintohomes.com/va-sah-grant-nevada): Pair a purchase search with Specially Adapted Housing
+- [VA SHA grant](https://www.zoomintohomes.com/va-sha-grant-nevada): Pair a purchase search with Special Housing Adaptation
+- [Clark County exemption](https://www.zoomintohomes.com/clark-county-disabled-veteran-property-tax-exemption): Assessor-published veteran exemption tiers
+- [Aging in place](https://www.zoomintohomes.com/aging-in-place): Single-level plans and measured bathrooms
+- [For care teams](https://www.zoomintohomes.com/referral-partners): Handoff for hospitals and referral partners
+- [About](https://www.zoomintohomes.com/about): Dr. Gene Boyle and Dr. Jan Duffy
+- [Contact](https://www.zoomintohomes.com/contact): Book a Zoom Into Homes Las Vegas video-tour call
+- [Example walkthrough](https://www.zoomintohomes.com/examples/walkthrough): Sample tour that does not autoplay
+- [Example checklist](https://www.zoomintohomes.com/examples/feature-sheet): Redacted access checklist
+- [Privacy](https://www.zoomintohomes.com/privacy): How call notes are used
+- [Terms](https://www.zoomintohomes.com/terms): Site terms
+- [Accessibility statement](https://www.zoomintohomes.com/accessibility-statement): WCAG 2.2 AA target
+- [Security policy](https://www.zoomintohomes.com/security-policy): How to report a security issue
+
+## Optional
+
+- [Referral one-pager](https://www.zoomintohomes.com/referral-partners/one-pager): Short handoff sheet
+- [Accessibility features](https://www.zoomintohomes.com/accessibility-features): Feature categories

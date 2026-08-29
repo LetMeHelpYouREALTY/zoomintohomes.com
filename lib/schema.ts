@@ -8,7 +8,8 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { verifiedPlatformSameAs } from "@/content/platform-profiles";
-import { brandVariations, siteIdentity } from "@/content/site";
+import { processSteps } from "@/content/process";
+import { brandVariations, planningOffice, siteIdentity } from "@/content/site";
 import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 import { absoluteUrl, SITE_ORIGIN } from "@/lib/site-url";
 
@@ -649,6 +650,15 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     image: {
       "@id": `${SITE_ORIGIN}/#primaryimage`,
     },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: planningOffice.streetAddress,
+      addressLocality: planningOffice.addressLocality,
+      addressRegion: planningOffice.addressRegion,
+      postalCode: planningOffice.postalCode,
+      addressCountry: planningOffice.addressCountry,
+    },
+    areaServed: siteIdentity.serviceArea.split(",").map((part) => part.trim()),
     ...(platformSameAs.length > 0 ? { sameAs: platformSameAs } : {}),
   };
 
@@ -677,6 +687,24 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
   };
 
   return [agent, org, website, primaryImage];
+}
+
+export function buildVirtualTourHowTo(): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How Zoom Into Homes keeps in-person tours short",
+    description:
+      "Six steps: list what the home must have, tour on video, check measurements, pick two or three finalists, visit only those homes, then offer and close.",
+    url: absoluteUrl("/virtual-tour-process"),
+    step: processSteps.map((step) => ({
+      "@type": "HowToStep",
+      position: step.order,
+      name: step.title,
+      text: step.body,
+      url: `${absoluteUrl("/virtual-tour-process")}#step-${step.order}`,
+    })),
+  };
 }
 
 export function buildBreadcrumbList(

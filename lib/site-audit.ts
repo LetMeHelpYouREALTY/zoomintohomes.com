@@ -474,6 +474,42 @@ export function auditSeoAndSchema(): AuditFinding[] {
       }
     }
   }
+  const orgAddress = org?.address as Record<string, unknown> | undefined;
+  if (orgAddress?.["@type"] !== "PostalAddress" || orgAddress.streetAddress !== "320 Junco") {
+    findings.push({
+      severity: "error",
+      area: "schema",
+      message: "Organization schema must include the published Irvine planning-office PostalAddress",
+    });
+  }
+  const processPage = readFileSync(
+    join(process.cwd(), "app/virtual-tour-process/page.tsx"),
+    "utf8",
+  );
+  if (!processPage.includes("buildVirtualTourHowTo")) {
+    findings.push({
+      severity: "error",
+      area: "schema",
+      message: "/virtual-tour-process must emit HowTo JSON-LD that matches the six visible steps",
+    });
+  }
+  const llmsPath = join(process.cwd(), "public/llms.txt");
+  if (!existsSync(llmsPath)) {
+    findings.push({
+      severity: "error",
+      area: "seo",
+      message: "public/llms.txt is missing (retrieval URL map for non-Google AI crawlers)",
+    });
+  } else {
+    const llms = readFileSync(llmsPath, "utf8");
+    if (!llms.includes("# Zoom Into Homes") || !llms.includes("/virtual-tour-process")) {
+      findings.push({
+        severity: "error",
+        area: "seo",
+        message: "llms.txt must name Zoom Into Homes and list first-party process URLs",
+      });
+    }
+  }
   if (siteIdentity.siteName !== "Zoom Into Homes") {
     findings.push({
       severity: "error",

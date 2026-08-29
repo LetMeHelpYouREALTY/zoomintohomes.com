@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/site/JsonLd";
-import { accessibleHomesCopy } from "@/content/pages";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { resoAccessibilityFeatures } from "@/content/reso-features";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
@@ -61,6 +61,14 @@ export default function AccessibleHomesPage() {
         {" · "}
         <Link href="/virtual-tour-process">Video-first process</Link>
       </p>
+      <PageSeoSections
+        page="accessibleHomes"
+        slot="closing"
+        related={[
+          { href: "/henderson", label: "How does Zoom Into Homes search Henderson?" },
+          { href: "/summerlin", label: "How does Zoom Into Homes search Summerlin?" },
+        ]}
+      />
     </article>
   );
 }

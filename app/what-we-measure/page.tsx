@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/site/JsonLd";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageMeta } from "@/content/site";
 import { whatWeMeasureCopy } from "@/content/pages";
 import { accessibilityFeatures } from "@/content/features";
@@ -63,6 +64,17 @@ export default function WhatWeMeasurePage() {
         {" · "}
         <Link href="/examples/feature-sheet">Example access checklist</Link>
       </p>
+      <PageSeoSections
+        page="whatWeMeasure"
+        slot="closing"
+        related={[
+          { href: "/glossary", label: "What is on the full glossary?" },
+          {
+            href: "/virtual-tour-process",
+            label: "How does Zoom Into Homes keep tours short?",
+          },
+        ]}
+      />
     </article>
   );
 }

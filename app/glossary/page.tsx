@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/site/JsonLd";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { resoAccessibilityFeatures } from "@/content/reso-features";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -43,6 +44,17 @@ export default function GlossaryIndexPage() {
         </a>
         .
       </p>
+      <PageSeoSections
+        page="glossary"
+        slot="closing"
+        related={[
+          { href: "/what-we-measure", label: "What does Zoom Into Homes measure?" },
+          {
+            href: "/examples/feature-sheet",
+            label: "What does an access checklist look like?",
+          },
+        ]}
+      />
     </article>
   );
 }

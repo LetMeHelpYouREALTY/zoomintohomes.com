@@ -8,7 +8,7 @@ import { processSteps } from "@/content/process";
 import { pageImages } from "@/content/page-images";
 import HeadingImage from "@/components/site/HeadingImage";
 import RoutePageHero from "@/components/site/RoutePageHero";
-import { buildBreadcrumbList } from "@/lib/schema";
+import { buildBreadcrumbList, buildVirtualTourHowTo } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -30,10 +30,13 @@ export default function VirtualTourProcessPage() {
     <article>
       <RoutePageHero path="/virtual-tour-process" />
       <JsonLd
-        data={buildBreadcrumbList([
-          { name: "Home", path: "/" },
-          { name: "How touring works", path: "/virtual-tour-process" },
-        ])}
+        data={[
+          buildBreadcrumbList([
+            { name: "Home", path: "/" },
+            { name: "How touring works", path: "/virtual-tour-process" },
+          ]),
+          buildVirtualTourHowTo(),
+        ]}
       />
       <div className="cta-row">
         <Link href="/contact" className="button">
@@ -46,7 +49,7 @@ export default function VirtualTourProcessPage() {
       <h2>{howItWorksCopy.stepsHeading}</h2>
       <ol className="process-steps">
         {processSteps.map((step) => (
-          <li key={step.order}>
+          <li key={step.order} id={`step-${step.order}`}>
             {byHeading[step.title] ? (
               <HeadingImage image={byHeading[step.title]} />
             ) : null}

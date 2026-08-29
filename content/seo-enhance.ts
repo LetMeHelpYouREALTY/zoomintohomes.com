@@ -373,4 +373,197 @@ export const pageSeoEnhance = {
       "WCAG 2.2 Level AA",
     ],
   },
+  whatWeMeasure: {
+    answerBlock:
+      "Zoom Into Homes writes door widths, step heights, shower curbs, hall widths, and control heights against a published access glossary. Each row has a date and notes how the number was checked. The sheet describes the building, not who should live there.",
+    keyFacts: [
+      "Measurements: door width, step height, shower curb, hall width, control height",
+      "Each row has a date and a source note",
+      "Numbers stay in a labeled box, separate from the listing's own feature list",
+      "Call (702) 222-1964 to apply the list to a Las Vegas or Henderson search",
+    ],
+    faqs: [
+      {
+        question: "What does Zoom Into Homes measure on a tour?",
+        answer:
+          "Door widths, step heights, shower curbs, hall widths, and control heights. Zoom Into Homes writes the date and how the number was checked.",
+      },
+      {
+        question: "Where do the numbers come from?",
+        answer:
+          "Each row notes whether it was measured on site, checked from a photo, reported by an agent, or taken from a floor plan—plus who checked it and when.",
+      },
+      {
+        question: "Do the measurements describe who should live in the house?",
+        answer:
+          "No. Zoom Into Homes records building features only. Copy does not claim a home fits a type of person.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "What Zoom Into Homes measures",
+      "doorway width Las Vegas",
+      "shower curb measurement Henderson",
+    ],
+  },
+  accessibleHomes: {
+    answerBlock:
+      "Zoom Into Homes publishes measured access features for Las Vegas and Henderson searches. Filters and copy use published access-feature names and numeric dimensions—not an undefined accessible checkbox. Video tours still write doorway and bathroom numbers on the specific unit.",
+    keyFacts: [
+      "Market: Las Vegas and Henderson",
+      "Feature language: published access-feature names plus measured numbers",
+      "Process: video tour, written checklist, two or three in-person finalists",
+      "Call (702) 222-1964 to start a measured search",
+    ],
+    faqs: [
+      {
+        question: "What is a Zoom Into Homes measured-access search?",
+        answer:
+          "A Las Vegas or Henderson housing search that records doorway, bathroom, and path numbers on video before anyone drives, then visits two or three finalists.",
+      },
+      {
+        question: "Is an accessible listing checkbox enough?",
+        answer:
+          "No. Zoom Into Homes still measures the unit. A marketing checkbox is not a dated doorway or shower-curb figure.",
+      },
+      {
+        question: "Which valley areas have editorial guides?",
+        answer:
+          "Henderson and Summerlin have first-party Zoom Into Homes guides. Access still has to be measured on the specific home.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes measured-access homes in Las Vegas",
+      "Henderson measured access features",
+    ],
+  },
+  glossary: {
+    answerBlock:
+      "The Zoom Into Homes glossary defines doorway, bathroom, entry, and related access features used on written checklists in Las Vegas and Henderson. Each term is a building feature we can measure. We do not use the terms to describe who should live in a property.",
+    keyFacts: [
+      "Source lookup: published access-feature names used on checklists",
+      "Use: dated checklists after a video or on-site tour",
+      "Language: building features, not people",
+      "Call (702) 222-1964 to apply a term to a specific house",
+    ],
+    faqs: [
+      {
+        question: "What is the Zoom Into Homes access glossary?",
+        answer:
+          "Plain-language definitions for doorway, bathroom, and entry features Zoom Into Homes records on Las Vegas and Henderson checklists.",
+      },
+      {
+        question: "Where do the technical names come from?",
+        answer:
+          "Feature names follow the published access-feature list used on this site. Zoom Into Homes still writes a dated number for the unit.",
+      },
+      {
+        question: "Does a glossary term mean a house is approved for someone?",
+        answer:
+          "No. Terms describe building features. Zoom Into Homes does not use them to describe who should live there.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes access-features glossary",
+      "Zoom Into Homes access-feature glossary",
+    ],
+  },
+  henderson: {
+    answerBlock:
+      "Zoom Into Homes treats Henderson searches the same as the rest of the valley: tour the unit on video, write doorway widths and shower curbs, then visit two or three finalists. Community marketing is not an access certificate.",
+    keyFacts: [
+      "City: Henderson, Nevada",
+      "Method: video tour plus dated access checklist",
+      "Communities often reviewed: Sun City Anthem, Solera, Siena",
+      "Call (702) 222-1964 to sequence a Henderson shortlist",
+    ],
+    faqs: [
+      {
+        question: "How does Zoom Into Homes search Henderson homes?",
+        answer:
+          "Video first, then a written doorway and bathroom list, then two or three in-person finalists. A community brochure is not a unit measurement.",
+      },
+      {
+        question: "Which Henderson communities come up often?",
+        answer:
+          "Sun City Anthem, Solera, and Siena appear often in Henderson searches. Zoom Into Homes still measures the specific unit.",
+      },
+      {
+        question: "Does a 55+ label replace an access checklist?",
+        answer:
+          "No. An age policy is not a doorway or shower-curb measurement. Zoom Into Homes still writes those numbers.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes Henderson",
+      "Henderson video home tours",
+    ],
+  },
+  summerlin: {
+    answerBlock:
+      "Zoom Into Homes still measures Summerlin homes unit by unit: door widths, thresholds, and shower curbs on video before a showing day. A master-plan amenity list is not a substitute for that checklist.",
+    keyFacts: [
+      "Area: Summerlin and northwest Las Vegas",
+      "Method: video tour plus dated access checklist",
+      "Often paired with Sun City Summerlin and single-level plans",
+      "Call (702) 222-1964 to sequence a Summerlin shortlist",
+    ],
+    faqs: [
+      {
+        question: "How does Zoom Into Homes search Summerlin homes?",
+        answer:
+          "Tour on video, write doorway and bathroom numbers, then visit two or three finalists. Amenity lists do not replace those numbers.",
+      },
+      {
+        question: "Is Sun City Summerlin automatically measured?",
+        answer:
+          "No. Zoom Into Homes still checks the specific unit. A community label is not an access certificate.",
+      },
+      {
+        question: "Do luxury Summerlin listings skip the video tour?",
+        answer:
+          "No. Price does not replace a dated Zoom Into Homes access checklist.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "Zoom Into Homes Summerlin",
+      "Summerlin video home tours",
+    ],
+  },
+  vaSha: {
+    answerBlock:
+      "Zoom Into Homes sequences a Nevada purchase search beside VA Special Housing Adaptation (SHA). SHA can fund adaptations that make a home safer or more usable for certain veterans. Eligibility and amounts come from the VA, not from this site.",
+    keyFacts: [
+      "Program: VA Special Housing Adaptation (SHA)",
+      "Official rules: VA.gov disability housing grants",
+      "Purchase file language: door width, threshold, shower curb, route width",
+      "This page is not a benefits determination",
+    ],
+    faqs: [
+      {
+        question: "How does Zoom Into Homes pair SHA with a home search?",
+        answer:
+          "Video tours and written access checklists run so showing time is not spent on plans that cannot take the needed work. The VA decides SHA eligibility.",
+      },
+      {
+        question: "How does SHA differ from SAH on a purchase file?",
+        answer:
+          "Both are VA programs. Zoom Into Homes uses the same building-feature language either way. Confirm current rules on VA.gov.",
+      },
+      {
+        question: "Does Zoom Into Homes quote SHA dollar amounts?",
+        answer:
+          "No. Amounts and remaining entitlement must be verified with the VA or an accredited representative.",
+      },
+    ],
+    entityPhrases: [
+      "Zoom Into Homes",
+      "VA SHA grant Nevada",
+      "Zoom Into Homes veteran housing search",
+    ],
+  },
 } satisfies Record<string, PageSeoEnhance>;

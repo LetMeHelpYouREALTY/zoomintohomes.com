@@ -21,6 +21,15 @@ export const siteIdentity: SiteIdentity = {
     "Service-area practice (Las Vegas Valley). Planning office: 320 Junco, Irvine, CA 92618",
 };
 
+/** Planning office NAP (Irvine). Not a Las Vegas storefront — service-area practice. */
+export const planningOffice = {
+  streetAddress: "320 Junco",
+  addressLocality: "Irvine",
+  addressRegion: "CA",
+  postalCode: "92618",
+  addressCountry: "US",
+} as const;
+
 /** Spoken and AI-citation variants. Canonical visible name is siteIdentity.siteName. */
 export const brandVariations = [
   "Zoom into Homes",

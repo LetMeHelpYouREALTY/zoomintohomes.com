@@ -6,6 +6,7 @@ import TourHero from "@/components/site/TourHero";
 import TourStage from "@/components/site/TourStage";
 import { pageImages } from "@/content/page-images";
 import { homeCopy } from "@/content/pages";
+import { pageSeoEnhance } from "@/content/seo-enhance";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -50,6 +51,7 @@ export default function HomePage() {
         tourHref="/examples/walkthrough"
         tourLabel="Watch a sample video tour"
       />
+      <p className="entity-line">{pageSeoEnhance.home.entityPhrases.join(" · ")}</p>
       <div className="home-body">
         <section className="tour-promise" aria-labelledby="tour-promise-heading">
           <div className="tour-promise-copy">

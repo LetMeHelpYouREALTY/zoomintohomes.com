@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/site/JsonLd";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageMeta } from "@/content/site";
 import { buildBreadcrumbList } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -57,6 +58,20 @@ export default function VaShaGrantPage() {
         {" · "}
         <Link href="/contact">Request a consultation</Link>
       </p>
+      <PageSeoSections
+        page="vaSha"
+        slot="closing"
+        related={[
+          {
+            href: "/va-sah-grant-nevada",
+            label: "How does Zoom Into Homes pair SAH with a purchase?",
+          },
+          {
+            href: "/clark-county-disabled-veteran-property-tax-exemption",
+            label: "What are the Clark County exemption tiers?",
+          },
+        ]}
+      />
     </article>
   );
 }

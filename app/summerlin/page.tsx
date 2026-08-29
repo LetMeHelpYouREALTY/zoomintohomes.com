@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageSeoSections from "@/components/site/PageSeoSections";
 import { pageMeta } from "@/content/site";
 import { buildPageMetadata } from "@/lib/seo";
 import RoutePageHero from "@/components/site/RoutePageHero";
@@ -18,8 +19,9 @@ export default function SummerlinPage() {
         <h2 className="answer-block-title">Direct answer</h2>
         <p className="answer-block-body">
           Summerlin inventory still needs door widths, thresholds, and shower
-          curbs measured on the specific unit. A master-plan amenity list is not
-          a substitute for a access checklist.
+          curbs measured on the specific unit. Zoom Into Homes still writes those
+          numbers; a master-plan amenity list is not a substitute for an access
+          checklist.
         </p>
       </section>
       <h2>Often paired with</h2>
@@ -34,6 +36,14 @@ export default function SummerlinPage() {
         {" · "}
         <Link href="/contact">Contact</Link>
       </p>
+      <PageSeoSections
+        page="summerlin"
+        slot="closing"
+        related={[
+          { href: "/henderson", label: "How does Zoom Into Homes search Henderson?" },
+          { href: "/aging-in-place", label: "How does Zoom Into Homes run aging-in-place searches?" },
+        ]}
+      />
     </article>
   );
 }

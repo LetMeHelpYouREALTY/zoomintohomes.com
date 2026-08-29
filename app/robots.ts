@@ -25,6 +25,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Claude-User", allow: "/" },
       { userAgent: "PerplexityBot", allow: "/" },
       { userAgent: "Perplexity-User", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
     ],
     sitemap: `${SITE_ORIGIN}/sitemap.xml`,
     host: SITE_HOST,
