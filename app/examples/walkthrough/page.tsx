@@ -1,33 +1,54 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import TourStage from "@/components/site/TourStage";
-import { pageMeta, siteIdentity } from "@/content/site";
-import { buildPageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/site/JsonLd";
 import RoutePageHero from "@/components/site/RoutePageHero";
+import TourStage from "@/components/site/TourStage";
+import { pageImages } from "@/content/page-images";
+import { pageMeta, siteIdentity } from "@/content/site";
+import { buildBreadcrumbList } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
+import {
+  buildSampleWalkthroughVideoObject,
+  withoutAutoplay,
+} from "@/lib/walkthrough-video";
+
+const walkthroughUrl = process.env.NEXT_PUBLIC_SAMPLE_WALKTHROUGH_URL?.trim();
+const sampleVideo = buildSampleWalkthroughVideoObject();
+const embedSrc = walkthroughUrl ? withoutAutoplay(walkthroughUrl) : "";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageMeta.walkthroughExample.title,
   description: pageMeta.walkthroughExample.description,
   path: "/examples/walkthrough",
+  imagePath: pageImages.howItWorks.hero.src,
+  imageAlt: pageImages.howItWorks.hero.alt,
 });
-
-const walkthroughUrl = process.env.NEXT_PUBLIC_SAMPLE_WALKTHROUGH_URL?.trim();
 
 export default function WalkthroughExamplePage() {
   return (
     <article>
       <RoutePageHero path="/examples/walkthrough" />
+      <JsonLd
+        data={[
+          buildBreadcrumbList([
+            { name: "Home", path: "/" },
+            { name: "Example walkthrough", path: "/examples/walkthrough" },
+          ]),
+          ...(sampleVideo ? [sampleVideo] : []),
+        ]}
+      />
       <TourStage
         title="Sample virtual tour · click to start"
         caption="Highlight sequence: zero-step entry → doorway width → primary bath → kitchen clearances."
       >
         <div className="video-frame tour-stage-video">
-          {walkthroughUrl ? (
+          {embedSrc ? (
             <iframe
-              title="Sample accessibility walkthrough"
-              src={walkthroughUrl}
+              title="Sample Zoom Into Homes walkthrough"
+              src={embedSrc}
               allow="fullscreen; picture-in-picture"
               loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
             />
           ) : (
             <p>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AgentPortrait from "@/components/site/AgentPortrait";
 import CalendlyButton from "@/components/calendly/CalendlyButton";
+import PlatformProfileLinks from "@/components/site/PlatformProfileLinks";
 import { brandCopy } from "@/content/brand";
 import { helpNav, siteIdentity } from "@/content/site";
 
@@ -100,6 +101,7 @@ export default function SiteFooter() {
           {" · "}
           <a href="#schedule">Schedule</a>
         </p>
+        <PlatformProfileLinks />
 
         <p className="eho">
           <EqualHousingMark />

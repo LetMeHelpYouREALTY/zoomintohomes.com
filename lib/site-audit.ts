@@ -14,6 +14,7 @@ import {
   PAGE_IMAGE_HEIGHT,
   PAGE_IMAGE_WIDTH,
 } from "@/lib/images";
+import { isLeftoverSocialUrl } from "@/content/platform-profiles";
 import { buildOrganizationSchemas } from "@/lib/schema";
 import { indexablePaths, SITE_HOST, SITE_ORIGIN } from "@/lib/site-url";
 
@@ -458,6 +459,20 @@ export function auditSeoAndSchema(): AuditFinding[] {
       area: "schema",
       message: "Organization schema must list Zoom into Homes as alternateName",
     });
+  }
+  for (const node of schemas) {
+    const sameAs = node.sameAs;
+    if (sameAs === undefined) continue;
+    const list = Array.isArray(sameAs) ? sameAs : [sameAs];
+    for (const url of list) {
+      if (typeof url === "string" && isLeftoverSocialUrl(url)) {
+        findings.push({
+          severity: "error",
+          area: "schema",
+          message: `first-party ${String(node["@type"])} sameAs must not use leftover social ${url}`,
+        });
+      }
+    }
   }
   if (siteIdentity.siteName !== "Zoom Into Homes") {
     findings.push({

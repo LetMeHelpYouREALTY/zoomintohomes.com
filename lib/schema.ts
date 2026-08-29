@@ -7,6 +7,7 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { verifiedPlatformSameAs } from "@/content/platform-profiles";
 import { brandVariations, siteIdentity } from "@/content/site";
 import { PAGE_IMAGE_HEIGHT, PAGE_IMAGE_WIDTH } from "@/lib/images";
 import { absoluteUrl, SITE_ORIGIN } from "@/lib/site-url";
@@ -66,7 +67,11 @@ export interface SeniorCommunityData {
 
 const BASE_URL = siteConfig.url;
 
-// Social media profiles (to be updated with actual URLs)
+/**
+ * Leftover HeyBerkshire / Dr. Jan Duffy handles. Do not attach these to
+ * Zoom Into Homes Organization `sameAs`. First-party profiles live in
+ * `content/platform-profiles.ts` (Instagram, TikTok, X, YouTube only).
+ */
 export const socialProfiles = {
   facebook: "https://www.facebook.com/heyberkshire",
   instagram: "https://www.instagram.com/heyberkshire",
@@ -80,8 +85,8 @@ export const socialProfiles = {
 // ============================================================================
 
 /**
- * Generate RealEstateAgent schema (LocalBusiness subtype)
- * Used site-wide in the root layout
+ * Leftover HeyBerkshire RealEstateAgent schema. First-party pages use
+ * `buildOrganizationSchemas()` in the root layout instead.
  */
 export function generateRealEstateAgentSchema() {
   return {
@@ -587,6 +592,8 @@ export function schemaToJsonLd(schema: Record<string, unknown>): string {
 // ---------------------------------------------------------------------------
 
 export function buildOrganizationSchemas(): Record<string, unknown>[] {
+  const platformSameAs = verifiedPlatformSameAs();
+
   const agent: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
@@ -624,6 +631,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     },
     description:
       "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, records access measurements in writing, and limits in-person visits to shortlisted finalists.",
+    ...(platformSameAs.length > 0 ? { sameAs: platformSameAs } : {}),
   };
 
   const org: Record<string, unknown> = {
@@ -641,6 +649,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     image: {
       "@id": `${SITE_ORIGIN}/#primaryimage`,
     },
+    ...(platformSameAs.length > 0 ? { sameAs: platformSameAs } : {}),
   };
 
   const website: Record<string, unknown> = {
