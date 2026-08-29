@@ -5,7 +5,7 @@ import {
   REALTOR_SLANG,
 } from "./site-audit";
 import { BUYER_SELLER_JARGON } from "./buyer-seller-language";
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 describe("site audit", () => {
@@ -86,6 +86,21 @@ describe("site audit", () => {
       expect(source, rel).not.toMatch(/<form\b/i);
       expect(source, rel).not.toMatch(/type\s*=\s*["']email["']/i);
     }
+  });
+
+  it("uses the agent headshot as the favicon instead of a generated letter", () => {
+    const appDir = join(process.cwd(), "app");
+    expect(existsSync(join(appDir, "icon.tsx"))).toBe(false);
+    expect(existsSync(join(appDir, "icon.png"))).toBe(true);
+    expect(existsSync(join(appDir, "apple-icon.png"))).toBe(true);
+    expect(existsSync(join(appDir, "favicon.ico"))).toBe(true);
+
+    const icon = readFileSync(join(appDir, "icon.png"));
+    expect(
+      icon
+        .subarray(0, 8)
+        .equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])),
+    ).toBe(true);
   });
 
   it("uses navy and champagne gold instead of teal", () => {
