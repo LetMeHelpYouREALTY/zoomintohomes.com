@@ -595,6 +595,13 @@ export function schemaToJsonLd(schema: Record<string, unknown>): string {
 export function buildOrganizationSchemas(): Record<string, unknown>[] {
   const platformSameAs = verifiedPlatformSameAs();
 
+  // First-party identity links for Dr. Gene Boyle (GEO/AEO entity resolution).
+  const agentSameAs = [
+    "https://www.linkedin.com/in/geneboyle",
+    "https://www.facebook.com/profile.php?id=61594716160032",
+    ...platformSameAs,
+  ];
+
   const agent: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
@@ -632,7 +639,7 @@ export function buildOrganizationSchemas(): Record<string, unknown>[] {
     },
     description:
       "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, records access measurements in writing, and limits in-person visits to shortlisted finalists.",
-    ...(platformSameAs.length > 0 ? { sameAs: platformSameAs } : {}),
+    sameAs: agentSameAs,
   };
 
   const org: Record<string, unknown> = {
