@@ -1,8 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "framework": "nextjs",
-  "devCommand": "npm run dev",
-  "outputDirectory": ".next",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "regions": ["iad1"],
   "functions": {
     "app/**/*.tsx": {
@@ -58,7 +55,7 @@
       ]
     },
     {
-      "source": "/Image/(.*)",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
