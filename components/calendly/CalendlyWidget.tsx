@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { calendlyEmbedUrl } from "@/content/widgets";
 import { ensureCalendlyAssets } from "@/components/calendly/loadCalendly";
+import { runWhenVisible } from "@/lib/load-on-interaction";
 import "./types";
 
 type CalendlyWidgetProps = {
@@ -12,7 +13,8 @@ type CalendlyWidgetProps = {
 };
 
 /**
- * Inline Calendly embed. CSS/JS load when this widget mounts.
+ * Inline Calendly embed. CSS/JS load when the block is near the viewport
+ * so the iframe stays off the PageSpeed lab path.
  */
 export default function CalendlyWidget({
   url = calendlyEmbedUrl(),
@@ -22,7 +24,8 @@ export default function CalendlyWidget({
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!widgetRef.current) return;
+    const host = widgetRef.current;
+    if (!host) return;
 
     let cancelled = false;
 
@@ -42,12 +45,15 @@ export default function CalendlyWidget({
       });
     };
 
-    void ensureCalendlyAssets()
-      .then(initWidget)
-      .catch(() => undefined);
+    const stop = runWhenVisible(host, () => {
+      void ensureCalendlyAssets()
+        .then(initWidget)
+        .catch(() => undefined);
+    });
 
     return () => {
       cancelled = true;
+      stop();
     };
   }, [url, minWidth, height]);
 
