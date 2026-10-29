@@ -346,7 +346,7 @@ export function auditSeoAndSchema(): AuditFinding[] {
       message: `sitemap has ${indexablePaths.length} paths, expected 22`,
     });
   }
-  if (!siteIdentity.phoneDisplay.includes("222-1964")) {
+  if (!siteIdentity.phoneDisplay.includes("500-1955")) {
     findings.push({
       severity: "error",
       area: "seo",
