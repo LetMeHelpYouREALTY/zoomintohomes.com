@@ -174,7 +174,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     contactCopy.lede,
     pageSeoEnhance.contact.answerBlock,
     [
-      "Pick a time on the calendar, or call (702) 222-1964",
+      "Pick a time on the calendar, or call (702) 500-1955",
       "Tour Las Vegas and Henderson homes on video first",
       "Visit two or three finalists in person, not a dozen",
     ],
@@ -201,7 +201,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.accessibilityStatement.hero,
     "Security policy",
     "How Zoom Into Homes handles security reports for zoomintohomes.com.",
-    "This page explains how to report a security issue on Zoom Into Homes. Do not include client names, medical notes, or listing credentials in a public report. Call (702) 222-1964 or book a time on the contact page for a private handoff.",
+    "This page explains how to report a security issue on Zoom Into Homes. Do not include client names, medical notes, or listing credentials in a public report. Call (702) 500-1955 or book a time on the contact page for a private handoff.",
   ),
   "/sellers": hero(
     pageImages.home.hero,
@@ -237,7 +237,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.home.hero,
     "Buy your Las Vegas home",
     "Tour listings on video, check doorway and bathroom access in writing, then visit only the finalists.",
-    "Buying in Las Vegas or Henderson with Zoom Into Homes means a video tour first, a written access checklist, and two or three in-person visits—not a dozen maybes. Call (702) 222-1964 to start intake.",
+    "Buying in Las Vegas or Henderson with Zoom Into Homes means a video tour first, a written access checklist, and two or three in-person visits—not a dozen maybes. Call (702) 500-1955 to start intake.",
   ),
   "/buyers/first-time-buyers": hero(
     pageImages.home.hero,
@@ -393,7 +393,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.home.hero,
     "Las Vegas investment properties",
     "Income searches still use video tours before a long showing day.",
-    "Investment listings in Las Vegas and Henderson are toured on video first. Access notes still describe doors, steps, and showers—the building, not a type of tenant. Call (702) 222-1964 to sequence a shortlist.",
+    "Investment listings in Las Vegas and Henderson are toured on video first. Access notes still describe doors, steps, and showers—the building, not a type of tenant. Call (702) 500-1955 to sequence a shortlist.",
   ),
   "/relocation": hero(
     pageImages.home.hero,
@@ -411,7 +411,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.home.hero,
     "Las Vegas real estate market report",
     "Market context for buyers and sellers, plus the video-tour process this practice uses.",
-    "Market figures change. Use this page for context, then tour specific homes on video and write doorway and bathroom measurements before anyone drives. Call (702) 222-1964 to apply the numbers to a shortlist.",
+    "Market figures change. Use this page for context, then tour specific homes on video and write doorway and bathroom measurements before anyone drives. Call (702) 500-1955 to apply the numbers to a shortlist.",
   ),
   "/market-update": hero(
     pageImages.home.hero,
@@ -429,7 +429,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.about.hero,
     "Las Vegas real estate services",
     "Buying, selling, and video touring through Berkshire Hathaway HomeServices Nevada Properties.",
-    "Services on this site are a Las Vegas and Henderson housing search that starts on video, a written access checklist, and in-person visits only for finalists. Call (702) 222-1964 to start.",
+    "Services on this site are a Las Vegas and Henderson housing search that starts on video, a written access checklist, and in-person visits only for finalists. Call (702) 500-1955 to start.",
   ),
   "/why-berkshire-hathaway": hero(
     pageImages.about.hero,
@@ -446,7 +446,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/google-business": hero(
     pageImages.about.hero,
     "Dr. Jan Duffy",
-    "Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+    "Berkshire Hathaway HomeServices Nevada Properties. Call (702) 500-1955.",
     "Dr. Jan Duffy coordinates Las Vegas and Henderson showings for Zoom Into Homes. The practice tours homes on video, writes doorway and bathroom measurements, and visits two or three finalists in person.",
   ),
 };

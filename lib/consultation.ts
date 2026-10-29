@@ -38,7 +38,7 @@ export async function submitConsultation(
         ok: false,
         error:
           payload.error ||
-          "We could not send that request. Call (702) 222-1964 and we will take it by phone.",
+          "We could not send that request. Call (702) 500-1955 and we will take it by phone.",
       };
     }
 
@@ -47,7 +47,7 @@ export async function submitConsultation(
     return {
       ok: false,
       error:
-        "Network error. Call (702) 222-1964 or try again in a moment.",
+        "Network error. Call (702) 500-1955 or try again in a moment.",
     };
   }
 }

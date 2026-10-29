@@ -350,7 +350,7 @@ export function auditSeoAndSchema(): AuditFinding[] {
     findings.push({
       severity: "error",
       area: "seo",
-      message: `CTA phone is ${siteIdentity.phoneDisplay}, expected (702) 222-1964`,
+      message: `CTA phone is ${siteIdentity.phoneDisplay}, expected (702) 500-1955`,
     });
   }
   if (homeCopy.explanation.split(/\s+/).length < 28) {

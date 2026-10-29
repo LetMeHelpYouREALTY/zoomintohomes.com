@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            'Lead desk is not configured yet. Call (702) 222-1964 and we will take your request by phone.',
+            'Lead desk is not configured yet. Call (702) 500-1955 and we will take your request by phone.',
         },
         { status: 503 },
       );
