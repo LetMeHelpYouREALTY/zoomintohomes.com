@@ -214,7 +214,7 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned perfection with top schools,
+                    "The Irvine of Las Vegas" - Master-planned perfection with nearby public schools,
                     Downtown Summerlin shopping, and Red Rock Canyon views.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
@@ -223,7 +223,7 @@ export default function CaliforniaRelocatorPage() {
                   <ul className="text-sm space-y-1 text-slate-700">
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
+                      Nearby public schools
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -254,7 +254,7 @@ export default function CaliforniaRelocatorPage() {
                     nearby schools, and strong community amenities.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Tech workers, young families, San Diego relocators
+                    <strong>Popular with:</strong> Tech commuters, San Diego relocators
                   </div>
                   <ul className="text-sm space-y-1 text-slate-700">
                     <li className="flex items-center">
@@ -263,7 +263,7 @@ export default function CaliforniaRelocatorPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
+                      Public crime maps online
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -414,7 +414,7 @@ export default function CaliforniaRelocatorPage() {
                 <p className="text-slate-600">
                   Nevada public schools overall rank lower than California's, but individual schools
                   in Summerlin and Henderson rate highly. Many California families choose areas with
-                  top-rated schools or consider private options. Dr. Jan provides school-specific
+                  nearby public schools or consider private options. Dr. Jan provides school-specific
                   guidance for every neighborhood.
                 </p>
               </div>

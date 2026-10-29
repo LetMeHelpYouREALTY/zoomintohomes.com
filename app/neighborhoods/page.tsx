@@ -22,7 +22,7 @@ const neighborhoods = [
     slug: "summerlin",
     medianPrice: "$625,000",
     priceChange: "+6.8%",
-    description: "Premier master-planned community with parks, trails, and top-rated schools",
+    description: "Premier master-planned community with parks, trails, and nearby public schools",
     highlights: ["150+ Parks", "Nearby Schools", "Red Rock Views", "Downtown Summerlin"],
     bestFor: "Families, professionals, outdoor enthusiasts",
   },
@@ -69,7 +69,7 @@ const neighborhoods = [
     priceChange: "+3.2%",
     description: "Rapidly growing area with affordable new construction and master-planned communities",
     highlights: ["New Construction", "Affordable", "Growing Area", "Trail Access"],
-    bestFor: "First-time buyers, young families, investors",
+    bestFor: "First-time buyers, move-up buyers, investors",
   },
   {
     name: "Skye Canyon",
@@ -78,7 +78,7 @@ const neighborhoods = [
     priceChange: "+5.5%",
     description: "Newer master-planned community in northwest Las Vegas with mountain views",
     highlights: ["New Homes", "Mountain Views", "Skye Center", "Nearby Schools"],
-    bestFor: "Young families, outdoor enthusiasts, commuters",
+    bestFor: "Move-up buyers, outdoor enthusiasts, commuters",
   },
   {
     name: "Centennial Hills",
