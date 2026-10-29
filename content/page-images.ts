@@ -317,7 +317,7 @@ export const pageImages = {
       img(
         "about",
         "workstation",
-        "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
+        "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, in real estate since 1983.",
         "Homeowner filming a staged kitchen on a gimbal while a laptop shows buyers on the same live Zoom tour.",
       ),
       img(

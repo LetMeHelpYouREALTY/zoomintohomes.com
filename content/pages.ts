@@ -108,10 +108,10 @@ export const agingInPlaceCopy = {
 
 export const aboutCopy = {
   h1: "About Zoom Into Homes",
-  lede: "Dr. Gene Boyle runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson. Video-first touring for buyers and sellers whose search is shaped by how their body moves through a house.",
+  lede: "Dr. Gene Boyle runs Zoom Into Homes with Las Vegas and Henderson coordination by Dr. Jan Duffy. Video-first touring for buyers and sellers whose search is shaped by how their body moves through a house.",
   practiceHeading: "What does Zoom Into Homes publish in writing?",
   body: [
-    "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
+    "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, in real estate since 1983.",
     "Call (702) 500-1955. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
     "The practice is built so a care team can read the process, the measurement list, and the Fair Housing rule (features, not people) without a sales call.",
   ],

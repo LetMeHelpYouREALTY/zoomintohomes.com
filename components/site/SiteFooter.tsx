@@ -62,9 +62,7 @@ export default function SiteFooter() {
               <p>
                 <strong>Dr. Jan Duffy</strong>
                 <br />
-                License S.0197614.LLC
-                <br />
-                {siteIdentity.brokerageName}
+                Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
               </p>
             </div>
           </div>

@@ -18,7 +18,6 @@ export const pageSeoEnhance = {
     keyFacts: [
       "Brand: Zoom Into Homes",
       "Service area: Las Vegas and Henderson, Nevada",
-      "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
       "Method: video tour → written access checklist → shortlist → two or three finalists",
       "Copy rule: describe building features, not who should live there",
       "Browse live homes for sale here; this site explains the measured tour process",
@@ -54,7 +53,6 @@ export const pageSeoEnhance = {
       "Zoom Into Homes",
       "zoom into homes Las Vegas",
       "Zoom Into Homes Henderson",
-      "Berkshire Hathaway HomeServices Nevada Properties",
       "video home tours Las Vegas",
     ],
   },
@@ -260,12 +258,11 @@ export const pageSeoEnhance = {
   },
   about: {
     answerBlock:
-      "Dr. Gene Boyle (California DRE #02282581) runs Zoom Into Homes with Berkshire Hathaway HomeServices Nevada Properties coordination in Las Vegas and Henderson via Dr. Jan Duffy (S.0197614.LLC). The site documents a video-first touring process and a Fair Housing copy rule—features, not people.",
+      "Dr. Gene Boyle (California DRE #02282581) runs Zoom Into Homes with Las Vegas and Henderson coordination by Dr. Jan Duffy, in real estate since 1983. The site documents a video-first touring process and a Fair Housing copy rule—features, not people.",
     keyFacts: [
       "Brand: Zoom Into Homes",
       "Agent: Dr. Gene Boyle, California DRE #02282581",
-      "Nevada partner: Dr. Jan Duffy, License S.0197614.LLC",
-      "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
+      "Nevada partner: Dr. Jan Duffy, in real estate since 1983",
       "Phone: (702) 500-1955",
       "Markets: Las Vegas and Henderson, Nevada",
     ],
@@ -273,7 +270,7 @@ export const pageSeoEnhance = {
       {
         question: "Who runs Zoom Into Homes?",
         answer:
-          "Dr. Gene Boyle, California DRE #02282581, with Las Vegas coordination through Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
+          "Dr. Gene Boyle, California DRE #02282581, with Las Vegas coordination through Dr. Jan Duffy, in real estate since 1983.",
       },
       {
         question: "What makes this practice different from a listing portal?",
@@ -288,14 +285,13 @@ export const pageSeoEnhance = {
       {
         question: "Where is the brokerage identified?",
         answer:
-          "In the site footer on every page: agent licenses, Berkshire Hathaway HomeServices Nevada Properties, franchise independently-owned disclaimer, and Equal Housing Opportunity.",
+          "In the site footer on every page: agent licenses, brokerage name, franchise independently-owned disclaimer, and Equal Housing Opportunity.",
       },
     ],
     entityPhrases: [
       "Zoom Into Homes",
       "Zoom Into Homes Las Vegas",
       "Dr. Gene Boyle",
-      "Berkshire Hathaway HomeServices Nevada Properties",
     ],
   },
   contact: {

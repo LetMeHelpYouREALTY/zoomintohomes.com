@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
+  title: "Las Vegas Neighborhoods | Dr. Jan Duffy, REALTOR®",
   description:
-    "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
+    "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
   keywords: [
     "Las Vegas neighborhoods",
     "Henderson communities",
@@ -162,11 +162,11 @@ export default function NeighborhoodsPage() {
                 "Every Las Vegas neighborhood has its own personality. Whether you want the
                 community parks of Summerlin, the established charm of Green Valley, or the
                 luxury of The Ridges, I'll help you find the community that matches your lifestyle.
-                That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
+                That's the Dr. Jan Duffy difference—personalized guidance backed
                 by local expertise."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties
+                — Dr. Jan Duffy, REALTOR®
               </cite>
             </div>
           </section>
@@ -216,7 +216,7 @@ export default function NeighborhoodsPage() {
               Call (702) 500-1955
             </a>
             <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Dr. Jan Duffy, REALTOR® | In Real Estate Since 1983
             </p>
           </section>
         </div>

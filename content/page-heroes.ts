@@ -206,7 +206,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/sellers": hero(
     pageImages.home.hero,
     "Sell your Las Vegas home",
-    "List with Berkshire Hathaway HomeServices Nevada Properties. We still tour buyer traffic on video and write access details before a long showing day.",
+    "List with Zoom Into Homes. We still tour buyer traffic on video and write access details before a long showing day.",
     "Selling in Las Vegas or Henderson starts with a valuation call, then photos and a listing plan. Buyers who work with this practice see the home on video first, with doorway and bathroom measurements written down, so in-person showings stay short.",
   ),
   "/sellers/downsizing": hero(
@@ -225,7 +225,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
     pageImages.home.hero,
     "Selling to buy the next Las Vegas home",
     "Sequence the sale and the purchase so showing days stay short on both sides.",
-    "Move-up searches in Las Vegas and Henderson use the same video-tour process: measure doors and showers remotely, write the numbers, then visit two or three finalists. The current house is listed with Berkshire Hathaway HomeServices Nevada Properties.",
+    "Move-up searches in Las Vegas and Henderson use the same video-tour process: measure doors and showers remotely, write the numbers, then visit two or three finalists. The current house is listed through the practice.",
   ),
   "/sellers/divorce-probate": hero(
     pageImages.about.hero,
@@ -271,61 +271,61 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   ),
   "/neighborhoods/summerlin": hero(
     pageImages.agingInPlace.hero,
-    "Berkshire Hathaway HomeServices Summerlin",
+    "Summerlin Real Estate",
     "Summerlin listings with video tours and written doorway and bathroom measurements.",
     areaExplanation("Summerlin"),
   ),
   "/neighborhoods/henderson": hero(
     pageImages.agingInPlace.hero,
-    "Berkshire Hathaway HomeServices Henderson",
+    "Henderson Real Estate",
     "Henderson listings with video tours and written access checklists.",
     areaExplanation("Henderson"),
   ),
   "/neighborhoods/green-valley": hero(
     pageImages.agingInPlace.hero,
-    "Berkshire Hathaway HomeServices Green Valley",
+    "Green Valley Real Estate",
     "Green Valley listings checked on video before a showing day.",
     areaExplanation("Green Valley"),
   ),
   "/neighborhoods/the-ridges": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices The Ridges",
+    "The Ridges Real Estate",
     "The Ridges listings still need unit-level doorway and bathroom measurements.",
     areaExplanation("The Ridges"),
   ),
   "/neighborhoods/centennial-hills": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices Centennial Hills",
+    "Centennial Hills Real Estate",
     "Centennial Hills listings with video tours first.",
     areaExplanation("Centennial Hills"),
   ),
   "/neighborhoods/southern-highlands": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices Southern Highlands",
+    "Southern Highlands Real Estate",
     "Southern Highlands listings with written access checklists.",
     areaExplanation("Southern Highlands"),
   ),
   "/neighborhoods/north-las-vegas": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices North Las Vegas",
+    "North Las Vegas Real Estate",
     "North Las Vegas listings toured on video before anyone drives.",
     areaExplanation("North Las Vegas"),
   ),
   "/neighborhoods/mountains-edge": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices Mountains Edge",
+    "Mountains Edge Real Estate",
     "Mountains Edge listings with doorway and shower measurements on a dated list.",
     areaExplanation("Mountains Edge"),
   ),
   "/neighborhoods/inspirada": hero(
     pageImages.agingInPlace.hero,
-    "Berkshire Hathaway HomeServices Inspirada",
+    "Inspirada Real Estate",
     "Inspirada listings in Henderson, checked on video first.",
     areaExplanation("Inspirada"),
   ),
   "/neighborhoods/skye-canyon": hero(
     pageImages.home.hero,
-    "Berkshire Hathaway HomeServices Skye Canyon",
+    "Skye Canyon Real Estate",
     "Skye Canyon listings with video tours and written access notes.",
     areaExplanation("Skye Canyon"),
   ),
@@ -416,7 +416,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/market-update": hero(
     pageImages.home.hero,
     "Las Vegas market update",
-    "Current valley context from Berkshire Hathaway HomeServices Nevada Properties.",
+    "Current valley context from Zoom Into Homes.",
     "A market update is not a substitute for measuring a house. Zoom Into Homes still tours listings on video, writes access details, and visits two or three finalists in person.",
   ),
   "/market-insights": hero(
@@ -428,14 +428,14 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/services": hero(
     pageImages.about.hero,
     "Las Vegas real estate services",
-    "Buying, selling, and video touring through Berkshire Hathaway HomeServices Nevada Properties.",
+    "Buying, selling, and video touring through Zoom Into Homes.",
     "Services on this site are a Las Vegas and Henderson housing search that starts on video, a written access checklist, and in-person visits only for finalists. Call (702) 500-1955 to start.",
   ),
   "/why-berkshire-hathaway": hero(
     pageImages.about.hero,
-    "Why Berkshire Hathaway HomeServices",
-    "Brokerage identification for Zoom Into Homes in Las Vegas and Henderson.",
-    "Zoom Into Homes works with Berkshire Hathaway HomeServices Nevada Properties. The touring method is still the same: video first, written doorway and bathroom measurements, two or three in-person finalists.",
+    "About Zoom Into Homes",
+    "How Zoom Into Homes works in Las Vegas and Henderson.",
+    "Brokerage details are listed in the site footer. The touring method is still the same: video first, written doorway and bathroom measurements, two or three in-person finalists.",
   ),
   "/faq": hero(
     pageImages.contact.hero,
@@ -446,7 +446,7 @@ export const pageHeroByPath: Record<string, PageHeroSpec> = {
   "/google-business": hero(
     pageImages.about.hero,
     "Dr. Jan Duffy",
-    "Berkshire Hathaway HomeServices Nevada Properties. Call (702) 500-1955.",
+    "Top 1% Las Vegas REALTOR®, in real estate since 1983. Call (702) 500-1955.",
     "Dr. Jan Duffy coordinates Las Vegas and Henderson showings for Zoom Into Homes. The practice tours homes on video, writes doorway and bathroom measurements, and visits two or three finalists in person.",
   ),
 };

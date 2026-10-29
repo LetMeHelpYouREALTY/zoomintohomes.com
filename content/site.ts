@@ -120,7 +120,7 @@ export const pageMeta: Record<string, PageMeta> = {
   about: {
     title: "About Zoom Into Homes and Dr. Gene Boyle",
     description:
-      "Dr. Gene Boyle helps Las Vegas and Henderson buyers tour homes on video first with Berkshire Hathaway HomeServices Nevada Properties. We describe building features, not people.",
+      "Dr. Gene Boyle helps Las Vegas and Henderson buyers tour homes on video first. We describe building features, not people.",
   },
   contact: {
     title: "Book a Zoom Into Homes Las Vegas video-tour call",

@@ -28,5 +28,5 @@ export const brandColors = {
 
 export const brandCopy = {
   franchiseDisclaimer:
-    "Berkshire Hathaway HomeServices Nevada Properties — each office is independently owned and operated.",
+    "Each Berkshire Hathaway HomeServices office is independently owned and operated.",
 } as const;
