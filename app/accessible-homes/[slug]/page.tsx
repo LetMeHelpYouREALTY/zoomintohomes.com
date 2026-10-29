@@ -11,7 +11,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -20,7 +20,8 @@ export function generateStaticParams() {
     .map((feature) => ({ slug: feature.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const feature = getResoFeature(params.slug);
   if (!feature) {
     return { title: "Feature not found" };
@@ -32,7 +33,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   });
 }
 
-export default function AccessibleHomesFeaturePage({ params }: PageProps) {
+export default async function AccessibleHomesFeaturePage(props: PageProps) {
+  const params = await props.params;
   const feature = getResoFeature(params.slug);
   if (!feature || !feature.landingEligible) {
     notFound();
@@ -74,9 +76,9 @@ export default function AccessibleHomesFeaturePage({ params }: PageProps) {
       <div className="provenance-panel">
         <h2>Attribution rule</h2>
         <p>
-          When listing data is shown later, Zoom Into Homes measurements appear in
-          a separate panel labeled as agent-measured data—not as the listing feed’s
-          own fields.
+          When listing data is shown later, Zoom Into Homes measurements appear
+          in a separate panel labeled as agent-measured data—not as the listing
+          feed’s own fields.
         </p>
       </div>
       <p>

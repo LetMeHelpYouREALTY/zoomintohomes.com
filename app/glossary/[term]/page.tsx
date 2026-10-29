@@ -11,14 +11,15 @@ import { buildPageMetadata } from "@/lib/seo";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 type PageProps = {
-  params: { term: string };
+  params: Promise<{ term: string }>;
 };
 
 export function generateStaticParams() {
   return resoAccessibilityFeatures.map((feature) => ({ term: feature.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const feature = getResoFeature(params.term);
   if (!feature) {
     return { title: "Term not found" };
@@ -30,7 +31,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   });
 }
 
-export default function GlossaryTermPage({ params }: PageProps) {
+export default async function GlossaryTermPage(props: PageProps) {
+  const params = await props.params;
   const feature = getResoFeature(params.term);
   if (!feature) {
     notFound();
@@ -56,9 +58,9 @@ export default function GlossaryTermPage({ params }: PageProps) {
       </p>
       <h2>How Zoom Into Homes uses this term</h2>
       <p>
-        We treat {feature.name} as a falsifiable building claim. Access checklists
-        record a measured or photo-verified value with a date. We do not use the
-        term to describe who should live in a property.
+        We treat {feature.name} as a falsifiable building claim. Access
+        checklists record a measured or photo-verified value with a date. We do
+        not use the term to describe who should live in a property.
       </p>
       {feature.landingEligible ? (
         <p>
