@@ -53,7 +53,7 @@ const faqSchema = {
       name: "What are the best neighborhoods in Henderson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Henderson's top neighborhoods include Green Valley (established, mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
+        text: "Henderson's top neighborhoods include Green Valley (mature landscaping), Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (parks and community centers), and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.",
       },
     },
     {
@@ -135,7 +135,7 @@ export default function HendersonPage() {
               </p>
               <p>
                 What sets Henderson apart? Start with safety. Henderson consistently ranks as one of America's
-                safest large cities, making it the top choice for families with children. The city's excellent
+                largest cities, with crime data published online by Henderson Police. The city's
                 schools, established residential streets, and community-oriented atmosphere create an environment where
                 families thrive. Add in the fact that Nevada has no state income tax, and you understand why
                 so many Californians are making Henderson their new home.
@@ -159,7 +159,7 @@ export default function HendersonPage() {
                   </div>
                   <p className="text-slate-600">
                     Henderson has been named the highly ranked Nevada city and consistently ranks among America's
-                    safest large cities. The Henderson Police Department's community policing approach and
+                    largest cities. The Henderson Police Department's community policing approach and
                     active neighborhood watch programs contribute to exceptionally established residential streets that give
                     families peace of mind.
                   </p>
@@ -182,7 +182,7 @@ export default function HendersonPage() {
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Henderson School Districts</h3>
               <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
                 <p className="text-slate-700 mb-4">
-                  Henderson offers some of Nevada's best public schools through Clark County School District,
+                  Henderson offers some of Nevada's nearby public schools through Clark County School District,
                   plus excellent charter and private options:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -295,7 +295,7 @@ export default function HendersonPage() {
               <p>
                 Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Henderson home search means
                 working with agents who understand the subtle differences between Henderson's many communities.
-                Dr. Jan Duffy can explain which neighborhoods have the best schools for your children's ages,
+                Dr. Jan Duffy can explain which neighborhoods have the nearby public schools for your children's ages,
                 which HOAs are well-managed, and which areas offer the strongest investment potential. That
                 local knowledge, backed by the resources and reputation of Berkshire Hathaway, makes all the
                 difference.
@@ -307,7 +307,7 @@ export default function HendersonPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Henderson offers something for everyone—young professionals, growing families, active retirees.
+                "Henderson offers something for everyone—condos, single-story homes, and 4+ bedroom floor plans.
                 As a Berkshire Hathaway HomeServices agent, I help clients cut through the options and find
                 the community that fits their lifestyle. There's a reason Henderson keeps winning 'Best Places
                 to Live' awards."
@@ -350,7 +350,7 @@ export default function HendersonPage() {
                 </h3>
                 <p className="text-slate-600">
                   Henderson's top neighborhoods include Green Valley (established, mature landscaping),
-                  Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented),
+                  Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (parks and community centers),
                   and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.
                 </p>
               </div>
