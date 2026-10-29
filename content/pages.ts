@@ -112,7 +112,7 @@ export const aboutCopy = {
   practiceHeading: "What does Zoom Into Homes publish in writing?",
   body: [
     "Dr. Gene Boyle (California DRE #02282581) plans video-first touring and cross-market coordination. Las Vegas Valley showings and Nevada brokerage compliance run with Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
-    "Call (702) 222-1964. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
+    "Call (702) 500-1955. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
     "The practice is built so a care team can read the process, the measurement list, and the Fair Housing rule (features, not people) without a sales call.",
   ],
 };
@@ -131,7 +131,7 @@ export const accessibilityStatementCopy = {
     },
     {
       title: "How do you report a barrier?",
-      body: "Call (702) 222-1964 or book a time on the contact page. Name the page, the browser or assistive technology, and the task that failed.",
+      body: "Call (702) 500-1955 or book a time on the contact page. Name the page, the browser or assistive technology, and the task that failed.",
     },
     {
       title: "What does this site not use?",
@@ -148,10 +148,10 @@ export const referralPartnersCopy = {
 
 export const contactCopy = {
   h1: "Book a Zoom Into Homes Las Vegas video-tour call",
-  lede: "Pick a time, or call (702) 222-1964. Zoom Into Homes tours Las Vegas and Henderson homes on video, writes doorway and bathroom measurements, then visits two or three finalists.",
+  lede: "Pick a time, or call (702) 500-1955. Zoom Into Homes tours Las Vegas and Henderson homes on video, writes doorway and bathroom measurements, then visits two or three finalists.",
   scheduleHeading: "Pick a time for a Zoom Into Homes planning call",
   scheduleIntro:
     "Use the calendar to book. We tour the listing on video, write doorway and bathroom measurements, then visit two or three finalists in person.",
   stubNotice:
-    "Pick a time on the calendar, or call (702) 222-1964 if you need us sooner.",
+    "Pick a time on the calendar, or call (702) 500-1955 if you need us sooner.",
 };

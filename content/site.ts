@@ -14,8 +14,8 @@ export const siteIdentity: SiteIdentity = {
   brokerageLicense: "Partner: Dr. Jan Duffy, License S.0197614.LLC",
   serviceArea:
     "Las Vegas, Henderson, North Las Vegas, Summerlin, Enterprise, Spring Valley, Paradise",
-  phoneDisplay: "(702) 222-1964",
-  phoneTel: "+17022221964",
+  phoneDisplay: "(702) 500-1955",
+  phoneTel: "+17025001955",
   email: process.env.NEXT_PUBLIC_AGENT_EMAIL?.trim() || "",
   officeAddress:
     "Service-area practice (Las Vegas Valley). Planning office: 320 Junco, Irvine, CA 92618",
@@ -125,7 +125,7 @@ export const pageMeta: Record<string, PageMeta> = {
   contact: {
     title: "Book a Zoom Into Homes Las Vegas video-tour call",
     description:
-      "Schedule a Las Vegas or Henderson video-tour planning call. We check doorway and bathroom access on camera, then visit two or three finalists. Call (702) 222-1964.",
+      "Schedule a Las Vegas or Henderson video-tour planning call. We check doorway and bathroom access on camera, then visit two or three finalists. Call (702) 500-1955.",
   },
   accessibilityStatement: {
     title: "Zoom Into Homes accessibility statement",

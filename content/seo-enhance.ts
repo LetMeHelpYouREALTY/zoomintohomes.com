@@ -27,7 +27,7 @@ export const pageSeoEnhance = {
       {
         question: "What is Zoom Into Homes?",
         answer:
-          "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, then visits only two or three finalists in person. Call (702) 222-1964.",
+          "Zoom Into Homes is a Las Vegas and Henderson real estate practice that tours homes on video, checks doorway and bathroom access against a written list, then visits only two or three finalists in person. Call (702) 500-1955.",
       },
       {
         question: "What does it mean to zoom into homes in Las Vegas?",
@@ -266,7 +266,7 @@ export const pageSeoEnhance = {
       "Agent: Dr. Gene Boyle, California DRE #02282581",
       "Nevada partner: Dr. Jan Duffy, License S.0197614.LLC",
       "Brokerage: Berkshire Hathaway HomeServices Nevada Properties",
-      "Phone: (702) 222-1964",
+      "Phone: (702) 500-1955",
       "Markets: Las Vegas and Henderson, Nevada",
     ],
     faqs: [
@@ -300,9 +300,9 @@ export const pageSeoEnhance = {
   },
   contact: {
     answerBlock:
-      "Zoom Into Homes books Las Vegas and Henderson video-tour planning calls on this page. We tour the listing on camera, write doorway widths, step heights, and shower curbs, then visit two or three finalists in person. Pick a time on the calendar or call (702) 222-1964.",
+      "Zoom Into Homes books Las Vegas and Henderson video-tour planning calls on this page. We tour the listing on camera, write doorway widths, step heights, and shower curbs, then visit two or three finalists in person. Pick a time on the calendar or call (702) 500-1955.",
     keyFacts: [
-      "Phone: (702) 222-1964",
+      "Phone: (702) 500-1955",
       "Book a time on the calendar on this page",
       "Markets: Las Vegas and Henderson, Nevada",
       "Method: video tour → written access checklist → two or three finalists",
@@ -311,7 +311,7 @@ export const pageSeoEnhance = {
       {
         question: "How do I book a Zoom Into Homes Las Vegas video-tour call?",
         answer:
-          "Pick a time on the calendar on this page, or call (702) 222-1964. Tell us whether you are buying, selling, or introducing a client, plus required doorway and bathroom features when known.",
+          "Pick a time on the calendar on this page, or call (702) 500-1955. Tell us whether you are buying, selling, or introducing a client, plus required doorway and bathroom features when known.",
       },
       {
         question: "What happens on the planning call?",
@@ -338,12 +338,12 @@ export const pageSeoEnhance = {
   },
   accessibilityStatement: {
     answerBlock:
-      "The Zoom Into Homes site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers by calling (702) 222-1964 or booking a time on the contact page.",
+      "The Zoom Into Homes site targets WCAG 2.2 Level AA in code and testing, does not use accessibility overlay widgets, and asks users to report barriers by calling (702) 500-1955 or booking a time on the contact page.",
     keyFacts: [
       "Target: WCAG 2.2 Level AA",
       "Automated checks: axe-core, jsx-a11y, Lighthouse accessibility",
       "No accessiBe, UserWay, or AudioEye overlays",
-      "Report barriers by calling (702) 222-1964 or booking a time on the contact page",
+      "Report barriers by calling (702) 500-1955 or booking a time on the contact page",
     ],
     faqs: [
       {
@@ -359,7 +359,7 @@ export const pageSeoEnhance = {
       {
         question: "How do I report an accessibility barrier?",
         answer:
-          "Call (702) 222-1964 or book a time on the contact page. Name the page URL, the browser or assistive technology, and the task that failed.",
+          "Call (702) 500-1955 or book a time on the contact page. Name the page URL, the browser or assistive technology, and the task that failed.",
       },
       {
         question: "What automated tests run in continuous integration?",
@@ -380,7 +380,7 @@ export const pageSeoEnhance = {
       "Measurements: door width, step height, shower curb, hall width, control height",
       "Each row has a date and a source note",
       "Numbers stay in a labeled box, separate from the listing's own feature list",
-      "Call (702) 222-1964 to apply the list to a Las Vegas or Henderson search",
+      "Call (702) 500-1955 to apply the list to a Las Vegas or Henderson search",
     ],
     faqs: [
       {
@@ -413,7 +413,7 @@ export const pageSeoEnhance = {
       "Market: Las Vegas and Henderson",
       "Feature language: published access-feature names plus measured numbers",
       "Process: video tour, written checklist, two or three in-person finalists",
-      "Call (702) 222-1964 to start a measured search",
+      "Call (702) 500-1955 to start a measured search",
     ],
     faqs: [
       {
@@ -445,7 +445,7 @@ export const pageSeoEnhance = {
       "Source lookup: published access-feature names used on checklists",
       "Use: dated checklists after a video or on-site tour",
       "Language: building features, not people",
-      "Call (702) 222-1964 to apply a term to a specific house",
+      "Call (702) 500-1955 to apply a term to a specific house",
     ],
     faqs: [
       {
@@ -477,7 +477,7 @@ export const pageSeoEnhance = {
       "City: Henderson, Nevada",
       "Method: video tour plus dated access checklist",
       "Communities often reviewed: Sun City Anthem, Solera, Siena",
-      "Call (702) 222-1964 to sequence a Henderson shortlist",
+      "Call (702) 500-1955 to sequence a Henderson shortlist",
     ],
     faqs: [
       {
@@ -509,7 +509,7 @@ export const pageSeoEnhance = {
       "Area: Summerlin and northwest Las Vegas",
       "Method: video tour plus dated access checklist",
       "Often paired with Sun City Summerlin and single-level plans",
-      "Call (702) 222-1964 to sequence a Summerlin shortlist",
+      "Call (702) 500-1955 to sequence a Summerlin shortlist",
     ],
     faqs: [
       {

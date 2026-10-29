@@ -335,7 +335,7 @@ export const pageImages = {
       img(
         "about",
         "measure",
-        "Call (702) 222-1964. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
+        "Call (702) 500-1955. Zoom Into Homes writes down how we keep in-person tours short and which access details we measure so a hospital or care team can evaluate the work without a sales call.",
         "Agent filming a live Zoom walkthrough down a hallway so doorway and bath details can be checked on camera.",
       ),
       img(
