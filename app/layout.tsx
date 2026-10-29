@@ -13,7 +13,6 @@ import RealScoutScript from "@/components/site/RealScoutScript";
 import { buildOrganizationSchemas } from "@/lib/schema";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
-import WidgetTracker from './widget-tracker'
 
 const atkinson = Atkinson_Hyperlegible({
   subsets: ["latin"],
@@ -131,7 +130,6 @@ export default function RootLayout({
             </Script>
           </>
         ) : null}
-        <WidgetTracker />
       </body>
     </html>
   );
