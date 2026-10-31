@@ -13,6 +13,7 @@ import RealScoutScript from "@/components/site/RealScoutScript";
 import { buildOrganizationSchemas } from "@/lib/schema";
 import { pageMeta, siteIdentity } from "@/content/site";
 import { SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const atkinson = Atkinson_Hyperlegible({
   subsets: ["latin"],
@@ -141,6 +142,7 @@ e.parentNode.insertBefore(t,e);})
 window.widgetTracker("create", "WT-XQHVYQWW");
 window.widgetTracker("send", "pageview");}
         `}</Script>
+  <VercelSpeedInsights />
 </body>
     </html>
   );
