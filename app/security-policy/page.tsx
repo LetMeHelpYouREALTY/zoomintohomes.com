@@ -3,6 +3,7 @@ import RoutePageHero from "@/components/site/RoutePageHero";
 import { siteIdentity } from '@/content/site'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/security-policy' },
   title: 'Security Policy',
   description: `Security policy and responsible disclosure for ${siteIdentity.domain}`,
   robots: {

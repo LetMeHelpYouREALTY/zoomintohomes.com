@@ -11,6 +11,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/faq' },
   title: "FAQ | Dr. Jan Duffy, Las Vegas REALTOR®",
   description:
     "Frequently asked questions about Las Vegas real estate, buying, selling, and working with Dr. Jan Duffy.",

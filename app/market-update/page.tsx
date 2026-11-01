@@ -14,6 +14,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/market-update' },
   title: "Las Vegas Market Update Real Estate | January 2026",
   description:
     "Weekly Las Vegas real estate market update from Dr. Jan Duffy, REALTOR®. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 500-1955.",

@@ -26,6 +26,7 @@ import {
 } from "@/lib/gbp-schema";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/google-business' },
   title: "Dr. Jan Duffy, REALTOR® Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "Dr. Jan Duffy is a trusted Las Vegas REALTOR®, in real estate since 1983. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 500-1955.",

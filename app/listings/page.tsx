@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/listings' },
   title: "Las Vegas Homes for Sale | MLS Property Search | Dr. Jan Duffy, REALTOR®",
   description:
     "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, REALTOR®. Call (702) 500-1955.",

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/skye-canyon' },
   title: "Skye Canyon Real Estate | Northwest Las Vegas",
   description:
     "Find Skye Canyon homes with Dr. Jan Duffy, REALTOR®. She specializes in this premier northwest community. Median price $550K. Call (702) 500-1955.",

@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/sellers' },
   title: "Sell Your Las Vegas Home | Dr. Jan Duffy, REALTOR®",
   description:
     "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy. Free home valuation. World-class marketing. Call (702) 500-1955.",

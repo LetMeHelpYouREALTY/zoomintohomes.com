@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/buyers' },
   title: "Home Buying Guide Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "Looking to buy a home in Las Vegas? Dr. Jan Duffy guides you through every step. Free buyer consultation. Call (702) 500-1955.",

@@ -11,6 +11,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/summerlin' },
   title: "Summerlin Real Estate | Las Vegas Luxury Real Estate",
   description:
     "Find Summerlin homes with Dr. Jan Duffy, REALTOR®. She offers expert guidance in Las Vegas's premier master-planned community. Median price $625K. Call (702) 500-1955.",

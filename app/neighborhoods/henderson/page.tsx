@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/henderson' },
   title: "Henderson Real Estate | Nevada Real Estate",
   description:
     "Find Henderson homes with Dr. Jan Duffy, REALTOR®. She specializes in Henderson's master-planned communities. Median price $485K. Call (702) 500-1955.",

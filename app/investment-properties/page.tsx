@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/investment-properties' },
   title: "Las Vegas Investment Properties | Dr. Jan Duffy, REALTOR®",
   description:
     "Invest in Las Vegas real estate with Dr. Jan Duffy. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 500-1955.",

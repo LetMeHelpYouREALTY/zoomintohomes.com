@@ -14,6 +14,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/sellers/relocation' },
   title: "Relocation Home Sales Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "Leaving Las Vegas for a new opportunity? Dr. Jan Duffy helps relocating homeowners sell fast and coordinates with agents nationwide. Call (702) 500-1955.",

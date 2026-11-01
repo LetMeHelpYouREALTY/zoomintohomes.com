@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/the-ridges' },
   title: "The Ridges Real Estate | Las Vegas Luxury Real Estate",
   description:
     "Find luxury homes in The Ridges with Dr. Jan Duffy, REALTOR®. She specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 500-1955.",

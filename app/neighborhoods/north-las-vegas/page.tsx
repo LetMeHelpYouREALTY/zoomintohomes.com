@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/north-las-vegas' },
   title: "North Las Vegas Real Estate | Affordable Homes",
   description:
     "Find affordable North Las Vegas homes with Dr. Jan Duffy, REALTOR®. She helps first-time buyers and investors. Median price $385K. Call (702) 500-1955.",

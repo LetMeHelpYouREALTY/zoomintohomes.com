@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/southern-highlands' },
   title: "Southern Highlands Real Estate | Las Vegas Golf Community",
   description:
     "Find Southern Highlands homes with Dr. Jan Duffy, REALTOR®. She specializes in this premier golf community. Median price $750K. Call (702) 500-1955.",

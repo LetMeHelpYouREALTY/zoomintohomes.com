@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/market-report' },
   title: "Las Vegas Real Estate Market Report January 2026 | Dr. Jan Duffy, REALTOR®",
   description:
     "Get the latest Las Vegas real estate market statistics for January 2026. Median prices, days on market, inventory levels, and expert analysis from Dr. Jan Duffy.",

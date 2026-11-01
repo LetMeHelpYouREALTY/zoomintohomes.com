@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/relocation' },
   title: "Relocating to Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "Moving to Las Vegas? Dr. Jan Duffy provides comprehensive relocation services. Schools, neighborhoods, cost of living. Call (702) 500-1955.",

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/inspirada' },
   title: "Inspirada Real Estate | Henderson Resort Living",
   description:
     "Find Inspirada homes with Dr. Jan Duffy, REALTOR®. She specializes in Henderson's resort-style community. Median price $525K. Call (702) 500-1955.",

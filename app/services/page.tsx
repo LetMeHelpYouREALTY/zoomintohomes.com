@@ -20,6 +20,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services' },
   title: "Real Estate Services Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "Comprehensive real estate services from Dr. Jan Duffy. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 500-1955.",

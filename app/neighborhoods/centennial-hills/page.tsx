@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import RoutePageHero from "@/components/site/RoutePageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/neighborhoods/centennial-hills' },
   title: "Centennial Hills Real Estate | Las Vegas Homes",
   description:
     "Find Centennial Hills homes with Dr. Jan Duffy, REALTOR®. She specializes in this established northwest community. Median price $495K. Call (702) 500-1955.",

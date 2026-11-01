@@ -17,6 +17,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/buyers/first-time-buyers' },
   title: "First-Time Home Buyers Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
     "First-time buyer in Las Vegas? Down payment assistance, builder incentives, and expert guidance from Dr. Jan Duffy. Call (702) 500-1955.",
