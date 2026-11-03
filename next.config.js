@@ -95,7 +95,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://assets.calendly.com https://fonts.googleapis.com",
               "img-src https://widgetbe.com https://*.widgetbe.com 'self' data: blob: https: http:",
               "font-src 'self' data: https://assets.calendly.com https://fonts.gstatic.com https://em.realscout.com https://www.realscout.com",
-              "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://api.mapbox.com https://openrouter.ai https://api.openai.com https://calendly.com https://assets.calendly.com https://www.google-analytics.com https://analytics.google.com https://*.ingest.sentry.io",
+              "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://api.mapbox.com https://openrouter.ai https://api.openai.com https://calendly.com https://assets.calendly.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googletagmanager.com https://*.ingest.sentry.io",
               "frame-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://*.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com",
               "worker-src 'self' blob:",
             ].join("; "),
